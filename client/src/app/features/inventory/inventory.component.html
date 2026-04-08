@@ -1,0 +1,98 @@
+<div class="flex flex-col gap-4 h-full">
+  
+  <div class="flex flex-col gap-6">
+    <h1 class="text-2xl font-black uppercase tracking-widest text-wham-dark">Inventory Management</h1>
+    
+    <div class="flex gap-8 border-b border-wham-dark/10">
+      @for (tab of tabs; track tab) {
+        <button 
+          (click)="setTab(tab)"
+          [class.border-wham-primary]="activeTab() === tab"
+          [class.text-wham-primary]="activeTab() === tab"
+          class="pb-3 text-[11px] font-black uppercase tracking-widest transition-all border-b-2 border-transparent hover:text-wham-primary">
+          {{ tab }}
+        </button>
+      }
+    </div>
+  </div>
+
+  <div class="flex flex-wrap justify-between items-center gap-4 mt-2">
+    <div class="relative w-full md:w-96">
+      <span class="absolute inset-y-0 left-3 flex items-center text-wham-dark/40">
+        <mat-icon class="scale-75">search</mat-icon>
+      </span>
+      <input 
+        type="text" 
+        [(ngModel)]="searchQuery"
+        placeholder="SEARCH BY PRODUCT NAME OR SKU..."
+        class="w-full bg-wham-white border-2 border-wham-dark/10 py-2 pl-10 pr-4 text-[11px] font-bold uppercase tracking-wider focus:outline-none focus:border-wham-primary transition-colors">
+    </div>
+
+    <div class="flex gap-2">
+         <button [routerLink]="['/dashboard/home']" class="bg-wham-dark text-wham-white px-4 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-wham-primary transition-colors">
+         Exit to Home
+      </button>
+      <button class="bg-wham-dark text-wham-white px-4 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-wham-primary transition-colors">
+        + Add Inventory
+      </button>
+    </div>
+  </div>
+
+  <div class="zentory-widget p-0 flex-1 flex flex-col overflow-hidden">
+    <div class="overflow-x-auto overflow-y-auto max-h-[calc(100vh-350px)]">
+      <table class="w-full text-left border-collapse">
+        <thead class="sticky top-0 bg-wham-tan/30 backdrop-blur-md z-10">
+          <tr class="border-b-2 border-wham-dark/5">
+            <th class="p-4 text-[10px] font-black uppercase tracking-widest text-wham-dark/60">Product Name</th>
+            <th class="p-4 text-[10px] font-black uppercase tracking-widest text-wham-dark/60">SKU</th>
+            <th class="p-4 text-[10px] font-black uppercase tracking-widest text-wham-dark/60">Status</th>
+            <th class="p-4 text-[10px] font-black uppercase tracking-widest text-wham-dark/60 text-right">Current Qty</th>
+            <th class="p-4 text-[10px] font-black uppercase tracking-widest text-wham-dark/60">Location</th>
+            <th class="p-4 text-[10px] font-black uppercase tracking-widest text-wham-dark/60 text-right">Actions</th>
+          </tr>
+        </thead>
+        
+        <tbody class="divide-y divide-wham-dark/5">
+          @for (item of filteredInventory(); track item.id) {
+            <tr class="hover:bg-wham-primary/5 transition-colors group">
+              <td class="p-4">
+                <p class="text-xs font-black text-wham-dark uppercase leading-none">{{ item.name }}</p>
+              </td>
+              <td class="p-4">
+                <span class="text-[10px] font-bold text-wham-dark/40 font-mono">{{ item.sku }}</span>
+              </td>
+              <td class="p-4">
+                <span 
+                  [ngClass]="{
+                    'text-green-600 bg-green-50': item.status === 'Ready',
+                    'text-wham-warn bg-wham-warn/10': item.status === 'Low',
+                    'text-blue-600 bg-blue-50': item.status === 'Arriving'
+                  }"
+                  class="px-2 py-1 text-[9px] font-black uppercase tracking-tighter">
+                  {{ item.status }}
+                </span>
+              </td>
+              <td class="p-4 text-right">
+                <p class="text-xs font-black">{{ item.qty | number }}</p>
+              </td>
+              <td class="p-4">
+                <p class="text-[10px] font-bold uppercase">{{ item.location }}</p>
+              </td>
+              <td class="p-4 text-right">
+                <button class="text-wham-dark/20 hover:text-wham-primary transition-colors">
+                  <mat-icon class="scale-75">edit</mat-icon>
+                </button>
+              </td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="6" class="p-20 text-center">
+                <p class="text-[11px] font-black uppercase tracking-widest text-wham-dark/30">No inventory found matching criteria</p>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,721 @@
+[
+{
+  "id": "ORD-1001",
+  "customer": "Northline Retail",
+  "date": "2026-04-08",
+  "lines": 3,
+  "totalItems": 18,
+  "urgency": "Priority",
+  "courier": "FedEx",
+  "palletType": "CHEP",
+  "status": "Processing",
+  "details": [
+    { "product": "Wireless Mouse", "sku": "WM-201", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" },
+    { "product": "USB Keyboard", "sku": "KB-110", "qtyOrdered": 8, "qtyPicked": 0, "status": "Pending" },
+    { "product": "HDMI Cable", "sku": "HD-55", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1002",
+  "customer": "UrbanTech",
+  "date": "2026-04-08",
+  "lines": 2,
+  "totalItems": 10,
+  "urgency": "Standard",
+  "courier": "UPS",
+  "palletType": "Regular",
+  "status": "Picked",
+  "details": [
+    { "product": "Laptop Stand", "sku": "LS-77", "qtyOrdered": 4, "qtyPicked": 4, "status": "Picked" },
+    { "product": "Monitor Arm", "sku": "MA-88", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1003",
+  "customer": "QuickBuy Inc",
+  "date": "2026-04-07",
+  "lines": 4,
+  "totalItems": 25,
+  "urgency": "Priority",
+  "courier": "DHL",
+  "palletType": "Plastic",
+  "status": "Packed",
+  "details": [
+    { "product": "Bluetooth Speaker", "sku": "BS-909", "qtyOrdered": 10, "qtyPicked": 10, "status": "Picked" },
+    { "product": "Phone Charger", "sku": "PC-44", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" },
+    { "product": "Power Bank", "sku": "PB-22", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" },
+    { "product": "USB Cable", "sku": "UC-11", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1004",
+  "customer": "Metro Supplies",
+  "date": "2026-04-07",
+  "lines": 2,
+  "totalItems": 12,
+  "urgency": "Standard",
+  "courier": "Canada Post",
+  "palletType": "Regular",
+  "status": "Processing",
+  "details": [
+    { "product": "Desk Lamp", "sku": "DL-66", "qtyOrdered": 7, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Office Chair Wheels", "sku": "CW-12", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1005",
+  "customer": "Alpha Distributors",
+  "date": "2026-04-06",
+  "lines": 3,
+  "totalItems": 20,
+  "urgency": "Priority",
+  "courier": "UPS",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "Tablet Case", "sku": "TC-90", "qtyOrdered": 10, "qtyPicked": 10, "status": "Picked" },
+    { "product": "Stylus Pen", "sku": "SP-21", "qtyOrdered": 5, "qtyPicked": 3, "status": "Short" },
+    { "product": "Screen Protector", "sku": "SC-10", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" }
+  ]
+},
+
+{
+  "id": "ORD-1006",
+  "customer": "Prime Wholesale",
+  "date": "2026-04-06",
+  "lines": 3,
+  "totalItems": 22,
+  "urgency": "Standard",
+  "courier": "FedEx",
+  "palletType": "Plastic",
+  "status": "Processing",
+  "details": [
+    { "product": "Ethernet Cable", "sku": "EC-33", "qtyOrdered": 10, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Router", "sku": "RT-55", "qtyOrdered": 6, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Switch Hub", "sku": "SH-88", "qtyOrdered": 6, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1007",
+  "customer": "NexaGoods",
+  "date": "2026-04-06",
+  "lines": 2,
+  "totalItems": 14,
+  "urgency": "Priority",
+  "courier": "DHL",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "Gaming Mouse", "sku": "GM-22", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Gaming Keyboard", "sku": "GK-11", "qtyOrdered": 7, "qtyPicked": 6, "status": "Short" }
+  ]
+},
+{
+  "id": "ORD-1008",
+  "customer": "SupplyHub",
+  "date": "2026-04-05",
+  "lines": 3,
+  "totalItems": 18,
+  "urgency": "Standard",
+  "courier": "UPS",
+  "palletType": "Regular",
+  "status": "Packed",
+  "details": [
+    { "product": "Webcam", "sku": "WC-77", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" },
+    { "product": "Headset", "sku": "HS-66", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" },
+    { "product": "Microphone", "sku": "MC-55", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1009",
+  "customer": "Vertex Stores",
+  "date": "2026-04-05",
+  "lines": 2,
+  "totalItems": 9,
+  "urgency": "Standard",
+  "courier": "Canada Post",
+  "palletType": "Plastic",
+  "status": "Processing",
+  "details": [
+    { "product": "USB Hub", "sku": "UH-12", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" },
+    { "product": "SD Card", "sku": "SD-34", "qtyOrdered": 4, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1010",
+  "customer": "CoreTech",
+  "date": "2026-04-05",
+  "lines": 4,
+  "totalItems": 30,
+  "urgency": "Priority",
+  "courier": "FedEx",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "SSD Drive", "sku": "SSD-1", "qtyOrdered": 10, "qtyPicked": 10, "status": "Picked" },
+    { "product": "HDD Drive", "sku": "HDD-2", "qtyOrdered": 10, "qtyPicked": 10, "status": "Picked" },
+    { "product": "RAM Stick", "sku": "RAM-3", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" },
+    { "product": "GPU Card", "sku": "GPU-4", "qtyOrdered": 5, "qtyPicked": 3, "status": "Short" }
+  ]
+},
+
+{
+  "id": "ORD-1011",
+  "customer": "Delta Supply",
+  "date": "2026-04-05",
+  "lines": 3,
+  "totalItems": 16,
+  "urgency": "Standard",
+  "courier": "UPS",
+  "palletType": "Regular",
+  "status": "Processing",
+  "details": [
+    { "product": "Extension Cord", "sku": "EX-11", "qtyOrdered": 6, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Surge Protector", "sku": "SP-45", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Power Strip", "sku": "PS-23", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1012",
+  "customer": "MegaRetail",
+  "date": "2026-04-04",
+  "lines": 2,
+  "totalItems": 12,
+  "urgency": "Priority",
+  "courier": "DHL",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "LED Monitor", "sku": "LM-10", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" },
+    { "product": "Monitor Stand", "sku": "MS-20", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1013",
+  "customer": "Nova Distributors",
+  "date": "2026-04-04",
+  "lines": 3,
+  "totalItems": 21,
+  "urgency": "Standard",
+  "courier": "FedEx",
+  "palletType": "Plastic",
+  "status": "Packed",
+  "details": [
+    { "product": "Keyboard Pad", "sku": "KP-12", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Mouse Pad", "sku": "MP-13", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Desk Mat", "sku": "DM-14", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1014",
+  "customer": "RetailOne",
+  "date": "2026-04-04",
+  "lines": 2,
+  "totalItems": 11,
+  "urgency": "Standard",
+  "courier": "Canada Post",
+  "palletType": "Regular",
+  "status": "Processing",
+  "details": [
+    { "product": "Phone Stand", "sku": "PS-90", "qtyOrdered": 6, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Tablet Holder", "sku": "TH-91", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1015",
+  "customer": "TechWave",
+  "date": "2026-04-03",
+  "lines": 4,
+  "totalItems": 28,
+  "urgency": "Priority",
+  "courier": "UPS",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "Graphics Tablet", "sku": "GT-01", "qtyOrdered": 8, "qtyPicked": 8, "status": "Picked" },
+    { "product": "Drawing Pen", "sku": "DP-02", "qtyOrdered": 8, "qtyPicked": 8, "status": "Picked" },
+    { "product": "Tablet Glove", "sku": "TG-03", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" },
+    { "product": "USB Adapter", "sku": "UA-04", "qtyOrdered": 6, "qtyPicked": 5, "status": "Short" }
+  ]
+},
+
+{
+  "id": "ORD-1016",
+  "customer": "BulkMart",
+  "date": "2026-04-03",
+  "lines": 3,
+  "totalItems": 24,
+  "urgency": "Priority",
+  "courier": "FedEx",
+  "palletType": "Plastic",
+  "status": "Packed",
+  "details": [
+    { "product": "Storage Box", "sku": "SB-10", "qtyOrdered": 8, "qtyPicked": 8, "status": "Picked" },
+    { "product": "Label Printer", "sku": "LP-11", "qtyOrdered": 8, "qtyPicked": 8, "status": "Picked" },
+    { "product": "Barcode Scanner", "sku": "BS-12", "qtyOrdered": 8, "qtyPicked": 8, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1017",
+  "customer": "HyperGoods",
+  "date": "2026-04-03",
+  "lines": 2,
+  "totalItems": 10,
+  "urgency": "Standard",
+  "courier": "UPS",
+  "palletType": "Regular",
+  "status": "Processing",
+  "details": [
+    { "product": "Cable Organizer", "sku": "CO-01", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Wire Clips", "sku": "WC-02", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1018",
+  "customer": "Speedy Retail",
+  "date": "2026-04-02",
+  "lines": 3,
+  "totalItems": 15,
+  "urgency": "Priority",
+  "courier": "DHL",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "Flash Drive", "sku": "FD-11", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" },
+    { "product": "Memory Card", "sku": "MC-12", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" },
+    { "product": "Card Reader", "sku": "CR-13", "qtyOrdered": 5, "qtyPicked": 4, "status": "Short" }
+  ]
+},
+{
+  "id": "ORD-1019",
+  "customer": "DailySupply",
+  "date": "2026-04-02",
+  "lines": 2,
+  "totalItems": 8,
+  "urgency": "Standard",
+  "courier": "Canada Post",
+  "palletType": "Plastic",
+  "status": "Processing",
+  "details": [
+    { "product": "Notebook", "sku": "NB-01", "qtyOrdered": 4, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Pen Pack", "sku": "PP-02", "qtyOrdered": 4, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1020",
+  "customer": "OmniTrade",
+  "date": "2026-04-02",
+  "lines": 4,
+  "totalItems": 32,
+  "urgency": "Priority",
+  "courier": "FedEx",
+  "palletType": "CHEP",
+  "status": "Packed",
+  "details": [
+    { "product": "Router Pro", "sku": "RP-01", "qtyOrdered": 8, "qtyPicked": 8, "status": "Picked" },
+    { "product": "Switch Pro", "sku": "SP-02", "qtyOrdered": 8, "qtyPicked": 8, "status": "Picked" },
+    { "product": "Firewall Device", "sku": "FD-03", "qtyOrdered": 8, "qtyPicked": 8, "status": "Picked" },
+    { "product": "Server Rack", "sku": "SR-04", "qtyOrdered": 8, "qtyPicked": 8, "status": "Picked" }
+  ]
+},
+
+{
+  "id": "ORD-1021",
+  "customer": "Peak Distribution",
+  "date": "2026-04-02",
+  "lines": 3,
+  "totalItems": 18,
+  "urgency": "Standard",
+  "courier": "UPS",
+  "palletType": "Regular",
+  "status": "Processing",
+  "details": [
+    { "product": "Cooling Fan", "sku": "CF-10", "qtyOrdered": 6, "qtyPicked": 0, "status": "Pending" },
+    { "product": "CPU Paste", "sku": "CP-11", "qtyOrdered": 6, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Heatsink", "sku": "HS-12", "qtyOrdered": 6, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1022",
+  "customer": "ValueGoods",
+  "date": "2026-04-01",
+  "lines": 2,
+  "totalItems": 12,
+  "urgency": "Priority",
+  "courier": "DHL",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "Smart Plug", "sku": "SP-20", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" },
+    { "product": "Smart Bulb", "sku": "SB-21", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1023",
+  "customer": "DirectSupply",
+  "date": "2026-04-01",
+  "lines": 3,
+  "totalItems": 21,
+  "urgency": "Standard",
+  "courier": "FedEx",
+  "palletType": "Plastic",
+  "status": "Packed",
+  "details": [
+    { "product": "Tablet Cover", "sku": "TC-31", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Phone Case", "sku": "PC-32", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Watch Strap", "sku": "WS-33", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1024",
+  "customer": "Retail Hub",
+  "date": "2026-04-01",
+  "lines": 2,
+  "totalItems": 9,
+  "urgency": "Standard",
+  "courier": "Canada Post",
+  "palletType": "Regular",
+  "status": "Processing",
+  "details": [
+    { "product": "USB Fan", "sku": "UF-10", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Mini Lamp", "sku": "ML-11", "qtyOrdered": 4, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1025",
+  "customer": "ExpressTrade",
+  "date": "2026-03-31",
+  "lines": 4,
+  "totalItems": 28,
+  "urgency": "Priority",
+  "courier": "UPS",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "Camera Lens", "sku": "CL-01", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Tripod Stand", "sku": "TS-02", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Camera Bag", "sku": "CB-03", "qtyOrdered": 7, "qtyPicked": 6, "status": "Short" },
+    { "product": "SD Card Pro", "sku": "SD-04", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" }
+  ]
+},
+
+{
+  "id": "ORD-1026",
+  "customer": "LogiMart",
+  "date": "2026-03-31",
+  "lines": 3,
+  "totalItems": 18,
+  "urgency": "Standard",
+  "courier": "FedEx",
+  "palletType": "Plastic",
+  "status": "Packed",
+  "details": [
+    { "product": "Packaging Tape", "sku": "PT-01", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" },
+    { "product": "Box Cutter", "sku": "BC-02", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" },
+    { "product": "Shipping Labels", "sku": "SL-03", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1027",
+  "customer": "GlobalTrade",
+  "date": "2026-03-30",
+  "lines": 2,
+  "totalItems": 10,
+  "urgency": "Standard",
+  "courier": "UPS",
+  "palletType": "Regular",
+  "status": "Processing",
+  "details": [
+    { "product": "Desk Organizer", "sku": "DO-10", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" },
+    { "product": "File Holder", "sku": "FH-11", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1028",
+  "customer": "FastLane Supply",
+  "date": "2026-03-30",
+  "lines": 3,
+  "totalItems": 15,
+  "urgency": "Priority",
+  "courier": "DHL",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "LED Strip", "sku": "LS-01", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" },
+    { "product": "Power Adapter", "sku": "PA-02", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" },
+    { "product": "Controller Unit", "sku": "CU-03", "qtyOrdered": 5, "qtyPicked": 4, "status": "Short" }
+  ]
+},
+{
+  "id": "ORD-1029",
+  "customer": "OfficePro",
+  "date": "2026-03-30",
+  "lines": 2,
+  "totalItems": 8,
+  "urgency": "Standard",
+  "courier": "Canada Post",
+  "palletType": "Plastic",
+  "status": "Processing",
+  "details": [
+    { "product": "Stapler", "sku": "ST-01", "qtyOrdered": 4, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Paper Clips", "sku": "PC-02", "qtyOrdered": 4, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1030",
+  "customer": "SupplyChain Co",
+  "date": "2026-03-29",
+  "lines": 4,
+  "totalItems": 28,
+  "urgency": "Priority",
+  "courier": "FedEx",
+  "palletType": "CHEP",
+  "status": "Packed",
+  "details": [
+    { "product": "Industrial Tape", "sku": "IT-01", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Shrink Wrap", "sku": "SW-02", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Pallet Cover", "sku": "PC-03", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Corner Protectors", "sku": "CP-04", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" }
+  ]
+},
+
+{
+  "id": "ORD-1031",
+  "customer": "North Goods",
+  "date": "2026-03-29",
+  "lines": 3,
+  "totalItems": 18,
+  "urgency": "Standard",
+  "courier": "UPS",
+  "palletType": "Regular",
+  "status": "Processing",
+  "details": [
+    { "product": "USB Light", "sku": "UL-01", "qtyOrdered": 6, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Mini Fan", "sku": "MF-02", "qtyOrdered": 6, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Desk Clock", "sku": "DC-03", "qtyOrdered": 6, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1032",
+  "customer": "BrightSupply",
+  "date": "2026-03-28",
+  "lines": 2,
+  "totalItems": 10,
+  "urgency": "Priority",
+  "courier": "DHL",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "LED Panel", "sku": "LP-10", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" },
+    { "product": "Light Driver", "sku": "LD-11", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1033",
+  "customer": "NovaTrade",
+  "date": "2026-03-28",
+  "lines": 3,
+  "totalItems": 21,
+  "urgency": "Standard",
+  "courier": "FedEx",
+  "palletType": "Plastic",
+  "status": "Packed",
+  "details": [
+    { "product": "Phone Mount", "sku": "PM-01", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Car Charger", "sku": "CC-02", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Bluetooth Kit", "sku": "BK-03", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1034",
+  "customer": "Retail Works",
+  "date": "2026-03-28",
+  "lines": 2,
+  "totalItems": 9,
+  "urgency": "Standard",
+  "courier": "Canada Post",
+  "palletType": "Regular",
+  "status": "Processing",
+  "details": [
+    { "product": "Phone Holder", "sku": "PH-10", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Tablet Stand", "sku": "TS-11", "qtyOrdered": 4, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1035",
+  "customer": "EliteSupply",
+  "date": "2026-03-27",
+  "lines": 4,
+  "totalItems": 28,
+  "urgency": "Priority",
+  "courier": "UPS",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "VR Headset", "sku": "VR-01", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Controller Set", "sku": "CS-02", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Tracking Sensor", "sku": "TS-03", "qtyOrdered": 7, "qtyPicked": 6, "status": "Short" },
+    { "product": "Charging Dock", "sku": "CD-04", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" }
+  ]
+},
+
+{
+  "id": "ORD-1036",
+  "customer": "MegaChain",
+  "date": "2026-03-27",
+  "lines": 3,
+  "totalItems": 18,
+  "urgency": "Standard",
+  "courier": "FedEx",
+  "palletType": "Plastic",
+  "status": "Packed",
+  "details": [
+    { "product": "Cable Roll", "sku": "CR-10", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" },
+    { "product": "Connector Kit", "sku": "CK-11", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" },
+    { "product": "Adapter Pack", "sku": "AP-12", "qtyOrdered": 6, "qtyPicked": 6, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1037",
+  "customer": "Urban Supply",
+  "date": "2026-03-26",
+  "lines": 2,
+  "totalItems": 10,
+  "urgency": "Standard",
+  "courier": "UPS",
+  "palletType": "Regular",
+  "status": "Processing",
+  "details": [
+    { "product": "Desk Fan", "sku": "DF-01", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Mini Heater", "sku": "MH-02", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1038",
+  "customer": "SpeedTrade",
+  "date": "2026-03-26",
+  "lines": 3,
+  "totalItems": 15,
+  "urgency": "Priority",
+  "courier": "DHL",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "Smart Watch", "sku": "SW-01", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" },
+    { "product": "Fitness Band", "sku": "FB-02", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" },
+    { "product": "Charging Cable", "sku": "CC-03", "qtyOrdered": 5, "qtyPicked": 4, "status": "Short" }
+  ]
+},
+{
+  "id": "ORD-1039",
+  "customer": "Office Essentials",
+  "date": "2026-03-26",
+  "lines": 2,
+  "totalItems": 8,
+  "urgency": "Standard",
+  "courier": "Canada Post",
+  "palletType": "Plastic",
+  "status": "Processing",
+  "details": [
+    { "product": "Marker Set", "sku": "MS-01", "qtyOrdered": 4, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Whiteboard Eraser", "sku": "WE-02", "qtyOrdered": 4, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1040",
+  "customer": "ChainSupply",
+  "date": "2026-03-25",
+  "lines": 4,
+  "totalItems": 28,
+  "urgency": "Priority",
+  "courier": "FedEx",
+  "palletType": "CHEP",
+  "status": "Packed",
+  "details": [
+    { "product": "Industrial Gloves", "sku": "IG-01", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Safety Glasses", "sku": "SG-02", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Hard Hat", "sku": "HH-03", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Reflective Vest", "sku": "RV-04", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" }
+  ]
+},
+
+{
+  "id": "ORD-1041",
+  "customer": "North Supply",
+  "date": "2026-03-25",
+  "lines": 3,
+  "totalItems": 18,
+  "urgency": "Standard",
+  "courier": "UPS",
+  "palletType": "Regular",
+  "status": "Processing",
+  "details": [
+    { "product": "Desk Cable", "sku": "DC-01", "qtyOrdered": 6, "qtyPicked": 0, "status": "Pending" },
+    { "product": "USB Hub Pro", "sku": "UH-02", "qtyOrdered": 6, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Laptop Cooler", "sku": "LC-03", "qtyOrdered": 6, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1042",
+  "customer": "BrightMart",
+  "date": "2026-03-24",
+  "lines": 2,
+  "totalItems": 10,
+  "urgency": "Priority",
+  "courier": "DHL",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "LED Tube", "sku": "LT-01", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" },
+    { "product": "Starter Kit", "sku": "SK-02", "qtyOrdered": 5, "qtyPicked": 5, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1043",
+  "customer": "Direct Wholesale",
+  "date": "2026-03-24",
+  "lines": 3,
+  "totalItems": 21,
+  "urgency": "Standard",
+  "courier": "FedEx",
+  "palletType": "Plastic",
+  "status": "Packed",
+  "details": [
+    { "product": "Tablet Charger", "sku": "TC-11", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Phone Cable", "sku": "PC-12", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Adapter Kit", "sku": "AK-13", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" }
+  ]
+},
+{
+  "id": "ORD-1044",
+  "customer": "Retail Connect",
+  "date": "2026-03-24",
+  "lines": 2,
+  "totalItems": 9,
+  "urgency": "Standard",
+  "courier": "Canada Post",
+  "palletType": "Regular",
+  "status": "Processing",
+  "details": [
+    { "product": "Phone Clip", "sku": "PC-21", "qtyOrdered": 5, "qtyPicked": 0, "status": "Pending" },
+    { "product": "Tablet Clip", "sku": "TC-22", "qtyOrdered": 4, "qtyPicked": 0, "status": "Pending" }
+  ]
+},
+{
+  "id": "ORD-1045",
+  "customer": "Elite Wholesale",
+  "date": "2026-03-23",
+  "lines": 4,
+  "totalItems": 28,
+  "urgency": "Priority",
+  "courier": "UPS",
+  "palletType": "CHEP",
+  "status": "Picked",
+  "details": [
+    { "product": "Drone Unit", "sku": "DU-01", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Battery Pack", "sku": "BP-02", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" },
+    { "product": "Controller", "sku": "CT-03", "qtyOrdered": 7, "qtyPicked": 6, "status": "Short" },
+    { "product": "Spare Props", "sku": "SP-04", "qtyOrdered": 7, "qtyPicked": 7, "status": "Picked" }
+  ]
+}
+]

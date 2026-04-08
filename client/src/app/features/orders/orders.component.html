@@ -1,0 +1,133 @@
+<div class="flex flex-col gap-6 p-4">
+  <div class="flex justify-between items-end border-b-2 border-wham-dark/10 pb-4">
+    <div>
+      <h1 class="text-2xl font-black uppercase tracking-widest text-wham-dark">Order Fulfillment</h1>
+      <p class="text-[10px] font-bold text-wham-primary uppercase tracking-widest mt-1">Live Warehouse Operations</p>
+    </div>
+    <div class="flex gap-2">
+      <button class="bg-wham-dark text-white px-4 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-wham-primary transition-colors">Bulk Print Labels</button>
+      <button class="bg-wham-primary text-white px-4 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-wham-warn transition-colors">+ New Order</button>
+    </div>
+  </div>
+
+  <div class="flex gap-8 border-b border-wham-dark/10">
+    @for (tab of tabs; track tab) {
+      <button 
+        (click)="setFilter(tab)"
+        [class.border-wham-primary]="statusFilter() === tab"
+        [class.text-wham-primary]="statusFilter() === tab"
+        class="pb-3 text-[11px] font-black uppercase tracking-widest transition-all border-b-2 border-transparent hover:text-wham-primary">
+        {{ tab }}
+        <span class="ml-1 opacity-30 text-[9px]">
+          ({{ tab === 'All' ? orders().length : orders().filter(o => o.status === tab).length }})
+        </span>
+      </button>
+    }
+  </div>
+
+  <div class="zentory-widget p-0 overflow-hidden">
+    <table class="w-full border-collapse">
+      <thead class="bg-wham-tan/20 border-b border-wham-dark/10">
+        <tr class="text-[10px] font-black uppercase tracking-widest text-wham-dark/60">
+          <th class="p-4 text-left">Order ID</th>
+          <th class="p-4 text-left">Customer / Courier</th>
+          <th class="p-4 text-center">Lines / Items</th>
+          <th class="p-4 text-center">Urgency</th>
+          <th class="p-4 text-center">Pallet</th>
+          <th class="p-4 text-center">Status</th>
+          <th class="p-4 text-right">Labels</th>
+        </tr>
+      </thead>
+      
+      <tbody class="divide-y divide-wham-dark/5">
+        @for (order of filteredOrders(); track order.id) {
+          <tr (click)="toggleOrder(order.id)" class="cursor-pointer hover:bg-wham-primary/5 transition-colors">
+            <td class="p-4">
+              <div class="flex items-center gap-2">
+                <mat-icon class="scale-75 text-wham-primary">
+                  {{ expandedOrderId() === order.id ? 'expand_more' : 'chevron_right' }}
+                </mat-icon>
+                <span class="font-black text-xs text-wham-dark">{{ order.id }}</span>
+              </div>
+            </td>
+            <td class="p-4">
+              <p class="text-xs font-black uppercase">{{ order.customer }}</p>
+              <p class="text-[9px] font-bold text-wham-dark/40">{{ order.courier }}</p>
+            </td>
+            <td class="p-4 text-center">
+              <p class="text-xs font-black">{{ order.lines }} <span class="text-[9px] opacity-40">LNS</span></p>
+              <p class="text-[9px] font-bold text-wham-primary">{{ order.totalItems }} <span class="opacity-40">PCS</span></p>
+            </td>
+            <td class="p-4 text-center">
+              <span [class]="order.urgency === 'Priority' ? 'bg-wham-warn text-white' : 'bg-wham-dark text-white'"
+                    class="px-2 py-1 text-[9px] font-black uppercase tracking-tighter">
+                {{ order.urgency }}
+              </span>
+            </td>
+            <td class="p-4 text-center text-[10px] font-bold uppercase">{{ order.palletType }}</td>
+            <td class="p-4 text-center">
+               <span class="px-2 py-1 bg-wham-tan text-wham-dark text-[9px] font-black uppercase tracking-tighter border border-wham-dark/10">
+                 {{ order.status }}
+               </span>
+            </td>
+            <td class="p-4 text-right">
+              <button class="hover:text-wham-primary" (click)="$event.stopPropagation()">
+                <mat-icon class="scale-75">print</mat-icon>
+              </button>
+            </td>
+          </tr>
+
+          @if (expandedOrderId() === order.id) {
+            <tr class="bg-wham-tan/5">
+              <td colspan="7" class="p-6">
+                <div class="border-l-4 border-wham-primary pl-6 py-2">
+                  <div class="flex justify-between items-center mb-4">
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-wham-primary">Order Contents & Picking Status</h4>
+                    <span class="text-[9px] font-bold text-wham-dark/40 uppercase">Shipping via {{ order.courier }}</span>
+                  </div>
+                  
+                  <table class="w-full text-left">
+                    <thead>
+                      <tr class="text-[9px] font-black uppercase text-wham-dark/40 border-b border-wham-dark/10">
+                        <th class="pb-2">SKU</th>
+                        <th class="pb-2">Product Name</th>
+                        <th class="pb-2 text-center">Ordered</th>
+                        <th class="pb-2 text-center">Picked</th>
+                        <th class="pb-2 text-right">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-wham-dark/5">
+                      @for (line of order.details; track line.sku) {
+                        <tr class="text-xs">
+                          <td class="py-3 font-mono text-[10px]">{{ line.sku }}</td>
+                          <td class="py-3 font-bold uppercase">{{ line.product }}</td>
+                          <td class="py-3 text-center font-black">{{ line.qtyOrdered }}</td>
+                          <td class="py-3 text-center">
+                            <span class="text-wham-primary font-black">{{ line.qtyPicked }}</span>
+                          </td>
+                          <td class="py-3 text-right">
+                            <span [class.text-wham-primary]="line.status === 'Picked'" 
+                                  [class.text-wham-warn]="line.status === 'Short'"
+                                  class="text-[9px] font-black uppercase">
+                              {{ line.status }}
+                            </span>
+                          </td>
+                        </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+              </td>
+            </tr>
+          }
+        } @empty {
+          <tr>
+            <td colspan="7" class="p-20 text-center">
+              <p class="text-[11px] font-black uppercase tracking-widest text-wham-dark/30">No {{ statusFilter() }} orders found</p>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
