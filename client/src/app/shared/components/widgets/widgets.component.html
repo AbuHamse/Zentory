@@ -1,0 +1,28 @@
+<div class="zentory-widget group">
+  <div class="flex justify-between items-start">
+    <h3 class="text-[10px] uppercase tracking-[0.2em] font-bold text-wham-primary group-hover:text-wham-dark transition-colors">
+      {{ label() }}
+    </h3>
+    <mat-icon class="text-wham-dark opacity-30 group-hover:opacity-100 transition-opacity">
+      {{ icon() }}
+    </mat-icon>
+  </div>
+  
+  <div class="flex flex-col justify-center flex-1">
+    <div class="flex items-baseline gap-2">
+      <span class="text-5xl font-light tracking-tighter text-wham-dark tabular-nums leading-none">
+        {{ value() }}
+      </span>
+      <span class="text-[10px] uppercase font-black text-wham-primary/60">{{ unit() }}</span>
+    </div>
+  </div>
+
+  <div class="flex justify-between items-center border-t border-wham-dark/5 pt-4">
+    <span class="text-[9px] uppercase tracking-widest text-wham-dark/40 group-hover:text-wham-dark font-bold">
+      Detailed Analytics
+    </span>
+    <mat-icon class="text-sm text-wham-primary opacity-0 group-hover:opacity-100 translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
+      arrow_forward
+    </mat-icon>
+  </div>
+</div>

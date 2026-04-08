@@ -1,0 +1,134 @@
+/* src/styles.css */
+@import "tailwindcss";
+
+@theme {
+  /* Red & White Color Scheme */
+  --color-wham-dark: #A90011;      /* Madder */
+  --color-wham-primary: #D11D27;   /* Simple Red */
+  --color-wham-warn: #E53C38;      /* Vermillion */
+  --color-wham-tan: #FBEBD8;       /* Pale Peach */
+  --color-wham-cream: #FFFAEF;     /* English Cream */
+  --color-wham-white: #FFFFFF;     /* Full White */
+}
+
+/* 4️⃣ Enterprise / Corporate Reset */
+html, body { 
+  height: 100%; 
+  margin: 0; 
+  background-color: var(--color-wham-cream);
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden; 
+}
+
+/* ============================================================
+   LAYOUT SHELL (Slide-In Mode)
+   ============================================================ */
+
+mat-sidenav-container {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* The "Dimmed" Backdrop when Sidebar is open */
+::ng-deep .mat-drawer-backdrop.mat-drawer-shown {
+  background-color: rgba(169, 0, 17, 0.15) !important; /* Madder Red tint */
+  backdrop-filter: blur(2px);
+}
+
+mat-sidenav-content {
+  display: flex !important;
+  flex-direction: column !important;
+  /* FIX: Added height to prevent the blank screen collapse */
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+/* Sidebar Styling for Over Mode */
+mat-sidenav {
+  border-right: 1px solid var(--color-wham-dark) !important;
+  scrollbar-width: none; 
+}
+
+mat-sidenav::-webkit-scrollbar {
+  display: none; 
+}
+
+/* ============================================================
+   3️⃣ EDGE / LINEAR / GEOMETRIC (Widgets)
+   ============================================================ */
+
+.zentory-widget {
+  @apply relative border border-wham-dark bg-wham-white p-6 
+         flex flex-col justify-between overflow-hidden;
+  border-radius: 0px !important; 
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: transform, box-shadow;
+  height: 100%;
+}
+
+.zentory-widget:hover {
+  @apply bg-wham-cream border-wham-primary;
+  box-shadow: 8px 8px 0px 0px var(--color-wham-dark);
+  transform: translate(-4px, -4px);
+}
+
+/* ============================================================
+   NAVBAR & SIDEBAR POLISH
+   ============================================================ */
+
+/* 1. Base Sidenav Links: Semi-bold and transition ready */
+.mat-mdc-list-item {
+  transition: background-color 0.2s ease-in-out !important;
+}
+
+.mat-mdc-list-item-title,
+.mdc-list-item__primary-text {
+  font-weight: 600 !important; /* Semi-bold text */
+  color: var(--color-wham-dark); /* Default to Madder Red */
+  transition: color 0.2s ease-in-out;
+}
+
+mat-icon {
+  user-select: none;
+  transition: color 0.2s ease-in-out;
+}
+
+/* 2. Sidenav Hover Effect */
+.mat-mdc-list-item:hover {
+  background-color: rgba(209, 29, 39, 0.05) !important; /* Soft 5% Simple Red */
+  cursor: pointer;
+}
+
+.mat-mdc-list-item:hover .mat-mdc-list-item-title,
+.mat-mdc-list-item:hover .mdc-list-item__primary-text,
+.mat-mdc-list-item:hover mat-icon {
+  color: var(--color-wham-primary) !important; /* Text and Icon turn Simple Red on hover */
+}
+
+/* 3. Active Link State (Clicking the route) */
+.active-link {
+  background-color: rgba(209, 29, 39, 0.08) !important;
+  border-right: 4px solid var(--color-wham-primary) !important;
+}
+
+/* Force Active Colors to pop over Material defaults */
+.active-link .mat-mdc-list-item-title,
+.active-link .mdc-list-item__primary-text,
+.active-link mat-icon {
+  color: var(--color-wham-primary) !important;
+  font-weight: 800 !important; /* Extra bold when active */
+}
+
+/* Dropdown/Menu Overrides */
+.cdk-overlay-pane .mat-mdc-menu-panel {
+  border-radius: 0px !important;
+  border: 1px solid var(--color-wham-dark);
+  background-color: var(--color-wham-white) !important;
+  box-shadow: 4px 4px 0px 0px rgba(169, 0, 17, 0.1) !important;
+}
+
+.mat-mdc-menu-item {
+  font-size: 11px !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}

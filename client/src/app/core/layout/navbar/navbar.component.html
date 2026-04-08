@@ -1,0 +1,38 @@
+<mat-toolbar class="h-14 bg-wham-dark text-wham-white flex justify-between items-center px-0 border-b border-wham-primary/30 shadow-lg">
+  
+  <div class="flex items-center h-full">
+    <div (click)="onToggleSidenav.emit()" 
+         class="bg-wham-primary h-full px-6 flex items-center border-r border-wham-white/10 group cursor-pointer hover:bg-wham-warn transition-all duration-200 active:scale-95">
+      <mat-icon class="mr-3 scale-75 opacity-70 group-hover:opacity-100">menu</mat-icon>
+      <span class="text-lg font-black tracking-[0.3em] uppercase italic select-none">{{ title() }}</span>
+    </div>
+    
+    <div class="hidden md:flex px-6 items-center">
+      <span class="text-[9px] uppercase tracking-[0.25em] font-bold text-wham-cream/60">
+        Warehouse & Asset Management <span class="text-wham-primary ml-2">// v21.4</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="flex items-center h-full">
+    <div class="h-8 w-[1px] bg-wham-white/10 mx-2"></div>
+    
+    <button mat-button [matMenuTriggerFor]="profileMenu" 
+            class="h-full px-6 flex items-center gap-3 hover:bg-wham-white/5 transition-all">
+      <div class="text-right hidden sm:block">
+        <p class="text-[10px] font-bold uppercase leading-none tracking-tighter">System Admin</p>
+        <p class="text-[8px] uppercase text-wham-cream/40 tracking-widest mt-1">Global Permissions</p>
+      </div>
+      <div class="w-8 h-8 bg-wham-primary border border-wham-white/20 flex items-center justify-center font-bold text-xs">
+        SA
+      </div>
+    </button>
+
+    <mat-menu #profileMenu="matMenu" class="zentory-menu">
+      <button mat-menu-item>PROFILE</button>
+      <button mat-menu-item>SETTINGS</button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item class="text-wham-primary font-bold">LOGOUT</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

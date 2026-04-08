@@ -1,0 +1,24 @@
+<div class="h-14 flex items-center justify-between px-6 bg-wham-dark text-wham-white">
+  <span class="text-[10px] font-black uppercase tracking-[0.3em]">Navigation</span>
+  <button mat-icon-button (click)="onClose.emit()" class="scale-75">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<mat-nav-list class="p-0 pt-4">
+  @for (item of navItems; track item.label) {
+    <a mat-list-item 
+       [routerLink]="item.route" 
+       routerLinkActive="active-link"
+       [routerLinkActiveOptions]="{exact: true}"
+       (click)="onClose.emit()"
+       class="h-14 px-6 flex items-center transition-all hover:bg-wham-primary/5">
+       
+      <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+      
+      <span matListItemTitle class="ml-4 text-[11px] uppercase tracking-widest font-bold">
+        {{ item.label }}
+      </span>
+    </a>
+  }
+</mat-nav-list>

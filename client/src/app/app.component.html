@@ -1,0 +1,33 @@
+<div class="flex flex-col h-screen w-screen overflow-hidden bg-wham-cream">
+  
+  <app-navbar 
+    [title]="title()"
+    (onToggleSidenav)="toggleSidebar()" 
+    class="block h-14 z-50 shadow-sm shrink-0">
+  </app-navbar>
+
+  <mat-sidenav-container 
+    class="flex-1 w-full h-[calc(100vh-3.5rem)] overflow-hidden bg-transparent" 
+    [hasBackdrop]="true"
+    (backdropClick)="closeSidebar()">
+    
+    <mat-sidenav 
+      mode="over" 
+      [opened]="isSidenavOpen()" 
+      (closedStart)="closeSidebar()"
+      class="w-[280px] bg-wham-tan border-r-2 border-wham-dark shadow-2xl z-[100]">
+      
+      <app-sidebar (onClose)="closeSidebar()"></app-sidebar>
+      
+    </mat-sidenav>
+
+    <mat-sidenav-content class="bg-transparent overflow-y-auto">
+      <main class="p-8 w-full min-h-full">
+        <div class="max-w-[1600px] mx-auto h-full">
+          <router-outlet></router-outlet>
+        </div>
+      </main>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+</div>
