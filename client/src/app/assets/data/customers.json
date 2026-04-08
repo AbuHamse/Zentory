@@ -1,0 +1,406 @@
+[
+  {
+    "id": "CUST-8801",
+    "name": "Amazon",
+    "email": "contact@amazon.com",
+    "phone": "+1-206-266-1000",
+    "company": "Amazon",
+    "mainBranch": "North Regional Hub",
+    "joinDate": "2025-01-15",
+    "avatarUrl": "https://logo.clearbit.com/amazon.com",
+    "address": {
+      "city": "Seattle",
+      "provinceState": "WA",
+      "postalCode": "98109",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "CUST-8802",
+    "name": "Walmart",
+    "email": "info@walmart.com",
+    "phone": "+1-479-273-4000",
+    "company": "Walmart",
+    "mainBranch": "South Distribution Center",
+    "joinDate": "2025-02-10",
+    "avatarUrl": "https://logo.clearbit.com/walmart.com",
+    "address": {
+      "city": "Bentonville",
+      "provinceState": "AR",
+      "postalCode": "72716",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "CUST-8803",
+    "name": "Shopify",
+    "email": "support@shopify.com",
+    "phone": "+1-613-241-2828",
+    "company": "Shopify",
+    "mainBranch": "Toronto Commerce Hub",
+    "joinDate": "2025-03-05",
+    "avatarUrl": "https://logo.clearbit.com/shopify.com",
+    "address": {
+      "city": "Ottawa",
+      "provinceState": "ON",
+      "postalCode": "K2P1L4",
+      "country": "Canada"
+    }
+  },
+  {
+    "id": "CUST-8804",
+    "name": "Tesla",
+    "email": "service@tesla.com",
+    "phone": "+1-888-518-3752",
+    "company": "Tesla",
+    "mainBranch": "West Coast Hub",
+    "joinDate": "2025-01-28",
+    "avatarUrl": "https://logo.clearbit.com/tesla.com",
+    "address": {
+      "city": "Austin",
+      "provinceState": "TX",
+      "postalCode": "73301",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "CUST-8805",
+    "name": "Apple",
+    "email": "contact@apple.com",
+    "phone": "+1-408-996-1010",
+    "company": "Apple",
+    "mainBranch": "Silicon Valley Hub",
+    "joinDate": "2025-02-18",
+    "avatarUrl": "https://logo.clearbit.com/apple.com",
+    "address": {
+      "city": "Cupertino",
+      "provinceState": "CA",
+      "postalCode": "95014",
+      "country": "USA"
+    }
+  },
+
+  {
+    "id": "CUST-8806",
+    "name": "Nike",
+    "email": "support@nike.com",
+    "phone": "+1-503-671-6453",
+    "company": "Nike",
+    "mainBranch": "West Logistics Center",
+    "joinDate": "2025-03-12",
+    "avatarUrl": "https://logo.clearbit.com/nike.com",
+    "address": {
+      "city": "Beaverton",
+      "provinceState": "OR",
+      "postalCode": "97005",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "CUST-8807",
+    "name": "Adidas",
+    "email": "contact@adidas.com",
+    "phone": "+49-9132-840",
+    "company": "Adidas",
+    "mainBranch": "EU Distribution Hub",
+    "joinDate": "2025-01-30",
+    "avatarUrl": "https://logo.clearbit.com/adidas.com",
+    "address": {
+      "city": "Herzogenaurach",
+      "provinceState": "Bavaria",
+      "postalCode": "91074",
+      "country": "Germany"
+    }
+  },
+  {
+    "id": "CUST-8808",
+    "name": "Samsung",
+    "email": "support@samsung.com",
+    "phone": "+82-2-2255-0114",
+    "company": "Samsung",
+    "mainBranch": "Asia Tech Hub",
+    "joinDate": "2025-02-25",
+    "avatarUrl": "https://logo.clearbit.com/samsung.com",
+    "address": {
+      "city": "Seoul",
+      "provinceState": "Seoul",
+      "postalCode": "04524",
+      "country": "South Korea"
+    }
+  },
+  {
+    "id": "CUST-8809",
+    "name": "Costco",
+    "email": "info@costco.com",
+    "phone": "+1-425-313-8100",
+    "company": "Costco",
+    "mainBranch": "Northwest Supply Hub",
+    "joinDate": "2025-03-08",
+    "avatarUrl": "https://logo.clearbit.com/costco.com",
+    "address": {
+      "city": "Issaquah",
+      "provinceState": "WA",
+      "postalCode": "98027",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "CUST-8810",
+    "name": "Best Buy",
+    "email": "support@bestbuy.com",
+    "phone": "+1-612-291-1000",
+    "company": "Best Buy",
+    "mainBranch": "Electronics Hub",
+    "joinDate": "2025-02-14",
+    "avatarUrl": "https://logo.clearbit.com/bestbuy.com",
+    "address": {
+      "city": "Richfield",
+      "provinceState": "MN",
+      "postalCode": "55423",
+      "country": "USA"
+    }
+  },
+
+  {
+    "id": "CUST-8811",
+    "name": "Sony",
+    "email": "support@sony.com",
+    "phone": "+81-3-6748-2111",
+    "company": "Sony",
+    "mainBranch": "Japan Tech Hub",
+    "joinDate": "2025-01-20",
+    "avatarUrl": "https://logo.clearbit.com/sony.com",
+    "address": {
+      "city": "Tokyo",
+      "provinceState": "Tokyo",
+      "postalCode": "108-0075",
+      "country": "Japan"
+    }
+  },
+  {
+    "id": "CUST-8812",
+    "name": "Microsoft",
+    "email": "contact@microsoft.com",
+    "phone": "+1-425-882-8080",
+    "company": "Microsoft",
+    "mainBranch": "Cloud Operations Hub",
+    "joinDate": "2025-03-01",
+    "avatarUrl": "https://logo.clearbit.com/microsoft.com",
+    "address": {
+      "city": "Redmond",
+      "provinceState": "WA",
+      "postalCode": "98052",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "CUST-8813",
+    "name": "Google",
+    "email": "support@google.com",
+    "phone": "+1-650-253-0000",
+    "company": "Google",
+    "mainBranch": "Search Infrastructure Hub",
+    "joinDate": "2025-02-05",
+    "avatarUrl": "https://logo.clearbit.com/google.com",
+    "address": {
+      "city": "Mountain View",
+      "provinceState": "CA",
+      "postalCode": "94043",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "CUST-8814",
+    "name": "Meta",
+    "email": "info@meta.com",
+    "phone": "+1-650-543-4800",
+    "company": "Meta",
+    "mainBranch": "Social Platform Hub",
+    "joinDate": "2025-01-25",
+    "avatarUrl": "https://logo.clearbit.com/meta.com",
+    "address": {
+      "city": "Menlo Park",
+      "provinceState": "CA",
+      "postalCode": "94025",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "CUST-8815",
+    "name": "Intel",
+    "email": "contact@intel.com",
+    "phone": "+1-408-765-8080",
+    "company": "Intel",
+    "mainBranch": "Chip Manufacturing Hub",
+    "joinDate": "2025-03-15",
+    "avatarUrl": "https://logo.clearbit.com/intel.com",
+    "address": {
+      "city": "Santa Clara",
+      "provinceState": "CA",
+      "postalCode": "95054",
+      "country": "USA"
+    }
+  },
+
+  {
+    "id": "CUST-8816",
+    "name": "Dell",
+    "email": "support@dell.com",
+    "phone": "+1-800-999-3355",
+    "company": "Dell",
+    "mainBranch": "Hardware Logistics Hub",
+    "joinDate": "2025-02-22",
+    "avatarUrl": "https://logo.clearbit.com/dell.com",
+    "address": {
+      "city": "Round Rock",
+      "provinceState": "TX",
+      "postalCode": "78664",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "CUST-8817",
+    "name": "HP",
+    "email": "info@hp.com",
+    "phone": "+1-650-857-1501",
+    "company": "HP",
+    "mainBranch": "Printing Solutions Hub",
+    "joinDate": "2025-03-10",
+    "avatarUrl": "https://logo.clearbit.com/hp.com",
+    "address": {
+      "city": "Palo Alto",
+      "provinceState": "CA",
+      "postalCode": "94304",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "CUST-8818",
+    "name": "Lenovo",
+    "email": "support@lenovo.com",
+    "phone": "+86-10-5886-8888",
+    "company": "Lenovo",
+    "mainBranch": "Asia Manufacturing Hub",
+    "joinDate": "2025-02-28",
+    "avatarUrl": "https://logo.clearbit.com/lenovo.com",
+    "address": {
+      "city": "Beijing",
+      "provinceState": "Beijing",
+      "postalCode": "100085",
+      "country": "China"
+    }
+  },
+  {
+    "id": "CUST-8819",
+    "name": "Uber",
+    "email": "support@uber.com",
+    "phone": "+1-415-986-2104",
+    "company": "Uber",
+    "mainBranch": "Mobility Hub",
+    "joinDate": "2025-01-18",
+    "avatarUrl": "https://logo.clearbit.com/uber.com",
+    "address": {
+      "city": "San Francisco",
+      "provinceState": "CA",
+      "postalCode": "94103",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "CUST-8820",
+    "name": "Airbnb",
+    "email": "contact@airbnb.com",
+    "phone": "+1-415-800-5959",
+    "company": "Airbnb",
+    "mainBranch": "Hospitality Hub",
+    "joinDate": "2025-02-12",
+    "avatarUrl": "https://logo.clearbit.com/airbnb.com",
+    "address": {
+      "city": "San Francisco",
+      "provinceState": "CA",
+      "postalCode": "94103",
+      "country": "USA"
+    }
+  },
+
+  {
+    "id": "CUST-8821",
+    "name": "Stripe",
+    "email": "support@stripe.com",
+    "phone": "+1-888-926-2289",
+    "company": "Stripe",
+    "mainBranch": "Payments Hub",
+    "joinDate": "2025-03-03",
+    "avatarUrl": "https://logo.clearbit.com/stripe.com",
+    "address": {
+      "city": "Dublin",
+      "provinceState": "Leinster",
+      "postalCode": "D02",
+      "country": "Ireland"
+    }
+  },
+  {
+    "id": "CUST-8822",
+    "name": "Netflix",
+    "email": "info@netflix.com",
+    "phone": "+1-408-540-3700",
+    "company": "Netflix",
+    "mainBranch": "Streaming Hub",
+    "joinDate": "2025-01-27",
+    "avatarUrl": "https://logo.clearbit.com/netflix.com",
+    "address": {
+      "city": "Los Gatos",
+      "provinceState": "CA",
+      "postalCode": "95032",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "CUST-8823",
+    "name": "Spotify",
+    "email": "support@spotify.com",
+    "phone": "+46-8-562-64000",
+    "company": "Spotify",
+    "mainBranch": "Media Hub",
+    "joinDate": "2025-02-20",
+    "avatarUrl": "https://logo.clearbit.com/spotify.com",
+    "address": {
+      "city": "Stockholm",
+      "provinceState": "Stockholm",
+      "postalCode": "11157",
+      "country": "Sweden"
+    }
+  },
+  {
+    "id": "CUST-8824",
+    "name": "Slack",
+    "email": "contact@slack.com",
+    "phone": "+1-415-630-7943",
+    "company": "Slack",
+    "mainBranch": "Collaboration Hub",
+    "joinDate": "2025-03-07",
+    "avatarUrl": "https://logo.clearbit.com/slack.com",
+    "address": {
+      "city": "San Francisco",
+      "provinceState": "CA",
+      "postalCode": "94105",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "CUST-8825",
+    "name": "Zoom",
+    "email": "support@zoom.us",
+    "phone": "+1-888-799-9666",
+    "company": "Zoom",
+    "mainBranch": "Video Communications Hub",
+    "joinDate": "2025-02-08",
+    "avatarUrl": "https://logo.clearbit.com/zoom.us",
+    "address": {
+      "city": "San Jose",
+      "provinceState": "CA",
+      "postalCode": "95113",
+      "country": "USA"
+    }
+  }
+]

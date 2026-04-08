@@ -1,0 +1,166 @@
+<div class="flex flex-col gap-6 p-4 h-full overflow-hidden">
+  
+  <div class="flex justify-between items-center border-b-2 border-wham-dark/10 pb-4">
+    <div class="flex items-center gap-4">
+      <button [routerLink]="['/dashboard/home']" class="p-2 border-2 border-wham-dark hover:bg-wham-dark hover:text-white transition-colors">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <h1 class="text-2xl font-black uppercase tracking-widest text-wham-dark leading-none">Customer Overview</h1>
+    </div>
+
+    <div class="relative w-96">
+      <input 
+        type="text" 
+        [(ngModel)]="searchQuery"
+        placeholder="SEARCH DIRECTORY (NAME / ID)..." 
+        class="w-full bg-wham-tan/10 border-2 border-wham-dark py-2 px-4 text-[11px] font-black uppercase tracking-widest focus:outline-none focus:bg-white transition-all">
+    </div>
+  </div>
+
+  <div class="grid grid-cols-12 gap-6 flex-1 overflow-hidden">
+    
+    <div class="col-span-12 lg:col-span-3 flex flex-col gap-4 overflow-hidden border-r border-wham-dark/5 pr-2">
+      <div class="flex justify-between items-center px-1">
+        <span class="text-[9px] font-black uppercase text-wham-dark/40 tracking-widest">Directory // First 15</span>
+        <span class="text-[9px] font-black uppercase text-wham-primary">{{ filteredList().length }} Matches</span>
+      </div>
+      
+      <div class="flex-1 overflow-y-auto custom-scrollbar space-y-2">
+        @for (c of filteredList(); track c.id) {
+          <div (click)="selectCustomer(c.id)" 
+               [class.bg-wham-dark]="selectedCustomerId() === c.id"
+               [class.text-white]="selectedCustomerId() === c.id"
+               class="p-4 border border-wham-dark/10 cursor-pointer hover:border-wham-primary transition-all group">
+            <p class="text-[8px] font-black uppercase opacity-40 group-hover:text-wham-primary" [class.text-white]="selectedCustomerId() === c.id">{{ c.id }}</p>
+            <p class="text-xs font-black uppercase tracking-wide">{{ c.name }}</p>
+            <p class="text-[10px] font-bold opacity-60">{{ c.company }}</p>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="col-span-12 lg:col-span-9 overflow-hidden flex flex-col">
+      @if (activeProfile(); as profile) {
+        <div class="flex-1 overflow-y-auto custom-scrollbar animate-in slide-in-from-right duration-300">
+          
+          <div class="grid grid-cols-12 gap-6 mb-6">
+            <div class="col-span-12 lg:col-span-8 zentory-widget border-t-4 border-wham-dark">
+              <div class="flex gap-6 items-center">
+                <div class="w-24 h-24 bg-wham-dark flex items-center justify-center text-white text-3xl font-black">
+                  {{ profile.name.charAt(0) }}
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between items-start">
+                    <h2 class="text-3xl font-black uppercase tracking-tighter text-wham-dark">{{ profile.name }}</h2>
+                    <span class="px-3 py-1 bg-wham-primary text-white text-[10px] font-black uppercase">{{ profile.segment }}</span>
+                  </div>
+                  <p class="text-sm font-bold opacity-60 uppercase">{{ profile.company }} // {{ profile.mainBranch }}</p>
+                  <div class="flex gap-4 mt-4 text-[10px] font-black uppercase">
+                    <span class="flex items-center gap-1"><mat-icon class="scale-50">mail</mat-icon> {{ profile.email }}</span>
+                    <span class="flex items-center gap-1"><mat-icon class="scale-50">phone</mat-icon> {{ profile.phone }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-span-12 lg:col-span-4 zentory-widget bg-wham-dark text-white flex flex-col justify-center items-center text-center">
+              <p class="text-[10px] font-black uppercase tracking-[0.2em] mb-2 opacity-40">Loyalty Score</p>
+              <h3 class="text-5xl font-black text-wham-primary">{{ profile.metrics?.loyaltyScore || 'N/A' }}</h3>
+              <p class="text-[9px] font-bold uppercase mt-2">Value vs Return Ratio</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-6 mb-6">
+            <div class="zentory-widget">
+              <p class="text-[9px] font-black uppercase text-wham-dark/40 mb-4">Value Metrics</p>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[8px] font-bold opacity-40 uppercase">Lifetime Value</p>
+                  <p class="text-xl font-black uppercase">${{ profile.metrics?.lifetimeValue | number }}</p>
+                </div>
+                <div>
+                  <p class="text-[8px] font-bold opacity-40 uppercase">Avg Order</p>
+                  <p class="text-xl font-black uppercase">${{ profile.metrics?.averageOrderValue | number }}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="zentory-widget border-l-4 border-wham-primary">
+              <p class="text-[9px] font-black uppercase text-wham-primary mb-4">Behavior Pattern</p>
+              <div class="space-y-2">
+                <p class="text-[11px] font-bold leading-relaxed">Purchases every <span class="font-black text-wham-primary">{{ profile.behavior?.purchaseFrequencyDays }} DAYS</span>.</p>
+                <p class="text-[11px] font-bold uppercase" [class.text-wham-warn]="profile.behavior?.atRisk">
+                  Status: {{ profile.behavior?.atRisk ? 'AT-RISK' : 'STABLE' }}
+                </p>
+              </div>
+            </div>
+
+            <div class="zentory-widget">
+              <p class="text-[9px] font-black uppercase text-wham-dark/40 mb-4">Shipping Address</p>
+              <div class="text-[10px] font-bold uppercase leading-relaxed">
+                <p>{{ profile.address?.city }}, {{ profile.address?.provinceState }}</p>
+                <p>{{ profile.address?.postalCode }}</p>
+                <p>{{ profile.address?.country }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="zentory-widget flex-1 flex flex-col overflow-hidden">
+            <div class="flex justify-between items-center border-b border-wham-dark/10 pb-2 mb-4">
+              <p class="text-[10px] font-black uppercase tracking-widest text-wham-dark">Internal Logistics Notes</p>
+              @if (!isAddingNote()) {
+                <button (click)="startAddNote()" class="text-[9px] font-black uppercase text-wham-primary hover:text-wham-dark transition-colors">
+                  + Add Internal Note
+                </button>
+              }
+            </div>
+
+            @if (isAddingNote() || editingNoteIndex() !== null) {
+              <div class="mb-6 animate-in fade-in slide-in-from-top duration-200">
+                <textarea 
+                  [(ngModel)]="noteInput"
+                  placeholder="TYPE NOTE HERE..."
+                  class="w-full h-24 bg-wham-tan/5 border-2 border-wham-dark p-3 text-xs font-medium focus:outline-none focus:border-wham-primary transition-all uppercase">
+                </textarea>
+                <div class="flex gap-2 mt-2">
+                  <button (click)="saveNote()" class="bg-wham-dark text-white px-4 py-1 text-[9px] font-black uppercase tracking-widest">Save Note</button>
+                  <button (click)="cancelNote()" class="border-2 border-wham-dark px-4 py-1 text-[9px] font-black uppercase tracking-widest">Cancel</button>
+                </div>
+              </div>
+            }
+
+            <div class="space-y-4 overflow-y-auto custom-scrollbar pr-2">
+              @for (note of profile.internalNotes; track $index) {
+                <div class="bg-wham-tan/5 p-4 border-l-4 border-wham-dark/20 group relative">
+                  <div class="flex justify-between text-[8px] font-black uppercase opacity-40 mb-2">
+                    <span>{{ note.author }} // {{ note.date | date:'short' }}</span>
+                    <div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <button (click)="startEditNote($index, note.text)" class="text-wham-dark hover:text-wham-primary">
+                        <mat-icon class="scale-75">edit</mat-icon>
+                      </button>
+                      <button (click)="deleteNote($index)" class="text-wham-dark hover:text-wham-warn">
+                        <mat-icon class="scale-75">delete</mat-icon>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="text-xs font-medium leading-relaxed">{{ note.text }}</p>
+                </div>
+              } @empty {
+                <div class="py-10 text-center border-2 border-dashed border-wham-dark/5">
+                  <p class="text-[10px] font-black uppercase opacity-20 tracking-widest">No logistics notes available</p>
+                </div>
+              }
+            </div>
+          </div>
+
+        </div>
+      } @else {
+        <div class="flex-1 flex flex-col items-center justify-center border-2 border-dashed border-wham-dark/5">
+          <mat-icon class="scale-[3] opacity-10 mb-6">badge</mat-icon>
+          <p class="text-[11px] font-black uppercase tracking-[0.3em] opacity-30">Select customer to view details</p>
+        </div>
+      }
+    </div>
+
+  </div>
+</div>

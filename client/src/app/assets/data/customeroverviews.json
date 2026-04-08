@@ -1,0 +1,443 @@
+[
+  {
+    "customerId": "CUST-8801",
+    "segment": "VIP",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 150000,
+      "averageOrderValue": 4500,
+      "totalOrders": 35,
+      "totalReturns": 2,
+      "loyaltyScore": 92
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 20,
+      "lastOrderDate": "2026-03-28",
+      "preferredCategory": "Electronics",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-20", "text": "High value client, ensure priority support." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9901", "date": "2026-03-28", "summary": "Placed large bulk electronics order." }
+    ]
+  },
+  {
+    "customerId": "CUST-8802",
+    "segment": "Repeat",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 62000,
+      "averageOrderValue": 1250,
+      "totalOrders": 50,
+      "totalReturns": 5,
+      "loyaltyScore": 78
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 25,
+      "lastOrderDate": "2026-03-26",
+      "preferredCategory": "Groceries",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-10", "text": "Frequent purchaser, check delivery satisfaction." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9902", "date": "2026-03-26", "summary": "Weekly grocery order." }
+    ]
+  },
+  {
+    "customerId": "CUST-8803",
+    "segment": "New",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 8000,
+      "averageOrderValue": 2000,
+      "totalOrders": 4,
+      "totalReturns": 0,
+      "loyaltyScore": 65
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 30,
+      "lastOrderDate": "2026-03-25",
+      "preferredCategory": "Software",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-15", "text": "New customer, monitor initial satisfaction." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9903", "date": "2026-03-25", "summary": "First software subscription purchase." }
+    ]
+  },
+  {
+    "customerId": "CUST-8804",
+    "segment": "At-Risk",
+    "status": "Flagged",
+    "metrics": {
+      "lifetimeValue": 40000,
+      "averageOrderValue": 4000,
+      "totalOrders": 10,
+      "totalReturns": 3,
+      "loyaltyScore": 45
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 60,
+      "lastOrderDate": "2025-12-20",
+      "preferredCategory": "Automotive",
+      "atRisk": true
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-01-05", "text": "Customer hasn't ordered in over 2 months, send promotion." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9904", "date": "2025-12-20", "summary": "Automotive accessory order." }
+    ]
+  },
+  {
+    "customerId": "CUST-8805",
+    "segment": "VIP",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 98000,
+      "averageOrderValue": 7000,
+      "totalOrders": 14,
+      "totalReturns": 1,
+      "loyaltyScore": 88
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 15,
+      "lastOrderDate": "2026-03-27",
+      "preferredCategory": "Electronics",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-22", "text": "High-value electronics orders, maintain priority." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9905", "date": "2026-03-27", "summary": "Smartphone bulk order." }
+    ]
+  },
+  {
+    "customerId": "CUST-8806",
+    "segment": "Repeat",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 54000,
+      "averageOrderValue": 1800,
+      "totalOrders": 30,
+      "totalReturns": 2,
+      "loyaltyScore": 72
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 20,
+      "lastOrderDate": "2026-03-23",
+      "preferredCategory": "Footwear",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-12", "text": "Repeat footwear orders, occasional return issues." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9906", "date": "2026-03-23", "summary": "Running shoes order." }
+    ]
+  },
+  {
+    "customerId": "CUST-8807",
+    "segment": "Inactive",
+    "status": "Archived",
+    "metrics": {
+      "lifetimeValue": 22000,
+      "averageOrderValue": 1100,
+      "totalOrders": 20,
+      "totalReturns": 4,
+      "loyaltyScore": 40
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 90,
+      "lastOrderDate": "2025-10-10",
+      "preferredCategory": "Sportswear",
+      "atRisk": true
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2025-11-01", "text": "Customer inactive, archived for now." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9907", "date": "2025-10-10", "summary": "Sportswear seasonal order." }
+    ]
+  },
+  {
+    "customerId": "CUST-8808",
+    "segment": "Repeat",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 68000,
+      "averageOrderValue": 3400,
+      "totalOrders": 20,
+      "totalReturns": 1,
+      "loyaltyScore": 80
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 30,
+      "lastOrderDate": "2026-03-20",
+      "preferredCategory": "Mobile Devices",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-18", "text": "Monitor mobile device orders, few returns." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9908", "date": "2026-03-20", "summary": "Tablet purchase." }
+    ]
+  },
+  {
+    "customerId": "CUST-8809",
+    "segment": "VIP",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 123000,
+      "averageOrderValue": 6150,
+      "totalOrders": 20,
+      "totalReturns": 0,
+      "loyaltyScore": 95
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 10,
+      "lastOrderDate": "2026-03-28",
+      "preferredCategory": "Bulk Groceries",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-25", "text": "Large grocery orders, zero returns." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9909", "date": "2026-03-28", "summary": "Weekly bulk grocery purchase." }
+    ]
+  },
+
+  {
+    "customerId": "CUST-8810",
+    "segment": "Repeat",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 48000,
+      "averageOrderValue": 1600,
+      "totalOrders": 30,
+      "totalReturns": 2,
+      "loyaltyScore": 75
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 28,
+      "lastOrderDate": "2026-03-21",
+      "preferredCategory": "Electronics",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-19", "text": "Electronics orders frequent, monitor returns." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9910", "date": "2026-03-21", "summary": "Headphone purchase." }
+    ]
+  },
+
+  {
+    "customerId": "CUST-8811",
+    "segment": "New",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 7000,
+      "averageOrderValue": 3500,
+      "totalOrders": 2,
+      "totalReturns": 0,
+      "loyaltyScore": 60
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 30,
+      "lastOrderDate": "2026-03-22",
+      "preferredCategory": "Entertainment",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-20", "text": "New Japanese customer, track satisfaction." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9911", "date": "2026-03-22", "summary": "Game console purchase." }
+    ]
+  },
+
+  {
+    "customerId": "CUST-8812",
+    "segment": "VIP",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 110000,
+      "averageOrderValue": 5500,
+      "totalOrders": 20,
+      "totalReturns": 1,
+      "loyaltyScore": 90
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 15,
+      "lastOrderDate": "2026-03-27",
+      "preferredCategory": "Software",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-22", "text": "High-value software orders, prioritize support." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9912", "date": "2026-03-27", "summary": "Enterprise software purchase." }
+    ]
+  },
+
+  {
+    "customerId": "CUST-8813",
+    "segment": "VIP",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 125000,
+      "averageOrderValue": 6250,
+      "totalOrders": 20,
+      "totalReturns": 0,
+      "loyaltyScore": 97
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 12,
+      "lastOrderDate": "2026-03-28",
+      "preferredCategory": "Cloud Services",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-25", "text": "Frequent cloud infrastructure orders, zero returns." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9913", "date": "2026-03-28", "summary": "Cloud storage upgrade." }
+    ]
+  },
+
+  {
+    "customerId": "CUST-8814",
+    "segment": "Repeat",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 88000,
+      "averageOrderValue": 4400,
+      "totalOrders": 20,
+      "totalReturns": 2,
+      "loyaltyScore": 85
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 18,
+      "lastOrderDate": "2026-03-26",
+      "preferredCategory": "Social Media Ads",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-24", "text": "Monitor ad spending, repeat orders consistent." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9914", "date": "2026-03-26", "summary": "Paid social media campaign." }
+    ]
+  },
+
+  {
+    "customerId": "CUST-8815",
+    "segment": "Repeat",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 55000,
+      "averageOrderValue": 2750,
+      "totalOrders": 20,
+      "totalReturns": 1,
+      "loyaltyScore": 78
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 22,
+      "lastOrderDate": "2026-03-23",
+      "preferredCategory": "Semiconductors",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-21", "text": "Semiconductor orders steady, check delivery." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9915", "date": "2026-03-23", "summary": "CPU bulk order." }
+    ]
+  },
+
+  {
+    "customerId": "CUST-8816",
+    "segment": "Repeat",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 64000,
+      "averageOrderValue": 3200,
+      "totalOrders": 20,
+      "totalReturns": 1,
+      "loyaltyScore": 80
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 20,
+      "lastOrderDate": "2026-03-24",
+      "preferredCategory": "Laptops",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-22", "text": "Monitor laptop orders, few returns." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9916", "date": "2026-03-24", "summary": "Business laptop purchase." }
+    ]
+  },
+
+  {
+    "customerId": "CUST-8817",
+    "segment": "Inactive",
+    "status": "Archived",
+    "metrics": {
+      "lifetimeValue": 32000,
+      "averageOrderValue": 1600,
+      "totalOrders": 20,
+      "totalReturns": 4,
+      "loyaltyScore": 50
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 60,
+      "lastOrderDate": "2025-11-10",
+      "preferredCategory": "Printers",
+      "atRisk": true
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2025-11-15", "text": "Inactive printer orders, archived." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9917", "date": "2025-11-10", "summary": "Printer bulk order." }
+    ]
+  },
+
+  {
+    "customerId": "CUST-8818",
+    "segment": "Repeat",
+    "status": "Active",
+    "metrics": {
+      "lifetimeValue": 72000,
+      "averageOrderValue": 3600,
+      "totalOrders": 20,
+      "totalReturns": 1,
+      "loyaltyScore": 82
+    },
+    "behavior": {
+      "purchaseFrequencyDays": 25,
+      "lastOrderDate": "2026-03-22",
+      "preferredCategory": "Computers",
+      "atRisk": false
+    },
+    "internalNotes": [
+      { "author": "Admin", "date": "2026-03-20", "text": "Regular computer orders, few returns." }
+    ],
+    "recentActivity": [
+      { "type": "Order", "id": "ORD-9918", "date": "2026-03-22", "summary": "Desktop PC purchase." }
+    ]
+  }
+]
