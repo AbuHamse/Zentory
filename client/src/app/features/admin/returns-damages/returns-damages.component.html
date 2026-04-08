@@ -1,0 +1,147 @@
+<div class="flex flex-col gap-6 p-4 h-full overflow-hidden">
+  
+  <div class="flex justify-between items-center border-b-2 border-wham-dark/10 pb-4">
+    <div class="flex items-center gap-4">
+      <button [routerLink]="['/dashboard/home']" class="p-2 border-2 border-wham-dark hover:bg-wham-dark hover:text-white transition-colors">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <h1 class="text-2xl font-black uppercase tracking-widest text-wham-dark leading-none">Returns & Quality Control</h1>
+    </div>
+    
+    <div class="flex items-center gap-4 bg-wham-warn/10 px-4 py-2 border-l-4 border-wham-warn">
+      <div>
+        <p class="text-[8px] font-black text-wham-warn uppercase">Loss Analytics Engine</p>
+        <p class="text-xs font-bold text-wham-dark">Est. Monthly Loss: <span class="text-wham-warn">${{ totalLoss() | number }}</span></p>
+      </div>
+      <mat-icon class="text-wham-warn">analytics</mat-icon>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-12 gap-6 flex-1 overflow-hidden">
+    
+    <div class="col-span-12 lg:col-span-3 flex flex-col gap-4 overflow-hidden">
+      <div class="zentory-widget flex-1 flex flex-col p-0 overflow-hidden bg-wham-tan/5">
+        <div class="p-4 border-b border-wham-dark/10 bg-wham-dark text-white">
+          <p class="text-[10px] font-black uppercase tracking-widest">Incoming Queue</p>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto custom-scrollbar">
+          @for (r of filteredReturns(); track r.id) {
+            <div (click)="selectReturn(r)" 
+                 class="p-4 border-b border-wham-dark/5 cursor-pointer hover:bg-wham-primary/5 transition-all"
+                 [class.bg-wham-primary/10]="selectedReturn()?.id === r.id"
+                 [class.border-l-4]="selectedReturn()?.id === r.id"
+                 [class.border-wham-primary]="selectedReturn()?.id === r.id">
+              <div class="flex justify-between mb-1">
+                <span class="text-[10px] font-black text-wham-primary">{{ r.id }}</span>
+                <span class="text-[8px] font-bold opacity-50">{{ r.dateReceived | date:'shortDate' }}</span>
+              </div>
+              <p class="text-[11px] font-black uppercase truncate">{{ r.customer }}</p>
+              <p class="text-[9px] font-medium opacity-60">{{ r.item }}</p>
+              <div class="mt-2">
+                <span class="text-[8px] font-black px-1.5 py-0.5 bg-wham-dark/10 text-wham-dark uppercase">{{ r.reason }}</span>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="col-span-12 lg:col-span-6 flex flex-col gap-4 overflow-hidden">
+      <div class="zentory-widget flex-1 bg-white border-t-4 border-wham-dark flex flex-col overflow-hidden">
+        @if (selectedReturn(); as r) {
+          <div class="flex-1 overflow-y-auto pr-2 custom-scrollbar space-y-8">
+            
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-[9px] font-bold text-wham-dark/40 uppercase">Original Order: {{ r.originalOrderId }}</p>
+                <h2 class="text-2xl font-black uppercase text-wham-dark">{{ r.item }}</h2>
+                <p class="text-sm font-bold text-wham-primary">QTY: {{ r.qty }} UNITS</p>
+              </div>
+              <div class="text-right">
+                <p class="text-[9px] font-bold text-wham-dark/40 uppercase">Report Status</p>
+                <p class="text-xs font-black uppercase px-2 py-1 bg-wham-primary text-white inline-block">{{ r.status }}</p>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-[10px] font-black uppercase tracking-widest border-b border-wham-dark/10 pb-2 mb-4">Inspection Evidence</p>
+              <div class="grid grid-cols-3 gap-4">
+                <div class="aspect-square bg-wham-dark/5 border border-dashed border-wham-dark/20 flex items-center justify-center flex-col gap-2 group hover:bg-wham-primary/5 transition-all cursor-pointer">
+                  <mat-icon class="opacity-20 group-hover:opacity-100">add_a_photo</mat-icon>
+                  <span class="text-[8px] font-black uppercase opacity-20 group-hover:opacity-100">Upload Angle A</span>
+                </div>
+                <div class="aspect-square bg-wham-dark/5 border border-dashed border-wham-dark/20 flex items-center justify-center flex-col gap-2">
+                  <mat-icon class="opacity-20">image</mat-icon>
+                  <span class="text-[8px] font-black uppercase opacity-20">Damage_Shot_02.jpg</span>
+                </div>
+                <div class="aspect-square bg-wham-dark/5 border border-dashed border-wham-dark/20 flex items-center justify-center flex-col gap-2">
+                  <mat-icon class="opacity-20">image</mat-icon>
+                  <span class="text-[8px] font-black uppercase opacity-20">Label_Check.jpg</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-wham-tan/10 p-6 border-2 border-wham-dark/10">
+              <p class="text-[10px] font-black uppercase tracking-widest mb-4">Final Disposition Action</p>
+              <div class="grid grid-cols-3 gap-4">
+                <button class="flex flex-col items-center gap-2 p-4 border-2 border-wham-dark hover:bg-wham-dark hover:text-white transition-all">
+                  <mat-icon>inventory_2</mat-icon>
+                  <span class="text-[9px] font-black uppercase">Restock</span>
+                </button>
+                <button class="flex flex-col items-center gap-2 p-4 border-2 border-wham-warn text-wham-warn hover:bg-wham-warn hover:text-white transition-all">
+                  <mat-icon>delete_forever</mat-icon>
+                  <span class="text-[9px] font-black uppercase">Scrap</span>
+                </button>
+                <button class="flex flex-col items-center gap-2 p-4 border-2 border-wham-primary text-wham-primary hover:bg-wham-primary hover:text-white transition-all">
+                  <mat-icon>assignment_return</mat-icon>
+                  <span class="text-[9px] font-black uppercase">Vendor Return</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        } @else {
+          <div class="h-full flex flex-col items-center justify-center opacity-20">
+            <mat-icon class="scale-[2.5] mb-6">biotech</mat-icon>
+            <p class="text-[10px] font-black uppercase tracking-widest">Awaiting Inspection Triage</p>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="col-span-12 lg:col-span-3 flex flex-col gap-6">
+      
+      <div class="zentory-widget border-l-4 border-wham-primary">
+        <span class="text-[10px] font-black uppercase tracking-widest text-wham-primary block mb-4">Root Cause Tracker</span>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between text-[10px] font-black uppercase mb-1">
+              <span>Manufacturing Defect</span>
+              <span>62%</span>
+            </div>
+            <div class="h-1 bg-wham-dark/10">
+              <div class="h-full bg-wham-primary w-[62%]"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-[10px] font-black uppercase mb-1">
+              <span>Transit Damage</span>
+              <span>24%</span>
+            </div>
+            <div class="h-1 bg-wham-dark/10">
+              <div class="h-full bg-wham-warn w-[24%]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="zentory-widget bg-wham-dark text-white">
+        <span class="text-[10px] font-black uppercase tracking-widest text-wham-primary block mb-2">Auto-Resolution</span>
+        <p class="text-[11px] font-bold leading-relaxed opacity-80">
+          Based on historical data, items with "Buyer Remorse" from this region are automatically flagged for <span class="text-wham-primary">Instant Restock</span>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>

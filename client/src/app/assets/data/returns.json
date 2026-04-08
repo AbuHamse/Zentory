@@ -1,0 +1,553 @@
+[
+  {
+    "id": "RTN-5501",
+    "originalOrderId": "ORD-92001",
+    "customer": "Amazon",
+    "item": "Wireless Mouse",
+    "qty": 4,
+    "reason": "Defective",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-01"
+  },
+  {
+    "id": "RTN-5502",
+    "originalOrderId": "ORD-92002",
+    "customer": "Walmart",
+    "item": "Bluetooth Headphones",
+    "qty": 6,
+    "reason": "Damaged",
+    "status": "Quarantined",
+    "disposition": "Write-off",
+    "dateReceived": "2026-04-02",
+    "images": ["https://img.example.com/rtn5502-1.jpg"]
+  },
+  {
+    "id": "RTN-5503",
+    "originalOrderId": "ORD-92003",
+    "customer": "Shopify",
+    "item": "Laptop Stand",
+    "qty": 10,
+    "reason": "Buyer Remorse",
+    "status": "Restocked",
+    "disposition": "Return to Stock",
+    "dateReceived": "2026-04-01"
+  },
+  {
+    "id": "RTN-5504",
+    "originalOrderId": "ORD-92004",
+    "customer": "Tesla",
+    "item": "USB-C Hub",
+    "qty": 3,
+    "reason": "Wrong Item",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-03"
+  },
+  {
+    "id": "RTN-5505",
+    "originalOrderId": "ORD-92005",
+    "customer": "Apple",
+    "item": "Gaming Keyboard",
+    "qty": 5,
+    "reason": "Defective",
+    "status": "Scrapped",
+    "disposition": "Write-off",
+    "dateReceived": "2026-03-30",
+    "images": ["https://img.example.com/rtn5505-1.jpg"]
+  },
+
+  {
+    "id": "RTN-5506",
+    "originalOrderId": "ORD-92006",
+    "customer": "Nike",
+    "item": "Smart Watch",
+    "qty": 7,
+    "reason": "Damaged",
+    "status": "Quarantined",
+    "disposition": "Return to Vendor",
+    "dateReceived": "2026-04-02",
+    "images": ["https://img.example.com/rtn5506-1.jpg"]
+  },
+  {
+    "id": "RTN-5507",
+    "originalOrderId": "ORD-92007",
+    "customer": "Adidas",
+    "item": "Phone Case",
+    "qty": 15,
+    "reason": "Buyer Remorse",
+    "status": "Restocked",
+    "disposition": "Return to Stock",
+    "dateReceived": "2026-04-01"
+  },
+  {
+    "id": "RTN-5508",
+    "originalOrderId": "ORD-92008",
+    "customer": "Samsung",
+    "item": "Tablet",
+    "qty": 2,
+    "reason": "Defective",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-04"
+  },
+  {
+    "id": "RTN-5509",
+    "originalOrderId": "ORD-92009",
+    "customer": "Costco",
+    "item": "External Hard Drive",
+    "qty": 8,
+    "reason": "Damaged",
+    "status": "Quarantined",
+    "disposition": "Write-off",
+    "dateReceived": "2026-04-02",
+    "images": ["https://img.example.com/rtn5509-1.jpg"]
+  },
+  {
+    "id": "RTN-5510",
+    "originalOrderId": "ORD-92010",
+    "customer": "Best Buy",
+    "item": "Monitor 24-inch",
+    "qty": 3,
+    "reason": "Wrong Item",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-03"
+  },
+
+  {
+    "id": "RTN-5511",
+    "originalOrderId": "ORD-92011",
+    "customer": "Sony",
+    "item": "Desk Lamp",
+    "qty": 9,
+    "reason": "Buyer Remorse",
+    "status": "Restocked",
+    "disposition": "Return to Stock",
+    "dateReceived": "2026-04-01"
+  },
+  {
+    "id": "RTN-5512",
+    "originalOrderId": "ORD-92012",
+    "customer": "Microsoft",
+    "item": "WiFi Router",
+    "qty": 4,
+    "reason": "Defective",
+    "status": "Scrapped",
+    "disposition": "Write-off",
+    "dateReceived": "2026-04-02"
+  },
+  {
+    "id": "RTN-5513",
+    "originalOrderId": "ORD-92013",
+    "customer": "Google",
+    "item": "Mechanical Keyboard",
+    "qty": 6,
+    "reason": "Damaged",
+    "status": "Quarantined",
+    "disposition": "Return to Vendor",
+    "dateReceived": "2026-04-03",
+    "images": ["https://img.example.com/rtn5513-1.jpg"]
+  },
+  {
+    "id": "RTN-5514",
+    "originalOrderId": "ORD-92014",
+    "customer": "Meta",
+    "item": "VR Headset",
+    "qty": 2,
+    "reason": "Defective",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-04"
+  },
+  {
+    "id": "RTN-5515",
+    "originalOrderId": "ORD-92015",
+    "customer": "Intel",
+    "item": "CPU Processor",
+    "qty": 5,
+    "reason": "Wrong Item",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-03"
+  },
+
+  {
+    "id": "RTN-5516",
+    "originalOrderId": "ORD-92016",
+    "customer": "Dell",
+    "item": "Laptop Charger",
+    "qty": 7,
+    "reason": "Buyer Remorse",
+    "status": "Restocked",
+    "disposition": "Return to Stock",
+    "dateReceived": "2026-04-01"
+  },
+  {
+    "id": "RTN-5517",
+    "originalOrderId": "ORD-92017",
+    "customer": "HP",
+    "item": "Printer Ink Cartridge",
+    "qty": 12,
+    "reason": "Damaged",
+    "status": "Quarantined",
+    "disposition": "Write-off",
+    "dateReceived": "2026-04-02"
+  },
+  {
+    "id": "RTN-5518",
+    "originalOrderId": "ORD-92018",
+    "customer": "Lenovo",
+    "item": "Laptop Battery",
+    "qty": 4,
+    "reason": "Defective",
+    "status": "Scrapped",
+    "disposition": "Write-off",
+    "dateReceived": "2026-04-02"
+  },
+  {
+    "id": "RTN-5519",
+    "originalOrderId": "ORD-92019",
+    "customer": "Uber",
+    "item": "Car Mount Holder",
+    "qty": 10,
+    "reason": "Buyer Remorse",
+    "status": "Restocked",
+    "disposition": "Return to Stock",
+    "dateReceived": "2026-04-01"
+  },
+  {
+    "id": "RTN-5520",
+    "originalOrderId": "ORD-92020",
+    "customer": "Airbnb",
+    "item": "Smart Lock",
+    "qty": 3,
+    "reason": "Defective",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-04"
+  },
+  {
+    "id": "RTN-5521",
+    "originalOrderId": "ORD-92021",
+    "customer": "Stripe",
+    "item": "Barcode Scanner",
+    "qty": 6,
+    "reason": "Damaged",
+    "status": "Quarantined",
+    "disposition": "Return to Vendor",
+    "dateReceived": "2026-04-03",
+    "images": ["https://img.example.com/rtn5521-1.jpg"]
+  },
+  {
+    "id": "RTN-5522",
+    "originalOrderId": "ORD-92022",
+    "customer": "Netflix",
+    "item": "Streaming Device",
+    "qty": 4,
+    "reason": "Defective",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-05"
+  },
+  {
+    "id": "RTN-5523",
+    "originalOrderId": "ORD-92023",
+    "customer": "Spotify",
+    "item": "Wireless Speaker",
+    "qty": 6,
+    "reason": "Damaged",
+    "status": "Quarantined",
+    "disposition": "Write-off",
+    "dateReceived": "2026-04-04",
+    "images": ["https://img.example.com/rtn5523-1.jpg"]
+  },
+  {
+    "id": "RTN-5524",
+    "originalOrderId": "ORD-92024",
+    "customer": "Slack",
+    "item": "Conference Camera",
+    "qty": 2,
+    "reason": "Wrong Item",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-05"
+  },
+  {
+    "id": "RTN-5525",
+    "originalOrderId": "ORD-92025",
+    "customer": "Zoom",
+    "item": "USB Microphone",
+    "qty": 5,
+    "reason": "Buyer Remorse",
+    "status": "Restocked",
+    "disposition": "Return to Stock",
+    "dateReceived": "2026-04-03"
+  },
+  {
+    "id": "RTN-5526",
+    "originalOrderId": "ORD-92026",
+    "customer": "Oracle",
+    "item": "Server Rack Kit",
+    "qty": 3,
+    "reason": "Damaged",
+    "status": "Quarantined",
+    "disposition": "Return to Vendor",
+    "dateReceived": "2026-04-04",
+    "images": ["https://img.example.com/rtn5526-1.jpg"]
+  },
+
+  {
+    "id": "RTN-5527",
+    "originalOrderId": "ORD-92027",
+    "customer": "Cisco",
+    "item": "Network Switch",
+    "qty": 4,
+    "reason": "Defective",
+    "status": "Scrapped",
+    "disposition": "Write-off",
+    "dateReceived": "2026-04-03"
+  },
+  {
+    "id": "RTN-5528",
+    "originalOrderId": "ORD-92028",
+    "customer": "IBM",
+    "item": "Enterprise Router",
+    "qty": 2,
+    "reason": "Wrong Item",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-05"
+  },
+  {
+    "id": "RTN-5529",
+    "originalOrderId": "ORD-92029",
+    "customer": "Salesforce",
+    "item": "CRM Terminal",
+    "qty": 6,
+    "reason": "Buyer Remorse",
+    "status": "Restocked",
+    "disposition": "Return to Stock",
+    "dateReceived": "2026-04-02"
+  },
+  {
+    "id": "RTN-5530",
+    "originalOrderId": "ORD-92030",
+    "customer": "PayPal",
+    "item": "Payment Terminal",
+    "qty": 5,
+    "reason": "Defective",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-05"
+  },
+
+  {
+    "id": "RTN-5531",
+    "originalOrderId": "ORD-92031",
+    "customer": "eBay",
+    "item": "Packaging Scanner",
+    "qty": 7,
+    "reason": "Damaged",
+    "status": "Quarantined",
+    "disposition": "Write-off",
+    "dateReceived": "2026-04-04"
+  },
+  {
+    "id": "RTN-5532",
+    "originalOrderId": "ORD-92032",
+    "customer": "Etsy",
+    "item": "Label Printer",
+    "qty": 3,
+    "reason": "Defective",
+    "status": "Scrapped",
+    "disposition": "Write-off",
+    "dateReceived": "2026-04-03"
+  },
+  {
+    "id": "RTN-5533",
+    "originalOrderId": "ORD-92033",
+    "customer": "Robinhood",
+    "item": "Security Key Device",
+    "qty": 4,
+    "reason": "Wrong Item",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-05"
+  },
+  {
+    "id": "RTN-5534",
+    "originalOrderId": "ORD-92034",
+    "customer": "Coinbase",
+    "item": "Cold Wallet Device",
+    "qty": 2,
+    "reason": "Defective",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-05"
+  },
+  {
+    "id": "RTN-5535",
+    "originalOrderId": "ORD-92035",
+    "customer": "Square",
+    "item": "POS Terminal",
+    "qty": 6,
+    "reason": "Buyer Remorse",
+    "status": "Restocked",
+    "disposition": "Return to Stock",
+    "dateReceived": "2026-04-03"
+  },
+
+  {
+    "id": "RTN-5536",
+    "originalOrderId": "ORD-92036",
+    "customer": "Lyft",
+    "item": "Vehicle Dash Cam",
+    "qty": 5,
+    "reason": "Damaged",
+    "status": "Quarantined",
+    "disposition": "Return to Vendor",
+    "dateReceived": "2026-04-04",
+    "images": ["https://img.example.com/rtn5536-1.jpg"]
+  },
+  {
+    "id": "RTN-5537",
+    "originalOrderId": "ORD-92037",
+    "customer": "DoorDash",
+    "item": "Thermal Food Bag",
+    "qty": 12,
+    "reason": "Buyer Remorse",
+    "status": "Restocked",
+    "disposition": "Return to Stock",
+    "dateReceived": "2026-04-02"
+  },
+  {
+    "id": "RTN-5538",
+    "originalOrderId": "ORD-92038",
+    "customer": "Instacart",
+    "item": "Portable Cooler",
+    "qty": 4,
+    "reason": "Defective",
+    "status": "Scrapped",
+    "disposition": "Write-off",
+    "dateReceived": "2026-04-03"
+  },
+  {
+    "id": "RTN-5539",
+    "originalOrderId": "ORD-92039",
+    "customer": "Pinterest",
+    "item": "Photo Light Kit",
+    "qty": 3,
+    "reason": "Wrong Item",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-05"
+  },
+  {
+    "id": "RTN-5540",
+    "originalOrderId": "ORD-92040",
+    "customer": "Reddit",
+    "item": "Streaming Webcam",
+    "qty": 5,
+    "reason": "Defective",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-05"
+  },
+
+  {
+    "id": "RTN-5541",
+    "originalOrderId": "ORD-92041",
+    "customer": "TikTok",
+    "item": "Ring Light",
+    "qty": 8,
+    "reason": "Damaged",
+    "status": "Quarantined",
+    "disposition": "Write-off",
+    "dateReceived": "2026-04-04"
+  },
+  {
+    "id": "RTN-5542",
+    "originalOrderId": "ORD-92042",
+    "customer": "Snapchat",
+    "item": "AR Glasses Prototype",
+    "qty": 2,
+    "reason": "Defective",
+    "status": "Scrapped",
+    "disposition": "Write-off",
+    "dateReceived": "2026-04-03"
+  },
+  {
+    "id": "RTN-5543",
+    "originalOrderId": "ORD-92043",
+    "customer": "Twitter",
+    "item": "Server Cooling Fan",
+    "qty": 6,
+    "reason": "Wrong Item",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-05"
+  },
+  {
+    "id": "RTN-5544",
+    "originalOrderId": "ORD-92044",
+    "customer": "LinkedIn",
+    "item": "Office Docking Station",
+    "qty": 4,
+    "reason": "Buyer Remorse",
+    "status": "Restocked",
+    "disposition": "Return to Stock",
+    "dateReceived": "2026-04-02"
+  },
+  {
+    "id": "RTN-5545",
+    "originalOrderId": "ORD-92045",
+    "customer": "ZoomInfo",
+    "item": "Data Capture Scanner",
+    "qty": 3,
+    "reason": "Damaged",
+    "status": "Quarantined",
+    "disposition": "Return to Vendor",
+    "dateReceived": "2026-04-04"
+  },
+
+  {
+    "id": "RTN-5546",
+    "originalOrderId": "ORD-92046",
+    "customer": "Atlassian",
+    "item": "Server Mount Kit",
+    "qty": 5,
+    "reason": "Defective",
+    "status": "Scrapped",
+    "disposition": "Write-off",
+    "dateReceived": "2026-04-03"
+  },
+  {
+    "id": "RTN-5547",
+    "originalOrderId": "ORD-92047",
+    "customer": "Notion",
+    "item": "Digital Tablet",
+    "qty": 2,
+    "reason": "Buyer Remorse",
+    "status": "Restocked",
+    "disposition": "Return to Stock",
+    "dateReceived": "2026-04-02"
+  },
+  {
+    "id": "RTN-5548",
+    "originalOrderId": "ORD-92048",
+    "customer": "Figma",
+    "item": "Design Pen Tablet",
+    "qty": 3,
+    "reason": "Wrong Item",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-05"
+  },
+  {
+    "id": "RTN-5549",
+    "originalOrderId": "ORD-92049",
+    "customer": "Canva",
+    "item": "Graphics Display Tablet",
+    "qty": 2,
+    "reason": "Defective",
+    "status": "Pending Inspection",
+    "dateReceived": "2026-04-05"
+  },
+  {
+    "id": "RTN-5550",
+    "originalOrderId": "ORD-92050",
+    "customer": "SpaceX",
+    "item": "Telemetry Sensor Unit",
+    "qty": 4,
+    "reason": "Damaged",
+    "status": "Quarantined",
+    "disposition": "Return to Vendor",
+    "dateReceived": "2026-04-04",
+    "images": ["https://img.example.com/rtn5550-1.jpg"]
+  }
+
+]

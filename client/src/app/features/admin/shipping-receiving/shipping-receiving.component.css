@@ -1,0 +1,21 @@
+/* Tighter Table Padding */
+table td {
+  padding: 0.5rem 1rem !important; /* Reduces vertical gap */
+  height: 40px; /* Forces a consistent compact height */
+}
+
+table th {
+  padding: 0.75rem 1rem !important;
+  font-size: 10px !important;
+}
+
+/* Custom Scrollbar for Manifest */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #A52A2A; /* Your Wham-Primary */
+}

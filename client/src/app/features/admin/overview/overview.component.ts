@@ -1,6 +1,6 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '../../shared/material.module'
+import { MaterialModule } from '../../../shared/material.module'
 import { RouterLink } from '@angular/router';
 
 // Interface for our KPI cards to keep things typed

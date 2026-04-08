@@ -1,7 +1,7 @@
 import { Component, OnInit, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule } from '../../shared/material.module'
+import { MaterialModule } from '../../../shared/material.module'
 import { RouterLink } from '@angular/router';
 
 interface InventoryItem {

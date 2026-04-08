@@ -1,9 +1,11 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './features/dashboard/dashboard.component';
-import { OverviewComponent } from './features/overview/overview.component';
-import { HomeComponent } from './features/home/home.component';
-import { InventoryComponent } from './features/inventory/inventory.component';
-import { OrdersComponent } from './features/orders/orders.component';
+import { DashboardComponent } from '././features/admin/dashboard/dashboard.component';
+import { OverviewComponent } from '././features/admin/overview/overview.component';
+import { HomeComponent } from '././features/admin/home/home.component';
+import { InventoryComponent } from '././features/admin/inventory/inventory.component';
+import { OrdersComponent } from '././features/admin/orders/orders.component';
+import { ShippingReceivingComponent } from './features/admin/shipping-receiving/shipping-receiving.component';
+import { ReturnsDamagesComponent } from './features/admin/returns-damages/returns-damages.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -13,6 +15,8 @@ export const routes: Routes = [
     { path: 'overview', component: OverviewComponent },
     { path: 'inventory', component: InventoryComponent },
     { path: 'orders', component: OrdersComponent },
+    { path: 'shipment-receiving', component: ShippingReceivingComponent },
+    { path: 'returns', component: ReturnsDamagesComponent },
     // { path: 'overview', component: OverviewComponent },
     // { path: 'overview', component: OverviewComponent },
   ] },

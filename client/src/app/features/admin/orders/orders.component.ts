@@ -1,9 +1,10 @@
 import { Component, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '../../shared/material.module';
+import { MaterialModule } from '../../../shared/material.module';
 
 // 1. IMPORT YOUR JSON (Make sure path is correct)
-import ordersData from '../../assets/data/orders.json';
+import ordersData from '../../../assets/data/orders.json';
+import { RouterLink } from '@angular/router';
 
 // 2. DEFINE THE TYPE INTERFACE
 export interface OrderLine {
@@ -30,7 +31,7 @@ export interface Order {
 @Component({
   selector: 'app-orders',
   standalone: true,
-  imports: [CommonModule, MaterialModule],
+  imports: [CommonModule, MaterialModule, RouterLink],
   templateUrl: './orders.component.html'
 })
 export class OrdersComponent {
