@@ -10,7 +10,7 @@ import { CustomReportConfig } from '../../../shared/models/performance-analytics
   standalone: true,
   imports: [CommonModule, FormsModule, MaterialModule],
   templateUrl: './report-architect.component.html',
-  styleUrls: ['./report-architect.component.css']
+  styleUrls: ['./report-architect.css']
 })
 export class ReportArchitectComponent {
   private reportService = inject(ReportDataService);

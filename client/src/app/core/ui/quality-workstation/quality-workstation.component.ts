@@ -8,7 +8,7 @@ import { ReportDataService } from '../../../services/report-data.service';
   standalone: true,
   imports: [CommonModule, MaterialModule],
   templateUrl: './quality-workstation.component.html',
-  styleUrls: ['./quality-workstation.component.css']
+  styleUrls: ['./quality-workstation.css']
 })
 export class QualityWorkstationComponent {
   private reportService = inject(ReportDataService);

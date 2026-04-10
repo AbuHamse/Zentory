@@ -1,10 +1,10 @@
-import { Component, signal, inject } from '@angular/common';
+import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../../../shared/material.module';
 
 // The "Battery"
-import { ReportDataService } from '../../../core/services/report-data.service';
+import { ReportDataService } from '../../../services/report-data.service';
 
 // The 5 Rooms (Sub-components)
 import { InventoryMatrixComponent } from '../../../core/ui/inventory-matrix/inventory-matrix.component';

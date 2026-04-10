@@ -5,10 +5,10 @@ import { ProductReport, CustomReportConfig } from '../shared/models/performance-
 import { TimePeriodReport, TrendData } from '../shared/models/trend-analysis.model';
 import { ComplaintReport, UserFeedbackReport } from '../shared/models/user-feedback.model';
 
-import businessSummary from '../../../assets/data/reports/business-summary.json';
-import feedbackLogs from '../../../assets/data/reports/feedback-logs.json';
-import monthlyTrends from '../../../assets/data/reports/monthly-trends.json';
-import productAnalytics from '../../../assets/data/reports/product-analytics.json';
+import businessSummary from '../assets/data/business-summary.json';
+import feedbackLogs from '../assets/data/feedback-logs.json';
+import monthlyTrends from '../assets/data/monthly-trends.json';
+import productAnalytics from '../assets/data/product-analytics.json';
 
 @Injectable({ providedIn: 'root' })
 export class ReportDataService {

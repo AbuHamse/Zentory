@@ -8,7 +8,7 @@ import { ReportDataService } from '../../../services/report-data.service';
   standalone: true,
   imports: [CommonModule, MaterialModule],
   templateUrl: './financial-workstation.component.html',
-  styleUrls: ['./financial-workstation.component.css']
+  styleUrls: ['./financial-workstation.css']
 })
 export class FinancialWorkstationComponent {
   private reportService = inject(ReportDataService);

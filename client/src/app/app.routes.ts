@@ -7,6 +7,7 @@ import { OrdersComponent } from '././features/admin/orders/orders.component';
 import { ShippingReceivingComponent } from './features/admin/shipping-receiving/shipping-receiving.component';
 import { ReturnsDamagesComponent } from './features/admin/returns-damages/returns-damages.component';
 import { CustomerOverviewComponent } from './features/admin/customer-overview/customer-overview.component';
+import { ReportsComponent } from './features/admin/reports/reports.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -19,6 +20,6 @@ export const routes: Routes = [
     { path: 'shipment-receiving', component: ShippingReceivingComponent },
     { path: 'returns', component: ReturnsDamagesComponent },
     { path: 'customers', component: CustomerOverviewComponent },
-    // { path: 'overview', component: OverviewComponent },
+    { path: 'reports', component: ReportsComponent },
   ] },
 ];

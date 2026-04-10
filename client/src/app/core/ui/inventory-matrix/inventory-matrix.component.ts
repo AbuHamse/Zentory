@@ -9,7 +9,7 @@ import { ReportDataService } from '../../../services/report-data.service';
   standalone: true,
   imports: [CommonModule, FormsModule, MaterialModule],
   templateUrl: './inventory-matrix.component.html',
-  styleUrls: ['./inventory-matrix.component.css']
+  styleUrls: ['./inventory-matrix.css']
 })
 export class InventoryMatrixComponent {
   private reportService = inject(ReportDataService);
