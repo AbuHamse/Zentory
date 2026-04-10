@@ -1,0 +1,88 @@
+<div class="flex flex-col gap-6 h-full animate-in fade-in duration-500">
+  
+  <div class="grid grid-cols-4 gap-4">
+    <div class="zentory-widget border-l-4 border-wham-primary">
+      <p class="text-[9px] font-black uppercase opacity-40 mb-1">Total Period Revenue</p>
+      <p class="text-2xl font-black">${{ timeReports()[0]?.revenue | number }}</p>
+      <span class="text-[8px] font-bold text-green-500 uppercase">↑ {{ timeReports()[0]?.varianceFromLastPeriod }}% vs Prev</span>
+    </div>
+
+    <div class="zentory-widget border-l-4 border-wham-dark">
+      <p class="text-[9px] font-black uppercase opacity-40 mb-1">Operating Expenses</p>
+      <p class="text-2xl font-black text-wham-warn">-${{ timeReports()[0]?.expenses | number }}</p>
+    </div>
+
+    <div class="zentory-widget border-l-4 border-wham-primary">
+      <p class="text-[9px] font-black uppercase opacity-40 mb-1">Net Profit</p>
+      <p class="text-2xl font-black">${{ timeReports()[0]?.netProfit | number }}</p>
+      <span class="text-[8px] font-bold opacity-40 uppercase">Margin: {{ profitMargin() }}%</span>
+    </div>
+
+    <div class="zentory-widget border-l-4 border-wham-primary bg-wham-dark text-white">
+      <p class="text-[9px] font-black uppercase text-wham-primary mb-1">Next Month Forecast</p>
+      <p class="text-2xl font-black">${{ timeReports()[0]?.forecastedRevenue | number }}</p>
+      <span class="text-[8px] font-bold opacity-40 uppercase tracking-widest">AI Projected</span>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-12 gap-6 flex-1 overflow-hidden">
+    
+    <div class="col-span-8 zentory-widget p-0 overflow-hidden flex flex-col border-wham-dark">
+      <div class="p-4 border-b border-wham-dark/10 flex justify-between items-center">
+        <h3 class="text-[10px] font-black uppercase tracking-widest">Financial History Matrix</h3>
+        <button (click)="onGenerateP_L()" class="text-[9px] font-black border-2 border-wham-dark px-4 py-1 hover:bg-wham-dark hover:text-white transition-all uppercase">
+          Download P&L Statement
+        </button>
+      </div>
+      
+      <div class="flex-1 overflow-y-auto custom-scrollbar">
+        <table class="w-full text-left">
+          <thead class="bg-wham-dark/5 text-wham-dark uppercase text-[8px] font-black">
+            <tr>
+              <th class="p-4">Period</th>
+              <th class="p-4">Revenue</th>
+              <th class="p-4">Orders</th>
+              <th class="p-4">Avg. Order Value</th>
+              <th class="p-4 text-right">Variance</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-wham-dark/5">
+            @for (report of timeReports(); track report.period) {
+              <tr class="hover:bg-wham-primary/5 transition-colors">
+                <td class="p-4 font-black text-[10px]">{{ report.period }}</td>
+                <td class="p-4 text-[10px]">${{ report.revenue | number }}</td>
+                <td class="p-4 text-[10px] font-bold">{{ report.ordersCount }}</td>
+                <td class="p-4 text-[10px] opacity-60">${{ report.averageOrderValue | number }}</td>
+                <td class="p-4 text-right">
+                  <span [class]="report.varianceFromLastPeriod >= 0 ? 'text-green-500' : 'text-wham-warn'" class="text-[9px] font-black">
+                    {{ report.varianceFromLastPeriod >= 0 ? '+' : '' }}{{ report.varianceFromLastPeriod }}%
+                  </span>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="col-span-4 flex flex-col gap-6">
+      <div class="zentory-widget bg-wham-tan/10 border-dashed border-2 border-wham-dark/20 flex-1">
+        <p class="text-[10px] font-black uppercase mb-4 tracking-widest">Financial Controls</p>
+        <div class="space-y-4">
+          <div class="flex flex-col gap-1">
+            <label class="text-[8px] font-bold opacity-40 uppercase">Tax Allocation (%)</label>
+            <input type="number" value="15" class="bg-white border-2 border-wham-dark p-2 text-xs font-black">
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="text-[8px] font-bold opacity-40 uppercase">Operational Buffer ($)</label>
+            <input type="number" value="5000" class="bg-white border-2 border-wham-dark p-2 text-xs font-black">
+          </div>
+          <button class="w-full bg-wham-dark text-white py-3 text-[10px] font-black uppercase tracking-widest mt-4">
+            Recalculate Forecast
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

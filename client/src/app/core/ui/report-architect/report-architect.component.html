@@ -1,0 +1,90 @@
+<div class="flex flex-col gap-6 h-full animate-in slide-in-from-left duration-500">
+  
+  <div class="grid grid-cols-12 gap-6 flex-1 overflow-hidden">
+    
+    <div class="col-span-4 zentory-widget bg-wham-dark text-white flex flex-col border-none">
+      <p class="text-[10px] font-black uppercase text-wham-primary mb-8 tracking-[0.2em]">Report Parameters</p>
+      
+      <div class="flex-1 space-y-6 overflow-y-auto pr-2 custom-scrollbar">
+        <div class="space-y-1">
+          <label class="text-[8px] font-bold opacity-40 uppercase">Report Title</label>
+          <input type="text" [(ngModel)]="config().title" 
+                 class="w-full bg-white/5 border border-white/20 p-3 text-xs font-black uppercase tracking-widest text-wham-primary outline-none focus:border-wham-primary">
+        </div>
+
+        <div class="space-y-1">
+          <label class="text-[8px] font-bold opacity-40 uppercase">Data Stream</label>
+          <div class="grid grid-cols-2 gap-2">
+            @for (s of sources; track s) {
+              <button (click)="config().dataSource = s"
+                      [class.border-wham-primary]="config().dataSource === s"
+                      [class.text-wham-primary]="config().dataSource === s"
+                      class="p-2 border border-white/10 text-[9px] font-black uppercase transition-all">
+                {{ s }}
+              </button>
+            }
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-1">
+            <label class="text-[8px] font-bold opacity-40 uppercase">History</label>
+            <select [(ngModel)]="config().timeFrame" class="w-full bg-white/5 border border-white/20 p-2 text-[10px] font-black uppercase outline-none">
+              @for (f of frames; track f) { <option [value]="f">{{ f }}</option> }
+            </select>
+          </div>
+          <div class="space-y-1">
+            <label class="text-[8px] font-bold opacity-40 uppercase">Visual Type</label>
+            <select [(ngModel)]="config().visualType" class="w-full bg-white/5 border border-white/20 p-2 text-[10px] font-black uppercase outline-none">
+              @for (v of visuals; track v) { <option [value]="v">{{ v }}</option> }
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <button (click)="onSaveConfig()" class="w-full bg-wham-primary text-wham-dark py-4 text-[10px] font-black uppercase tracking-widest mt-8 hover:bg-white transition-all">
+        Deploy Custom Report
+      </button>
+    </div>
+
+    <div class="col-span-8 flex flex-col gap-6">
+      <div class="zentory-widget flex-1 border-dashed border-2 border-wham-dark/20 flex flex-col items-center justify-center relative bg-wham-tan/5">
+        
+        <mat-icon class="absolute scale-[10] opacity-[0.03] rotate-12">architecture</mat-icon>
+
+        <div class="text-center z-10">
+          <p class="text-[8px] font-black uppercase opacity-40 mb-2">Live Preview // {{ config().visualType }} Mode</p>
+          <h2 class="text-2xl font-black text-wham-dark uppercase tracking-tighter mb-4">{{ config().title }}</h2>
+          
+          <div class="flex gap-2 justify-center mb-8">
+            <span class="px-2 py-1 bg-wham-dark text-white text-[8px] font-black uppercase">{{ config().dataSource }}</span>
+            <span class="px-2 py-1 border border-wham-dark text-[8px] font-black uppercase">{{ config().timeFrame }}</span>
+          </div>
+
+          <div class="w-64 h-32 flex items-end justify-center gap-2">
+            @for (i of [40, 70, 45, 90, 60]; track i) {
+              <div class="w-4 bg-wham-dark/10" [style.height.%]="i"></div>
+            }
+          </div>
+          <p class="mt-6 text-[10px] font-bold opacity-40 italic">Click "Deploy" to generate live dataset...</p>
+        </div>
+      </div>
+
+      <div class="h-24 grid grid-cols-3 gap-4">
+        <div class="zentory-widget p-3 flex items-center gap-3 border-wham-dark/20 opacity-50 hover:opacity-100 cursor-pointer transition-all">
+          <mat-icon class="text-sm">history</mat-icon>
+          <span class="text-[9px] font-black uppercase">Q3 Audit Template</span>
+        </div>
+        <div class="zentory-widget p-3 flex items-center gap-3 border-wham-dark/20 opacity-50 hover:opacity-100 cursor-pointer transition-all">
+          <mat-icon class="text-sm">history</mat-icon>
+          <span class="text-[9px] font-black uppercase">Supplier Scorecard</span>
+        </div>
+        <div class="zentory-widget p-3 flex items-center gap-3 border-wham-dark/20 opacity-50 hover:opacity-100 cursor-pointer transition-all">
+          <mat-icon class="text-sm">add</mat-icon>
+          <span class="text-[9px] font-black uppercase">Save New Preset</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

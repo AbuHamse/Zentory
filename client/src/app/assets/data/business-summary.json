@@ -1,0 +1,712 @@
+{"ZentoryBusinessState":[
+  {
+    "lastUpdated": "2026-04-08T10:00:00Z",
+    "summary": {
+      "totalRevenue": 450200,
+      "activeInventoryValue": 890000,
+      "activeReturnLoss": 12400,
+      "overallProfitMargin": 22.5
+    },
+    "insights": [
+      {
+        "type": "Success",
+        "message": "Revenue exceeded monthly target by 12%",
+        "impactValue": "+$48,000"
+      },
+      {
+        "type": "Warning",
+        "message": "High return rate for 'Electronics' category",
+        "impactValue": "-$4,200"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T11:30:00Z",
+    "summary": {
+      "totalRevenue": 380000,
+      "activeInventoryValue": 1200000,
+      "activeReturnLoss": 25000,
+      "overallProfitMargin": 18.2
+    },
+    "insights": [
+      {
+        "type": "Action",
+        "message": "Liquidate 54 items of dead stock to recover capital",
+        "impactValue": "$15,800"
+      },
+      {
+        "type": "Warning",
+        "message": "Inventory turnover rate falling below industry average"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T12:15:00Z",
+    "summary": {
+      "totalRevenue": 125000,
+      "activeInventoryValue": 450000,
+      "activeReturnLoss": 3100,
+      "overallProfitMargin": 28.1
+    },
+    "insights": [
+      {
+        "type": "Success",
+        "message": "Marketing campaign ROI hit a record high",
+        "impactValue": "+15.4%"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T13:45:00Z",
+    "summary": {
+      "totalRevenue": 920000,
+      "activeInventoryValue": 2100000,
+      "activeReturnLoss": 42000,
+      "overallProfitMargin": 15.5
+    },
+    "insights": [
+      {
+        "type": "Warning",
+        "message": "Logistics costs spiked due to carrier surcharges",
+        "impactValue": "-$8,500"
+      },
+      {
+        "type": "Action",
+        "message": "Negotiate new rates with regional carriers"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T14:20:00Z",
+    "summary": {
+      "totalRevenue": 67000,
+      "activeInventoryValue": 150000,
+      "activeReturnLoss": 1200,
+      "overallProfitMargin": 35.0
+    },
+    "insights": [
+      {
+        "type": "Success",
+        "message": "New product line 'Essentials' fully sold out",
+        "impactValue": "+$22,000"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T15:10:00Z",
+    "summary": {
+      "totalRevenue": 510000,
+      "activeInventoryValue": 980000,
+      "activeReturnLoss": 15600,
+      "overallProfitMargin": 20.8
+    },
+    "insights": [
+      {
+        "type": "Warning",
+        "message": "Unusual volume of support tickets for shipping",
+        "impactValue": "Declining Sentiment"
+      },
+      {
+        "type": "Action",
+        "message": "Review warehouse dispatch lead times"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T16:00:00Z",
+    "summary": {
+      "totalRevenue": 245000,
+      "activeInventoryValue": 520000,
+      "activeReturnLoss": 4800,
+      "overallProfitMargin": 24.2
+    },
+    "insights": [
+      {
+        "type": "Success",
+        "message": "Inventory reconciliation 100% accurate this quarter"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T16:45:00Z",
+    "summary": {
+      "totalRevenue": 115000,
+      "activeInventoryValue": 600000,
+      "activeReturnLoss": 19000,
+      "overallProfitMargin": 12.0
+    },
+    "insights": [
+      {
+        "type": "Warning",
+        "message": "Return loss ratio is 3x higher than Q1",
+        "impactValue": "-$11,200"
+      },
+      {
+        "type": "Action",
+        "message": "Implement stricter quality control at intake"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T17:30:00Z",
+    "summary": {
+      "totalRevenue": 840000,
+      "activeInventoryValue": 1500000,
+      "activeReturnLoss": 31000,
+      "overallProfitMargin": 19.5
+    },
+    "insights": [
+      {
+        "type": "Success",
+        "message": "Warehouse optimization reduced overhead by 8%",
+        "impactValue": "+$6,400"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T18:15:00Z",
+    "summary": {
+      "totalRevenue": 310000,
+      "activeInventoryValue": 780000,
+      "activeReturnLoss": 9000,
+      "overallProfitMargin": 21.0
+    },
+    "insights": [
+      {
+        "type": "Action",
+        "message": "Restock 'Best Seller B'—only 2 days supply left",
+        "impactValue": "Est. Loss $12k"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T19:00:00Z",
+    "summary": {
+      "totalRevenue": 420000,
+      "activeInventoryValue": 880000,
+      "activeReturnLoss": 14000,
+      "overallProfitMargin": 23.4
+    },
+    "insights": [
+      {
+        "type": "Warning",
+        "message": "Slow-moving items identified in Q3 batch",
+        "impactValue": "24 Items"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T19:45:00Z",
+    "summary": {
+      "totalRevenue": 55000,
+      "activeInventoryValue": 120000,
+      "activeReturnLoss": 800,
+      "overallProfitMargin": 38.2
+    },
+    "insights": [
+      {
+        "type": "Success",
+        "message": "Average Order Value up by $15",
+        "impactValue": "+12.5%"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T20:20:00Z",
+    "summary": {
+      "totalRevenue": 1050000,
+      "activeInventoryValue": 2500000,
+      "activeReturnLoss": 55000,
+      "overallProfitMargin": 14.8
+    },
+    "insights": [
+      {
+        "type": "Warning",
+        "message": "Operating expenses exceeded forecast",
+        "impactValue": "-$32,000"
+      },
+      {
+        "type": "Action",
+        "message": "Audit storage recurring costs"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T21:05:00Z",
+    "summary": {
+      "totalRevenue": 290000,
+      "activeInventoryValue": 410000,
+      "activeReturnLoss": 3500,
+      "overallProfitMargin": 26.7
+    },
+    "insights": [
+      {
+        "type": "Success",
+        "message": "Supplier discount secured for bulk purchasing",
+        "impactValue": "+$5,000/mo"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T21:50:00Z",
+    "summary": {
+      "totalRevenue": 180000,
+      "activeInventoryValue": 920000,
+      "activeReturnLoss": 28000,
+      "overallProfitMargin": 8.5
+    },
+    "insights": [
+      {
+        "type": "Warning",
+        "message": "Drastic drop in profit margin this week",
+        "impactValue": "-12.0%"
+      },
+      {
+        "type": "Action",
+        "message": "Review pricing strategy for clearance items"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T22:30:00Z",
+    "summary": {
+      "totalRevenue": 630000,
+      "activeInventoryValue": 1100000,
+      "activeReturnLoss": 15000,
+      "overallProfitMargin": 21.9
+    },
+    "insights": [
+      {
+        "type": "Success",
+        "message": "New automated return workflow active",
+        "impactValue": "-40% Res. Time"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-08T23:10:00Z",
+    "summary": {
+      "totalRevenue": 48000,
+      "activeInventoryValue": 95000,
+      "activeReturnLoss": 600,
+      "overallProfitMargin": 41.0
+    },
+    "insights": [
+      {
+        "type": "Action",
+        "message": "Update product descriptions for top 5 items",
+        "impactValue": "Boost Conversion"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-09T00:00:00Z",
+    "summary": {
+      "totalRevenue": 770000,
+      "activeInventoryValue": 1350000,
+      "activeReturnLoss": 22000,
+      "overallProfitMargin": 17.6
+    },
+    "insights": [
+      {
+        "type": "Warning",
+        "message": "Pending returns awaiting inspection",
+        "impactValue": "112 Items"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-09T01:15:00Z",
+    "summary": {
+      "totalRevenue": 140000,
+      "activeInventoryValue": 320000,
+      "activeReturnLoss": 2100,
+      "overallProfitMargin": 29.5
+    },
+    "insights": [
+      {
+        "type": "Success",
+        "message": "Customer Lifetime Value (CLV) improved",
+        "impactValue": "+8.2%"
+      }
+    ]
+  },
+  {
+    "lastUpdated": "2026-04-09T02:00:00Z",
+    "summary": {
+      "totalRevenue": 520000,
+      "activeInventoryValue": 1050000,
+      "activeReturnLoss": 18000,
+      "overallProfitMargin": 20.2
+    },
+    "insights": [
+      {
+        "type": "Action",
+        "message": "Adjust safety stock levels for 'Peak Season'",
+        "impactValue": "Risk: Stockout"
+      }
+    ]
+  }
+],
+"ReportSummary":[
+  {
+    "revenue": {
+      "current": 125000,
+      "previous": 110000,
+      "growthPercent": 13.6,
+      "forecastNextMonth": 132000
+    },
+    "inventory": {
+      "turnoverRate": 4.2,
+      "stockValue": 450000,
+      "deadStockCount": 12
+    },
+    "returns": {
+      "rate": 2.1,
+      "lossValue": 2600,
+      "topReason": "Sizing Mismatch"
+    }
+  },
+  {
+    "revenue": {
+      "current": 89000,
+      "previous": 95000,
+      "growthPercent": -6.3,
+      "forecastNextMonth": 92000
+    },
+    "inventory": {
+      "turnoverRate": 3.8,
+      "stockValue": 510000,
+      "deadStockCount": 25
+    },
+    "returns": {
+      "rate": 4.5,
+      "lossValue": 4000,
+      "topReason": "Defective Item"
+    }
+  },
+  {
+    "revenue": {
+      "current": 210000,
+      "previous": 180000,
+      "growthPercent": 16.7,
+      "forecastNextMonth": 225000
+    },
+    "inventory": {
+      "turnoverRate": 5.1,
+      "stockValue": 380000,
+      "deadStockCount": 8
+    },
+    "returns": {
+      "rate": 1.8,
+      "lossValue": 3780,
+      "topReason": "Shipping Damage"
+    }
+  },
+  {
+    "revenue": {
+      "current": 45000,
+      "previous": 42000,
+      "growthPercent": 7.1,
+      "forecastNextMonth": 48000
+    },
+    "inventory": {
+      "turnoverRate": 2.9,
+      "stockValue": 120000,
+      "deadStockCount": 45
+    },
+    "returns": {
+      "rate": 3.2,
+      "lossValue": 1440,
+      "topReason": "Wrong Item Sent"
+    }
+  },
+  {
+    "revenue": {
+      "current": 320000,
+      "previous": 290000,
+      "growthPercent": 10.3,
+      "forecastNextMonth": 350000
+    },
+    "inventory": {
+      "turnoverRate": 6.4,
+      "stockValue": 600000,
+      "deadStockCount": 5
+    },
+    "returns": {
+      "rate": 2.5,
+      "lossValue": 8000,
+      "topReason": "Quality Concerns"
+    }
+  },
+  {
+    "revenue": {
+      "current": 150000,
+      "previous": 150000,
+      "growthPercent": 0.0,
+      "forecastNextMonth": 155000
+    },
+    "inventory": {
+      "turnoverRate": 4.0,
+      "stockValue": 420000,
+      "deadStockCount": 18
+    },
+    "returns": {
+      "rate": 2.0,
+      "lossValue": 3000,
+      "topReason": "Found Better Price"
+    }
+  },
+  {
+    "revenue": {
+      "current": 75000,
+      "previous": 82000,
+      "growthPercent": -8.5,
+      "forecastNextMonth": 78000
+    },
+    "inventory": {
+      "turnoverRate": 3.1,
+      "stockValue": 490000,
+      "deadStockCount": 32
+    },
+    "returns": {
+      "rate": 5.2,
+      "lossValue": 3900,
+      "topReason": "Did Not Fit"
+    }
+  },
+  {
+    "revenue": {
+      "current": 540000,
+      "previous": 480000,
+      "growthPercent": 12.5,
+      "forecastNextMonth": 580000
+    },
+    "inventory": {
+      "turnoverRate": 7.2,
+      "stockValue": 850000,
+      "deadStockCount": 2
+    },
+    "returns": {
+      "rate": 1.5,
+      "lossValue": 8100,
+      "topReason": "Shipping Delay"
+    }
+  },
+  {
+    "revenue": {
+      "current": 112000,
+      "previous": 105000,
+      "growthPercent": 6.7,
+      "forecastNextMonth": 118000
+    },
+    "inventory": {
+      "turnoverRate": 4.5,
+      "stockValue": 310000,
+      "deadStockCount": 15
+    },
+    "returns": {
+      "rate": 2.8,
+      "lossValue": 3136,
+      "topReason": "Description Inaccurate"
+    }
+  },
+  {
+    "revenue": {
+      "current": 98000,
+      "previous": 115000,
+      "growthPercent": -14.8,
+      "forecastNextMonth": 102000
+    },
+    "inventory": {
+      "turnoverRate": 2.8,
+      "stockValue": 550000,
+      "deadStockCount": 54
+    },
+    "returns": {
+      "rate": 6.1,
+      "lossValue": 5978,
+      "topReason": "Damaged in Transit"
+    }
+  },
+  {
+    "revenue": {
+      "current": 275000,
+      "previous": 250000,
+      "growthPercent": 10.0,
+      "forecastNextMonth": 290000
+    },
+    "inventory": {
+      "turnoverRate": 5.8,
+      "stockValue": 410000,
+      "deadStockCount": 7
+    },
+    "returns": {
+      "rate": 2.2,
+      "lossValue": 6050,
+      "topReason": "Defective Parts"
+    }
+  },
+  {
+    "revenue": {
+      "current": 62000,
+      "previous": 58000,
+      "growthPercent": 6.9,
+      "forecastNextMonth": 65000
+    },
+    "inventory": {
+      "turnoverRate": 3.4,
+      "stockValue": 180000,
+      "deadStockCount": 21
+    },
+    "returns": {
+      "rate": 3.5,
+      "lossValue": 2170,
+      "topReason": "Changed Mind"
+    }
+  },
+  {
+    "revenue": {
+      "current": 410000,
+      "previous": 395000,
+      "growthPercent": 3.8,
+      "forecastNextMonth": 425000
+    },
+    "inventory": {
+      "turnoverRate": 6.1,
+      "stockValue": 720000,
+      "deadStockCount": 9
+    },
+    "returns": {
+      "rate": 2.4,
+      "lossValue": 9840,
+      "topReason": "Quality Expectations"
+    }
+  },
+  {
+    "revenue": {
+      "current": 134000,
+      "previous": 128000,
+      "growthPercent": 4.7,
+      "forecastNextMonth": 140000
+    },
+    "inventory": {
+      "turnoverRate": 4.8,
+      "stockValue": 360000,
+      "deadStockCount": 11
+    },
+    "returns": {
+      "rate": 1.9,
+      "lossValue": 2546,
+      "topReason": "Slow Delivery"
+    }
+  },
+  {
+    "revenue": {
+      "current": 185000,
+      "previous": 170000,
+      "growthPercent": 8.8,
+      "forecastNextMonth": 195000
+    },
+    "inventory": {
+      "turnoverRate": 5.3,
+      "stockValue": 440000,
+      "deadStockCount": 14
+    },
+    "returns": {
+      "rate": 2.3,
+      "lossValue": 4255,
+      "topReason": "Color Mismatch"
+    }
+  },
+  {
+    "revenue": {
+      "current": 55000,
+      "previous": 60000,
+      "growthPercent": -8.3,
+      "forecastNextMonth": 57000
+    },
+    "inventory": {
+      "turnoverRate": 2.5,
+      "stockValue": 250000,
+      "deadStockCount": 38
+    },
+    "returns": {
+      "rate": 4.8,
+      "lossValue": 2640,
+      "topReason": "Incomplete Order"
+    }
+  },
+  {
+    "revenue": {
+      "current": 720000,
+      "previous": 680000,
+      "growthPercent": 5.9,
+      "forecastNextMonth": 750000
+    },
+    "inventory": {
+      "turnoverRate": 8.1,
+      "stockValue": 980000,
+      "deadStockCount": 1
+    },
+    "returns": {
+      "rate": 1.2,
+      "lossValue": 8640,
+      "topReason": "Manufacturing Flaw"
+    }
+  },
+  {
+    "revenue": {
+      "current": 105000,
+      "previous": 112000,
+      "growthPercent": -6.2,
+      "forecastNextMonth": 108000
+    },
+    "inventory": {
+      "turnoverRate": 3.9,
+      "stockValue": 480000,
+      "deadStockCount": 28
+    },
+    "returns": {
+      "rate": 3.9,
+      "lossValue": 4095,
+      "topReason": "Late Arrival"
+    }
+  },
+  {
+    "revenue": {
+      "current": 245000,
+      "previous": 230000,
+      "growthPercent": 6.5,
+      "forecastNextMonth": 260000
+    },
+    "inventory": {
+      "turnoverRate": 5.5,
+      "stockValue": 415000,
+      "deadStockCount": 6
+    },
+    "returns": {
+      "rate": 2.0,
+      "lossValue": 4900,
+      "topReason": "Item Not as Described"
+    }
+  },
+  {
+    "revenue": {
+      "current": 33000,
+      "previous": 31000,
+      "growthPercent": 6.4,
+      "forecastNextMonth": 35000
+    },
+    "inventory": {
+      "turnoverRate": 2.1,
+      "stockValue": 95000,
+      "deadStockCount": 19
+    },
+    "returns": {
+      "rate": 4.2,
+      "lossValue": 1386,
+      "topReason": "Damaged Packaging"
+    }
+  }
+]}

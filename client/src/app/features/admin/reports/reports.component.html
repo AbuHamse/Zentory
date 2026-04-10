@@ -1,0 +1,83 @@
+<p>reports works!</p>
+<div class="flex flex-col gap-6 p-6 h-full overflow-hidden bg-wham-tan/5">
+  
+  <div class="flex justify-between items-center border-b-2 border-wham-dark pb-4">
+    <div class="flex items-center gap-4">
+      @if (activeSection() === 'HUB') {
+        <button [routerLink]="['/dashboard/home']" class="p-2 border-2 border-wham-dark hover:bg-wham-dark hover:text-white transition-all">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+      } @else {
+        <button (click)="backToHub()" class="p-2 border-2 border-wham-primary text-wham-primary hover:bg-wham-primary hover:text-white transition-all">
+          <mat-icon>apps</mat-icon>
+        </button>
+      }
+      <h1 class="text-2xl font-black uppercase tracking-widest text-wham-dark leading-none">
+        Intelligence Hub // <span class="text-wham-primary">{{ activeSection() }}</span>
+      </h1>
+    </div>
+    
+    <div class="flex items-center gap-2">
+      <span class="text-[10px] font-mono opacity-40 uppercase tracking-widest">Active State: {{ state()?.lastUpdated | date:'shortTime' }}</span>
+    </div>
+  </div>
+
+  <div class="flex-1 overflow-hidden">
+    @switch (activeSection()) {
+      
+      @case ('HUB') {
+        <div class="grid grid-cols-12 gap-6 h-full animate-in fade-in duration-500">
+          
+          <div class="col-span-8 grid grid-cols-2 gap-6 overflow-y-auto pr-2 custom-scrollbar">
+            
+            <div (click)="navigateTo('FINANCIAL')" class="zentory-widget border-t-4 border-wham-dark group cursor-pointer hover:border-wham-primary transition-all">
+              <p class="text-[10px] font-black uppercase tracking-widest text-wham-dark/40 mb-6">Revenue & Profit</p>
+              <p class="text-2xl font-black">${{ state()?.summary?.totalRevenue | number }}</p>
+              <p class="text-[9px] font-bold opacity-40 uppercase mt-4">Growth: {{ trends()[0]?.varianceFromLastPeriod }}%</p>
+            </div>
+
+            <div (click)="navigateTo('INVENTORY')" class="zentory-widget border-t-4 border-wham-dark group cursor-pointer hover:border-wham-primary transition-all">
+              <p class="text-[10px] font-black uppercase tracking-widest text-wham-dark/40 mb-6">Inventory Health</p>
+              <p class="text-2xl font-black">${{ state()?.summary?.activeInventoryValue | number }}</p>
+              <p class="text-[9px] font-bold opacity-40 uppercase mt-4">System SKU Count: Active</p>
+            </div>
+
+            <div (click)="navigateTo('QUALITY')" class="zentory-widget border-t-4 border-wham-dark group cursor-pointer hover:border-wham-warn transition-all">
+              <p class="text-[10px] font-black uppercase tracking-widest text-wham-dark/40 mb-6">Loss Analytics</p>
+              <p class="text-2xl font-black text-wham-warn">-${{ state()?.summary?.activeReturnLoss | number }}</p>
+              <p class="text-[9px] font-bold opacity-40 uppercase mt-4">Primary: {{ summary()?.returns?.topReason }}</p>
+            </div>
+
+            <div (click)="navigateTo('SERVICE')" class="zentory-widget border-t-4 border-wham-dark group cursor-pointer hover:border-wham-primary transition-all">
+              <p class="text-[10px] font-black uppercase tracking-widest text-wham-dark/40 mb-6">User Sentiment</p>
+              <p class="text-xl font-black uppercase">Sentiment: Stable</p>
+              <p class="text-[9px] font-bold opacity-40 uppercase mt-4">Active Logs: {{ summary()?.returns?.rate }}% Rate</p>
+            </div>
+
+          </div>
+
+          <div class="col-span-4 h-full">
+            <div (click)="navigateTo('ARCHITECT')" class="zentory-widget bg-wham-dark text-white h-full group cursor-pointer flex flex-col justify-between border-none">
+              <div>
+                <p class="text-[10px] font-black uppercase tracking-widest text-wham-primary mb-6">Custom Architect</p>
+                <h2 class="text-3xl font-black leading-tight">BUILD A<br>NEW VIEW.</h2>
+                <p class="text-[10px] font-bold opacity-40 uppercase mt-4">Assemble unique data streams into custom visual reports.</p>
+              </div>
+              <div class="flex justify-between items-center text-wham-primary">
+                <span class="text-[10px] font-black uppercase">Open Architect Mode</span>
+                <mat-icon>architecture</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+
+      @case ('INVENTORY') { <app-inventory-matrix /> }
+      @case ('FINANCIAL') { <app-financial-workstation /> }
+      @case ('SERVICE')   { <app-service-insights /> }
+      @case ('QUALITY')   { <app-quality-workstation /> }
+      @case ('ARCHITECT') { <app-report-architect /> }
+
+    }
+  </div>
+</div>

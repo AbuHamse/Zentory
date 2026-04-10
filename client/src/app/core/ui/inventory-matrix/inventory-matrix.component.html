@@ -1,0 +1,75 @@
+<div class="flex flex-col gap-6 h-full animate-in slide-in-from-bottom duration-500">
+  
+  <div class="flex gap-4 items-center bg-wham-dark/5 p-4 border-2 border-wham-dark">
+    <mat-icon class="opacity-40">search</mat-icon>
+    <input 
+      type="text" 
+      [(ngModel)]="searchQuery"
+      placeholder="FILTER BY SKU, NAME, OR CATEGORY..." 
+      class="bg-transparent border-none outline-none text-[11px] font-black uppercase tracking-widest flex-1">
+    
+    <button (click)="onExport()" class="bg-wham-dark text-white px-6 py-2 text-[9px] font-black uppercase tracking-widest hover:bg-wham-primary transition-all">
+      Export Data
+    </button>
+  </div>
+
+  <div class="zentory-widget flex-1 p-0 overflow-hidden flex flex-col border-wham-dark shadow-xl">
+    <div class="flex-1 overflow-y-auto custom-scrollbar">
+      <table class="w-full text-left border-collapse">
+        <thead class="bg-wham-dark text-white uppercase text-[9px] tracking-[0.2em] sticky top-0 z-10">
+          <tr>
+            <th class="p-4">SKU / Identity</th>
+            <th class="p-4">Category</th>
+            <th class="p-4">Margin %</th>
+            <th class="p-4">Return Rate</th>
+            <th class="p-4">Velocity</th>
+            <th class="p-4 text-right">System Action</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-wham-dark/10">
+          @for (p of products(); track p.sku) {
+            <tr class="hover:bg-wham-primary/5 transition-colors group">
+              <td class="p-4">
+                <p class="text-[10px] font-black group-hover:text-wham-primary transition-colors">{{ p.sku }}</p>
+                <p class="text-[9px] font-bold opacity-40 uppercase">{{ p.name }}</p>
+              </td>
+              <td class="p-4 text-[9px] font-black uppercase opacity-60">
+                {{ p.category }}
+              </td>
+              <td class="p-4 font-black text-[10px] text-wham-primary">
+                {{ p.marginPercent }}%
+              </td>
+              <td class="p-4 font-black text-[10px]" [class.text-wham-warn]="p.returnRate > 10">
+                {{ p.returnRate }}%
+              </td>
+              <td class="p-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-16 h-1.5 bg-wham-dark/10">
+                    <div class="h-full bg-wham-dark" [style.width.%]="p.inventoryTurnoverVelocity * 10"></div>
+                  </div>
+                  <span class="text-[9px] font-black">{{ p.inventoryTurnoverVelocity }}/10</span>
+                </div>
+              </td>
+              <td class="p-4 text-right">
+                <div class="flex justify-end gap-3 items-center">
+                  <span class="text-[8px] font-black uppercase px-2 py-1 bg-wham-dark/5 border border-wham-dark/20 text-wham-dark">
+                    {{ p.recommendation }}
+                  </span>
+                  <button (click)="onArchive(p.sku)" matTooltip="Archive SKU" class="text-wham-dark/40 hover:text-wham-warn transition-colors">
+                    <mat-icon class="text-lg">inventory_2</mat-icon>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="6" class="p-20 text-center">
+                <p class="opacity-20 text-[10px] font-black uppercase tracking-[0.3em]">No Products Match Current Filter</p>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

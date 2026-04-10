@@ -1,0 +1,403 @@
+{"ProductReport":[
+  {
+    "sku": "ZK-101",
+    "name": "Titanium Wireless Mouse",
+    "category": "Electronics",
+    "unitsSold": 1240,
+    "revenue": 61876,
+    "costOfGoods": 24800,
+    "grossProfit": 37076,
+    "marginPercent": 59.9,
+    "returnRate": 1.2,
+    "inventoryTurnoverVelocity": 9,
+    "recommendation": "Increase Order Vol"
+  },
+  {
+    "sku": "ZK-102",
+    "name": "ErgoComfort Desk Chair",
+    "category": "Furniture",
+    "unitsSold": 150,
+    "revenue": 44850,
+    "costOfGoods": 31500,
+    "grossProfit": 13350,
+    "marginPercent": 29.8,
+    "returnRate": 8.5,
+    "inventoryTurnoverVelocity": 4,
+    "recommendation": "Review Quality Control"
+  },
+  {
+    "sku": "ZK-103",
+    "name": "UltraSoft Cotton Tee",
+    "category": "Apparel",
+    "unitsSold": 3200,
+    "revenue": 80000,
+    "costOfGoods": 25600,
+    "grossProfit": 54400,
+    "marginPercent": 68.0,
+    "returnRate": 12.4,
+    "inventoryTurnoverVelocity": 8,
+    "recommendation": "Check Sizing Accuracy"
+  },
+  {
+    "sku": "ZK-104",
+    "name": "Pro-Series HDMI Cable",
+    "category": "Electronics",
+    "unitsSold": 45,
+    "revenue": 900,
+    "costOfGoods": 400,
+    "grossProfit": 500,
+    "marginPercent": 55.5,
+    "returnRate": 15.0,
+    "inventoryTurnoverVelocity": 1,
+    "recommendation": "Liquidate Stock"
+  },
+  {
+    "sku": "ZK-105",
+    "name": "Bamboo Desk Organizer",
+    "category": "Office",
+    "unitsSold": 890,
+    "revenue": 22250,
+    "costOfGoods": 11570,
+    "grossProfit": 10680,
+    "marginPercent": 48.0,
+    "returnRate": 2.1,
+    "inventoryTurnoverVelocity": 7,
+    "recommendation": "Maintain Levels"
+  },
+  {
+    "sku": "ZK-106",
+    "name": "Smart-Temp Kettle",
+    "category": "Kitchen",
+    "unitsSold": 410,
+    "revenue": 32800,
+    "costOfGoods": 20500,
+    "grossProfit": 12300,
+    "marginPercent": 37.5,
+    "returnRate": 18.2,
+    "inventoryTurnoverVelocity": 3,
+    "recommendation": "Stop Stocking"
+  },
+  {
+    "sku": "ZK-107",
+    "name": "Noise-Cancelling Earbuds",
+    "category": "Electronics",
+    "unitsSold": 2100,
+    "revenue": 262500,
+    "costOfGoods": 147000,
+    "grossProfit": 115500,
+    "marginPercent": 44.0,
+    "returnRate": 3.5,
+    "inventoryTurnoverVelocity": 10,
+    "recommendation": "Increase Order Vol"
+  },
+  {
+    "sku": "ZK-108",
+    "name": "Heavy Duty Yoga Mat",
+    "category": "Fitness",
+    "unitsSold": 600,
+    "revenue": 21000,
+    "costOfGoods": 12600,
+    "grossProfit": 8400,
+    "marginPercent": 40.0,
+    "returnRate": 0.8,
+    "inventoryTurnoverVelocity": 6,
+    "recommendation": "Increase Marketing"
+  },
+  {
+    "sku": "ZK-109",
+    "name": "Ceramic Coffee Dripper",
+    "category": "Kitchen",
+    "unitsSold": 220,
+    "revenue": 6600,
+    "costOfGoods": 4400,
+    "grossProfit": 2200,
+    "marginPercent": 33.3,
+    "returnRate": 5.4,
+    "inventoryTurnoverVelocity": 2,
+    "recommendation": "Monitor Performance"
+  },
+  {
+    "sku": "ZK-110",
+    "name": "RFID Blocking Wallet",
+    "category": "Accessories",
+    "unitsSold": 1450,
+    "revenue": 43500,
+    "costOfGoods": 13050,
+    "grossProfit": 30450,
+    "marginPercent": 70.0,
+    "returnRate": 1.1,
+    "inventoryTurnoverVelocity": 9,
+    "recommendation": "Increase Order Vol"
+  },
+  {
+    "sku": "ZK-111",
+    "name": "LED Desk Lamp",
+    "category": "Office",
+    "unitsSold": 530,
+    "revenue": 23850,
+    "costOfGoods": 15900,
+    "grossProfit": 7950,
+    "marginPercent": 33.3,
+    "returnRate": 4.2,
+    "inventoryTurnoverVelocity": 5,
+    "recommendation": "Maintain Levels"
+  },
+  {
+    "sku": "ZK-112",
+    "name": "Glass Water Bottle",
+    "category": "Kitchen",
+    "unitsSold": 1100,
+    "revenue": 27500,
+    "costOfGoods": 8250,
+    "grossProfit": 19250,
+    "marginPercent": 70.0,
+    "returnRate": 9.1,
+    "inventoryTurnoverVelocity": 7,
+    "recommendation": "Improve Packaging"
+  },
+  {
+    "sku": "ZK-113",
+    "name": "Microfiber Towel Set",
+    "category": "Fitness",
+    "unitsSold": 2800,
+    "revenue": 42000,
+    "costOfGoods": 14000,
+    "grossProfit": 28000,
+    "marginPercent": 66.7,
+    "returnRate": 0.5,
+    "inventoryTurnoverVelocity": 9,
+    "recommendation": "Increase Order Vol"
+  },
+  {
+    "sku": "ZK-114",
+    "name": "Mechanical Keyboard",
+    "category": "Electronics",
+    "unitsSold": 340,
+    "revenue": 42500,
+    "costOfGoods": 30600,
+    "grossProfit": 11900,
+    "marginPercent": 28.0,
+    "returnRate": 6.8,
+    "inventoryTurnoverVelocity": 4,
+    "recommendation": "Review Margins"
+  },
+  {
+    "sku": "ZK-115",
+    "name": "Weighted Blanket",
+    "category": "Bedding",
+    "unitsSold": 180,
+    "revenue": 21600,
+    "costOfGoods": 18000,
+    "grossProfit": 3600,
+    "marginPercent": 16.7,
+    "returnRate": 14.5,
+    "inventoryTurnoverVelocity": 2,
+    "recommendation": "Stop Stocking"
+  },
+  {
+    "sku": "ZK-116",
+    "name": "Adjustable Dumbbells",
+    "category": "Fitness",
+    "unitsSold": 95,
+    "revenue": 28500,
+    "costOfGoods": 21375,
+    "grossProfit": 7125,
+    "marginPercent": 25.0,
+    "returnRate": 3.2,
+    "inventoryTurnoverVelocity": 3,
+    "recommendation": "Liquidate Stock"
+  },
+  {
+    "sku": "ZK-117",
+    "name": "Vegan Leather Tote",
+    "category": "Accessories",
+    "unitsSold": 670,
+    "revenue": 53600,
+    "costOfGoods": 24120,
+    "grossProfit": 29480,
+    "marginPercent": 55.0,
+    "returnRate": 2.8,
+    "inventoryTurnoverVelocity": 6,
+    "recommendation": "Increase Marketing"
+  },
+  {
+    "sku": "ZK-118",
+    "name": "Smart Home Hub",
+    "category": "Electronics",
+    "unitsSold": 1500,
+    "revenue": 148500,
+    "costOfGoods": 103950,
+    "grossProfit": 44550,
+    "marginPercent": 30.0,
+    "returnRate": 4.1,
+    "inventoryTurnoverVelocity": 8,
+    "recommendation": "Maintain Levels"
+  },
+  {
+    "sku": "ZK-119",
+    "name": "Electric Standing Desk",
+    "category": "Furniture",
+    "unitsSold": 240,
+    "revenue": 108000,
+    "costOfGoods": 81000,
+    "grossProfit": 27000,
+    "marginPercent": 25.0,
+    "returnRate": 7.3,
+    "inventoryTurnoverVelocity": 5,
+    "recommendation": "Monitor Returns"
+  },
+  {
+    "sku": "ZK-120",
+    "name": "Aromatherapy Diffuser",
+    "category": "Home",
+    "unitsSold": 1850,
+    "revenue": 64750,
+    "costOfGoods": 19425,
+    "grossProfit": 45325,
+    "marginPercent": 70.0,
+    "returnRate": 1.5,
+    "inventoryTurnoverVelocity": 9,
+    "recommendation": "Increase Order Vol"
+  }
+],"CustomReportConfig":[
+  {
+    "title": "Weekly Sales Performance",
+    "dataSource": "Sales",
+    "timeFrame": "7D",
+    "visualType": "Bar",
+    "metrics": ["Total Sales", "Gross Profit"]
+  },
+  {
+    "title": "Monthly Inventory Health",
+    "dataSource": "Inventory",
+    "timeFrame": "30D",
+    "visualType": "Pie",
+    "metrics": ["Stock Value", "Turnover Rate"]
+  },
+  {
+    "title": "Quarterly Returns Analysis",
+    "dataSource": "Returns",
+    "timeFrame": "90D",
+    "visualType": "Line",
+    "metrics": ["Return Rate", "Loss Value"]
+  },
+  {
+    "title": "Annual Support Overview",
+    "dataSource": "Complaints",
+    "timeFrame": "1Y",
+    "visualType": "Table",
+    "metrics": ["Complaint Count", "Resolution Time"]
+  },
+  {
+    "title": "Top Selling Products",
+    "dataSource": "Sales",
+    "timeFrame": "30D",
+    "visualType": "Bar",
+    "metrics": ["Units Sold", "Revenue"]
+  },
+  {
+    "title": "Shipping Accuracy Trends",
+    "dataSource": "Complaints",
+    "timeFrame": "90D",
+    "visualType": "Line",
+    "metrics": ["Accuracy Score", "Feedback Sentiment"]
+  },
+  {
+    "title": "Yearly Revenue Forecast",
+    "dataSource": "Sales",
+    "timeFrame": "1Y",
+    "visualType": "Line",
+    "metrics": ["Projected Growth", "Net Profit"]
+  },
+  {
+    "title": "Dead Stock Breakdown",
+    "dataSource": "Inventory",
+    "timeFrame": "90D",
+    "visualType": "Pie",
+    "metrics": ["Item Count", "Storage Cost"]
+  },
+  {
+    "title": "Customer Service Efficiency",
+    "dataSource": "Complaints",
+    "timeFrame": "7D",
+    "visualType": "Table",
+    "metrics": ["Resolved Count", "Average Response Time"]
+  },
+  {
+    "title": "Regional Logistics Cost",
+    "dataSource": "Returns",
+    "timeFrame": "30D",
+    "visualType": "Bar",
+    "metrics": ["Shipping Loss", "Return Volume"]
+  },
+  {
+    "title": "Q3 Inventory Velocity",
+    "dataSource": "Inventory",
+    "timeFrame": "90D",
+    "visualType": "Line",
+    "metrics": ["Turnover Velocity", "Active Value"]
+  },
+  {
+    "title": "High Margin Items",
+    "dataSource": "Sales",
+    "timeFrame": "30D",
+    "visualType": "Table",
+    "metrics": ["Profit Margin", "Category"]
+  },
+  {
+    "title": "Returns by Reason",
+    "dataSource": "Returns",
+    "timeFrame": "30D",
+    "visualType": "Pie",
+    "metrics": ["Reason Frequency", "Loss Amount"]
+  },
+  {
+    "title": "Last 7 Days Complaints",
+    "dataSource": "Complaints",
+    "timeFrame": "7D",
+    "visualType": "Bar",
+    "metrics": ["Category", "Severity Score"]
+  },
+  {
+    "title": "AOV Performance 1Y",
+    "dataSource": "Sales",
+    "timeFrame": "1Y",
+    "visualType": "Line",
+    "metrics": ["Average Order Value"]
+  },
+  {
+    "title": "Inventory Replacement Cycle",
+    "dataSource": "Inventory",
+    "timeFrame": "1Y",
+    "visualType": "Table",
+    "metrics": ["Lead Time", "Restock Frequency"]
+  },
+  {
+    "title": "Feedback Sentiment Monthly",
+    "dataSource": "Complaints",
+    "timeFrame": "30D",
+    "visualType": "Line",
+    "metrics": ["Sentiment Score"]
+  },
+  {
+    "title": "Loss Prevention Audit",
+    "dataSource": "Returns",
+    "timeFrame": "90D",
+    "visualType": "Bar",
+    "metrics": ["Damage Claims", "Re-stockable Rate"]
+  },
+  {
+    "title": "Q1 Sales Growth",
+    "dataSource": "Sales",
+    "timeFrame": "90D",
+    "visualType": "Bar",
+    "metrics": ["Revenue Growth %"]
+  },
+  {
+    "title": "Category Performance Pie",
+    "dataSource": "Sales",
+    "timeFrame": "30D",
+    "visualType": "Pie",
+    "metrics": ["Market Share by Category"]
+  }
+]}

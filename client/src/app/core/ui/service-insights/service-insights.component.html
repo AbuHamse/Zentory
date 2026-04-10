@@ -1,0 +1,86 @@
+<div class="flex flex-col gap-6 h-full animate-in slide-in-from-right duration-500">
+  
+  <div class="grid grid-cols-4 gap-4">
+    @for (stat of summaries(); track stat.category) {
+      <div class="zentory-widget border-t-2 border-wham-dark">
+        <div class="flex justify-between items-start mb-2">
+          <p class="text-[9px] font-black uppercase tracking-widest">{{ stat.category }}</p>
+          <span [class]="stat.sentimentTrend === 'Improving' ? 'text-green-500' : 'text-wham-warn'" 
+                class="text-[8px] font-black uppercase">
+            {{ stat.sentimentTrend }}
+          </span>
+        </div>
+        <p class="text-xl font-black">{{ stat.totalComplaints }} <span class="text-[10px] opacity-40">LOGS</span></p>
+        <div class="mt-2 h-1 bg-wham-dark/10">
+          <div class="h-full bg-wham-dark" [style.width.%]="(stat.resolvedCount / stat.totalComplaints) * 100"></div>
+        </div>
+        <p class="text-[8px] font-bold mt-1 opacity-40 uppercase">Resolution: {{ stat.resolvedCount }} / {{ stat.totalComplaints }}</p>
+      </div>
+    }
+  </div>
+
+  <div class="grid grid-cols-12 gap-6 flex-1 overflow-hidden">
+    
+    <div class="col-span-8 zentory-widget p-0 overflow-hidden flex flex-col border-wham-dark">
+      <div class="p-4 border-b border-wham-dark/10 bg-wham-dark/5">
+        <h3 class="text-[10px] font-black uppercase tracking-widest">Active Complaint Stream</h3>
+      </div>
+      
+      <div class="flex-1 overflow-y-auto custom-scrollbar p-4 space-y-4">
+        @for (log of logs(); track log.id) {
+          <div class="border-l-4 border-wham-dark bg-wham-dark/5 p-4 group hover:bg-wham-dark hover:text-white transition-all">
+            <div class="flex justify-between mb-2">
+              <span class="text-[9px] font-black uppercase px-2 py-0.5 bg-wham-dark text-white group-hover:bg-wham-primary">
+                {{ log.category }}
+              </span>
+              <span class="text-[10px] font-mono opacity-40 group-hover:opacity-100">ID: {{ log.id }}</span>
+            </div>
+            <p class="text-xs font-bold italic mb-3">"{{ log.recentFeedback }}"</p>
+            <div class="flex items-center gap-4">
+              <div class="flex items-center gap-1">
+                <mat-icon class="text-xs">sentiment_satisfied</mat-icon>
+                <span class="text-[9px] font-black uppercase">Score: {{ log.sentimentScore }}/100</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <mat-icon class="text-xs">poll</mat-icon>
+                <span class="text-[9px] font-black uppercase">Volume: {{ log.count }} Similar</span>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="col-span-4 flex flex-col gap-6">
+      <div class="zentory-widget border-2 border-wham-dark bg-wham-dark text-white">
+        <p class="text-[10px] font-black uppercase text-wham-primary mb-6 tracking-widest">Efficiency Matrix</p>
+        
+        <div class="space-y-6">
+          @if (criticalCategory(); as crit) {
+            <div>
+              <p class="text-[8px] font-bold uppercase opacity-40 mb-1">Highest Bottleneck</p>
+              <p class="text-lg font-black uppercase">{{ crit.category }}</p>
+              <p class="text-[10px] font-bold text-wham-warn">{{ crit.averageResolutionTimeHrs }} HRS AVG RESPONSE</p>
+            </div>
+          }
+
+          <div class="pt-6 border-t border-white/10">
+            <p class="text-[8px] font-bold uppercase opacity-40 mb-2">Common Pain Point</p>
+            <p class="text-xs font-black uppercase leading-tight">{{ summaries()[0]?.topComplaintReason }}</p>
+          </div>
+
+          <button class="w-full border-2 border-wham-primary py-3 text-[10px] font-black uppercase tracking-widest hover:bg-wham-primary transition-all mt-4">
+            Contact Dept Heads
+          </button>
+        </div>
+      </div>
+
+      <div class="zentory-widget bg-wham-tan/10 border-dashed border-2 border-wham-dark/20 p-4">
+        <p class="text-[8px] font-black uppercase opacity-60 leading-relaxed">
+          Zentory AI Note: Sentiment is currently <span class="text-green-600 font-black">Improving</span> across 3/4 categories. Logistics remains the primary source of negative feedback.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>

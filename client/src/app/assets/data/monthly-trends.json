@@ -1,0 +1,304 @@
+{"TimePeriodReport":[
+  {
+    "period": "2024-07",
+    "revenue": 45000,
+    "ordersCount": 900,
+    "averageOrderValue": 50,
+    "expenses": 32000,
+    "netProfit": 13000,
+    "forecastedRevenue": 47000,
+    "varianceFromLastPeriod": 4.2
+  },
+  {
+    "period": "2024-08",
+    "revenue": 48200,
+    "ordersCount": 945,
+    "averageOrderValue": 51,
+    "expenses": 33500,
+    "netProfit": 14700,
+    "forecastedRevenue": 49000,
+    "varianceFromLastPeriod": 7.1
+  },
+  {
+    "period": "2024-09",
+    "revenue": 46500,
+    "ordersCount": 910,
+    "averageOrderValue": 51.1,
+    "expenses": 33000,
+    "netProfit": 13500,
+    "forecastedRevenue": 50000,
+    "varianceFromLastPeriod": -3.5
+  },
+  {
+    "period": "2024-10",
+    "revenue": 52000,
+    "ordersCount": 1020,
+    "averageOrderValue": 50.9,
+    "expenses": 36000,
+    "netProfit": 16000,
+    "forecastedRevenue": 58000,
+    "varianceFromLastPeriod": 11.8
+  },
+  {
+    "period": "2024-11",
+    "revenue": 65000,
+    "ordersCount": 1250,
+    "averageOrderValue": 52,
+    "expenses": 45000,
+    "netProfit": 20000,
+    "forecastedRevenue": 85000,
+    "varianceFromLastPeriod": 25.0
+  },
+  {
+    "period": "2024-12",
+    "revenue": 88000,
+    "ordersCount": 1600,
+    "averageOrderValue": 55,
+    "expenses": 58000,
+    "netProfit": 30000,
+    "forecastedRevenue": 55000,
+    "varianceFromLastPeriod": 35.3
+  },
+  {
+    "period": "2025-01",
+    "revenue": 54000,
+    "ordersCount": 1080,
+    "averageOrderValue": 50,
+    "expenses": 38000,
+    "netProfit": 16000,
+    "forecastedRevenue": 52000,
+    "varianceFromLastPeriod": -38.6
+  },
+  {
+    "period": "2025-02",
+    "revenue": 51000,
+    "ordersCount": 980,
+    "averageOrderValue": 52.04,
+    "expenses": 37500,
+    "netProfit": 13500,
+    "forecastedRevenue": 55000,
+    "varianceFromLastPeriod": -5.5
+  },
+  {
+    "period": "2025-03",
+    "revenue": 58500,
+    "ordersCount": 1125,
+    "averageOrderValue": 52,
+    "expenses": 40000,
+    "netProfit": 18500,
+    "forecastedRevenue": 61000,
+    "varianceFromLastPeriod": 14.7
+  },
+  {
+    "period": "2025-04",
+    "revenue": 60200,
+    "ordersCount": 1150,
+    "averageOrderValue": 52.34,
+    "expenses": 41500,
+    "netProfit": 18700,
+    "forecastedRevenue": 63000,
+    "varianceFromLastPeriod": 2.9
+  },
+  {
+    "period": "2025-05",
+    "revenue": 64000,
+    "ordersCount": 1210,
+    "averageOrderValue": 52.89,
+    "expenses": 43000,
+    "netProfit": 21000,
+    "forecastedRevenue": 62000,
+    "varianceFromLastPeriod": 6.3
+  },
+  {
+    "period": "2025-06",
+    "revenue": 61500,
+    "ordersCount": 1180,
+    "averageOrderValue": 52.12,
+    "expenses": 42000,
+    "netProfit": 19500,
+    "forecastedRevenue": 68000,
+    "varianceFromLastPeriod": -3.9
+  },
+  {
+    "period": "2025-07",
+    "revenue": 69000,
+    "ordersCount": 1300,
+    "averageOrderValue": 53.07,
+    "expenses": 47000,
+    "netProfit": 22000,
+    "forecastedRevenue": 71000,
+    "varianceFromLastPeriod": 12.2
+  },
+  {
+    "period": "2025-08",
+    "revenue": 72500,
+    "ordersCount": 1340,
+    "averageOrderValue": 54.1,
+    "expenses": 49000,
+    "netProfit": 23500,
+    "forecastedRevenue": 70000,
+    "varianceFromLastPeriod": 5.1
+  },
+  {
+    "period": "2025-09",
+    "revenue": 69800,
+    "ordersCount": 1280,
+    "averageOrderValue": 54.53,
+    "expenses": 48500,
+    "netProfit": 21300,
+    "forecastedRevenue": 75000,
+    "varianceFromLastPeriod": -3.7
+  },
+  {
+    "period": "2025-10",
+    "revenue": 78000,
+    "ordersCount": 1420,
+    "averageOrderValue": 54.92,
+    "expenses": 53000,
+    "netProfit": 25000,
+    "forecastedRevenue": 95000,
+    "varianceFromLastPeriod": 11.7
+  },
+  {
+    "period": "2025-11",
+    "revenue": 105000,
+    "ordersCount": 1850,
+    "averageOrderValue": 56.75,
+    "expenses": 68000,
+    "netProfit": 37000,
+    "forecastedRevenue": 140000,
+    "varianceFromLastPeriod": 34.6
+  },
+  {
+    "period": "2025-12",
+    "revenue": 138000,
+    "ordersCount": 2300,
+    "averageOrderValue": 60,
+    "expenses": 85000,
+    "netProfit": 53000,
+    "forecastedRevenue": 82000,
+    "varianceFromLastPeriod": 31.4
+  },
+  {
+    "period": "2026-01",
+    "revenue": 81000,
+    "ordersCount": 1500,
+    "averageOrderValue": 54,
+    "expenses": 60000,
+    "netProfit": 21000,
+    "forecastedRevenue": 79000,
+    "varianceFromLastPeriod": -41.3
+  },
+  {
+    "period": "2026-02",
+    "revenue": 78500,
+    "ordersCount": 1440,
+    "averageOrderValue": 54.51,
+    "expenses": 59000,
+    "netProfit": 19500,
+    "forecastedRevenue": 85000,
+    "varianceFromLastPeriod": -3.1
+  }
+],
+"TrendData":[
+  {
+    "label": "Jan",
+    "value": 12500,
+    "comparisonValue": 11000
+  },
+  {
+    "label": "Feb",
+    "value": 14200,
+    "comparisonValue": 12500
+  },
+  {
+    "label": "Mar",
+    "value": 13800,
+    "comparisonValue": 14200
+  },
+  {
+    "label": "Apr",
+    "value": 16500,
+    "comparisonValue": 13800
+  },
+  {
+    "label": "May",
+    "value": 18900,
+    "comparisonValue": 16500
+  },
+  {
+    "label": "Jun",
+    "value": 17400,
+    "comparisonValue": 18900
+  },
+  {
+    "label": "Jul",
+    "value": 21000,
+    "comparisonValue": 17400
+  },
+  {
+    "label": "Aug",
+    "value": 22500,
+    "comparisonValue": 21000
+  },
+  {
+    "label": "Sep",
+    "value": 19800,
+    "comparisonValue": 22500
+  },
+  {
+    "label": "Oct",
+    "value": 24000,
+    "comparisonValue": 19800
+  },
+  {
+    "label": "Nov",
+    "value": 31500,
+    "comparisonValue": 24000
+  },
+  {
+    "label": "Dec",
+    "value": 42000,
+    "comparisonValue": 31500
+  },
+  {
+    "label": "Week 1",
+    "value": 450,
+    "comparisonValue": 410
+  },
+  {
+    "label": "Week 2",
+    "value": 520,
+    "comparisonValue": 450
+  },
+  {
+    "label": "Week 3",
+    "value": 480,
+    "comparisonValue": 520
+  },
+  {
+    "label": "Week 4",
+    "value": 610,
+    "comparisonValue": 480
+  },
+  {
+    "label": "Q1",
+    "value": 40500,
+    "comparisonValue": 38000
+  },
+  {
+    "label": "Q2",
+    "value": 52800,
+    "comparisonValue": 40500
+  },
+  {
+    "label": "Q3",
+    "value": 63300,
+    "comparisonValue": 52800
+  },
+  {
+    "label": "Q4",
+    "value": 97500,
+    "comparisonValue": 63300
+  }
+]}

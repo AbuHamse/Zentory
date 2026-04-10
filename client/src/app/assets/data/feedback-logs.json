@@ -1,0 +1,303 @@
+{"UserFeedbackReport":[
+  {
+    "category": "Logistics",
+    "totalComplaints": 142,
+    "resolvedCount": 118,
+    "averageResolutionTimeHrs": 34.5,
+    "topComplaintReason": "Delayed delivery during peak season",
+    "sentimentTrend": "Declining"
+  },
+  {
+    "category": "Product",
+    "totalComplaints": 85,
+    "resolvedCount": 80,
+    "averageResolutionTimeHrs": 12.2,
+    "topComplaintReason": "Defective power switches",
+    "sentimentTrend": "Improving"
+  },
+  {
+    "category": "Packaging",
+    "totalComplaints": 40,
+    "resolvedCount": 38,
+    "averageResolutionTimeHrs": 8.5,
+    "topComplaintReason": "Insufficient padding for glassware",
+    "sentimentTrend": "Stable"
+  },
+  {
+    "category": "Service",
+    "totalComplaints": 67,
+    "resolvedCount": 52,
+    "averageResolutionTimeHrs": 48.0,
+    "topComplaintReason": "Long hold times for technical support",
+    "sentimentTrend": "Declining"
+  },
+  {
+    "category": "Logistics",
+    "totalComplaints": 95,
+    "resolvedCount": 92,
+    "averageResolutionTimeHrs": 22.1,
+    "topComplaintReason": "Incorrect tracking numbers provided",
+    "sentimentTrend": "Stable"
+  },
+  {
+    "category": "Product",
+    "totalComplaints": 110,
+    "resolvedCount": 95,
+    "averageResolutionTimeHrs": 18.4,
+    "topComplaintReason": "Sizing inconsistent with chart",
+    "sentimentTrend": "Declining"
+  },
+  {
+    "category": "Packaging",
+    "totalComplaints": 25,
+    "resolvedCount": 25,
+    "averageResolutionTimeHrs": 4.2,
+    "topComplaintReason": "Excessive use of non-recyclable plastic",
+    "sentimentTrend": "Improving"
+  },
+  {
+    "category": "Service",
+    "totalComplaints": 54,
+    "resolvedCount": 54,
+    "averageResolutionTimeHrs": 6.0,
+    "topComplaintReason": "Refund processing delays",
+    "sentimentTrend": "Improving"
+  },
+  {
+    "category": "Logistics",
+    "totalComplaints": 130,
+    "resolvedCount": 105,
+    "averageResolutionTimeHrs": 41.2,
+    "topComplaintReason": "Lost packages in transit",
+    "sentimentTrend": "Declining"
+  },
+  {
+    "category": "Product",
+    "totalComplaints": 44,
+    "resolvedCount": 42,
+    "averageResolutionTimeHrs": 10.5,
+    "topComplaintReason": "Color mismatch from website photos",
+    "sentimentTrend": "Stable"
+  },
+  {
+    "category": "Packaging",
+    "totalComplaints": 31,
+    "resolvedCount": 29,
+    "averageResolutionTimeHrs": 15.3,
+    "topComplaintReason": "Boxes arriving crushed or torn",
+    "sentimentTrend": "Declining"
+  },
+  {
+    "category": "Service",
+    "totalComplaints": 88,
+    "resolvedCount": 70,
+    "averageResolutionTimeHrs": 28.8,
+    "topComplaintReason": "Unhelpful automated bot responses",
+    "sentimentTrend": "Declining"
+  },
+  {
+    "category": "Logistics",
+    "totalComplaints": 62,
+    "resolvedCount": 60,
+    "averageResolutionTimeHrs": 19.5,
+    "topComplaintReason": "Package left in unsafe location",
+    "sentimentTrend": "Improving"
+  },
+  {
+    "category": "Product",
+    "totalComplaints": 156,
+    "resolvedCount": 140,
+    "averageResolutionTimeHrs": 14.7,
+    "topComplaintReason": "Component failure after 30 days",
+    "sentimentTrend": "Stable"
+  },
+  {
+    "category": "Packaging",
+    "totalComplaints": 18,
+    "resolvedCount": 18,
+    "averageResolutionTimeHrs": 5.1,
+    "topComplaintReason": "Wrong item labels on outer box",
+    "sentimentTrend": "Improving"
+  },
+  {
+    "category": "Service",
+    "totalComplaints": 42,
+    "resolvedCount": 42,
+    "averageResolutionTimeHrs": 3.5,
+    "topComplaintReason": "Difficulty reaching a human agent",
+    "sentimentTrend": "Stable"
+  },
+  {
+    "category": "Logistics",
+    "totalComplaints": 77,
+    "resolvedCount": 75,
+    "averageResolutionTimeHrs": 12.9,
+    "topComplaintReason": "Shipping address typos by dispatch",
+    "sentimentTrend": "Improving"
+  },
+  {
+    "category": "Product",
+    "totalComplaints": 201,
+    "resolvedCount": 185,
+    "averageResolutionTimeHrs": 20.2,
+    "topComplaintReason": "Firmware update causing crashes",
+    "sentimentTrend": "Declining"
+  },
+  {
+    "category": "Packaging",
+    "totalComplaints": 37,
+    "resolvedCount": 35,
+    "averageResolutionTimeHrs": 11.0,
+    "topComplaintReason": "Missing assembly hardware in box",
+    "sentimentTrend": "Stable"
+  },
+  {
+    "category": "Service",
+    "totalComplaints": 29,
+    "resolvedCount": 28,
+    "averageResolutionTimeHrs": 9.4,
+    "topComplaintReason": "Rude interaction with delivery staff",
+    "sentimentTrend": "Improving"
+  }
+],"ComplaintReport":[
+  {
+    "id": "CR-001",
+    "category": "Shipping",
+    "count": 45,
+    "sentimentScore": 22,
+    "recentFeedback": "Package arrived two weeks late and the box was crushed."
+  },
+  {
+    "id": "CR-002",
+    "category": "Product Quality",
+    "count": 12,
+    "sentimentScore": 15,
+    "recentFeedback": "The stitching on the hem started unraveling after just one wash."
+  },
+  {
+    "id": "CR-003",
+    "category": "Support",
+    "count": 30,
+    "sentimentScore": 40,
+    "recentFeedback": "Wait times on the live chat are consistently over 30 minutes."
+  },
+  {
+    "id": "CR-004",
+    "category": "Accuracy",
+    "count": 8,
+    "sentimentScore": 35,
+    "recentFeedback": "The website listed the material as 100% cotton, but the tag says polyester."
+  },
+  {
+    "id": "CR-005",
+    "category": "Shipping",
+    "count": 19,
+    "sentimentScore": 55,
+    "recentFeedback": "Tracking link didn't update until after the item was delivered."
+  },
+  {
+    "id": "CR-006",
+    "category": "Product Quality",
+    "count": 5,
+    "sentimentScore": 10,
+    "recentFeedback": "The electronic component failed within 24 hours of first use."
+  },
+  {
+    "id": "CR-007",
+    "category": "Support",
+    "count": 22,
+    "sentimentScore": 62,
+    "recentFeedback": "The agent was polite but didn't actually have the authority to issue a refund."
+  },
+  {
+    "id": "CR-008",
+    "category": "Accuracy",
+    "count": 14,
+    "sentimentScore": 28,
+    "recentFeedback": "Received a size Small when the order confirmation clearly states Large."
+  },
+  {
+    "id": "CR-009",
+    "category": "Shipping",
+    "count": 52,
+    "sentimentScore": 18,
+    "recentFeedback": "Carrier left the package in the rain instead of under the porch roof."
+  },
+  {
+    "id": "CR-010",
+    "category": "Product Quality",
+    "count": 33,
+    "sentimentScore": 48,
+    "recentFeedback": "The color is much duller in person than it appeared in the studio photos."
+  },
+  {
+    "id": "CR-011",
+    "category": "Support",
+    "count": 17,
+    "sentimentScore": 25,
+    "recentFeedback": "I've sent three emails over five days and haven't received a single response."
+  },
+  {
+    "id": "CR-012",
+    "category": "Accuracy",
+    "count": 6,
+    "sentimentScore": 50,
+    "recentFeedback": "Missing the charging cable that was supposed to be included in the box."
+  },
+  {
+    "id": "CR-013",
+    "category": "Shipping",
+    "count": 27,
+    "sentimentScore": 31,
+    "recentFeedback": "Status marked as 'Delivered' yesterday, but it still hasn't shown up."
+  },
+  {
+    "id": "CR-014",
+    "category": "Product Quality",
+    "count": 9,
+    "sentimentScore": 12,
+    "recentFeedback": "The screen has several dead pixels right out of the box."
+  },
+  {
+    "id": "CR-015",
+    "category": "Support",
+    "count": 41,
+    "sentimentScore": 38,
+    "recentFeedback": "Got disconnected from the phone queue twice after waiting 15 minutes."
+  },
+  {
+    "id": "CR-016",
+    "category": "Accuracy",
+    "count": 11,
+    "sentimentScore": 44,
+    "recentFeedback": "The dimensions provided online are off by nearly two inches."
+  },
+  {
+    "id": "CR-017",
+    "category": "Shipping",
+    "count": 38,
+    "sentimentScore": 20,
+    "recentFeedback": "International customs fees were not disclosed at checkout as promised."
+  },
+  {
+    "id": "CR-018",
+    "category": "Product Quality",
+    "count": 25,
+    "sentimentScore": 58,
+    "recentFeedback": "Functional, but the plastic casing feels very thin and cheap."
+  },
+  {
+    "id": "CR-019",
+    "category": "Support",
+    "count": 14,
+    "sentimentScore": 70,
+    "recentFeedback": "Issue was finally resolved, but I had to explain my problem to four different people."
+  },
+  {
+    "id": "CR-020",
+    "category": "Accuracy",
+    "count": 3,
+    "sentimentScore": 65,
+    "recentFeedback": "The software version advertised is older than the one actually shipped."
+  }
+]}
