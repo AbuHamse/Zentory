@@ -1,0 +1,302 @@
+[
+  {
+    "assignedPickerId": "USR-1001",
+    "assignedPackerId": "USR-1004",
+    "boxSize": "12x12x12",
+    "weight": 4.5,
+    "carrier": "FedEx",
+    "trackingNumber": "278394011223",
+    "sealNumber": "SEAL-8821",
+    "trailerNumber": "TR-5044"
+  },
+  {
+    "assignedPickerId": "USR-1002",
+    "assignedPackerId": "USR-1005",
+    "boxSize": "24x18x12",
+    "weight": 18.2,
+    "carrier": "UPS",
+    "trackingNumber": "1Z999AA10123456784",
+    "sealNumber": "SEAL-9002",
+    "trailerNumber": "TR-9912"
+  },
+  {
+    "assignedPickerId": "USR-1003",
+    "assignedPackerId": "USR-1011",
+    "boxSize": "10x10x10",
+    "weight": 2.1,
+    "carrier": "DHL",
+    "trackingNumber": "JD0144529384",
+    "sealNumber": "SEAL-1156",
+    "trailerNumber": "TR-2231"
+  },
+  {
+    "assignedPickerId": "USR-1009",
+    "assignedPackerId": "USR-1015",
+    "boxSize": "Pallet-Standard",
+    "weight": 450.0,
+    "carrier": "XPO Logistics",
+    "trackingNumber": "XPO-7783921",
+    "sealNumber": "SEAL-4439",
+    "trailerNumber": "TR-8801"
+  },
+  {
+    "assignedPickerId": "USR-1010",
+    "assignedPackerId": "USR-1020",
+    "boxSize": "18x18x24",
+    "weight": 35.7,
+    "carrier": "FedEx Ground",
+    "trackingNumber": "992837411002",
+    "sealNumber": "SEAL-3321",
+    "trailerNumber": "TR-4450"
+  },
+  {
+    "assignedPickerId": "USR-1012",
+    "assignedPackerId": "USR-1030",
+    "boxSize": "6x6x6",
+    "weight": 0.8,
+    "carrier": "USPS",
+    "trackingNumber": "940010002345678901",
+    "sealNumber": "SEAL-0092",
+    "trailerNumber": "TR-1122"
+  },
+  {
+    "assignedPickerId": "USR-1013",
+    "assignedPackerId": "USR-1043",
+    "boxSize": "20x20x20",
+    "weight": 22.4,
+    "carrier": "UPS",
+    "trackingNumber": "1Z888BB20234567812",
+    "sealNumber": "SEAL-5561",
+    "trailerNumber": "TR-7734"
+  },
+  {
+    "assignedPickerId": "USR-1016",
+    "assignedPackerId": "USR-1047",
+    "boxSize": "12x12x48",
+    "weight": 12.0,
+    "carrier": "FedEx",
+    "trackingNumber": "278394011556",
+    "sealNumber": "SEAL-2210",
+    "trailerNumber": "TR-6619"
+  },
+  {
+    "assignedPickerId": "USR-1019",
+    "assignedPackerId": "USR-1004",
+    "boxSize": "14x14x14",
+    "weight": 8.9,
+    "carrier": "DHL",
+    "trackingNumber": "JD0144529990",
+    "sealNumber": "SEAL-7712",
+    "trailerNumber": "TR-3345"
+  },
+  {
+    "assignedPickerId": "USR-1021",
+    "assignedPackerId": "USR-1005",
+    "boxSize": "Small-Padded",
+    "weight": 0.4,
+    "carrier": "Amazon Logistics",
+    "trackingNumber": "TBA3344556677",
+    "sealNumber": "SEAL-9981",
+    "trailerNumber": "TR-5521"
+  },
+  {
+    "assignedPickerId": "USR-1023",
+    "assignedPackerId": "USR-1011",
+    "boxSize": "12x12x12",
+    "weight": 5.2,
+    "carrier": "UPS",
+    "trackingNumber": "1Z777CC30345678901",
+    "sealNumber": "SEAL-1004",
+    "trailerNumber": "TR-9980"
+  },
+  {
+    "assignedPickerId": "USR-1028",
+    "assignedPackerId": "USR-1015",
+    "boxSize": "24x24x24",
+    "weight": 42.1,
+    "carrier": "Old Dominion",
+    "trackingNumber": "OD-11223344",
+    "sealNumber": "SEAL-6672",
+    "trailerNumber": "TR-2113"
+  },
+  {
+    "assignedPickerId": "USR-1029",
+    "assignedPackerId": "USR-1020",
+    "boxSize": "10x8x6",
+    "weight": 3.3,
+    "carrier": "FedEx",
+    "trackingNumber": "278394011889",
+    "sealNumber": "SEAL-4431",
+    "trailerNumber": "TR-5566"
+  },
+  {
+    "assignedPickerId": "USR-1033",
+    "assignedPackerId": "USR-1030",
+    "boxSize": "12x12x12",
+    "weight": 6.7,
+    "carrier": "UPS",
+    "trackingNumber": "1Z666DD40456789012",
+    "sealNumber": "SEAL-2290",
+    "trailerNumber": "TR-8812"
+  },
+  {
+    "assignedPickerId": "USR-1034",
+    "assignedPackerId": "USR-1043",
+    "boxSize": "Medium-Flat-Rate",
+    "weight": 5.0,
+    "carrier": "USPS",
+    "trackingNumber": "940550009876543210",
+    "sealNumber": "SEAL-8813",
+    "trailerNumber": "TR-4411"
+  },
+  {
+    "assignedPickerId": "USR-1036",
+    "assignedPackerId": "USR-1047",
+    "boxSize": "Custom-Aviation",
+    "weight": 115.0,
+    "carrier": "Emirates SkyCargo",
+    "trackingNumber": "EK-9928374",
+    "sealNumber": "SEAL-SKY-01",
+    "trailerNumber": "TR-1010"
+  },
+  {
+    "assignedPickerId": "USR-1038",
+    "assignedPackerId": "USR-1004",
+    "boxSize": "16x16x16",
+    "weight": 14.5,
+    "carrier": "DHL",
+    "trackingNumber": "JD0144531122",
+    "sealNumber": "SEAL-3340",
+    "trailerNumber": "TR-2299"
+  },
+  {
+    "assignedPickerId": "USR-1041",
+    "assignedPackerId": "USR-1005",
+    "boxSize": "8x8x8",
+    "weight": 1.2,
+    "carrier": "UPS",
+    "trackingNumber": "1Z555EE50567890123",
+    "sealNumber": "SEAL-1123",
+    "trailerNumber": "TR-7711"
+  },
+  {
+    "assignedPickerId": "USR-1045",
+    "assignedPackerId": "USR-1011",
+    "boxSize": "Pallet-L",
+    "weight": 890.0,
+    "carrier": "Maersk",
+    "trackingNumber": "MAE-992031",
+    "sealNumber": "SEAL-M-99",
+    "trailerNumber": "TR-CONTAINER-4"
+  },
+  {
+    "assignedPickerId": "USR-1046",
+    "assignedPackerId": "USR-1015",
+    "boxSize": "12x12x12",
+    "weight": 4.8,
+    "carrier": "FedEx Ground",
+    "trackingNumber": "992837411990",
+    "sealNumber": "SEAL-4451",
+    "trailerNumber": "TR-9008"
+  },
+  {
+    "assignedPickerId": "USR-1049",
+    "assignedPackerId": "USR-1020",
+    "boxSize": "6x6x36",
+    "weight": 7.4,
+    "carrier": "UPS",
+    "trackingNumber": "1Z444FF60678901234",
+    "sealNumber": "SEAL-6617",
+    "trailerNumber": "TR-3312"
+  },
+  {
+    "assignedPickerId": "USR-1001",
+    "assignedPackerId": "USR-1030",
+    "boxSize": "10x10x10",
+    "weight": 2.9,
+    "carrier": "DHL",
+    "trackingNumber": "JD0144535566",
+    "sealNumber": "SEAL-8824",
+    "trailerNumber": "TR-5044"
+  },
+  {
+    "assignedPickerId": "USR-1002",
+    "assignedPackerId": "USR-1043",
+    "boxSize": "24x18x12",
+    "weight": 19.5,
+    "carrier": "FedEx",
+    "trackingNumber": "278394012001",
+    "sealNumber": "SEAL-9005",
+    "trailerNumber": "TR-9912"
+  },
+  {
+    "assignedPickerId": "USR-1013",
+    "assignedPackerId": "USR-1047",
+    "boxSize": "14x14x14",
+    "weight": 9.2,
+    "carrier": "UPS",
+    "trackingNumber": "1Z333GG70789012345",
+    "sealNumber": "SEAL-1122",
+    "trailerNumber": "TR-7734"
+  },
+  {
+    "assignedPickerId": "USR-1034",
+    "assignedPackerId": "USR-1004",
+    "boxSize": "8x8x8",
+    "weight": 1.1,
+    "carrier": "USPS",
+    "trackingNumber": "940550001112223334",
+    "sealNumber": "SEAL-5567",
+    "trailerNumber": "TR-4411"
+  },
+  {
+    "assignedPickerId": "USR-1021",
+    "assignedPackerId": "USR-1005",
+    "boxSize": "12x12x12",
+    "weight": 4.2,
+    "carrier": "FedEx",
+    "trackingNumber": "278394012112",
+    "sealNumber": "SEAL-9985",
+    "trailerNumber": "TR-5521"
+  },
+  {
+    "assignedPickerId": "USR-1016",
+    "assignedPackerId": "USR-1011",
+    "boxSize": "18x18x18",
+    "weight": 28.6,
+    "carrier": "UPS Ground",
+    "trackingNumber": "1Z222HH80890123456",
+    "sealNumber": "SEAL-2215",
+    "trailerNumber": "TR-6619"
+  },
+  {
+    "assignedPickerId": "USR-1041",
+    "assignedPackerId": "USR-1015",
+    "boxSize": "Small-Box",
+    "weight": 0.9,
+    "carrier": "DHL",
+    "trackingNumber": "JD0144538899",
+    "sealNumber": "SEAL-1125",
+    "trailerNumber": "TR-7711"
+  },
+  {
+    "assignedPickerId": "USR-1046",
+    "assignedPackerId": "USR-1020",
+    "boxSize": "10x10x10",
+    "weight": 3.1,
+    "carrier": "UPS",
+    "trackingNumber": "1Z111II90901234567",
+    "sealNumber": "SEAL-4455",
+    "trailerNumber": "TR-9008"
+  },
+  {
+    "assignedPickerId": "USR-1050",
+    "assignedPackerId": "USR-1030",
+    "boxSize": "Administrative-Large",
+    "weight": 15.0,
+    "carrier": "FedEx",
+    "trackingNumber": "278394013000",
+    "sealNumber": "SEAL-9999",
+    "trailerNumber": "TR-1001"
+  }
+]

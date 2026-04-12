@@ -1,0 +1,272 @@
+[
+  {
+    "id": "ALT-3001",
+    "severity": "CRITICAL",
+    "category": "INVENTORY",
+    "message": "Stockout detected for SKU: MS-XBOX-01. 10 units required for ORD-2001.",
+    "timestamp": "2026-04-12T08:05:00Z",
+    "isResolved": false,
+    "relatedId": "MS-XBOX-01"
+  },
+  {
+    "id": "ALT-3002",
+    "severity": "WARNING",
+    "category": "EQUIPMENT",
+    "message": "Forklift #04 (Zone B) reports low battery. Maintenance required.",
+    "timestamp": "2026-04-12T08:20:00Z",
+    "isResolved": false,
+    "relatedId": "FL-04"
+  },
+  {
+    "id": "ALT-3003",
+    "severity": "INFO",
+    "category": "ORDER",
+    "message": "Priority upgraded to URGENT for ORD-2002 by Admin.",
+    "timestamp": "2026-04-12T08:45:00Z",
+    "isResolved": true,
+    "relatedId": "ORD-2002"
+  },
+  {
+    "id": "ALT-3004",
+    "severity": "CRITICAL",
+    "category": "SAFETY",
+    "message": "Spill reported in Aisle 15. Zone restricted until cleanup complete.",
+    "timestamp": "2026-04-12T09:10:00Z",
+    "isResolved": false,
+    "relatedId": "Aisle-15"
+  },
+  {
+    "id": "ALT-3005",
+    "severity": "WARNING",
+    "category": "INVENTORY",
+    "message": "Low stock warning: TSLA-BAT-M3. Current qty: 5.",
+    "timestamp": "2026-04-12T09:30:00Z",
+    "isResolved": false,
+    "relatedId": "TSLA-BAT-M3"
+  },
+  {
+    "id": "ALT-3006",
+    "severity": "CRITICAL",
+    "category": "ORDER",
+    "message": "ORD-2005 contains hazardous materials (Cryogenic O-Ring). Special handling required.",
+    "timestamp": "2026-04-12T10:00:00Z",
+    "isResolved": false,
+    "relatedId": "ORD-2005"
+  },
+  {
+    "id": "ALT-3007",
+    "severity": "INFO",
+    "category": "EQUIPMENT",
+    "message": "Conveyor Belt 2 scheduled maintenance completed.",
+    "timestamp": "2026-04-12T10:15:00Z",
+    "isResolved": true,
+    "relatedId": "CB-02"
+  },
+  {
+    "id": "ALT-3008",
+    "severity": "WARNING",
+    "category": "ORDER",
+    "message": "Delayed Picking: ORD-2010 has been in PENDING for over 2 hours.",
+    "timestamp": "2026-04-12T10:45:00Z",
+    "isResolved": false,
+    "relatedId": "ORD-2010"
+  },
+  {
+    "id": "ALT-3009",
+    "severity": "CRITICAL",
+    "category": "INVENTORY",
+    "message": "Inventory discrepancy found in Vault-05 for APL-IPH-15.",
+    "timestamp": "2026-04-12T11:00:00Z",
+    "isResolved": false,
+    "relatedId": "APL-IPH-15"
+  },
+  {
+    "id": "ALT-3010",
+    "severity": "INFO",
+    "category": "SAFETY",
+    "message": "Monthly safety inspection passed for Zone D.",
+    "timestamp": "2026-04-12T11:30:00Z",
+    "isResolved": true,
+    "relatedId": "Zone-D"
+  },
+  {
+    "id": "ALT-3011",
+    "severity": "WARNING",
+    "category": "EQUIPMENT",
+    "message": "Handheld Scanner USR-1043 reporting intermittent connectivity.",
+    "timestamp": "2026-04-12T12:00:00Z",
+    "isResolved": false,
+    "relatedId": "USR-1043"
+  },
+  {
+    "id": "ALT-3012",
+    "severity": "CRITICAL",
+    "category": "ORDER",
+    "message": "Customer Cancellation: ORD-2007. Halt picking immediately.",
+    "timestamp": "2026-04-12T12:15:00Z",
+    "isResolved": false,
+    "relatedId": "ORD-2007"
+  },
+  {
+    "id": "ALT-3013",
+    "severity": "WARNING",
+    "category": "INVENTORY",
+    "message": "Expiring Stock: PF-VIAL-S (Batch #492) expires in 48 hours.",
+    "timestamp": "2026-04-12T12:45:00Z",
+    "isResolved": false,
+    "relatedId": "PF-VIAL-S"
+  },
+  {
+    "id": "ALT-3014",
+    "severity": "INFO",
+    "category": "INVENTORY",
+    "message": "Restock arrived: 500 units of COKE-CL-12 added to Pallet Zone 01.",
+    "timestamp": "2026-04-12T13:00:00Z",
+    "isResolved": true,
+    "relatedId": "COKE-CL-12"
+  },
+  {
+    "id": "ALT-3015",
+    "severity": "CRITICAL",
+    "category": "SAFETY",
+    "message": "Emergency Exit 3 blocked in Loading Dock. Clear immediately.",
+    "timestamp": "2026-04-12T13:20:00Z",
+    "isResolved": false,
+    "relatedId": "Dock-S"
+  },
+  {
+    "id": "ALT-3016",
+    "severity": "WARNING",
+    "category": "ORDER",
+    "message": "Incorrect item scanned for ORD-2020. User: Marcus.",
+    "timestamp": "2026-04-12T13:45:00Z",
+    "isResolved": true,
+    "relatedId": "ORD-2020"
+  },
+  {
+    "id": "ALT-3017",
+    "severity": "INFO",
+    "category": "EQUIPMENT",
+    "message": "New automated wrapper installed in Packing Zone 3.",
+    "timestamp": "2026-04-12T14:10:00Z",
+    "isResolved": true,
+    "relatedId": "WRAP-03"
+  },
+  {
+    "id": "ALT-3018",
+    "severity": "CRITICAL",
+    "category": "INVENTORY",
+    "message": "Temperature breach in Cold Storage Unit 4. Vaccines at risk.",
+    "timestamp": "2026-04-12T14:30:00Z",
+    "isResolved": false,
+    "relatedId": "CSU-04"
+  },
+  {
+    "id": "ALT-3019",
+    "severity": "WARNING",
+    "category": "EQUIPMENT",
+    "message": "Printer P-LBL-02 out of thermal labels.",
+    "timestamp": "2026-04-12T15:00:00Z",
+    "isResolved": false,
+    "relatedId": "AMZ-LBL-T"
+  },
+  {
+    "id": "ALT-3020",
+    "severity": "INFO",
+    "category": "ORDER",
+    "message": "ORD-2030 successfully consolidated with ORD-2035.",
+    "timestamp": "2026-04-12T15:20:00Z",
+    "isResolved": true,
+    "relatedId": "ORD-2030"
+  },
+  {
+    "id": "ALT-3021",
+    "severity": "CRITICAL",
+    "category": "ORDER",
+    "message": "Shipping address validation failed for ORD-2040. Action required.",
+    "timestamp": "2026-04-12T15:45:00Z",
+    "isResolved": false,
+    "relatedId": "ORD-2040"
+  },
+  {
+    "id": "ALT-3022",
+    "severity": "WARNING",
+    "category": "SAFETY",
+    "message": "High pedestrian traffic detected in Forklift Lane 2.",
+    "timestamp": "2026-04-12T16:00:00Z",
+    "isResolved": false,
+    "relatedId": "Lane-02"
+  },
+  {
+    "id": "ALT-3023",
+    "severity": "INFO",
+    "category": "INVENTORY",
+    "message": "SKU: TYT-FILT-O moved from Aisle 12 to High-Velocity Zone A.",
+    "timestamp": "2026-04-12T16:30:00Z",
+    "isResolved": true,
+    "relatedId": "TYT-FILT-O"
+  },
+  {
+    "id": "ALT-3024",
+    "severity": "CRITICAL",
+    "category": "EQUIPMENT",
+    "message": "Sorting Arm #01 jammed. Shipping throughput reduced by 40%.",
+    "timestamp": "2026-04-12T16:50:00Z",
+    "isResolved": false,
+    "relatedId": "SORT-01"
+  },
+  {
+    "id": "ALT-3025",
+    "severity": "WARNING",
+    "category": "ORDER",
+    "message": "ORD-2044 weight exceeds standard pallet limit. Recalculating shipping.",
+    "timestamp": "2026-04-13T08:10:00Z",
+    "isResolved": false,
+    "relatedId": "ORD-2044"
+  },
+  {
+    "id": "ALT-3026",
+    "severity": "INFO",
+    "category": "SAFETY",
+    "message": "Weekly fire extinguisher check complete.",
+    "timestamp": "2026-04-13T08:45:00Z",
+    "isResolved": true,
+    "relatedId": "Safety-Log"
+  },
+  {
+    "id": "ALT-3027",
+    "severity": "CRITICAL",
+    "category": "INVENTORY",
+    "message": "Product Recall: Batch #881 of SKU: ABT-FS-01. Quarantine all units.",
+    "timestamp": "2026-04-13T09:00:00Z",
+    "isResolved": false,
+    "relatedId": "ABT-FS-01"
+  },
+  {
+    "id": "ALT-3028",
+    "severity": "WARNING",
+    "category": "EQUIPMENT",
+    "message": "WiFi Access Point AP-09 is offline. Picking in Zone Z may be affected.",
+    "timestamp": "2026-04-13T09:20:00Z",
+    "isResolved": false,
+    "relatedId": "AP-09"
+  },
+  {
+    "id": "ALT-3029",
+    "severity": "INFO",
+    "category": "ORDER",
+    "message": "ORD-2050 assigned to Marcus for priority picking.",
+    "timestamp": "2026-04-13T10:00:00Z",
+    "isResolved": true,
+    "relatedId": "ORD-2050"
+  },
+  {
+    "id": "ALT-3030",
+    "severity": "CRITICAL",
+    "category": "SAFETY",
+    "message": "Unauthorized personnel detected in High-Security Vault.",
+    "timestamp": "2026-04-13T10:30:00Z",
+    "isResolved": false,
+    "relatedId": "Vault-S"
+  }
+]
