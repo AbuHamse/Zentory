@@ -15,7 +15,7 @@ export interface ProductReport {
 export interface CustomReportConfig {
   title: string;
   dataSource: 'Sales' | 'Inventory' | 'Returns' | 'Complaints';
-  timeFrame: '7D' | '30D' | '90D' | '1Y';
+  timeFrame: '7D' | '30D' | '90D' | '6M' | '1Y';
   visualType: 'Bar' | 'Line' | 'Pie' | 'Table';
   metrics: string[]; // e.g., ["Total Sales", "Profit Margin"]
 }

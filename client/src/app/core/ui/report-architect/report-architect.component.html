@@ -1,25 +1,38 @@
-<div class="flex flex-col gap-6 h-full animate-in slide-in-from-left duration-500">
-  
-  <div class="grid grid-cols-12 gap-6 flex-1 overflow-hidden">
-    
-    <div class="col-span-4 zentory-widget bg-wham-dark text-white flex flex-col border-none">
-      <p class="text-[10px] font-black uppercase text-wham-primary mb-8 tracking-[0.2em]">Report Parameters</p>
-      
+<div
+  class="flex flex-col gap-4 h-full animate-in slide-in-from-left duration-500 overflow-hidden p-2"
+>
+  <div class="grid grid-cols-12 gap-6 flex-1 min-h-0">
+    <div
+      class="col-span-4 zentory-widget bg-wham-dark text-white flex flex-col border-none shadow-[8px_8px_0px_#000] min-h-0"
+    >
+      <p
+        class="text-[18px] font-black uppercase text-wham-primary mb-6 tracking-[0.3em] border-b border-wham-primary/20 pb-2"
+      >
+        Report Parameters
+      </p>
+
       <div class="flex-1 space-y-6 overflow-y-auto pr-2 custom-scrollbar">
-        <div class="space-y-1">
-          <label class="text-[8px] font-bold opacity-40 uppercase">Report Title</label>
-          <input type="text" [(ngModel)]="config().title" 
-                 class="w-full bg-white/5 border border-white/20 p-3 text-xs font-black uppercase tracking-widest text-wham-primary outline-none focus:border-wham-primary">
+        <div class="space-y-2">
+          <label class="text-[14px] font-black uppercase text-wham-primary">Report Title</label>
+          <input
+            type="text"
+            [(ngModel)]="config().title"
+            class="w-full bg-white/10 border-2 border-white/20 p-3 text-sm font-black uppercase tracking-widest text-slate-800 outline-none focus:border-wham-primary"
+          />
         </div>
 
-        <div class="space-y-1">
-          <label class="text-[8px] font-bold opacity-40 uppercase">Data Stream</label>
+        <div class="space-y-2">
+          <label class="text-[13px] font-black uppercase text-wham-primary"
+            >Data Stream Source</label
+          >
           <div class="grid grid-cols-2 gap-2">
             @for (s of sources; track s) {
-              <button (click)="config().dataSource = s"
-                      [class.border-wham-primary]="config().dataSource === s"
-                      [class.text-wham-primary]="config().dataSource === s"
-                      class="p-2 border border-white/10 text-[9px] font-black uppercase transition-all">
+              <button
+                (click)="config().dataSource = s"
+                [class.bg-wham-primary]="config().dataSource === s"
+                [class.text-wham-white]="config().dataSource === s"
+                class="p-2 border-2 border-white/10 text-[11px] text-slate-800 font-black uppercase transition-all hover:border-wham-primary"
+              >
                 {{ s }}
               </button>
             }
@@ -27,64 +40,272 @@
         </div>
 
         <div class="grid grid-cols-2 gap-4">
-          <div class="space-y-1">
-            <label class="text-[8px] font-bold opacity-40 uppercase">History</label>
-            <select [(ngModel)]="config().timeFrame" class="w-full bg-white/5 border border-white/20 p-2 text-[10px] font-black uppercase outline-none">
-              @for (f of frames; track f) { <option [value]="f">{{ f }}</option> }
+          <div class="space-y-2">
+            <label class="text-[13px] font-black uppercase text-wham-primary">History</label>
+            <select
+              [(ngModel)]="config().timeFrame"
+              class="w-full bg-wham-dark border-2 border-white/20 p-2 text-[12px] font-black uppercase text-white outline-none"
+            >
+              @for (f of frames; track f) {
+                <option [value]="f">{{ f }}</option>
+              }
             </select>
           </div>
-          <div class="space-y-1">
-            <label class="text-[8px] font-bold opacity-40 uppercase">Visual Type</label>
-            <select [(ngModel)]="config().visualType" class="w-full bg-white/5 border border-white/20 p-2 text-[10px] font-black uppercase outline-none">
-              @for (v of visuals; track v) { <option [value]="v">{{ v }}</option> }
+          <div class="space-y-2">
+            <label class="text-[13px] font-black uppercase text-wham-primary">Visual Type</label>
+            <select
+              [(ngModel)]="config().visualType"
+              class="w-full bg-wham-dark border-2 border-white/20 p-2 text-[12px] font-black uppercase text-white outline-none"
+            >
+              @for (v of visuals; track v) {
+                <option [value]="v">{{ v }}</option>
+              }
             </select>
           </div>
         </div>
       </div>
 
-      <button (click)="onSaveConfig()" class="w-full bg-wham-primary text-wham-dark py-4 text-[10px] font-black uppercase tracking-widest mt-8 hover:bg-white transition-all">
+      <button
+        (click)="onSaveConfig()"
+        class="w-full bg-wham-primary text-black py-4 text-[16px] font-black uppercase tracking-widest mt-6 hover:bg-white transition-all shadow-[4px_4px_0px_#000]"
+      >
         Deploy Custom Report
       </button>
     </div>
 
-    <div class="col-span-8 flex flex-col gap-6">
-      <div class="zentory-widget flex-1 border-dashed border-2 border-wham-dark/20 flex flex-col items-center justify-center relative bg-wham-tan/5">
-        
-        <mat-icon class="absolute scale-[10] opacity-[0.03] rotate-12">architecture</mat-icon>
-
-        <div class="text-center z-10">
-          <p class="text-[8px] font-black uppercase opacity-40 mb-2">Live Preview // {{ config().visualType }} Mode</p>
-          <h2 class="text-2xl font-black text-wham-dark uppercase tracking-tighter mb-4">{{ config().title }}</h2>
-          
-          <div class="flex gap-2 justify-center mb-8">
-            <span class="px-2 py-1 bg-wham-dark text-white text-[8px] font-black uppercase">{{ config().dataSource }}</span>
-            <span class="px-2 py-1 border border-wham-dark text-[8px] font-black uppercase">{{ config().timeFrame }}</span>
+    <div class="col-span-8 flex flex-col gap-4 min-h-0 relative">
+      @if (selectedPoint()) {
+        <div
+          class="absolute right-6 top-24 z-40 w-64 bg-white border-4 border-wham-dark p-6 shadow-[12px_12px_0px_#ff0000] animate-in slide-in-from-right duration-300"
+        >
+          <div class="flex justify-between items-start mb-4">
+            <h4 class="text-xl font-black uppercase leading-none">{{ selectedPoint()?.label }}</h4>
+            <button
+              (click)="selectedPoint.set(null)"
+              class="text-wham-dark hover:text-wham-primary"
+            >
+              <mat-icon>close</mat-icon>
+            </button>
           </div>
+          <p class="text-[10px] font-black uppercase opacity-40 mb-1">Quantified Value</p>
+          <p class="text-4xl font-black text-wham-primary">{{ selectedPoint()?.value }}%</p>
+          <div class="mt-6 pt-4 border-t-2 border-wham-dark/5">
+            <button
+              class="w-full bg-wham-dark text-white p-2 text-[10px] font-black uppercase hover:bg-wham-primary hover:text-wham-dark transition-all"
+            >
+              View Full Analytics
+            </button>
+          </div>
+        </div>
+      }
 
-          <div class="w-64 h-32 flex items-end justify-center gap-2">
-            @for (i of [40, 70, 45, 90, 60]; track i) {
-              <div class="w-4 bg-wham-dark/10" [style.height.%]="i"></div>
+      <div
+        class="zentory-widget flex-1 border-dashed border-4 border-wham-dark/10 flex flex-col relative bg-wham-tan/5 overflow-hidden"
+      >
+        @if (isDeployed()) {
+          <div class="absolute top-4 right-4 z-30 flex gap-2">
+            <button
+              (click)="engine.downloadReportData()"
+              class="bg-wham-dark text-white p-2 border-2 border-wham-dark hover:bg-wham-primary transition-all flex items-center gap-2 shadow-[4px_4px_0px_#000]"
+            >
+              <mat-icon class="scale-75">download</mat-icon>
+              <span class="text-[9px] font-black uppercase">Export CSV</span>
+            </button>
+          </div>
+        }
+
+        <div class="flex-1 flex flex-col items-center justify-center p-8 z-10 w-full min-h-0">
+          <p class="text-[10px] font-black uppercase opacity-40 mb-2 tracking-[0.5em]">
+            Live Engine // {{ config().dataSource }}
+          </p>
+          <h2
+            class="text-4xl font-black text-wham-dark uppercase tracking-tighter mb-8 text-center"
+          >
+            {{ config().title }}
+          </h2>
+
+          <div class="w-full flex-1 flex items-center justify-center min-h-0">
+            @switch (config().visualType) {
+              @case ('Bar') {
+                <div class="w-full h-full flex px-4">
+                  <div
+                    class="flex flex-col justify-between text-[10px] font-black opacity-30 pr-4 pb-8"
+                  >
+                    @for (y of engine.yLabels; track y) {
+                      <span>{{ y }}%</span>
+                    }
+                  </div>
+
+                  <div class="flex-1 flex flex-col">
+                    <div
+                      class="flex-1 flex items-end justify-center gap-2 border-b-4 border-wham-dark/10 pb-2"
+                    >
+                      @for (val of graphData(); track $index) {
+                        <div
+                          (click)="engine.selectPoint($index)"
+                          class="flex-1 bg-wham-dark group relative transition-all duration-700 hover:bg-wham-primary cursor-pointer"
+                          [style.height.%]="isDeployed() ? val : 2"
+                        >
+                          <div
+                            class="absolute -top-8 left-1/2 -translate-x-1/2 bg-wham-dark text-white text-[9px] font-black p-1 opacity-0 group-hover:opacity-100 shadow-[2px_2px_0px_#ff0000]"
+                          >
+                            {{ val }}%
+                          </div>
+                        </div>
+                      }
+                    </div>
+                    <div class="flex justify-center gap-2 pt-2">
+                      @for (label of engine.xLabels(); track label) {
+                        <span
+                          class="flex-1 text-center text-[9px] font-black uppercase opacity-40 tracking-tighter leading-none"
+                          >{{ label }}</span
+                        >
+                      }
+                    </div>
+                  </div>
+                </div>
+              }
+
+              @case ('Line') {
+                <div class="w-full h-full p-4 flex">
+                  <div
+                    class="flex flex-col justify-between text-[10px] font-black opacity-30 pr-4 pb-8"
+                  >
+                    @for (y of engine.yLabels; track y) {
+                      <span>{{ y }}%</span>
+                    }
+                  </div>
+                  <div class="flex-1 flex flex-col">
+                    <svg viewBox="0 0 1000 400" class="w-full h-full flex-1">
+                      <polyline
+                        fill="none"
+                        stroke="#222"
+                        stroke-width="10"
+                        [attr.points]="
+                          isDeployed()
+                            ? '50,350 200,280 400,320 600,80 800,120 950,40'
+                            : '50,350 950,350'
+                        "
+                        class="transition-all duration-1000 ease-out"
+                      />
+                    </svg>
+                    <div class="flex justify-between px-4 pt-2 border-t-2 border-wham-dark/10">
+                      @for (label of engine.xLabels(); track label) {
+                        <span class="text-[9px] font-black uppercase opacity-40">{{ label }}</span>
+                      }
+                    </div>
+                  </div>
+                </div>
+              }
+
+              @case ('Pie') {
+                <div class="w-full h-full flex items-center justify-center p-8">
+                  <svg
+                    viewBox="0 0 100 100"
+                    class="w-72 h-72 transform -rotate-90 animate-in zoom-in duration-700"
+                  >
+                    @for (val of graphData(); track $index) {
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="40"
+                        fill="transparent"
+                        stroke="#222"
+                        stroke-width="12"
+                        stroke-dasharray="251.2"
+                        class="opacity-10"
+                      />
+
+                      <circle
+                        (click)="engine.selectPoint($index)"
+                        cx="50"
+                        cy="50"
+                        r="40"
+                        fill="transparent"
+                        [attr.stroke]="val > 70 ? '#ff0000' : '#222'"
+                        stroke-width="12"
+                        [attr.stroke-dasharray]="isDeployed() ? val * 2.512 + ' 251.2' : '0 251.2'"
+                        stroke-linecap="round"
+                        class="transition-all duration-1000 ease-out cursor-pointer hover:opacity-80"
+                      />
+                    }
+
+                    <text
+                      x="50"
+                      y="55"
+                      text-anchor="middle"
+                      class="fill-wham-dark font-black text-[12px] uppercase tracking-tighter"
+                      transform="rotate(90 50 50)"
+                    >
+                      {{ isDeployed() ? graphData()[0] + '%' : 'READY' }}
+                    </text>
+                  </svg>
+                </div>
+              }
+
+              @case ('Table') {
+                <div
+                  class="w-full max-h-full overflow-y-auto bg-white border-4 border-wham-dark p-4 shadow-[10px_10px_0px_rgba(0,0,0,0.1)] custom-scrollbar"
+                >
+                  <table class="w-full text-left text-[11px] font-black uppercase">
+                    <thead class="sticky top-0 bg-white">
+                      <tr class="border-b-4 border-wham-dark">
+                        <th class="py-2">System_Metric</th>
+                        <th>Value</th>
+                        <th>Sync</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @for (m of config().metrics; track m) {
+                        <tr
+                          (click)="engine.selectPoint($index)"
+                          class="border-b border-wham-dark/10 hover:bg-wham-primary/5 cursor-pointer transition-colors"
+                        >
+                          <td class="py-4">{{ m }}</td>
+                          <td class="text-wham-primary">STABLE</td>
+                          <td class="opacity-40">OK</td>
+                        </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+              }
             }
           </div>
-          <p class="mt-6 text-[10px] font-bold opacity-40 italic">Click "Deploy" to generate live dataset...</p>
+
+          @if (!isDeployed()) {
+            <p
+              class="mt-8 text-[12px] font-black text-wham-primary uppercase animate-pulse tracking-[0.3em]"
+            >
+              [ Deployment Signature Required ]
+            </p>
+          }
         </div>
       </div>
 
-      <div class="h-24 grid grid-cols-3 gap-4">
-        <div class="zentory-widget p-3 flex items-center gap-3 border-wham-dark/20 opacity-50 hover:opacity-100 cursor-pointer transition-all">
-          <mat-icon class="text-sm">history</mat-icon>
-          <span class="text-[9px] font-black uppercase">Q3 Audit Template</span>
+      <div class="h-20 grid grid-cols-3 gap-4">
+        <div
+          (click)="applyPreset('AUDIT')"
+          class="zentory-widget p-2 flex items-center justify-center gap-3 border-2 border-wham-dark/20 hover:border-wham-primary cursor-pointer transition-all"
+        >
+          <mat-icon class="scale-100">assignment</mat-icon>
+          <span class="text-[11px] font-black uppercase leading-none">Q3 Audit</span>
         </div>
-        <div class="zentory-widget p-3 flex items-center gap-3 border-wham-dark/20 opacity-50 hover:opacity-100 cursor-pointer transition-all">
-          <mat-icon class="text-sm">history</mat-icon>
-          <span class="text-[9px] font-black uppercase">Supplier Scorecard</span>
+        <div
+          (click)="applyPreset('SCORECARD')"
+          class="zentory-widget p-2 flex items-center justify-center gap-3 border-2 border-wham-dark/20 hover:border-wham-primary cursor-pointer transition-all"
+        >
+          <mat-icon class="scale-100">analytics</mat-icon>
+          <span class="text-[11px] font-black uppercase leading-none">Supplier Score</span>
         </div>
-        <div class="zentory-widget p-3 flex items-center gap-3 border-wham-dark/20 opacity-50 hover:opacity-100 cursor-pointer transition-all">
-          <mat-icon class="text-sm">add</mat-icon>
-          <span class="text-[9px] font-black uppercase">Save New Preset</span>
+        <div
+          (click)="onSaveConfig()"
+          class="zentory-widget p-2 flex items-center justify-center gap-3 border-2 border-wham-dark bg-wham-dark text-slate-900 hover:bg-wham-primary hover:text-wham-dark cursor-pointer transition-all"
+        >
+          <mat-icon class="scale-100">bolt</mat-icon>
+          <span class="text-[11px] font-black uppercase leading-none tracking-widest">Execute</span>
         </div>
       </div>
     </div>
-
   </div>
 </div>

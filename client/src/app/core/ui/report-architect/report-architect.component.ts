@@ -1,8 +1,8 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../../../shared/material.module';
-import { ReportDataService } from '../../../services/report-data.service';
+import { ArchitectEngineService } from '../../../services/architect-engine.service';
 import { CustomReportConfig } from '../../../shared/models/performance-analytics.model';
 
 @Component({
@@ -13,24 +13,30 @@ import { CustomReportConfig } from '../../../shared/models/performance-analytics
   styleUrls: ['./report-architect.css']
 })
 export class ReportArchitectComponent {
-  private reportService = inject(ReportDataService);
+  // Inject the Engine
+  protected engine = inject(ArchitectEngineService);
 
-  // Available options for the builder
+  // Options remain in UI for selection
   protected sources: CustomReportConfig['dataSource'][] = ['Sales', 'Inventory', 'Returns', 'Complaints'];
-  protected frames: CustomReportConfig['timeFrame'][] = ['7D', '30D', '90D', '1Y'];
+  protected frames: CustomReportConfig['timeFrame'][] = ['7D', '30D', '90D', '6M', '1Y'];
   protected visuals: CustomReportConfig['visualType'][] = ['Bar', 'Line', 'Pie', 'Table'];
 
-  // The active configuration being built
-  protected config = signal<CustomReportConfig>({
-    title: 'NEW ANALYTICS REPORT',
-    dataSource: 'Sales',
-    timeFrame: '30D',
-    visualType: 'Bar',
-    metrics: ['Total Revenue', 'Profit Margin']
-  });
+  // Link local helpers to the engine's signals
+  protected config = this.engine.config;
+  protected graphData = this.engine.graphData;
+  protected isDeployed = this.engine.isDeployed;
+  protected selectedPoint = this.engine.activeTab;
 
   onSaveConfig() {
-    console.log('Zentory: Saving Architect Configuration...', this.config());
-    // This would eventually push to a "Saved Reports" array in your service
+    this.engine.isDeployed.set(true);
+    console.log('Zentory: Architect Deployment Active.');
   }
+
+  downloadGraph() {
+    alert(`Exporting ${this.config().title} as high-res PNG...`);
+  }
+
+  applyPreset(type: 'AUDIT' | 'SCORECARD') {
+  this.engine.applyPreset(type);
+}
 }

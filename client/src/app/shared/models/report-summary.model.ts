@@ -19,6 +19,7 @@ export interface ReportSummary {
 
 export interface ZentoryBusinessState {
   lastUpdated: string;
+  activeStorageUtilization: number;
   summary: {
     totalRevenue: number;
     activeInventoryValue: number;

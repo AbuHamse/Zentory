@@ -1,114 +1,146 @@
-<div class="flex flex-col gap-6 p-2 h-full">
-
-  <div class="flex justify-between items-center mb-2">
-    <div class="flex gap-4">
-      <button 
-        [routerLink]="['/dashboard/home']"
-        class="flex items-center gap-2 px-5 py-2 border-2 border-wham-dark bg-wham-white text-wham-dark font-black text-[11px] uppercase tracking-widest hover:bg-wham-dark hover:text-wham-white transition-all group">
-        <mat-icon class="scale-75 transition-transform group-hover:-translate-x-1">arrow_back</mat-icon>
-        Exit to Home
+<div class="flex flex-col gap-6 p-6 h-full overflow-hidden bg-wham-tan/5 relative">
+  
+  <div class="flex justify-between items-center bg-wham-dark p-4 border-2 border-wham-dark shadow-[4px_4px_0px_#000]">
+    <div class="flex gap-4 items-center">
+      <button (click)="openEditor('GLOBAL_CONFIG', $event)" 
+              class="bg-wham-primary text-wham-white px-5 py-2 font-black text-[10px] uppercase tracking-tighter hover:bg-wham-white hover:text-wham-dark transition-colors">
+        System Configuration
       </button>
-
-      <!-- <button 
-        [routerLink]="['/dashboard/inventory']"
-        class="hidden sm:flex items-center gap-2 px-5 py-2 border border-wham-dark/20 text-wham-dark/40 font-black text-[11px] uppercase tracking-widest hover:border-wham-primary hover:text-wham-primary transition-all">
-        View Inventory
-      </button> -->
+      <div class="flex items-center bg-wham-white/10 px-4 py-2 border border-wham-white/20 group focus-within:border-wham-primary">
+        <mat-icon class="scale-75 text-wham-white/40">search</mat-icon>
+        <input [ngModel]="searchQuery()" 
+       (ngModelChange)="searchQuery.set($event)" 
+       placeholder="SEARCH SYSTEM SKU..." 
+       class="bg-transparent outline-none text-[10px] font-black text-wham-white w-48 ml-2">
+      </div>
     </div>
-
-    <div class="text-right hidden md:block">
-      <p class="text-[9px] font-black text-wham-primary uppercase tracking-[0.4em] mb-1 leading-none">Command Center</p>
-      <h1 class="text-sm font-black text-wham-dark uppercase tracking-widest leading-none">Overview / Analytics</h1>
-    </div>
+    <span class="text-wham-white/30 text-[9px] font-black uppercase tracking-[0.4em]">Zentory_OS // v21.4</span>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-    <div class="zentory-widget h-24 border-l-4 border-wham-primary">
-      <p class="text-[10px] font-black tracking-widest opacity-60 uppercase">Total Revenue</p>
-      <h2 class="text-2xl font-black mt-1">$532k</h2>
+  <div class="flex justify-between items-center border-b-2 border-wham-dark pb-4">
+    <div class="flex items-center gap-4">
+      @if (activeSection() === 'HUB') {
+        <button [routerLink]="['/dashboard/home']" class="p-2 border-2 border-wham-dark hover:bg-wham-dark hover:text-white transition-all group">
+          <mat-icon class="transition-transform group-hover:-translate-x-1">arrow_back</mat-icon>
+        </button>
+      } @else {
+        <button (click)="backToHub()" class="p-2 border-2 border-wham-primary text-wham-primary hover:bg-wham-primary hover:text-white transition-all">
+          <mat-icon>apps</mat-icon>
+        </button>
+      }
+      <h1 class="text-2xl font-black uppercase tracking-widest text-wham-dark leading-none">
+        Overview // <span class="text-wham-primary">{{ activeSection() }}</span>
+      </h1>
     </div>
-    <div class="zentory-widget h-24 border-l-4 border-wham-primary">
-      <p class="text-[10px] font-black tracking-widest opacity-60 uppercase">New Orders</p>
-      <h2 class="text-2xl font-black mt-1">3,432</h2>
-    </div>
-    <div class="zentory-widget h-24 border-l-4 border-wham-primary">
-      <p class="text-[10px] font-black tracking-widest opacity-60 uppercase">Low Stock</p>
-      <h2 class="text-2xl font-black mt-1 text-wham-warn">1,942</h2>
-    </div>
-    <div class="zentory-widget h-24 border-l-4 border-wham-primary">
-      <p class="text-[10px] font-black tracking-widest opacity-60 uppercase">Return Customers</p>
-      <h2 class="text-2xl font-black mt-1">33%</h2>
-    </div>
-  </div>
-
-  <div class="grid grid-cols-12 gap-6 flex-1">
     
-    <div class="col-span-12 lg:col-span-9 flex flex-col gap-6">
-      <div class="zentory-widget flex-1 min-h-[300px]">
-        <div class="flex justify-between items-center mb-6">
-          <span class="text-xs font-black uppercase tracking-widest">Section Overview // Warehouse Map</span>
-          <div class="flex gap-2 text-[10px] font-bold">
-            <span class="flex items-center gap-1"><div class="w-2 h-2 bg-wham-tan border border-wham-dark/20"></div> Free</span>
-            <span class="flex items-center gap-1"><div class="w-2 h-2 bg-wham-primary"></div> Loaded</span>
-          </div>
-        </div>
-        <div class="grid grid-cols-8 gap-2 opacity-30">
-           @for(i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]; track i) {
-             <div class="h-10 bg-wham-primary/20 border border-wham-primary/30"></div>
-           }
-        </div>
-      </div>
-
-      <div class="grid grid-cols-2 gap-6 h-[300px]">
-        <div class="zentory-widget">
-          <span class="text-xs font-black uppercase tracking-widest mb-4 block">Top Cities</span>
-          <div class="space-y-4">
-             <div class="h-2 w-full bg-wham-primary/10 relative"><div class="absolute h-full w-[80%] bg-wham-primary"></div></div>
-             <div class="h-2 w-full bg-wham-primary/10 relative"><div class="absolute h-full w-[60%] bg-wham-primary"></div></div>
-             <div class="h-2 w-full bg-wham-primary/10 relative"><div class="absolute h-full w-[40%] bg-wham-primary"></div></div>
-          </div>
-        </div>
-        <div class="zentory-widget">
-          <span class="text-xs font-black uppercase tracking-widest mb-4 block">Inventory Stock</span>
-          <div class="flex items-end justify-between h-32 pt-4">
-             <div class="w-4 h-full bg-wham-dark"></div>
-             <div class="w-4 h-[70%] bg-wham-primary"></div>
-             <div class="w-4 h-[40%] bg-wham-warn"></div>
-             <div class="w-4 h-[85%] bg-wham-dark"></div>
-          </div>
-        </div>
-      </div>
+    <div class="flex items-center gap-2">
+      <span class="text-[10px] font-mono opacity-40 uppercase tracking-widest">
+        Last Sync: {{ state()?.lastUpdated | date:'shortTime' }}
+      </span>
     </div>
-
-    <div class="col-span-12 lg:col-span-3 flex flex-col gap-6">
-      <div class="zentory-widget bg-wham-dark text-wham-white h-64 flex flex-col items-center justify-center">
-        <span class="text-[10px] font-black uppercase tracking-widest opacity-60 mb-4">Storage Usage</span>
-        <div class="w-32 h-32 rounded-full border-8 border-wham-primary border-t-wham-white flex items-center justify-center">
-           <span class="text-2xl font-black">58%</span>
-        </div>
-        <p class="text-[10px] font-bold mt-4 uppercase">19 Shelves Loaded</p>
-      </div>
-
-      <div class="zentory-widget flex-1">
-        <span class="text-xs font-black uppercase tracking-widest mb-6 block">Best Sellers</span>
-        <div class="space-y-6">
-          <div class="flex justify-between items-center border-b border-wham-dark/5 pb-2">
-            <div>
-              <p class="text-[10px] font-black uppercase">Kelly Bookshelf</p>
-              <p class="text-[9px] font-bold text-wham-primary">BR 8129</p>
-            </div>
-            <p class="font-black text-sm">124 Units</p>
-          </div>
-          <div class="flex justify-between items-center border-b border-wham-dark/5 pb-2">
-            <div>
-              <p class="text-[10px] font-black uppercase">Darcy Side Table</p>
-              <p class="text-[9px] font-bold text-wham-primary">BR 3039</p>
-            </div>
-            <p class="font-black text-sm">107 Units</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
+
+  <div class="flex-1 overflow-hidden">
+    @switch (activeSection()) {
+      
+      @case ('HUB') {
+        <div class="flex flex-col gap-6 h-full animate-in fade-in duration-500">
+          
+          <div class="grid grid-cols-4 gap-4">
+            @for (stat of kpiStats(); track stat.label) {
+              <div (click)="navigateTo(stat.sectionKey)" 
+                   class="zentory-widget h-24 border-l-4 text-wham-primary border-wham-primary cursor-pointer hover:bg-wham-dark hover:text-slate-800 transition-all group">
+                <div class="flex justify-between">
+                  <p class="text-[10px] font-black tracking-widest opacity-60 uppercase">{{ stat.label }}</p>
+                  <button (click)="openEditor(stat.label, $event)" class="opacity-0 group-hover:opacity-100 transition-opacity">
+                    <mat-icon class="scale-50">edit</mat-icon>
+                  </button>
+                </div>
+                <h2 class="text-2xl font-black mt-1" [class.text-wham-warn]="stat.isWarning">{{ stat.value }}</h2>
+              </div>
+            }
+          </div>
+
+          <div class="grid grid-cols-12 gap-6 flex-1">
+            <div class="col-span-9 flex flex-col gap-6">
+              <div (click)="navigateTo('LOGISTICS')" class="zentory-widget flex-1 min-h-[250px] cursor-pointer hover:border-wham-primary">
+                <span class="text-xs font-black uppercase tracking-widest mb-6 block">Section Overview // Warehouse Map</span>
+                <div class="grid grid-cols-8 gap-2">
+                   @for(sec of warehouseSections(); track sec.id) {
+                     <div [class.bg-wham-primary]="sec.isLoaded" [class.bg-wham-primary/10]="!sec.isLoaded" class="h-10 border border-wham-dark/5 transition-all"></div>
+                   }
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-6 h-[200px]">
+                <div (click)="navigateTo('REGIONS')" class="zentory-widget cursor-pointer hover:border-wham-primary">
+                  <span class="text-xs font-black uppercase tracking-widest mb-4 block">Top Regions</span>
+                  <div class="space-y-4">
+                    @for(city of topRegions(); track city.name) {
+                       <div class="h-2 w-full bg-wham-primary/10 relative"><div class="absolute h-full bg-wham-primary" [style.width.%]="city.value"></div></div>
+                    }
+                  </div>
+                </div>
+                <div (click)="navigateTo('STOCK')" class="zentory-widget cursor-pointer hover:border-wham-primary">
+                  <span class="text-xs font-black uppercase tracking-widest mb-4 block">Inventory Stock</span>
+                  <div class="flex items-end justify-between h-20 gap-1">
+                     @for(p of products().slice(0, 10); track p.sku) {
+                       <div class="flex-1 bg-wham-dark" [style.height.%]="p.inventoryTurnoverVelocity * 10"></div>
+                     }
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-span-3 flex flex-col gap-6">
+              <div (click)="navigateTo('STORAGE')" class="zentory-widget bg-wham-dark text-wham-white flex-1 flex flex-col items-center justify-center cursor-pointer">
+                <span class="text-[10px] font-black uppercase tracking-widest opacity-60 mb-4">Storage Usage</span>
+                <div class="w-32 h-32 rounded-full border-8 border-wham-primary/20 border-t-wham-primary flex items-center justify-center">
+                   <span class="text-2xl font-black">{{ state()?.activeStorageUtilization }}%</span>
+                </div>
+              </div>
+              <div (click)="navigateTo('ARCHITECT')" class="zentory-widget bg-wham-primary text-wham-white h-48 flex flex-col justify-between cursor-pointer border-none shadow-[8px_8px_0px_#000] group">
+                <div>
+                  <h2 class="text-2xl text-slate-800 font-black leading-none uppercase">Deploy<br>New View</h2>
+                  <p class="text-[9px] text-slate-800 font-bold mt-2 opacity-60 uppercase">System Architect Mode</p>
+                </div>
+                <mat-icon class="group-hover:rotate-90 transition-transform scale-100">architecture</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+
+      @case ('REVENUE')  { <app-financial-workstation /> }
+      @case ('ORDERS')   { <app-inventory-matrix /> }
+      @case ('STOCK')    { <app-inventory-matrix /> }
+      @case ('RISK')     { <app-quality-workstation /> }
+      @case ('LOGISTICS'){ <app-inventory-matrix /> } @case ('REGIONS')  { <app-service-insights /> }
+      @case ('STORAGE')  { <app-quality-workstation /> }
+      @case ('ARCHITECT'){ <app-report-architect /> }
+
+    }
+  </div>
+
+  @if (isModalOpen()) {
+    <div class="absolute inset-0 z-50 flex items-center justify-center bg-wham-dark/90 backdrop-blur-md p-10 animate-in fade-in duration-200">
+      <div class="bg-wham-tan border-4 border-wham-dark p-8 w-full max-w-md shadow-[12px_12px_0px_#000] animate-in zoom-in-95">
+        <div class="flex justify-between items-center mb-6 border-b-2 border-wham-dark pb-2">
+          <h3 class="text-xl font-black uppercase tracking-tighter">Edit {{ modalContext() }}</h3>
+          <button (click)="isModalOpen.set(false)"><mat-icon>close</mat-icon></button>
+        </div>
+        <form class="space-y-6">
+          <div class="space-y-2">
+            <label class="text-[10px] font-black uppercase opacity-40">System Override Value</label>
+            <input type="text" placeholder="INPUT DATA..." class="w-full bg-white border-2 border-wham-dark p-4 font-black text-xs outline-none focus:border-wham-primary transition-colors">
+          </div>
+          <div class="flex flex-col gap-2">
+            <button type="button" (click)="isModalOpen.set(false)" class="w-full bg-wham-dark text-wham-white p-4 font-black uppercase hover:bg-wham-primary transition-all">Apply Changes</button>
+            <button type="button" (click)="isModalOpen.set(false)" class="w-full border-2 border-wham-warn text-wham-warn p-2 font-black uppercase text-[10px] hover:bg-wham-warn hover:text-white transition-all">Delete Data Point</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  }
+
 </div>
