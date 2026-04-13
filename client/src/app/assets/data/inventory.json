@@ -1,0 +1,1362 @@
+[
+  {
+    "id": "SKU-10001",
+    "sku": "ELEC-WLS-001",
+    "name": "Noise Cancelling Headphones",
+    "description": "Over-ear wireless bluetooth headphones with active noise cancellation.",
+    "category": "ELECTRONICS",
+    "quantity": {
+      "onHand": 45,
+      "allocated": 12,
+      "available": 33,
+      "minThreshold": 10
+    },
+    "location": {
+      "zone": "NORTH-WING",
+      "aisle": "A02",
+      "rack": "04",
+      "bin": "B-3"
+    },
+    "dimensions": {
+      "length": 20,
+      "width": 18,
+      "height": 8,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.5,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-03-15T10:30:00Z",
+    "supplier": "SoundMaster Global",
+    "pickedBy": ["James", "Sarah", "Michael", "Elena", "David", "Robert"],
+    "recievedBy": ["Linda", "Kevin", "Susan"]
+  },
+  {
+    "id": "SKU-10002",
+    "sku": "APP-TSH-002",
+    "name": "Cotton Crew Neck T-Shirt",
+    "description": "100% organic cotton white t-shirt, size Medium.",
+    "category": "APPAREL",
+    "quantity": {
+      "onHand": 120,
+      "allocated": 40,
+      "available": 80,
+      "minThreshold": 50
+    },
+    "location": {
+      "zone": "SOUTH-WING",
+      "aisle": "A15",
+      "rack": "12",
+      "bin": "D-1"
+    },
+    "dimensions": {
+      "length": 12,
+      "width": 10,
+      "height": 1,
+      "unit": "in"
+    },
+    "weight": {
+      "value": 0.4,
+      "unit": "lb"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-03-12T08:00:00Z",
+    "supplier": "Threads Inc.",
+    "pickedBy": ["Emily", "Chris", "Jessica", "Mark", "Anthony", "Sophia", "Brian"],
+    "recievedBy": ["Paul", "Nancy"]
+  },
+  {
+    "id": "SKU-10003",
+    "sku": "HW-DRL-003",
+    "name": "Cordless Power Drill",
+    "description": "18V Lithium-Ion brushless motor drill with 2 batteries.",
+    "category": "HARDWARE",
+    "quantity": {
+      "onHand": 8,
+      "allocated": 2,
+      "available": 6,
+      "minThreshold": 10
+    },
+    "location": {
+      "zone": "WEST-WING",
+      "aisle": "A08",
+      "rack": "01",
+      "bin": "A-5"
+    },
+    "dimensions": {
+      "length": 30,
+      "width": 25,
+      "height": 10,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 2.2,
+      "unit": "kg"
+    },
+    "status": "LOW_STOCK",
+    "lastCounted": "2024-03-18T14:20:00Z",
+    "supplier": "BuildIt Tools",
+    "pickedBy": ["Tom", "Gary", "Anna", "Lisa", "Steve", "Frank", "Peter", "Owen"],
+    "recievedBy": ["Derek", "Zoe", "Walter"]
+  },
+  {
+    "id": "SKU-10004",
+    "sku": "FOOD-ORZ-004",
+    "name": "Organic Jasmine Rice",
+    "description": "5kg bag of premium long-grain jasmine rice.",
+    "category": "FOOD",
+    "quantity": {
+      "onHand": 200,
+      "allocated": 0,
+      "available": 200,
+      "minThreshold": 20
+    },
+    "location": {
+      "zone": "EAST-WING",
+      "aisle": "A19",
+      "rack": "05",
+      "bin": "E-2"
+    },
+    "dimensions": {
+      "length": 40,
+      "width": 25,
+      "height": 15,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 5.0,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-03-20T09:00:00Z",
+    "supplier": "Nature's Pantry",
+    "pickedBy": ["Victor", "Yolanda", "Ursula", "Xavier", "William", "Tina"],
+    "recievedBy": ["Quinn", "Rose"]
+  },
+  {
+    "id": "SKU-10005",
+    "sku": "ELEC-LAP-005",
+    "name": "14-inch Ultrabook",
+    "description": "Silver laptop with 16GB RAM and 512GB SSD.",
+    "category": "ELECTRONICS",
+    "quantity": {
+      "onHand": 0,
+      "allocated": 0,
+      "available": 0,
+      "minThreshold": 5
+    },
+    "location": {
+      "zone": "NORTH-WING",
+      "aisle": "A01",
+      "rack": "03",
+      "bin": "C-1"
+    },
+    "dimensions": {
+      "length": 32,
+      "width": 22,
+      "height": 2,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 1.4,
+      "unit": "kg"
+    },
+    "status": "OUT_OF_STOCK",
+    "lastCounted": "2024-03-10T16:45:00Z",
+    "supplier": "TechCore Systems",
+    "pickedBy": ["Alice", "Bob", "Charlie", "Diana", "Edward", "Fiona", "George", "Hannah", "Ian"],
+    "recievedBy": ["Jack", "Kelly"]
+  },
+  {
+    "id": "SKU-10006",
+    "sku": "APP-JKT-006",
+    "name": "Waterproof Rain Jacket",
+    "description": "Windproof and waterproof shell jacket for hiking.",
+    "category": "APPAREL",
+    "quantity": {
+      "onHand": 55,
+      "allocated": 5,
+      "available": 50,
+      "minThreshold": 15
+    },
+    "location": {
+      "zone": "SOUTH-WING",
+      "aisle": "A14",
+      "rack": "08",
+      "bin": "B-4"
+    },
+    "dimensions": {
+      "length": 15,
+      "width": 12,
+      "height": 4,
+      "unit": "in"
+    },
+    "weight": {
+      "value": 1.2,
+      "unit": "lb"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-03-22T11:15:00Z",
+    "supplier": "Outdoor Pro",
+    "pickedBy": ["Liam", "Noah", "Olivia", "Ava", "Sophia", "Isabella", "Mia"],
+    "recievedBy": ["Mason", "Lucas", "Ethan"]
+  },
+  {
+    "id": "SKU-10007",
+    "sku": "HW-HAM-007",
+    "name": "Claw Hammer 16oz",
+    "description": "Forged steel head with ergonomic rubber grip.",
+    "category": "HARDWARE",
+    "quantity": {
+      "onHand": 85,
+      "allocated": 10,
+      "available": 75,
+      "minThreshold": 20
+    },
+    "location": {
+      "zone": "WEST-WING",
+      "aisle": "A07",
+      "rack": "02",
+      "bin": "C-2"
+    },
+    "dimensions": {
+      "length": 33,
+      "width": 13,
+      "height": 4,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.8,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-03-25T13:00:00Z",
+    "supplier": "IronClad Tools",
+    "pickedBy": ["Logan", "Jacob", "Michael", "Elijah", "Aiden", "James"],
+    "recievedBy": ["Benjamin", "Alexander"]
+  },
+  {
+    "id": "SKU-10008",
+    "sku": "FOOD-BAR-008",
+    "name": "Protein Energy Bar",
+    "description": "Chocolate peanut butter flavor, pack of 12.",
+    "category": "FOOD",
+    "quantity": {
+      "onHand": 300,
+      "allocated": 150,
+      "available": 150,
+      "minThreshold": 100
+    },
+    "location": {
+      "zone": "EAST-WING",
+      "aisle": "A18",
+      "rack": "09",
+      "bin": "A-1"
+    },
+    "dimensions": {
+      "length": 20,
+      "width": 10,
+      "height": 10,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.6,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-03-26T09:45:00Z",
+    "supplier": "Vitality Foods",
+    "pickedBy": ["Sebastian", "Jack", "Daniel", "William", "Wyatt", "Luke", "Julian"],
+    "recievedBy": ["Grayson", "Levi"]
+  },
+  {
+    "id": "SKU-10009",
+    "sku": "OTH-MAT-009",
+    "name": "Yoga Mat",
+    "description": "6mm non-slip eco-friendly rubber mat.",
+    "category": "OTHER",
+    "quantity": {
+      "onHand": 42,
+      "allocated": 2,
+      "available": 40,
+      "minThreshold": 10
+    },
+    "location": {
+      "zone": "RETURN-WING",
+      "aisle": "A03",
+      "rack": "05",
+      "bin": "D-5"
+    },
+    "dimensions": {
+      "length": 61,
+      "width": 15,
+      "height": 15,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 1.1,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-03-14T15:30:00Z",
+    "supplier": "Zenith Sports",
+    "pickedBy": ["Gabriel", "Carter", "Jayden", "John", "Thomas", "Isaac", "Charles", "Josiah"],
+    "recievedBy": ["Isaiah", "Andrew"]
+  },
+  {
+    "id": "SKU-10010",
+    "sku": "ELEC-TAB-010",
+    "name": "10-inch Tablet",
+    "description": "High resolution display with 128GB storage.",
+    "category": "ELECTRONICS",
+    "quantity": {
+      "onHand": 12,
+      "allocated": 10,
+      "available": 2,
+      "minThreshold": 5
+    },
+    "location": {
+      "zone": "NORTH-WING",
+      "aisle": "A01",
+      "rack": "02",
+      "bin": "B-2"
+    },
+    "dimensions": {
+      "length": 25,
+      "width": 17,
+      "height": 0.8,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.45,
+      "unit": "kg"
+    },
+    "status": "LOW_STOCK",
+    "lastCounted": "2024-03-28T10:00:00Z",
+    "supplier": "TabTech Inc.",
+    "pickedBy": ["Joshua", "Christopher", "Nathan", "Henry", "Ryan", "Leo", "Nathaniel"],
+    "recievedBy": ["Hunter", "Christian"]
+  },
+  {
+    "id": "SKU-10011",
+    "sku": "APP-HOD-011",
+    "name": "Fleece Pullover Hoodie",
+    "description": "Navy blue heavy cotton hoodie.",
+    "category": "APPAREL",
+    "quantity": {
+      "onHand": 65,
+      "allocated": 15,
+      "available": 50,
+      "minThreshold": 20
+    },
+    "location": {
+      "zone": "SOUTH-WING",
+      "aisle": "A13",
+      "rack": "04",
+      "bin": "C-3"
+    },
+    "dimensions": {
+      "length": 14,
+      "width": 11,
+      "height": 3,
+      "unit": "in"
+    },
+    "weight": {
+      "value": 1.5,
+      "unit": "lb"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-03-29T14:00:00Z",
+    "supplier": "Urban Wear",
+    "pickedBy": ["Connor", "Eli", "Aaron", "Landon", "Adrian", "Jonathan", "Nolan"],
+    "recievedBy": ["Jeremiah", "Easton"]
+  },
+  {
+    "id": "SKU-10012",
+    "sku": "HW-SCR-012",
+    "name": "Screwdriver Set (10pc)",
+    "description": "Magnetic tipped precision screwdrivers.",
+    "category": "HARDWARE",
+    "quantity": {
+      "onHand": 150,
+      "allocated": 20,
+      "available": 130,
+      "minThreshold": 30
+    },
+    "location": {
+      "zone": "WEST-WING",
+      "aisle": "A06",
+      "rack": "06",
+      "bin": "B-1"
+    },
+    "dimensions": {
+      "length": 25,
+      "width": 15,
+      "height": 5,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 1.2,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-03-30T11:20:00Z",
+    "supplier": "FixIt Fast",
+    "pickedBy": ["Elias", "Colton", "Cameron", "Carson", "Robert", "Angel", "Maverick"],
+    "recievedBy": ["Nicholas", "Dominic"]
+  },
+  {
+    "id": "SKU-10013",
+    "sku": "FOOD-COF-013",
+    "name": "Dark Roast Coffee Beans",
+    "description": "1kg bag of Fair Trade Arabica beans.",
+    "category": "FOOD",
+    "quantity": {
+      "onHand": 45,
+      "allocated": 40,
+      "available": 5,
+      "minThreshold": 15
+    },
+    "location": {
+      "zone": "EAST-WING",
+      "aisle": "A20",
+      "rack": "01",
+      "bin": "A-2"
+    },
+    "dimensions": {
+      "length": 30,
+      "width": 12,
+      "height": 8,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 1.0,
+      "unit": "kg"
+    },
+    "status": "LOW_STOCK",
+    "lastCounted": "2024-04-01T08:30:00Z",
+    "supplier": "Beanery Co.",
+    "pickedBy": ["Jaxson", "Greyson", "Adam", "Ian", "Austin", "Santiago", "Jordan"],
+    "recievedBy": ["Cooper", "Xavier"]
+  },
+  {
+    "id": "SKU-10014",
+    "sku": "ELEC-SPK-014",
+    "name": "Portable Bluetooth Speaker",
+    "description": "Rugged waterproof speaker with 20h battery.",
+    "category": "ELECTRONICS",
+    "quantity": {
+      "onHand": 28,
+      "allocated": 2,
+      "available": 26,
+      "minThreshold": 10
+    },
+    "location": {
+      "zone": "NORTH-WING",
+      "aisle": "A04",
+      "rack": "07",
+      "bin": "E-4"
+    },
+    "dimensions": {
+      "length": 18,
+      "width": 7,
+      "height": 7,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.6,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-02T13:15:00Z",
+    "supplier": "VibeAudio",
+    "pickedBy": ["Kai", "Everett", "Parker", "Kayden", "Miles", "Jason", "Declan"],
+    "recievedBy": ["Sawyer", "Evan"]
+  },
+  {
+    "id": "SKU-10015",
+    "sku": "APP-SKS-015",
+    "name": "Wool Hiking Socks",
+    "description": "Pack of 3 pairs, moisture-wicking wool.",
+    "category": "APPAREL",
+    "quantity": {
+      "onHand": 210,
+      "allocated": 10,
+      "available": 200,
+      "minThreshold": 50
+    },
+    "location": {
+      "zone": "SOUTH-WING",
+      "aisle": "A12",
+      "rack": "03",
+      "bin": "A-3"
+    },
+    "dimensions": {
+      "length": 8,
+      "width": 4,
+      "height": 3,
+      "unit": "in"
+    },
+    "weight": {
+      "value": 0.8,
+      "unit": "lb"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-03T10:00:00Z",
+    "supplier": "Trekker Gear",
+    "pickedBy": ["Braxton", "Damian", "Silas", "Bentley", "Zayden", "Ryder", "Tristan"],
+    "recievedBy": ["Bennett", "George"]
+  },
+  {
+    "id": "SKU-10016",
+    "sku": "HW-WRE-016",
+    "name": "Adjustable Wrench 10\"",
+    "description": "Carbon steel adjustable crescent wrench.",
+    "category": "HARDWARE",
+    "quantity": {
+      "onHand": 40,
+      "allocated": 5,
+      "available": 35,
+      "minThreshold": 15
+    },
+    "location": {
+      "zone": "WEST-WING",
+      "aisle": "A05",
+      "rack": "09",
+      "bin": "B-5"
+    },
+    "dimensions": {
+      "length": 25,
+      "width": 6,
+      "height": 2,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.5,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-04T15:45:00Z",
+    "supplier": "SteelForce",
+    "pickedBy": ["Gael", "Ivan", "Kingston", "Aidan", "King", "Micah", "Amir"],
+    "recievedBy": ["Jesse", "Justin"]
+  },
+  {
+    "id": "SKU-10017",
+    "sku": "FOOD-TEA-017",
+    "name": "Green Tea Bags",
+    "description": "Box of 100 organic green tea bags.",
+    "category": "FOOD",
+    "quantity": {
+      "onHand": 12,
+      "allocated": 0,
+      "available": 12,
+      "minThreshold": 20
+    },
+    "location": {
+      "zone": "EAST-WING",
+      "aisle": "A17",
+      "rack": "04",
+      "bin": "C-1"
+    },
+    "dimensions": {
+      "length": 15,
+      "width": 10,
+      "height": 8,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.2,
+      "unit": "kg"
+    },
+    "status": "LOW_STOCK",
+    "lastCounted": "2024-04-05T09:10:00Z",
+    "supplier": "Leafy Brews",
+    "pickedBy": ["Jonah", "Beau", "Jude", "Hayden", "Milo", "Fabian", "Emiliano"],
+    "recievedBy": ["Diego", "Luca"]
+  },
+  {
+    "id": "SKU-10018",
+    "sku": "ELEC-MOU-018",
+    "name": "Wireless Ergonomic Mouse",
+    "description": "Vertical design to reduce wrist strain.",
+    "category": "ELECTRONICS",
+    "quantity": {
+      "onHand": 75,
+      "allocated": 5,
+      "available": 70,
+      "minThreshold": 15
+    },
+    "location": {
+      "zone": "NORTH-WING",
+      "aisle": "A03",
+      "rack": "08",
+      "bin": "D-2"
+    },
+    "dimensions": {
+      "length": 12,
+      "width": 8,
+      "height": 7,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.15,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-06T11:50:00Z",
+    "supplier": "PeriTech",
+    "pickedBy": ["Matias", "Giovanni", "Sergio", "Kaleb", "Adonis", "Derek", "Nash"],
+    "recievedBy": ["Finn", "Theo"]
+  },
+  {
+    "id": "SKU-10019",
+    "sku": "APP-GLV-019",
+    "name": "Touchscreen Winter Gloves",
+    "description": "Conductive fingertips for smartphone use.",
+    "category": "APPAREL",
+    "quantity": {
+      "onHand": 0,
+      "allocated": 0,
+      "available": 0,
+      "minThreshold": 25
+    },
+    "location": {
+      "zone": "SOUTH-WING",
+      "aisle": "A11",
+      "rack": "05",
+      "bin": "E-5"
+    },
+    "dimensions": {
+      "length": 10,
+      "width": 5,
+      "height": 1,
+      "unit": "in"
+    },
+    "weight": {
+      "value": 0.3,
+      "unit": "lb"
+    },
+    "status": "OUT_OF_STOCK",
+    "lastCounted": "2024-03-01T10:00:00Z",
+    "supplier": "Arctic Wear",
+    "pickedBy": ["Beckett", "Lane", "Felix", "Remington", "Leon", "Atlas", "Jace"],
+    "recievedBy": ["River", "Brooks"]
+  },
+  {
+    "id": "SKU-10020",
+    "sku": "HW-LVL-020",
+    "name": "Magnetic Bubble Level",
+    "description": "24-inch aluminum spirit level.",
+    "category": "HARDWARE",
+    "quantity": {
+      "onHand": 33,
+      "allocated": 3,
+      "available": 30,
+      "minThreshold": 10
+    },
+    "location": {
+      "zone": "WEST-WING",
+      "aisle": "A04",
+      "rack": "10",
+      "bin": "A-4"
+    },
+    "dimensions": {
+      "length": 60,
+      "width": 5,
+      "height": 2,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.9,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-07T14:30:00Z",
+    "supplier": "Precision Built",
+    "pickedBy": ["Walker", "Major", "Arthur", "Dallas", "Louis", "Rory", "Sutton"],
+    "recievedBy": ["Ellis", "Reed"]
+  },
+  {
+    "id": "SKU-10021",
+    "sku": "FOOD-PAS-021",
+    "name": "Fusilli Pasta",
+    "description": "500g box of durum wheat pasta.",
+    "category": "FOOD",
+    "quantity": {
+      "onHand": 450,
+      "allocated": 100,
+      "available": 350,
+      "minThreshold": 100
+    },
+    "location": {
+      "zone": "EAST-WING",
+      "aisle": "A16",
+      "rack": "02",
+      "bin": "B-2"
+    },
+    "dimensions": {
+      "length": 20,
+      "width": 12,
+      "height": 5,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.5,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-08T08:45:00Z",
+    "supplier": "Roma Foods",
+    "pickedBy": ["Holden", "Arlo", "Caleb", "Kobe", "Wilder", "Raiden", "Noel"],
+    "recievedBy": ["Otto", "Enzo"]
+  },
+  {
+    "id": "SKU-10022",
+    "sku": "ELEC-CHG-022",
+    "name": "USB-C Fast Charger",
+    "description": "65W GaN wall charger with dual ports.",
+    "category": "ELECTRONICS",
+    "quantity": {
+      "onHand": 110,
+      "allocated": 15,
+      "available": 95,
+      "minThreshold": 30
+    },
+    "location": {
+      "zone": "NORTH-WING",
+      "aisle": "A05",
+      "rack": "01",
+      "bin": "C-5"
+    },
+    "dimensions": {
+      "length": 6,
+      "width": 4,
+      "height": 4,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.12,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-09T10:15:00Z",
+    "supplier": "VoltEdge",
+    "pickedBy": ["Aries", "Munir", "Zaid", "Omar", "Yusuf", "Hamza", "Ali"],
+    "recievedBy": ["Ibrahim", "Ahmed"]
+  },
+  {
+    "id": "SKU-10023",
+    "sku": "APP-BEL-023",
+    "name": "Leather Dress Belt",
+    "description": "Genuine black leather belt, size 34.",
+    "category": "APPAREL",
+    "quantity": {
+      "onHand": 42,
+      "allocated": 2,
+      "available": 40,
+      "minThreshold": 15
+    },
+    "location": {
+      "zone": "SOUTH-WING",
+      "aisle": "A10",
+      "rack": "06",
+      "bin": "D-3"
+    },
+    "dimensions": {
+      "length": 40,
+      "width": 1.5,
+      "height": 0.2,
+      "unit": "in"
+    },
+    "weight": {
+      "value": 0.5,
+      "unit": "lb"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-10T15:20:00Z",
+    "supplier": "Luxe Accents",
+    "pickedBy": ["Hugo", "Killian", "Milan", "Kash", "Ronan", "Lucian", "Theo"],
+    "recievedBy": ["Alonzo", "Pedro"]
+  },
+  {
+    "id": "SKU-10024",
+    "sku": "HW-SDR-024",
+    "name": "Socket Driver Set",
+    "description": "40-piece chrome vanadium socket set.",
+    "category": "HARDWARE",
+    "quantity": {
+      "onHand": 18,
+      "allocated": 17,
+      "available": 1,
+      "minThreshold": 5
+    },
+    "location": {
+      "zone": "WEST-WING",
+      "aisle": "A03",
+      "rack": "11",
+      "bin": "B-4"
+    },
+    "dimensions": {
+      "length": 35,
+      "width": 20,
+      "height": 6,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 3.5,
+      "unit": "kg"
+    },
+    "status": "LOW_STOCK",
+    "lastCounted": "2024-04-11T13:30:00Z",
+    "supplier": "DriveTrain Tools",
+    "pickedBy": ["Dante", "Malik", "Kameron", "Zane", "Soren", "Ezequiel", "Khalil"],
+    "recievedBy": ["Romeo", "Marcelo"]
+  },
+  {
+    "id": "SKU-10025",
+    "sku": "FOOD-CER-025",
+    "name": "Honey Oat Cereal",
+    "description": "Family size box, toasted oats with honey.",
+    "category": "FOOD",
+    "quantity": {
+      "onHand": 90,
+      "allocated": 5,
+      "available": 85,
+      "minThreshold": 30
+    },
+    "location": {
+      "zone": "EAST-WING",
+      "aisle": "A15",
+      "rack": "03",
+      "bin": "E-1"
+    },
+    "dimensions": {
+      "length": 30,
+      "width": 20,
+      "height": 6,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.75,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-12T09:00:00Z",
+    "supplier": "GrainFields",
+    "pickedBy": ["Avery", "Parker", "Quinn", "Riley", "Taylor", "Jordan", "Alex"],
+    "recievedBy": ["Morgan", "Casey"]
+  },
+  {
+    "id": "SKU-10026",
+    "sku": "ELEC-CBL-026",
+    "name": "HDMI 2.1 Cable",
+    "description": "2-meter high-speed 8K HDMI cable.",
+    "category": "ELECTRONICS",
+    "quantity": {
+      "onHand": 250,
+      "allocated": 10,
+      "available": 240,
+      "minThreshold": 50
+    },
+    "location": {
+      "zone": "NORTH-WING",
+      "aisle": "A06",
+      "rack": "04",
+      "bin": "A-5"
+    },
+    "dimensions": {
+      "length": 20,
+      "width": 20,
+      "height": 3,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.2,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-12T11:00:00Z",
+    "supplier": "LinkUp Tech",
+    "pickedBy": ["Sam", "Jess", "Pat", "Terry", "Chris", "Kelly", "Robin"],
+    "recievedBy": ["Jamie", "Drew"]
+  },
+  {
+    "id": "SKU-10027",
+    "sku": "OTH-BTL-027",
+    "name": "Insulated Water Bottle",
+    "description": "32oz stainless steel vacuum flask.",
+    "category": "OTHER",
+    "quantity": {
+      "onHand": 15,
+      "allocated": 20,
+      "available": -5,
+      "minThreshold": 10
+    },
+    "location": {
+      "zone": "DOCKED-WING",
+      "aisle": "A01",
+      "rack": "05",
+      "bin": "B-2"
+    },
+    "dimensions": {
+      "length": 25,
+      "width": 9,
+      "height": 9,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.4,
+      "unit": "kg"
+    },
+    "status": "OUT_OF_STOCK",
+    "lastCounted": "2024-04-12T14:00:00Z",
+    "supplier": "HydroFlow",
+    "pickedBy": ["Lee", "Kim", "Dale", "Gene", "Dana", "Tracy", "Shannon"],
+    "recievedBy": ["Stacy", "Leslie"]
+  },
+  {
+    "id": "SKU-10028",
+    "sku": "APP-SHP-028",
+    "name": "Canvas Backpack",
+    "description": "Vintage style 20L daypack.",
+    "category": "APPAREL",
+    "quantity": {
+      "onHand": 5,
+      "allocated": 0,
+      "available": 5,
+      "minThreshold": 10
+    },
+    "location": {
+      "zone": "SOUTH-WING",
+      "aisle": "A09",
+      "rack": "07",
+      "bin": "C-4"
+    },
+    "dimensions": {
+      "length": 18,
+      "width": 12,
+      "height": 6,
+      "unit": "in"
+    },
+    "weight": {
+      "value": 2.1,
+      "unit": "lb"
+    },
+    "status": "LOW_STOCK",
+    "lastCounted": "2024-04-11T16:00:00Z",
+    "supplier": "Rugged Road",
+    "pickedBy": ["Skylar", "Peyton", "Kendall", "Harley", "Sage", "Phoenix", "Dallas"],
+    "recievedBy": ["Reese", "Blaire"]
+  },
+  {
+    "id": "SKU-10029",
+    "sku": "HW-TSM-029",
+    "name": "Tape Measure 25ft",
+    "description": "Self-locking steel tape with inch/metric.",
+    "category": "HARDWARE",
+    "quantity": {
+      "onHand": 66,
+      "allocated": 6,
+      "available": 60,
+      "minThreshold": 20
+    },
+    "location": {
+      "zone": "WEST-WING",
+      "aisle": "A02",
+      "rack": "12",
+      "bin": "D-4"
+    },
+    "dimensions": {
+      "length": 10,
+      "width": 10,
+      "height": 5,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.45,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-10T12:00:00Z",
+    "supplier": "MeasurePro",
+    "pickedBy": ["Stevie", "Joni", "Bobbie", "Billie", "Frankie", "Charlie", "Freddie"],
+    "recievedBy": ["Eddie", "Johnnie"]
+  },
+  {
+    "id": "SKU-10030",
+    "sku": "FOOD-SNC-030",
+    "name": "Roasted Almonds",
+    "description": "Salted and roasted almonds, 1lb tub.",
+    "category": "FOOD",
+    "quantity": {
+      "onHand": 150,
+      "allocated": 0,
+      "available": 150,
+      "minThreshold": 25
+    },
+    "location": {
+      "zone": "EAST-WING",
+      "aisle": "A14",
+      "rack": "04",
+      "bin": "A-3"
+    },
+    "dimensions": {
+      "length": 12,
+      "width": 12,
+      "height": 10,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.5,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-12T10:00:00Z",
+    "supplier": "Nutty Delight",
+    "pickedBy": ["Rene", "Michel", "Claude", "Jean", "Luc", "Guy", "Marc"],
+    "recievedBy": ["Yves", "Paul"]
+  },
+  {
+    "id": "SKU-10031",
+    "sku": "ELEC-KB-031",
+    "name": "Mechanical Keyboard",
+    "description": "RGB backlit with blue switches.",
+    "category": "ELECTRONICS",
+    "quantity": {
+      "onHand": 25,
+      "allocated": 20,
+      "available": 5,
+      "minThreshold": 10
+    },
+    "location": {
+      "zone": "NORTH-WING",
+      "aisle": "A07",
+      "rack": "03",
+      "bin": "B-1"
+    },
+    "dimensions": {
+      "length": 45,
+      "width": 15,
+      "height": 4,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 1.1,
+      "unit": "kg"
+    },
+    "status": "LOW_STOCK",
+    "lastCounted": "2024-04-12T13:45:00Z",
+    "supplier": "ClickKeys",
+    "pickedBy": ["Arno", "Bram", "Dirk", "Gijs", "Hans", "Joost", "Koen"],
+    "recievedBy": ["Lars", "Pim"]
+  },
+  {
+    "id": "SKU-10032",
+    "sku": "APP-HAT-032",
+    "name": "Baseball Cap",
+    "description": "Classic 6-panel adjustable cap.",
+    "category": "APPAREL",
+    "quantity": {
+      "onHand": 120,
+      "allocated": 10,
+      "available": 110,
+      "minThreshold": 30
+    },
+    "location": {
+      "zone": "SOUTH-WING",
+      "aisle": "A08",
+      "rack": "08",
+      "bin": "E-2"
+    },
+    "dimensions": {
+      "length": 10,
+      "width": 8,
+      "height": 5,
+      "unit": "in"
+    },
+    "weight": {
+      "value": 0.2,
+      "unit": "lb"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-11T11:00:00Z",
+    "supplier": "HeadGear Co.",
+    "pickedBy": ["Sven", "Bjorn", "Olaf", "Erik", "Lukas", "Nils", "Magnus"],
+    "recievedBy": ["Anders", "Ivar"]
+  },
+  {
+    "id": "SKU-10033",
+    "sku": "HW-PLR-033",
+    "name": "Needle Nose Pliers",
+    "description": "8-inch long nose pliers with wire cutter.",
+    "category": "HARDWARE",
+    "quantity": {
+      "onHand": 54,
+      "allocated": 4,
+      "available": 50,
+      "minThreshold": 15
+    },
+    "location": {
+      "zone": "WEST-WING",
+      "aisle": "A01",
+      "rack": "13",
+      "bin": "C-2"
+    },
+    "dimensions": {
+      "length": 20,
+      "width": 6,
+      "height": 2,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.3,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-09T14:30:00Z",
+    "supplier": "GripTech",
+    "pickedBy": ["Otto", "Karl", "Kurt", "Franz", "Hans", "Uwe", "Jens"],
+    "recievedBy": ["Rolf", "Dirk"]
+  },
+  {
+    "id": "SKU-10034",
+    "sku": "FOOD-OIL-034",
+    "name": "Extra Virgin Olive Oil",
+    "description": "750ml glass bottle, cold pressed.",
+    "category": "FOOD",
+    "quantity": {
+      "onHand": 60,
+      "allocated": 5,
+      "available": 55,
+      "minThreshold": 20
+    },
+    "location": {
+      "zone": "EAST-WING",
+      "aisle": "A13",
+      "rack": "05",
+      "bin": "D-5"
+    },
+    "dimensions": {
+      "length": 30,
+      "width": 8,
+      "height": 8,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 1.2,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-12T09:30:00Z",
+    "supplier": "Mediterranean Harvest",
+    "pickedBy": ["Mateo", "Enzo", "Luca", "Leo", "Nico", "Rocco", "Dante"],
+    "recievedBy": ["Gino", "Pino"]
+  },
+  {
+    "id": "SKU-10035",
+    "sku": "ELEC-CAM-035",
+    "name": "Webcam 1080p",
+    "description": "HD webcam with built-in microphone.",
+    "category": "ELECTRONICS",
+    "quantity": {
+      "onHand": 0,
+      "allocated": 0,
+      "available": 0,
+      "minThreshold": 10
+    },
+    "location": {
+      "zone": "RETURN-WING",
+      "aisle": "A01",
+      "rack": "01",
+      "bin": "A-1"
+    },
+    "dimensions": {
+      "length": 10,
+      "width": 5,
+      "height": 5,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.25,
+      "unit": "kg"
+    },
+    "status": "DISCONTINUED",
+    "lastCounted": "2024-01-15T12:00:00Z",
+    "supplier": "VisionStream",
+    "pickedBy": ["Liam", "Noah", "Oliver", "James", "Elijah", "William", "Henry"],
+    "recievedBy": ["Lucas", "Mason"]
+  },
+  {
+    "id": "SKU-10036",
+    "sku": "APP-SHO-036",
+    "name": "Running Shoes",
+    "description": "Lightweight breathable mesh, size 10.",
+    "category": "APPAREL",
+    "quantity": {
+      "onHand": 40,
+      "allocated": 35,
+      "available": 5,
+      "minThreshold": 15
+    },
+    "location": {
+      "zone": "SOUTH-WING",
+      "aisle": "A07",
+      "rack": "09",
+      "bin": "B-3"
+    },
+    "dimensions": {
+      "length": 12,
+      "width": 8,
+      "height": 5,
+      "unit": "in"
+    },
+    "weight": {
+      "value": 1.8,
+      "unit": "lb"
+    },
+    "status": "LOW_STOCK",
+    "lastCounted": "2024-04-12T15:00:00Z",
+    "supplier": "Sprint Athletics",
+    "pickedBy": ["Ava", "Mia", "Luna", "Ella", "Zoe", "Mila", "Lily"],
+    "recievedBy": ["Nora", "Aria"]
+  },
+  {
+    "id": "SKU-10037",
+    "sku": "HW-SAW-037",
+    "name": "Hand Saw 15\"",
+    "description": "Aggressive tooth geometry for fast cutting.",
+    "category": "HARDWARE",
+    "quantity": {
+      "onHand": 25,
+      "allocated": 2,
+      "available": 23,
+      "minThreshold": 10
+    },
+    "location": {
+      "zone": "WEST-WING",
+      "aisle": "A10",
+      "rack": "02",
+      "bin": "E-4"
+    },
+    "dimensions": {
+      "length": 45,
+      "width": 15,
+      "height": 3,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.7,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-05T16:30:00Z",
+    "supplier": "TimberCut",
+    "pickedBy": ["Jack", "Levi", "Owen", "Asher", "Wyatt", "Leo", "Luke"],
+    "recievedBy": ["Julian", "Isaac"]
+  },
+  {
+    "id": "SKU-10038",
+    "sku": "FOOD-SWT-038",
+    "name": "Dark Chocolate Bar",
+    "description": "85% Cocoa, Single Origin.",
+    "category": "FOOD",
+    "quantity": {
+      "onHand": 180,
+      "allocated": 20,
+      "available": 160,
+      "minThreshold": 40
+    },
+    "location": {
+      "zone": "EAST-WING",
+      "aisle": "A12",
+      "rack": "06",
+      "bin": "C-1"
+    },
+    "dimensions": {
+      "length": 18,
+      "width": 9,
+      "height": 1,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.1,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-12T10:30:00Z",
+    "supplier": "ChocoPure",
+    "pickedBy": ["Ruby", "Jade", "Iris", "Rose", "Daisy", "Ivy", "Willow"],
+    "recievedBy": ["Hazel", "Autumn"]
+  },
+  {
+    "id": "SKU-10039",
+    "sku": "OTH-LMP-039",
+    "name": "LED Desk Lamp",
+    "description": "Adjustable brightness and color temp.",
+    "category": "OTHER",
+    "quantity": {
+      "onHand": 30,
+      "allocated": 5,
+      "available": 25,
+      "minThreshold": 10
+    },
+    "location": {
+      "zone": "NORTH-WING",
+      "aisle": "A08",
+      "rack": "05",
+      "bin": "D-2"
+    },
+    "dimensions": {
+      "length": 40,
+      "width": 15,
+      "height": 15,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 1.2,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-11T14:00:00Z",
+    "supplier": "Lumina Tech",
+    "pickedBy": ["Finn", "Arlo", "Kai", "Hugo", "Otto", "Ezra", "Milo"],
+    "recievedBy": ["Felix", "Silas"]
+  },
+  {
+    "id": "SKU-10040",
+    "sku": "ELEC-BNK-040",
+    "name": "Power Bank 20000mAh",
+    "description": "Portable charger with power delivery.",
+    "category": "ELECTRONICS",
+    "quantity": {
+      "onHand": 52,
+      "allocated": 12,
+      "available": 40,
+      "minThreshold": 20
+    },
+    "location": {
+      "zone": "NORTH-WING",
+      "aisle": "A09",
+      "rack": "01",
+      "bin": "A-4"
+    },
+    "dimensions": {
+      "length": 15,
+      "width": 7,
+      "height": 2.5,
+      "unit": "cm"
+    },
+    "weight": {
+      "value": 0.4,
+      "unit": "kg"
+    },
+    "status": "IN_STOCK",
+    "lastCounted": "2024-04-12T16:20:00Z",
+    "supplier": "JuiceBox",
+    "pickedBy": ["Xander", "Quinn", "Zion", "Yara", "Wren", "Veda", "Uri"],
+    "recievedBy": ["Tate", "Sloan"]
+  }
+]

@@ -1,1 +1,89 @@
-<p>picker-dashboard works!</p>
+<div class="w-full min-h-screen bg-wham-tan p-4 md:p-10 animate-in slide-in-from-bottom duration-500">
+  
+  <div class="max-w-[1600px] mx-auto grid grid-cols-12 gap-8 h-full">
+    
+    <div class="col-span-12 lg:col-span-8 bg-wham-cream border-4 border-black flex flex-col min-h-[500px] shadow-[12px_12px_0px_#000]">
+      <div class="bg-black text-wham-white p-5 flex justify-between items-center">
+        <h3 class="text-2xl font-black uppercase tracking-tighter">Active Pick Queue</h3>
+        <span class="text-[11px] font-black border-2 border-wham-primary px-3 py-1 text-wham-primary bg-black">
+          {{ engine.myPendingTasks().length }} ORDERS TOTAL
+        </span>
+      </div>
+      
+      <div class="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar">
+        @for (order of engine.myPendingTasks(); track order.id) {
+          <div class="border-4 border-black p-5 flex justify-between items-center group hover:bg-wham-tan transition-all bg-wham-white">
+            <div class="space-y-2">
+              <p class="text-[11px] font-black text-wham-dark uppercase tracking-widest">ORDER #{{ order.orderNumber }} // {{ order.priority }}</p>
+              <h4 class="text-3xl font-black uppercase leading-none text-black">{{ order.customerName }}</h4>
+              <div class="flex gap-4 mt-3">
+                <span class="bg-wham-dark text-wham-white px-3 py-1 text-[11px] font-black uppercase">Aisle {{ order.items[0].location.split('-')[0] }}</span>
+                <span class="border-2 border-black px-3 py-1 text-[11px] font-black uppercase text-black font-bold">{{ order.items.length }} ITEMS</span>
+              </div>
+            </div>
+            <button (click)="onConfirmPick(order.id, order.items[0].sku)" 
+                    class="bg-black text-wham-white px-8 py-5 font-black uppercase hover:bg-wham-primary transition-all border-none shadow-[4px_4px_0px_#D11D27] active:translate-y-1 active:shadow-none">
+              Start Pick
+            </button>
+          </div>
+        } @empty {
+          <div class="flex flex-col items-center justify-center h-full opacity-30 italic">
+            <mat-icon class="scale-[2]">inbox</mat-icon>
+            <p class="mt-4 font-black uppercase">Queue Clear // No Tasks Assigned</p>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="col-span-12 lg:col-span-4 bg-wham-dark text-wham-white p-8 shadow-[12px_12px_0px_#000] border-4 border-black flex flex-col justify-between">
+      <div>
+        <h3 class="text-2xl font-black uppercase tracking-tighter mb-1 text-wham-tan">Floor Performance</h3>
+        <p class="text-[12px] font-black uppercase opacity-60 tracking-widest">Real-time UPH Tracking</p>
+      </div>
+      
+      <div class="py-8 text-center border-y-4 border-wham-tan/20 my-6">
+        <span class="text-9xl font-black tracking-tighter text-wham-white">{{ engine.currentUser()?.stats?.unitsPerHour }}</span>
+        <p class="text-2xl font-black uppercase text-wham-tan tracking-[0.3em] mt-2">Picks Per Hour</p>
+      </div>
+
+      <div class="bg-black/40 p-5 border-2 border-wham-tan/30 text-wham-tan">
+        @if (engine.performanceTier() === 'ELITE') {
+          <p class="text-[14px] font-black uppercase text-center tracking-tight text-wham-white">🚀 ELITE STATUS: 10% Above Floor Average</p>
+        } @else {
+          <p class="text-[14px] font-black uppercase text-center tracking-tight">Status: STABLE / MAINTAINING</p>
+        }
+      </div>
+    </div>
+
+    <div class="col-span-12 lg:col-span-4 bg-wham-warn text-black p-8 shadow-[12px_12px_0px_#000] border-4 border-black overflow-hidden flex flex-col">
+      <h3 class="text-2xl font-black uppercase tracking-tighter mb-6 border-b-4 border-black pb-2">Floor Alerts</h3>
+      <div class="space-y-4 flex-1">
+        @for (alert of engine.activeAlerts().slice(0, 4); track alert.id) {
+          <div class="flex items-start gap-4 bg-wham-cream/50 p-4 border-2 border-black">
+            <mat-icon class="text-wham-dark">priority_high</mat-icon>
+            <p class="text-[12px] font-black uppercase leading-tight">{{ alert.message }}</p>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="col-span-12 lg:col-span-8 bg-wham-primary p-8 shadow-[12px_12px_0px_#000] border-4 border-black grid grid-cols-1 md:grid-cols-3 gap-6">
+      <button (click)="onReportIssue('SKU-ERR', 'N/A')" 
+              class="bg-black text-wham-white p-6 flex flex-col items-center justify-center gap-4 hover:bg-wham-dark transition-all border-none group shadow-[6px_6px_0px_#000]">
+        <mat-icon class="scale-[1.5]">search_off</mat-icon>
+        <span class="text-[12px] font-black uppercase tracking-widest">Item Not Found</span>
+      </button>
+
+      <button class="bg-black text-wham-white p-6 flex flex-col items-center justify-center gap-4 hover:bg-wham-dark transition-all border-none shadow-[6px_6px_0px_#000]">
+        <mat-icon class="scale-[1.5]">print</mat-icon>
+        <span class="text-[12px] font-black uppercase tracking-widest">Print Batch</span>
+      </button>
+
+      <button class="bg-black text-wham-white p-6 flex flex-col items-center justify-center gap-4 hover:bg-wham-dark transition-all border-none shadow-[6px_6px_0px_#000]">
+        <mat-icon class="scale-[1.5]">help_outline</mat-icon>
+        <span class="text-[12px] font-black uppercase tracking-widest">Supervisor Help</span>
+      </button>
+    </div>
+
+  </div>
+</div>
