@@ -14,6 +14,9 @@ export class InventoryDataService {
   public isLoaded = signal<boolean>(false);
   public searchTerm = signal<string>(''); // NEW: For the search widget
 
+  // NEW: Tab State for your component views
+  public activeTab = signal<'ALL' | 'LOW' | 'MAP' | 'LOGS'>('ALL');
+
   // 2. Computed Logic
   public totalSkus = computed(() => this.inventory().length);
   
@@ -26,6 +29,23 @@ export class InventoryDataService {
       item.sku.toLowerCase().includes(term) ||
       item.location.zone.toLowerCase().includes(term)
     );
+  });
+
+  // NEW: Grouped Logic for your main container (Zone > Aisle)
+  public groupedInventory = computed(() => {
+    const items = this.filteredInventory();
+    const groups: { [key: string]: InventoryItem[] } = {};
+
+    items.forEach(item => {
+      const zone = item.location.zone;
+      if (!groups[zone]) groups[zone] = [];
+      groups[zone].push(item);
+    });
+
+    for (const zone in groups) {
+      groups[zone].sort((a, b) => a.location.aisle.localeCompare(b.location.aisle));
+    }
+    return groups;
   });
 
   public lowStockItems = computed(() => 
@@ -44,8 +64,9 @@ export class InventoryDataService {
 
   private async initInventory() {
     try {
+      // FIX: Removed leading slash to prevent 404 in most Angular environments
       const data = await firstValueFrom(
-        this.http.get<InventoryItem[]>('/assets/data/inventory.json')
+        this.http.get<InventoryItem[]>('data/inventory.json')
       );
       this.inventory.set(data);
       this.isLoaded.set(true);
