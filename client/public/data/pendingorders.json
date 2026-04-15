@@ -1,0 +1,718 @@
+[
+  {
+    "id": "ORD-2001",
+    "orderNumber": "ORD-2001",
+    "customerName": "Microsoft Corporation",
+    "dateCreated": "2026-04-12T08:00:00Z",
+    "status": "PENDING",
+    "priority": "URGENT",
+    "assignedPicker": "Sarah",
+    "items": [
+      { "sku": "MS-XBOX-01", "description": "Xbox Series X Console", "quantity": 10, "location": "Aisle 4 - B10", "isPicked": false, "isPacked": false },
+      { "sku": "MS-SURF-05", "description": "Surface Laptop 5", "quantity": 5, "location": "Aisle 4 - B12", "isPicked": false, "isPacked": true },
+      { "sku": "MS-CTRL-BLK", "description": "Wireless Controller Black", "quantity": 20, "location": "Aisle 4 - C01", "isPicked": false, "isPacked": false },
+      { "sku": "MS-OFF-365", "description": "Office 365 Retail Pack", "quantity": 50, "location": "Aisle 2 - A01", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2002",
+    "orderNumber": "ORD-2002",
+    "customerName": "Tesla Motors Inc.",
+    "dateCreated": "2026-04-12T08:15:00Z",
+    "status": "PICKING",
+    "priority": "NORMAL",
+    "assignedPicker": "Marcus",
+    "items": [
+      { "sku": "TSLA-BAT-M3", "description": "Model 3 Battery Module", "quantity": 2, "location": "Aisle 10 - E05", "isPicked": false, "isPacked": false },
+      { "sku": "TSLA-SCR-15", "description": "15-inch Touchscreen Display", "quantity": 1, "location": "Aisle 10 - E09", "isPicked": false, "isPacked": false },
+      { "sku": "TSLA-WHL-20", "description": "20-inch Induction Wheels", "quantity": 4, "location": "Aisle 12 - F01", "isPicked": false, "isPacked": true },
+      { "sku": "TSLA-CHG-V3", "description": "Wall Connector Gen 3", "quantity": 3, "location": "Aisle 8 - D02", "isPicked": false, "isPacked": true },
+      { "sku": "TSLA-FILT-H", "description": "HEPA Cabin Filter", "quantity": 10, "location": "Aisle 8 - D04", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2003",
+    "orderNumber": "ORD-2003",
+    "customerName": "Nike Global Logistics",
+    "dateCreated": "2026-04-12T08:30:00Z",
+    "status": "PENDING",
+    "priority": "LOW",
+    "assignedPicker": "Elena",
+    "items": [
+      { "sku": "NK-AF1-W", "description": "Air Force 1 White", "quantity": 15, "location": "Aisle 15 - G01", "isPicked": false, "isPacked": true },
+      { "sku": "NK-DRY-TS", "description": "Dri-FIT Training Shirt", "quantity": 30, "location": "Aisle 15 - G05", "isPicked": false, "isPacked": false },
+      { "sku": "NK-SOC-CW", "description": "Cushioned Crew Socks", "quantity": 100, "location": "Aisle 16 - H10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2004",
+    "orderNumber": "ORD-2004",
+    "customerName": "Coca-Cola Enterprises",
+    "dateCreated": "2026-04-12T08:45:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "David",
+    "items": [
+      { "sku": "COKE-CL-12", "description": "Classic Coke 12pk", "quantity": 50, "location": "Pallet Zone - 01", "isPicked": false, "isPacked": false },
+      { "sku": "COKE-ZT-12", "description": "Zero Sugar 12pk", "quantity": 40, "location": "Pallet Zone - 02", "isPicked": false, "isPacked": true },
+      { "sku": "COKE-SPR-12", "description": "Sprite 12pk", "quantity": 20, "location": "Pallet Zone - 03", "isPicked": false, "isPacked": false },
+      { "sku": "COKE-GLS-RT", "description": "Vintage Glass Bottle Pack", "quantity": 5, "location": "Aisle 20 - Z05", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2005",
+    "orderNumber": "ORD-2005",
+    "customerName": "SpaceX Systems",
+    "dateCreated": "2026-04-12T09:00:00Z",
+    "status": "PICKING",
+    "priority": "URGENT",
+    "assignedPicker": "Chloe",
+    "items": [
+      { "sku": "SPX-VLV-99", "description": "Fuel Pressure Valve", "quantity": 4, "location": "Aisle 30 - V01", "isPicked": false, "isPacked": true },
+      { "sku": "SPX-BOLT-TI", "description": "Titanium Structural Bolt", "quantity": 200, "location": "Aisle 30 - V05", "isPicked": false, "isPacked": false },
+      { "sku": "SPX-SEAL-O", "description": "Cryogenic O-Ring", "quantity": 50, "location": "Aisle 31 - W02", "isPicked": false, "isPacked": true },
+      { "sku": "SPX-SENS-T", "description": "Thermal Sensor Node", "quantity": 12, "location": "Aisle 31 - W08", "isPicked": false, "isPacked": false },
+      { "sku": "SPX-CAB-6G", "description": "Shielded Data Cable 5m", "quantity": 8, "location": "Aisle 32 - X10", "isPicked": false, "isPacked": false },
+      { "sku": "SPX-BRK-S", "description": "Safety Break Switch", "quantity": 2, "location": "Aisle 32 - X12", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2006",
+    "orderNumber": "ORD-2006",
+    "customerName": "Samsung Electronics",
+    "dateCreated": "2026-04-12T09:15:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "James",
+    "items": [
+      { "sku": "SS-S24-U", "description": "Galaxy S24 Ultra", "quantity": 25, "location": "Aisle 5 - A01", "isPicked": false, "isPacked": false },
+      { "sku": "SS-BUDS-PRO", "description": "Galaxy Buds Pro 2", "quantity": 50, "location": "Aisle 5 - A04", "isPicked": false, "isPacked": true },
+      { "sku": "SS-TV-QLED", "description": "65-inch QLED Panel", "quantity": 2, "location": "Large Item - B05", "isPicked": false, "isPacked": false },
+      { "sku": "SS-CHG-45W", "description": "45W Fast Charger", "quantity": 100, "location": "Aisle 5 - C02", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2007",
+    "orderNumber": "ORD-2007",
+    "customerName": "Pfizer Inc.",
+    "dateCreated": "2026-04-12T09:30:00Z",
+    "status": "PENDING",
+    "priority": "URGENT",
+    "assignedPicker": "Sarah",
+    "items": [
+      { "sku": "PF-VIAL-S", "description": "Sterile Glass Vials", "quantity": 500, "location": "Aisle 22 - K01", "isPicked": false, "isPacked": false },
+      { "sku": "PF-SYR-05", "description": "0.5ml Syringe Pack", "quantity": 1000, "location": "Aisle 22 - K05", "isPicked": false, "isPacked": true },
+      { "sku": "PF-LAB-CR", "description": "Cold Chain Labels", "quantity": 50, "location": "Aisle 21 - L01", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2008",
+    "orderNumber": "ORD-2008",
+    "customerName": "Boeing Commercial Airplanes",
+    "dateCreated": "2026-04-12T10:00:00Z",
+    "status": "PICKING",
+    "priority": "NORMAL",
+    "assignedPicker": "Marcus",
+    "items": [
+      { "sku": "BA-RIV-01", "description": "Wing Rivet Set", "quantity": 5, "location": "Aisle 18 - M01", "isPicked": false, "isPacked": true },
+      { "sku": "BA-LITE-NAV", "description": "Navigation Light LED", "quantity": 10, "location": "Aisle 18 - M10", "isPicked": false, "isPacked": false },
+      { "sku": "BA-HYD-L", "description": "Hydraulic Fluid 5L", "quantity": 20, "location": "Hazardous - S01", "isPicked": false, "isPacked": true },
+      { "sku": "BA-SEAT-CV", "description": "Economy Seat Cover", "quantity": 150, "location": "Aisle 19 - N04", "isPicked": false, "isPacked": false },
+      { "sku": "BA-DUCT-F", "description": "Flexible Air Ducting", "quantity": 8, "location": "Aisle 19 - N12", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2009",
+    "orderNumber": "ORD-2009",
+    "customerName": "Amazon Fulfillment Center",
+    "dateCreated": "2026-04-12T10:15:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "Elena",
+    "items": [
+      { "sku": "AMZ-BOX-M", "description": "Medium Shipping Boxes", "quantity": 200, "location": "Aisle 40 - Z01", "isPicked": false, "isPacked": true },
+      { "sku": "AMZ-TAPE-HD", "description": "Heavy Duty Tape Rolls", "quantity": 48, "location": "Aisle 40 - Z05", "isPicked": false, "isPacked": false },
+      { "sku": "AMZ-LBL-T", "description": "Thermal Label Rolls", "quantity": 24, "location": "Aisle 41 - A01", "isPicked": false, "isPacked": true },
+      { "sku": "AMZ-WRAP-B", "description": "Bubble Wrap Roll", "quantity": 10, "location": "Aisle 40 - Z10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2010",
+    "orderNumber": "ORD-2010",
+    "customerName": "Ford Motor Company",
+    "dateCreated": "2026-04-12T10:30:00Z",
+    "status": "PICKING",
+    "priority": "LOW",
+    "assignedPicker": "David",
+    "items": [
+      { "sku": "FORD-F150-TL", "description": "Tail Light Assembly", "quantity": 4, "location": "Aisle 11 - G02", "isPicked": false, "isPacked": false },
+      { "sku": "FORD-OIL-5W", "description": "Motor Oil 5W-30", "quantity": 12, "location": "Aisle 11 - G05", "isPicked": false, "isPacked": true },
+      { "sku": "FORD-PLG-IR", "description": "Iridium Spark Plug", "quantity": 32, "location": "Aisle 11 - G09", "isPicked": false, "isPacked": false },
+      { "sku": "FORD-BRK-P", "description": "Front Brake Pads", "quantity": 8, "location": "Aisle 12 - H01", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2011",
+    "orderNumber": "ORD-2011",
+    "customerName": "Intel Corporation",
+    "dateCreated": "2026-04-12T11:00:00Z",
+    "status": "PENDING",
+    "priority": "URGENT",
+    "assignedPicker": "Chloe",
+    "items": [
+      { "sku": "INTL-I9-14", "description": "Core i9-14900K CPU", "quantity": 50, "location": "Vault - 01", "isPicked": false, "isPacked": false },
+      { "sku": "INTL-I7-14", "description": "Core i7-14700K CPU", "quantity": 100, "location": "Vault - 02", "isPicked": false, "isPacked": true },
+      { "sku": "INTL-THM-P", "description": "Thermal Paste Syringe", "quantity": 200, "location": "Aisle 1 - A05", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2012",
+    "orderNumber": "ORD-2012",
+    "customerName": "McDonald's Supply Chain",
+    "dateCreated": "2026-04-12T11:15:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "James",
+    "items": [
+      { "sku": "MCD-CUP-L", "description": "Large Drink Cups (Case)", "quantity": 20, "location": "Aisle 33 - S01", "isPicked": false, "isPacked": false },
+      { "sku": "MCD-LID-L", "description": "Large Drink Lids (Case)", "quantity": 20, "location": "Aisle 33 - S02", "isPicked": false, "isPacked": true },
+      { "sku": "MCD-STR-P", "description": "Paper Straws (Box)", "quantity": 50, "location": "Aisle 33 - S05", "isPicked": false, "isPacked": false },
+      { "sku": "MCD-NAP-B", "description": "Napkins Bulk Pack", "quantity": 100, "location": "Aisle 34 - T01", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2013",
+    "orderNumber": "ORD-2013",
+    "customerName": "Walmart Stores Inc.",
+    "dateCreated": "2026-04-12T11:30:00Z",
+    "status": "PICKING",
+    "priority": "NORMAL",
+    "assignedPicker": "Sarah",
+    "items": [
+      { "sku": "WM-LED-60", "description": "60W LED Bulbs 4pk", "quantity": 500, "location": "Aisle 6 - C01", "isPicked": false, "isPacked": false },
+      { "sku": "WM-TOWEL-W", "description": "White Bath Towels", "quantity": 100, "location": "Aisle 25 - R04", "isPicked": false, "isPacked": true },
+      { "sku": "WM-BAT-AA", "description": "AA Batteries 24pk", "quantity": 300, "location": "Aisle 6 - C10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2014",
+    "orderNumber": "ORD-2014",
+    "customerName": "General Motors",
+    "dateCreated": "2026-04-12T11:45:00Z",
+    "status": "PENDING",
+    "priority": "LOW",
+    "assignedPicker": "Marcus",
+    "items": [
+      { "sku": "GM-ALT-X", "description": "High Output Alternator", "quantity": 5, "location": "Aisle 14 - J01", "isPicked": false, "isPacked": false },
+      { "sku": "GM-BELT-S", "description": "Serpentine Belt", "quantity": 10, "location": "Aisle 14 - J05", "isPicked": false, "isPacked": true },
+      { "sku": "GM-COOL-1G", "description": "Dex-Cool Antifreeze 1G", "quantity": 24, "location": "Aisle 15 - K02", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2015",
+    "orderNumber": "ORD-2015",
+    "customerName": "Nestlé S.A.",
+    "dateCreated": "2026-04-12T12:00:00Z",
+    "status": "PICKING",
+    "priority": "NORMAL",
+    "assignedPicker": "Elena",
+    "items": [
+      { "sku": "NEST-WAT-50", "description": "Pure Life 500ml Case", "quantity": 200, "location": "Pallet Zone - 10", "isPicked": false, "isPacked": false },
+      { "sku": "NEST-NES-C", "description": "Nescafé Classic 200g", "quantity": 100, "location": "Aisle 7 - D01", "isPicked": false, "isPacked": true },
+      { "sku": "NEST-KIT-B", "description": "KitKat 4-Finger Box", "quantity": 50, "location": "Aisle 7 - D05", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2016",
+    "orderNumber": "ORD-2016",
+    "customerName": "Apple Inc.",
+    "dateCreated": "2026-04-12T12:15:00Z",
+    "status": "PENDING",
+    "priority": "URGENT",
+    "assignedPicker": "David",
+    "items": [
+      { "sku": "APL-IPH-15", "description": "iPhone 15 Pro Max 256GB", "quantity": 100, "location": "Vault - 05", "isPicked": false, "isPacked": false },
+      { "sku": "APL-MAC-M3", "description": "MacBook Pro M3 14-inch", "quantity": 40, "location": "Vault - 06", "isPicked": false, "isPacked": true },
+      { "sku": "APL-AIR-P3", "description": "AirPods Pro 2nd Gen", "quantity": 200, "location": "Vault - 07", "isPicked": false, "isPacked": false },
+      { "sku": "APL-CHG-20", "description": "20W USB-C Adapter", "quantity": 500, "location": "Aisle 2 - B01", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2017",
+    "orderNumber": "ORD-2017",
+    "customerName": "Toyota Motor Corp",
+    "dateCreated": "2026-04-12T12:30:00Z",
+    "status": "PICKING",
+    "priority": "NORMAL",
+    "assignedPicker": "Chloe",
+    "items": [
+      { "sku": "TYT-FILT-O", "description": "Genuine Oil Filter", "quantity": 100, "location": "Aisle 12 - L01", "isPicked": false, "isPacked": false },
+      { "sku": "TYT-PAD-F", "description": "Front Brake Pad Kit", "quantity": 20, "location": "Aisle 12 - L05", "isPicked": false, "isPacked": true },
+      { "sku": "TYT-WPR-26", "description": "26-inch Wiper Blade", "quantity": 50, "location": "Aisle 12 - L09", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2018",
+    "orderNumber": "ORD-2018",
+    "customerName": "Johnson & Johnson",
+    "dateCreated": "2026-04-12T12:45:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "James",
+    "items": [
+      { "sku": "JJ-BND-50", "description": "Band-Aid Tough Strips", "quantity": 500, "location": "Aisle 23 - M01", "isPicked": false, "isPacked": true },
+      { "sku": "JJ-TYL-500", "description": "Tylenol Extra Strength", "quantity": 200, "location": "Aisle 23 - M05", "isPicked": false, "isPacked": false },
+      { "sku": "JJ-BAB-P", "description": "Baby Powder 500g", "quantity": 100, "location": "Aisle 24 - N01", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2019",
+    "orderNumber": "ORD-2019",
+    "customerName": "Home Depot",
+    "dateCreated": "2026-04-12T13:00:00Z",
+    "status": "PENDING",
+    "priority": "LOW",
+    "assignedPicker": "Sarah",
+    "items": [
+      { "sku": "HD-LBR-24", "description": "2x4 Pine Stud 8ft", "quantity": 100, "location": "Yard - A1", "isPicked": false, "isPacked": false },
+      { "sku": "HD-DRL-18V", "description": "18V Cordless Drill Kit", "quantity": 10, "location": "Aisle 9 - B04", "isPicked": false, "isPacked": true },
+      { "sku": "HD-NLR-BX", "description": "Framing Nails 3-inch", "quantity": 20, "location": "Aisle 9 - B10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2020",
+    "orderNumber": "ORD-2020",
+    "customerName": "PepsiCo Inc.",
+    "dateCreated": "2026-04-12T13:15:00Z",
+    "status": "PICKING",
+    "priority": "NORMAL",
+    "assignedPicker": "Marcus",
+    "items": [
+      { "sku": "PEP-CL-12", "description": "Pepsi Classic 12pk", "quantity": 60, "location": "Pallet Zone - 05", "isPicked": false, "isPacked": true },
+      { "sku": "PEP-LAY-C", "description": "Lay's Classic XL Bag", "quantity": 100, "location": "Aisle 28 - P01", "isPicked": false, "isPacked": false },
+      { "sku": "PEP-DOR-N", "description": "Nacho Cheese Doritos", "quantity": 100, "location": "Aisle 28 - P04", "isPicked": false, "isPacked": true },
+      { "sku": "PEP-GAT-BL", "description": "Gatorade Blue 20oz", "quantity": 240, "location": "Aisle 29 - Q01", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2021",
+    "orderNumber": "ORD-2021",
+    "customerName": "Sony Electronics",
+    "dateCreated": "2026-04-12T13:30:00Z",
+    "status": "PENDING",
+    "priority": "URGENT",
+    "assignedPicker": "Elena",
+    "items": [
+      { "sku": "SNY-PS5-D", "description": "PlayStation 5 Digital", "quantity": 15, "location": "Aisle 4 - D01", "isPicked": false, "isPacked": false },
+      { "sku": "SNY-CTRL-W", "description": "DualSense Controller White", "quantity": 30, "location": "Aisle 4 - D05", "isPicked": false, "isPacked": true },
+      { "sku": "SNY-HDM-21", "description": "High Speed HDMI 2.1", "quantity": 50, "location": "Aisle 4 - D10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2022",
+    "orderNumber": "ORD-2022",
+    "customerName": "Shell Energy",
+    "dateCreated": "2026-04-12T13:45:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "David",
+    "items": [
+      { "sku": "SHL-OIL-SY", "description": "Synthetic Motor Oil 1L", "quantity": 100, "location": "Aisle 35 - U01", "isPicked": false, "isPacked": true },
+      { "sku": "SHL-GRS-HD", "description": "Heavy Duty Grease Tube", "quantity": 50, "location": "Aisle 35 - U05", "isPicked": false, "isPacked": false },
+      { "sku": "SHL-CLN-F", "description": "Fuel System Cleaner", "quantity": 48, "location": "Aisle 35 - U10", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2023",
+    "orderNumber": "ORD-2023",
+    "customerName": "Starbucks Corp",
+    "dateCreated": "2026-04-12T14:00:00Z",
+    "status": "PICKING",
+    "priority": "NORMAL",
+    "assignedPicker": "Chloe",
+    "items": [
+      { "sku": "SBX-BN-ES", "description": "Espresso Roast Beans", "quantity": 40, "location": "Aisle 7 - E01", "isPicked": false, "isPacked": false },
+      { "sku": "SBX-SYR-V", "description": "Vanilla Syrup 1L", "quantity": 24, "location": "Aisle 7 - E05", "isPicked": false, "isPacked": true },
+      { "sku": "SBX-CUP-HT", "description": "Hot Cups 12oz Case", "quantity": 15, "location": "Aisle 34 - S10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2024",
+    "orderNumber": "ORD-2024",
+    "customerName": "FedEx Ground",
+    "dateCreated": "2026-04-12T14:15:00Z",
+    "status": "PENDING",
+    "priority": "URGENT",
+    "assignedPicker": "James",
+    "items": [
+      { "sku": "FDX-ENV-L", "description": "Large Document Envelope", "quantity": 1000, "location": "Aisle 42 - B01", "isPicked": false, "isPacked": true },
+      { "sku": "FDX-TPE-CL", "description": "Clear Packing Tape", "quantity": 72, "location": "Aisle 42 - B05", "isPicked": false, "isPacked": false },
+      { "sku": "FDX-LBL-PR", "description": "Shipping Label Paper", "quantity": 50, "location": "Aisle 42 - B10", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2025",
+    "orderNumber": "ORD-2025",
+    "customerName": "Mercedes-Benz AG",
+    "dateCreated": "2026-04-12T14:30:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "Sarah",
+    "items": [
+      { "sku": "MB-EMB-HL", "description": "Hood Emblem Classic", "quantity": 10, "location": "Aisle 13 - K01", "isPicked": false, "isPacked": false },
+      { "sku": "MB-FLT-CAB", "description": "Active Carbon Filter", "quantity": 30, "location": "Aisle 13 - K05", "isPicked": false, "isPacked": true },
+      { "sku": "MB-KEY-FOB", "description": "Replacement Key Fob", "quantity": 5, "location": "Vault - 09", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2026",
+    "orderNumber": "ORD-2026",
+    "customerName": "Lowe's Companies",
+    "dateCreated": "2026-04-12T14:45:00Z",
+    "status": "PICKING",
+    "priority": "LOW",
+    "assignedPicker": "Marcus",
+    "items": [
+      { "sku": "LW-PAINT-W", "description": "White Semigloss 1G", "quantity": 20, "location": "Aisle 17 - P01", "isPicked": false, "isPacked": true },
+      { "sku": "LW-BRSH-3", "description": "3-inch Angle Brush", "quantity": 50, "location": "Aisle 17 - P05", "isPicked": false, "isPacked": false },
+      { "sku": "LW-DROP-C", "description": "Plastic Drop Cloth", "quantity": 40, "location": "Aisle 17 - P09", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2027",
+    "orderNumber": "ORD-2027",
+    "customerName": "IBM Research",
+    "dateCreated": "2026-04-12T15:00:00Z",
+    "status": "PENDING",
+    "priority": "URGENT",
+    "assignedPicker": "Elena",
+    "items": [
+      { "sku": "IBM-SRV-X", "description": "Rack Mount Server Node", "quantity": 2, "location": "Aisle 50 - Z01", "isPicked": false, "isPacked": false },
+      { "sku": "IBM-RAM-64", "description": "64GB DDR5 ECC RAM", "quantity": 16, "location": "Vault - 10", "isPicked": false, "isPacked": true },
+      { "sku": "IBM-SSD-2T", "description": "2TB NVMe Enterprise", "quantity": 8, "location": "Vault - 11", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2028",
+    "orderNumber": "ORD-2028",
+    "customerName": "Costco Wholesale",
+    "dateCreated": "2026-04-12T15:15:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "David",
+    "items": [
+      { "sku": "CST-TP-36", "description": "Kirkland Bath Tissue", "quantity": 100, "location": "Pallet Zone - 15", "isPicked": false, "isPacked": true },
+      { "sku": "CST-WTR-40", "description": "Purified Water 40pk", "quantity": 200, "location": "Pallet Zone - 16", "isPicked": false, "isPacked": false },
+      { "sku": "CST-DET-2X", "description": "Ultra Clean Detergent", "quantity": 50, "location": "Aisle 26 - Q01", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2029",
+    "orderNumber": "ORD-2029",
+    "customerName": "Siemens Healthineers",
+    "dateCreated": "2026-04-12T15:30:00Z",
+    "status": "PICKING",
+    "priority": "URGENT",
+    "assignedPicker": "Chloe",
+    "items": [
+      { "sku": "SIE-MRI-S", "description": "MRI Contrast Agent", "quantity": 24, "location": "Aisle 45 - M01", "isPicked": false, "isPacked": false },
+      { "sku": "SIE-GEL-US", "description": "Ultrasound Gel 5L", "quantity": 10, "location": "Aisle 45 - M05", "isPicked": false, "isPacked": true },
+      { "sku": "SIE-ELC-D", "description": "Disposable Electrodes", "quantity": 500, "location": "Aisle 45 - M10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2030",
+    "orderNumber": "ORD-2030",
+    "customerName": "Dell Technologies",
+    "dateCreated": "2026-04-12T15:45:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "James",
+    "items": [
+      { "sku": "DELL-LAT-5", "description": "Latitude 5440 Laptop", "quantity": 20, "location": "Aisle 3 - D01", "isPicked": false, "isPacked": false },
+      { "sku": "DELL-MON-27", "description": "27-inch 4K Monitor", "quantity": 15, "location": "Aisle 3 - D05", "isPicked": false, "isPacked": true },
+      { "sku": "DELL-DSK-WD", "description": "WD19S Docking Station", "quantity": 20, "location": "Aisle 3 - D08", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2031",
+    "orderNumber": "ORD-2031",
+    "customerName": "Caterpillar Inc.",
+    "dateCreated": "2026-04-12T16:00:00Z",
+    "status": "PENDING",
+    "priority": "LOW",
+    "assignedPicker": "Sarah",
+    "items": [
+      { "sku": "CAT-HD-P1", "description": "Hydraulic Cylinder Seal", "quantity": 12, "location": "Aisle 55 - C01", "isPicked": false, "isPacked": true },
+      { "sku": "CAT-FLT-F", "description": "Heavy Duty Fuel Filter", "quantity": 24, "location": "Aisle 55 - C05", "isPicked": false, "isPacked": false },
+      { "sku": "CAT-BLT-G", "description": "Grade 8 Steel Bolt Set", "quantity": 100, "location": "Aisle 55 - C10", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2032",
+    "orderNumber": "ORD-2032",
+    "customerName": "Unilever PLC",
+    "dateCreated": "2026-04-12T16:15:00Z",
+    "status": "PICKING",
+    "priority": "NORMAL",
+    "assignedPicker": "Marcus",
+    "items": [
+      { "sku": "UNI-DOV-B", "description": "Dove Beauty Bar 6pk", "quantity": 200, "location": "Aisle 27 - S01", "isPicked": false, "isPacked": false },
+      { "sku": "UNI-HEL-M", "description": "Hellmann's Mayo 32oz", "quantity": 48, "location": "Aisle 27 - S05", "isPicked": false, "isPacked": true },
+      { "sku": "UNI-LPT-T", "description": "Lipton Tea Bags 100ct", "quantity": 100, "location": "Aisle 27 - S10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2033",
+    "orderNumber": "ORD-2033",
+    "customerName": "General Electric",
+    "dateCreated": "2026-04-12T16:30:00Z",
+    "status": "PENDING",
+    "priority": "URGENT",
+    "assignedPicker": "Elena",
+    "items": [
+      { "sku": "GE-LED-A1", "description": "A19 LED Bulb Soft White", "quantity": 1000, "location": "Aisle 6 - E01", "isPicked": false, "isPacked": true },
+      { "sku": "GE-CIR-BR", "description": "20A Circuit Breaker", "quantity": 50, "location": "Aisle 6 - E05", "isPicked": false, "isPacked": false },
+      { "sku": "GE-TUBE-F", "description": "4ft Fluorescent Tube", "quantity": 100, "location": "Aisle 6 - E10", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2034",
+    "orderNumber": "ORD-2034",
+    "customerName": "Target Corporation",
+    "dateCreated": "2026-04-12T16:45:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "David",
+    "items": [
+      { "sku": "TGT-PIL-S", "description": "Threshold Bed Pillow", "quantity": 40, "location": "Aisle 22 - B01", "isPicked": false, "isPacked": false },
+      { "sku": "TGT-MUG-C", "description": "Ceramic Coffee Mug", "quantity": 60, "location": "Aisle 22 - B05", "isPicked": false, "isPacked": true },
+      { "sku": "TGT-BASK-W", "description": "Woven Storage Basket", "quantity": 20, "location": "Aisle 22 - B10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2035",
+    "orderNumber": "ORD-2035",
+    "customerName": "Honeywell International",
+    "dateCreated": "2026-04-12T17:00:00Z",
+    "status": "PICKING",
+    "priority": "URGENT",
+    "assignedPicker": "Chloe",
+    "items": [
+      { "sku": "HON-THM-T9", "description": "T9 Smart Thermostat", "quantity": 25, "location": "Aisle 14 - T01", "isPicked": false, "isPacked": true },
+      { "sku": "HON-FILT-A", "description": "Air Purifier Filter", "quantity": 50, "location": "Aisle 14 - T05", "isPicked": false, "isPacked": false },
+      { "sku": "HON-MSK-N9", "description": "N95 Respirator Mask", "quantity": 500, "location": "Aisle 14 - T10", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2036",
+    "orderNumber": "ORD-2036",
+    "customerName": "Abbott Laboratories",
+    "dateCreated": "2026-04-13T08:00:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "James",
+    "items": [
+      { "sku": "ABT-FS-01", "description": "FreeStyle Libre Sensor", "quantity": 100, "location": "Aisle 46 - A01", "isPicked": false, "isPacked": false },
+      { "sku": "ABT-ENS-V", "description": "Ensure Vanilla Case", "quantity": 50, "location": "Aisle 46 - A05", "isPicked": false, "isPacked": true },
+      { "sku": "ABT-TEST-G", "description": "Glucose Test Strips", "quantity": 200, "location": "Aisle 46 - A10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2037",
+    "orderNumber": "ORD-2037",
+    "customerName": "3M Company",
+    "dateCreated": "2026-04-13T08:15:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "Sarah",
+    "items": [
+      { "sku": "3M-TPE-60", "description": "Scotch Blue Painter Tape", "quantity": 144, "location": "Aisle 19 - S01", "isPicked": false, "isPacked": true },
+      { "sku": "3M-PST-N", "description": "Post-it Notes Yellow", "quantity": 500, "location": "Aisle 19 - S05", "isPicked": false, "isPacked": false },
+      { "sku": "3M-CMD-H", "description": "Command Hooks Large", "quantity": 100, "location": "Aisle 19 - S10", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2038",
+    "orderNumber": "ORD-2038",
+    "customerName": "Northrop Grumman",
+    "dateCreated": "2026-04-13T08:30:00Z",
+    "status": "PICKING",
+    "priority": "URGENT",
+    "assignedPicker": "Marcus",
+    "items": [
+      { "sku": "NG-ANT-05", "description": "RF Antenna Module", "quantity": 4, "location": "Vault - 15", "isPicked": false, "isPacked": false },
+      { "sku": "NG-CAB-HT", "description": "High-Temp Wire Harness", "quantity": 10, "location": "Aisle 51 - N01", "isPicked": false, "isPacked": true },
+      { "sku": "NG-PLT-CO", "description": "Composite Panel Sec A", "quantity": 2, "location": "Large Item - C01", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2039",
+    "orderNumber": "ORD-2039",
+    "customerName": "Oracle Corporation",
+    "dateCreated": "2026-04-13T08:45:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "Elena",
+    "items": [
+      { "sku": "ORCL-SRV-7", "description": "Oracle X9-2 Server", "quantity": 5, "location": "Aisle 50 - O01", "isPicked": false, "isPacked": true },
+      { "sku": "ORCL-SW-L", "description": "DB License Physical Kit", "quantity": 1, "location": "Aisle 50 - O05", "isPicked": false, "isPacked": false },
+      { "sku": "ORCL-PDU-B", "description": "Rack PDU 240V", "quantity": 10, "location": "Aisle 50 - O10", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2040",
+    "orderNumber": "ORD-2040",
+    "customerName": "Bridgestone Tires",
+    "dateCreated": "2026-04-13T09:00:00Z",
+    "status": "PENDING",
+    "priority": "LOW",
+    "assignedPicker": "David",
+    "items": [
+      { "sku": "BST-PNZ-26", "description": "Potenza RE980AS 265", "quantity": 20, "location": "Tire Rack - 01", "isPicked": false, "isPacked": false },
+      { "sku": "BST-VL-TR", "description": "Chrome Valve Stems", "quantity": 100, "location": "Aisle 11 - V01", "isPicked": false, "isPacked": true },
+      { "sku": "BST-WGT-W", "description": "Wheel Weights Box", "quantity": 10, "location": "Aisle 11 - V05", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2041",
+    "orderNumber": "ORD-2041",
+    "customerName": "Adidas AG",
+    "dateCreated": "2026-04-13T09:15:00Z",
+    "status": "PICKING",
+    "priority": "NORMAL",
+    "assignedPicker": "Chloe",
+    "items": [
+      { "sku": "ADI-STN-S", "description": "Stan Smith White", "quantity": 30, "location": "Aisle 16 - A01", "isPicked": false, "isPacked": true },
+      { "sku": "ADI-TR-JK", "description": "Tiross Track Jacket", "quantity": 20, "location": "Aisle 16 - A05", "isPicked": false, "isPacked": false },
+      { "sku": "ADI-SOC-3P", "description": "Performance Socks 3pk", "quantity": 100, "location": "Aisle 16 - A10", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2042",
+    "orderNumber": "ORD-2042",
+    "customerName": "L'Oréal Group",
+    "dateCreated": "2026-04-13T09:30:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "James",
+    "items": [
+      { "sku": "LOR-MAS-B", "description": "Voluminous Mascara", "quantity": 120, "location": "Aisle 29 - L01", "isPicked": false, "isPacked": false },
+      { "sku": "LOR-SHA-5", "description": "Elvive Shampoo 500ml", "quantity": 60, "location": "Aisle 29 - L05", "isPicked": false, "isPacked": true },
+      { "sku": "LOR-CRM-A", "description": "Revitalift Night Cream", "quantity": 48, "location": "Aisle 29 - L10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2043",
+    "orderNumber": "ORD-2043",
+    "customerName": "Bayer AG",
+    "dateCreated": "2026-04-13T09:45:00Z",
+    "status": "PENDING",
+    "priority": "URGENT",
+    "assignedPicker": "Sarah",
+    "items": [
+      { "sku": "BYR-ASP-10", "description": "Bayer Aspirin 100ct", "quantity": 300, "location": "Aisle 24 - B01", "isPicked": false, "isPacked": true },
+      { "sku": "BYR-ALV-50", "description": "Aleve Liquid Gels", "quantity": 150, "location": "Aisle 24 - B05", "isPicked": false, "isPacked": false },
+      { "sku": "BYR-VIC-Z", "description": "One A Day Men's Multi", "quantity": 100, "location": "Aisle 24 - B10", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2044",
+    "orderNumber": "ORD-2044",
+    "customerName": "Nissan Motor Co.",
+    "dateCreated": "2026-04-13T10:00:00Z",
+    "status": "PICKING",
+    "priority": "NORMAL",
+    "assignedPicker": "Marcus",
+    "items": [
+      { "sku": "NSN-ALT-T", "description": "Altima Brake Rotor", "quantity": 12, "location": "Aisle 13 - N01", "isPicked": false, "isPacked": false },
+      { "sku": "NSN-CVT-F", "description": "CVT Fluid NS-3 1L", "quantity": 48, "location": "Aisle 13 - N05", "isPicked": false, "isPacked": true },
+      { "sku": "NSN-CLP-F", "description": "Fender Clip Bag", "quantity": 20, "location": "Aisle 13 - N10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2045",
+    "orderNumber": "ORD-2045",
+    "customerName": "FedEx",
+    "dateCreated": "2026-04-13T10:15:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "Elena",
+    "items": [
+      { "sku": "FDX-ENV-M", "description": "Medium Shipping Envelope", "quantity": 500, "location": "Aisle 42 - C01", "isPicked": false, "isPacked": true },
+      { "sku": "FDX-TPE-BR", "description": "Brown Packing Tape", "quantity": 36, "location": "Aisle 42 - C05", "isPicked": false, "isPacked": false },
+      { "sku": "FDX-PLT-S", "description": "Plastic Pallet Wrap", "quantity": 5, "location": "Aisle 42 - C10", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2046",
+    "orderNumber": "ORD-2046",
+    "customerName": "HP Inc.",
+    "dateCreated": "2026-04-13T10:30:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "David",
+    "items": [
+      { "sku": "HP-INK-65", "description": "HP 65 Black Ink Cart", "quantity": 200, "location": "Aisle 4 - H01", "isPicked": false, "isPacked": false },
+      { "sku": "HP-PPR-L", "description": "LaserJet Paper Ream", "quantity": 100, "location": "Aisle 4 - H05", "isPicked": false, "isPacked": true },
+      { "sku": "HP-OFF-P", "description": "OfficeJet Pro 9015e", "quantity": 10, "location": "Aisle 4 - H10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2047",
+    "orderNumber": "ORD-2047",
+    "customerName": "UPS Logistics",
+    "dateCreated": "2026-04-13T10:45:00Z",
+    "status": "PICKING",
+    "priority": "URGENT",
+    "assignedPicker": "Chloe",
+    "items": [
+      { "sku": "UPS-BOX-1", "description": "Express Box Small", "quantity": 1000, "location": "Aisle 43 - U01", "isPicked": false, "isPacked": true },
+      { "sku": "UPS-LBL-H", "description": "High Speed Label Roll", "quantity": 50, "location": "Aisle 43 - U05", "isPicked": false, "isPacked": false },
+      { "sku": "UPS-SCAN-V", "description": "Handheld Scanner Battery", "quantity": 12, "location": "Vault - 12", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2048",
+    "orderNumber": "ORD-2048",
+    "customerName": "Philips Healthcare",
+    "dateCreated": "2026-04-13T11:00:00Z",
+    "status": "PENDING",
+    "priority": "NORMAL",
+    "assignedPicker": "James",
+    "items": [
+      { "sku": "PHL-AED-P", "description": "AED Electrode Pads", "quantity": 20, "location": "Aisle 47 - P01", "isPicked": false, "isPacked": false },
+      { "sku": "PHL-BAT-A", "description": "AED Replacement Battery", "quantity": 5, "location": "Aisle 47 - P05", "isPicked": false, "isPacked": true },
+      { "sku": "PHL-MSK-O", "description": "Oxygen Face Mask", "quantity": 50, "location": "Aisle 47 - P10", "isPicked": false, "isPacked": false }
+    ]
+  },
+  {
+    "id": "ORD-2049",
+    "orderNumber": "ORD-2049",
+    "customerName": "Adobe Systems",
+    "dateCreated": "2026-04-13T11:15:00Z",
+    "status": "PENDING",
+    "priority": "LOW",
+    "assignedPicker": "Sarah",
+    "items": [
+      { "sku": "ADB-CC-1Y", "description": "Creative Cloud 1Y Card", "quantity": 100, "location": "Aisle 2 - D01", "isPicked": false, "isPacked": true },
+      { "sku": "ADB-PDF-P", "description": "Acrobat Pro Retail Box", "quantity": 20, "location": "Aisle 2 - D05", "isPicked": false, "isPacked": false },
+      { "sku": "ADB-STY-1", "description": "Adobe Branded Stylus", "quantity": 50, "location": "Aisle 2 - D10", "isPicked": false, "isPacked": true }
+    ]
+  },
+  {
+    "id": "ORD-2050",
+    "orderNumber": "ORD-2050",
+    "customerName": "Volvo Trucks",
+    "dateCreated": "2026-04-13T11:30:00Z",
+    "status": "PICKING",
+    "priority": "URGENT",
+    "assignedPicker": "Marcus",
+    "items": [
+      { "sku": "VLV-AIR-S", "description": "Air Suspension Bag", "quantity": 8, "location": "Aisle 56 - V01", "isPicked": false, "isPacked": false },
+      { "sku": "VLV-MIR-L", "description": "Heated Side Mirror Left", "quantity": 2, "location": "Aisle 56 - V05", "isPicked": false, "isPacked": true },
+      { "sku": "VLV-WHL-H", "description": "Heavy Duty Wheel Hub", "quantity": 4, "location": "Aisle 56 - V10", "isPicked": false, "isPacked": false },
+      { "sku": "VLV-SNS-P", "description": "Oil Pressure Sensor", "quantity": 10, "location": "Aisle 56 - V12", "isPicked": false, "isPacked": true }
+    ]
+  }
+]

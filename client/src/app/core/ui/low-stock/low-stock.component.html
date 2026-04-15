@@ -1,0 +1,54 @@
+<div class="w-full h-[700px] overflow-y-auto custom-scrollbar bg-[#A3B899] border-4 border-black p-6 shadow-[inner_10px_10px_20px_rgba(0,0,0,0.2)]">
+  
+  <div class="bg-black text-wham-warn p-4 mb-8 border-4 border-black shadow-[8px_8px_0px_#000] flex justify-between items-center">
+    <div>
+      <h2 class="text-3xl font-black uppercase tracking-tighter italic">Critical_Depletion_Report</h2>
+      <p class="text-[10px] font-black uppercase tracking-[0.3em] opacity-80">Immediate Restock Required for {{ invService.lowStockItems().length }} SKUs</p>
+    </div>
+    <mat-icon class="scale-[2] mr-4">warning</mat-icon>
+  </div>
+
+  <div class="grid grid-cols-1 gap-6">
+    @for (item of invService.lowStockItems(); track item.id) {
+      <div class="bg-wham-tan border-4 border-black flex overflow-hidden shadow-[10px_10px_0px_#000] group">
+        
+        <div class="w-4" [ngClass]="item.quantity.available === 0 ? 'bg-wham-dark' : 'bg-wham-warn'"></div>
+
+        <div class="flex-1 p-6 grid grid-cols-12 gap-4 items-center bg-wham-cream">
+          
+          <div class="col-span-12 md:col-span-4">
+            <span class="bg-black text-white px-2 py-1 font-black text-[10px] uppercase mb-1 inline-block tracking-widest">
+              {{ item.sku }}
+            </span>
+            <h3 class="text-3xl font-black uppercase leading-none text-black mb-1">{{ item.name }}</h3>
+            <p class="text-[11px] font-black uppercase opacity-60">Supplier: {{ item.supplier }}</p>
+          </div>
+
+          <div class="col-span-12 md:col-span-5 px-4">
+            <div class="flex justify-between text-[10px] font-black uppercase mb-1">
+              <span>Stock_Depletion_Status</span>
+              <span class="text-wham-dark">{{ item.quantity.available }} / {{ item.quantity.minThreshold }} MIN</span>
+            </div>
+            <div class="w-full h-8 bg-black/10 border-2 border-black p-1">
+              <div class="h-full bg-wham-primary shadow-[0_0_15px_rgba(209,29,39,0.5)]" 
+                   [style.width.%]="(item.quantity.available / item.quantity.minThreshold) * 100"></div>
+            </div>
+          </div>
+
+          <div class="col-span-12 md:col-span-3 flex flex-col items-end gap-2">
+            <button class="w-full bg-black text-white p-4 font-black uppercase text-sm border-none hover:bg-wham-dark transition-all active:translate-y-1 shadow-[4px_4px_0px_#A90011]">
+              Generate_Restock
+            </button>
+            <p class="text-[9px] font-black uppercase italic opacity-40">Located at: {{ item.location.zone }} // {{ item.location.aisle }}</p>
+          </div>
+
+        </div>
+      </div>
+    } @empty {
+      <div class="bg-wham-tan border-4 border-black border-dashed p-20 flex flex-col items-center justify-center">
+        <mat-icon class="scale-[3] opacity-20 mb-6">verified</mat-icon>
+        <p class="text-4xl font-black uppercase opacity-20 italic">Vault_Stable_No_Depletions</p>
+      </div>
+    }
+  </div>
+</div>

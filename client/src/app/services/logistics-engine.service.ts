@@ -56,10 +56,10 @@ export class LogisticsEngineService {
     try {
       // Added leading slashes to ensure paths are absolute from root
       const [u, o, a, l] = await Promise.all([
-        firstValueFrom(this.http.get<WarehouseUser[]>('/assets/data/users.json')),
-        firstValueFrom(this.http.get<LogisticsOrder[]>('/assets/data/pendingorders.json')),
-        firstValueFrom(this.http.get<LogisticsAlert[]>('/assets/data/logistic-alerts.json')),
-        firstValueFrom(this.http.get<Logistics[]>('/assets/data/logistics.json'))
+        firstValueFrom(this.http.get<WarehouseUser[]>('data/users.json')),
+        firstValueFrom(this.http.get<LogisticsOrder[]>('data/pendingorders.json')),
+        firstValueFrom(this.http.get<LogisticsAlert[]>('data/logistic-alerts.json')),
+        firstValueFrom(this.http.get<Logistics[]>('data/logistics.json'))
       ]);
 
       this.users.set(u);

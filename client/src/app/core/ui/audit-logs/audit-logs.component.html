@@ -1,0 +1,56 @@
+<div class="w-full h-[700px] overflow-y-auto custom-scrollbar bg-black border-4 border-black p-6 shadow-[inner_10px_10px_20px_rgba(0,0,0,0.5)]">
+  
+  <div class="border-b-2 border-wham-tan/30 pb-4 mb-6 flex justify-between items-end">
+    <div>
+      <h2 class="text-wham-tan text-4xl font-black uppercase tracking-tighter italic">SYSTEM_AUDIT_LOG</h2>
+      <p class="text-wham-warn font-mono text-[10px] uppercase tracking-[0.4em]">Secure_Chain_of_Custody_v21.4</p>
+    </div>
+    <div class="text-right text-wham-tan/40 font-mono text-[10px]">
+      LOG_COUNT: {{ auditTrail().length }} entries<br>
+      VAULT_STATUS: ENCRYPTED_SYNC
+    </div>
+  </div>
+
+  <div class="space-y-2 font-mono">
+    @for (log of auditTrail(); track $index) {
+      <div class="flex gap-4 p-3 hover:bg-wham-tan/5 border-l-2 border-transparent hover:border-wham-warn transition-all group">
+        
+        <span class="text-wham-tan/40 text-[11px] min-w-[150px]">
+          [{{ log.timestamp | date:'yyyy.MM.dd | HH:mm' }}]
+        </span>
+
+        <span class="min-w-[100px] font-black text-[11px] uppercase"
+              [ngClass]="{
+                'text-green-400': log.action === 'RECEIVED',
+                'text-wham-warn': log.action === 'PICKED',
+                'text-blue-400': log.action === 'REGISTERED'
+              }">
+          {{ log.action }}_BY
+        </span>
+
+        <div class="flex-1 flex gap-4 text-wham-tan text-[11px]">
+          <span class="font-black text-white">USER://{{ log.user }}</span>
+          <span class="opacity-50">—</span>
+          <span>ITEM_SKU: <span class="text-wham-warn">{{ log.sku }}</span></span>
+          <span class="opacity-50">—</span>
+          <span class="opacity-60 text-[10px]">LOC: {{ log.zone }}</span>
+        </div>
+
+        <span class="text-wham-tan/10 group-hover:text-wham-tan/30 transition-colors">
+          0x{{ $index }}FF9
+        </span>
+      </div>
+    } @empty {
+      <div class="flex flex-col items-center justify-center h-96 opacity-30 text-wham-tan">
+        <p class="text-2xl font-black uppercase">No_Recent_Log_Activity</p>
+        <p class="text-[10px] font-mono">Vault idle since last refresh</p>
+      </div>
+    }
+  </div>
+
+  <div class="mt-10 border-t border-wham-tan/10 pt-4">
+    <p class="text-wham-tan/20 font-mono text-[9px] uppercase animate-pulse">
+      >>>_CONTINUOUS_MONITORING_ACTIVE_...
+    </p>
+  </div>
+</div>

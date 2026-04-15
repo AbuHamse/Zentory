@@ -1,0 +1,72 @@
+<div class="w-full h-[700px] overflow-hidden bg-[#A3B899] border-4 border-black p-2 shadow-[inner_10px_10px_20px_rgba(0,0,0,0.2)]">
+  
+  <svg viewBox="0 0 1000 600" class="w-full h-full custom-scrollbar" xmlns="http://www.w3.org/2000/svg">
+    
+    <defs>
+      <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+        <rect width="20" height="20" fill="white" fill-opacity="0.05"/>
+        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="black" stroke-width="0.5" stroke-opacity="0.1"/>
+      </pattern>
+    </defs>
+    
+    <rect width="1000" height="600" fill="url(#grid)" />
+
+    <g class="zone-block group cursor-pointer" (click)="focusZone('NORTH-WING')">
+      <rect x="50" y="50" width="300" height="200" 
+            [attr.fill]="getZoneColor(zoneHeatmap()['NORTH-WING'])"
+            class="stroke-black stroke-2 transition-colors duration-300 hover:fill-wham-dark" />
+      <text x="200" y="150" text-anchor="middle" class="font-black uppercase text-4xl fill-black pointer-events-none">NORTH_WING</text>
+      <text x="200" y="190" text-anchor="middle" class="font-bold text-lg fill-black/60 pointer-events-none">{{ zoneHeatmap()['NORTH-WING'] }}% FULL</text>
+    </g>
+
+    <g class="zone-block group cursor-pointer" (click)="focusZone('SOUTH-WING')">
+      <rect x="650" y="50" width="300" height="200" 
+            [attr.fill]="getZoneColor(zoneHeatmap()['SOUTH-WING'])"
+            class="stroke-black stroke-2 transition-colors duration-300 hover:fill-wham-dark" />
+      <text x="800" y="150" text-anchor="middle" class="font-black uppercase text-4xl fill-black pointer-events-none">SOUTH_WING</text>
+      <text x="800" y="190" text-anchor="middle" class="font-bold text-lg fill-black/60 pointer-events-none">{{ zoneHeatmap()['SOUTH-WING'] }}% FULL</text>
+    </g>
+
+    <g class="zone-block group cursor-pointer" (click)="focusZone('EAST-WING')">
+      <rect x="350" y="100" width="300" height="150" 
+            [attr.fill]="getZoneColor(zoneHeatmap()['EAST-WING'])"
+            class="stroke-black stroke-2 transition-colors duration-300 hover:fill-wham-dark" />
+      <text x="500" y="170" text-anchor="middle" class="font-black uppercase text-xl fill-black pointer-events-none">EAST (STATIC)</text>
+      <text x="500" y="200" text-anchor="middle" class="font-bold text-sm fill-black/60 pointer-events-none">{{ zoneHeatmap()['EAST-WING'] }}% FULL</text>
+    </g>
+
+    <g class="zone-block group cursor-pointer" (click)="focusZone('WEST-WING')">
+      <rect x="350" y="300" width="100" height="150" 
+            [attr.fill]="getZoneColor(zoneHeatmap()['WEST-WING'])"
+            class="stroke-black stroke-2 transition-colors duration-300 hover:fill-wham-dark" />
+      <text x="400" y="375" text-anchor="middle" transform="rotate(-90 400 375)" class="font-black uppercase text-xl fill-black pointer-events-none">WEST</text>
+    </g>
+
+    <g class="zone-block group cursor-pointer" (click)="focusZone('DOCKED-WING')">
+      <rect x="50" y="400" width="200" height="150" 
+            [attr.fill]="getZoneColor(zoneHeatmap()['DOCKED-WING'])"
+            class="stroke-black stroke-2 transition-colors duration-300 hover:fill-wham-dark" />
+      <text x="150" y="475" text-anchor="middle" class="font-black uppercase text-3xl fill-black pointer-events-none">DOCKED</text>
+      <text x="150" y="510" text-anchor="middle" class="font-bold text-sm fill-black/60 pointer-events-none">{{ zoneHeatmap()['DOCKED-WING'] }}% FULL</text>
+      
+      <rect x="65" y="415" width="20" height="120" class="fill-black/30 stroke-black stroke-1"/>
+      <rect x="95" y="415" width="20" height="120" class="fill-black/30 stroke-black stroke-1"/>
+      <rect x="125" y="415" width="20" height="120" class="fill-black/30 stroke-black stroke-1"/>
+      <rect x="155" y="415" width="20" height="120" class="fill-black/30 stroke-black stroke-1"/>
+    </g>
+
+    <g class="zone-block group cursor-pointer" (click)="focusZone('RETURN-WING')">
+      <rect x="750" y="400" width="200" height="150" 
+            [attr.fill]="getZoneColor(zoneHeatmap()['RETURN-WING'])"
+            class="stroke-black stroke-2 transition-colors duration-300 hover:fill-wham-dark" />
+      <text x="850" y="475" text-anchor="middle" class="font-black uppercase text-3xl fill-black pointer-events-none">RETURN</text>
+      <text x="850" y="510" text-anchor="middle" class="font-bold text-sm fill-black/60 pointer-events-none">{{ zoneHeatmap()['RETURN-WING'] }}% FULL</text>
+    </g>
+
+    <g transform="translate(850, 550)">
+      <rect width="120" height="40" class="fill-wham-tan stroke-black stroke-1"/>
+      <rect x="10" y="10" width="20" height="20" class="fill-[#D11D27] stroke-black"/>
+      <text x="40" y="25" class="font-black text-[10px] uppercase fill-black">CRITICAL (90%+)</text>
+    </g>
+  </svg>
+</div>

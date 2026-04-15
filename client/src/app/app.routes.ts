@@ -13,7 +13,7 @@ import { ReportsComponent } from './features/admin/reports/reports.component';
 import { UserHomeComponent } from './features/user/home/home.component';
 import { PickerDashboardComponent } from './features/user/picker-dashboard/picker-dashboard.component';
 import { InventoryVaultComponent } from './features/user/inventory-vault/inventory-vault.component';
-// import { ReceivingDockComponent } from './features/user/receiving-dock/receiving-dock.component';
+import { ReceivingDockComponent } from './features/user/receiving-dock/receiving-dock.component';
 // import { ShippingDispatchComponent } from './features/user/shipping-dispatch/shipping-dispatch.component';
 // import { RecoveryCenterComponent } from './features/user/recovery-center/recovery-center.component';
 // import { SystemLogsComponent } from './features/user/system-logs/system-logs.component';
@@ -44,7 +44,7 @@ export const routes: Routes = [
       { path: 'home/:id', component: UserHomeComponent },
       { path: 'picker-dashboard', component: PickerDashboardComponent },
       { path: 'inventory-control', component: InventoryVaultComponent },
-      // { path: 'receiving-dock', component: ReceivingDockComponent },
+      { path: 'receiving-dock', component: ReceivingDockComponent },
       // { path: 'shipping-dispatch', component: ShippingDispatchComponent },
       // { path: 'recovery-center', component: RecoveryCenterComponent },
       // { path: 'system-logs', component: SystemLogsComponent },

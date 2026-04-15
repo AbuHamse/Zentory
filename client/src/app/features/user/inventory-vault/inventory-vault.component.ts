@@ -2,14 +2,30 @@ import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { InventoryDataService } from '../../../services/inventory-data.service';
-import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms'; // Added Form Module
+import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { MaterialModule } from '../../../shared/material.module';
 import { InventoryItem } from '../../../shared/models/user/inventory-item.model';
+
+// NEW: Component Imports for the Tabs
+import { AllSkusComponent } from '../../../core/ui/all-skus/all-skus.component';
+import { LowStockComponent } from '../../../core/ui/low-stock/low-stock.component';
+import { ZoneMapComponent } from '../../../core/ui/zone-map/zone-map.component';
+import { AuditLogsComponent } from '../../../core/ui/audit-logs/audit-logs.component';
 
 @Component({
   selector: 'app-inventory-vault',
   standalone: true,
-  imports: [CommonModule, RouterModule, ReactiveFormsModule, MaterialModule],
+  imports: [
+    CommonModule, 
+    RouterModule, 
+    ReactiveFormsModule, 
+    MaterialModule,
+    // Add the new tab components here
+    AllSkusComponent,
+    LowStockComponent,
+    ZoneMapComponent,
+    AuditLogsComponent
+  ],
   templateUrl: './inventory-vault.component.html'
 })
 export class InventoryVaultComponent {
@@ -54,7 +70,7 @@ export class InventoryVaultComponent {
         },
         location: {
           zone: f.zone as any,
-          aisle: 'A01', // Defaulting for the mock
+          aisle: 'A01', 
           rack: '01',
           bin: 'A-1'
         },

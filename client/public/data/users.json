@@ -1,0 +1,802 @@
+[
+  {
+    "id": "USR-1001",
+    "name": "Sarah Jenkins",
+    "role": "PICKER",
+    "currentTask": "ORD-2001",
+    "stats": {
+      "unitsPerHour": 85,
+      "accuracyRate": 99.2,
+      "tasksCompletedToday": 12,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 82, "accuracy": 98.5 },
+      { "date": "2026-04-10", "uph": 88, "accuracy": 99.0 }
+    ]
+  },
+  {
+    "id": "USR-1002",
+    "name": "Marcus Thompson",
+    "role": "PICKER",
+    "currentTask": "ORD-2002",
+    "stats": {
+      "unitsPerHour": 78,
+      "accuracyRate": 97.5,
+      "tasksCompletedToday": 9,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 75, "accuracy": 98.0 },
+      { "date": "2026-04-10", "uph": 80, "accuracy": 97.2 }
+    ]
+  },
+  {
+    "id": "USR-1003",
+    "name": "Elena Rodriguez",
+    "role": "PICKER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 92,
+      "accuracyRate": 99.8,
+      "tasksCompletedToday": 15,
+      "shiftStartTime": "2026-04-12T07:30:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 90, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 94, "accuracy": 99.5 }
+    ]
+  },
+  {
+    "id": "USR-1004",
+    "name": "David Chen",
+    "role": "PACKER",
+    "currentTask": "ORD-2016",
+    "stats": {
+      "unitsPerHour": 45,
+      "accuracyRate": 98.9,
+      "tasksCompletedToday": 22,
+      "shiftStartTime": "2026-04-12T08:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 42, "accuracy": 99.1 },
+      { "date": "2026-04-10", "uph": 47, "accuracy": 98.5 }
+    ]
+  },
+  {
+    "id": "USR-1005",
+    "name": "Chloe Whitmore",
+    "role": "PACKER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 50,
+      "accuracyRate": 99.5,
+      "tasksCompletedToday": 28,
+      "shiftStartTime": "2026-04-12T08:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 48, "accuracy": 99.8 },
+      { "date": "2026-04-10", "uph": 52, "accuracy": 99.2 }
+    ]
+  },
+  {
+    "id": "USR-1006",
+    "name": "James Wilson",
+    "role": "SHIPPER_RECEIVER",
+    "currentTask": "ORD-2012",
+    "stats": {
+      "unitsPerHour": 15,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 4,
+      "shiftStartTime": "2026-04-12T05:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 12, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 14, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1007",
+    "name": "Linda Wu",
+    "role": "INVENTORY_MANAGER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 120,
+      "accuracyRate": 99.9,
+      "tasksCompletedToday": 2,
+      "shiftStartTime": "2026-04-12T09:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 115, "accuracy": 99.8 },
+      { "date": "2026-04-10", "uph": 118, "accuracy": 99.9 }
+    ]
+  },
+  {
+    "id": "USR-1008",
+    "name": "Robert Miller",
+    "role": "ADMIN",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 0,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 0,
+      "shiftStartTime": "2026-04-12T08:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 0, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 0, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1009",
+    "name": "Samantha Reed",
+    "role": "PICKER",
+    "currentTask": "ORD-2037",
+    "stats": {
+      "unitsPerHour": 80,
+      "accuracyRate": 96.2,
+      "tasksCompletedToday": 11,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 78, "accuracy": 97.0 },
+      { "date": "2026-04-10", "uph": 82, "accuracy": 96.5 }
+    ]
+  },
+  {
+    "id": "USR-1010",
+    "name": "Kevin Patel",
+    "role": "PICKER",
+    "currentTask": "ORD-2044",
+    "stats": {
+      "unitsPerHour": 89,
+      "accuracyRate": 98.1,
+      "tasksCompletedToday": 14,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 85, "accuracy": 98.4 },
+      { "date": "2026-04-10", "uph": 87, "accuracy": 98.0 }
+    ]
+  },
+  {
+    "id": "USR-1011",
+    "name": "Fiona Gallagher",
+    "role": "PACKER",
+    "currentTask": "ORD-2041",
+    "stats": {
+      "unitsPerHour": 55,
+      "accuracyRate": 99.0,
+      "tasksCompletedToday": 30,
+      "shiftStartTime": "2026-04-12T08:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 52, "accuracy": 99.3 },
+      { "date": "2026-04-10", "uph": 54, "accuracy": 99.1 }
+    ]
+  },
+  {
+    "id": "USR-1012",
+    "name": "Oscar Isaacs",
+    "role": "PICKER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 72,
+      "accuracyRate": 95.5,
+      "tasksCompletedToday": 8,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 70, "accuracy": 96.0 },
+      { "date": "2026-04-10", "uph": 74, "accuracy": 95.0 }
+    ]
+  },
+  {
+    "id": "USR-1013",
+    "name": "Tara Strong",
+    "role": "PICKER",
+    "currentTask": "ORD-2021",
+    "stats": {
+      "unitsPerHour": 95,
+      "accuracyRate": 99.9,
+      "tasksCompletedToday": 18,
+      "shiftStartTime": "2026-04-12T07:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 93, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 96, "accuracy": 99.8 }
+    ]
+  },
+  {
+    "id": "USR-1014",
+    "name": "Victor Stone",
+    "role": "SHIPPER_RECEIVER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 18,
+      "accuracyRate": 99.2,
+      "tasksCompletedToday": 6,
+      "shiftStartTime": "2026-04-12T05:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 17, "accuracy": 99.5 },
+      { "date": "2026-04-10", "uph": 16, "accuracy": 99.0 }
+    ]
+  },
+  {
+    "id": "USR-1015",
+    "name": "Bella Swan",
+    "role": "PACKER",
+    "currentTask": "ORD-2047",
+    "stats": {
+      "unitsPerHour": 40,
+      "accuracyRate": 97.8,
+      "tasksCompletedToday": 19,
+      "shiftStartTime": "2026-04-12T08:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 38, "accuracy": 98.0 },
+      { "date": "2026-04-10", "uph": 41, "accuracy": 97.5 }
+    ]
+  },
+  {
+    "id": "USR-1016",
+    "name": "Nathan Drake",
+    "role": "PICKER",
+    "currentTask": "ORD-2010",
+    "stats": {
+      "unitsPerHour": 82,
+      "accuracyRate": 98.4,
+      "tasksCompletedToday": 13,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 80, "accuracy": 98.6 },
+      { "date": "2026-04-10", "uph": 83, "accuracy": 98.2 }
+    ]
+  },
+  {
+    "id": "USR-1017",
+    "name": "Lara Croft",
+    "role": "INVENTORY_MANAGER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 130,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 1,
+      "shiftStartTime": "2026-04-12T09:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 125, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 128, "accuracy": 99.9 }
+    ]
+  },
+  {
+    "id": "USR-1018",
+    "name": "Arthur Morgan",
+    "role": "SHIPPER_RECEIVER",
+    "currentTask": "ORD-2050",
+    "stats": {
+      "unitsPerHour": 10,
+      "accuracyRate": 96.0,
+      "tasksCompletedToday": 3,
+      "shiftStartTime": "2026-04-12T05:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 11, "accuracy": 96.5 },
+      { "date": "2026-04-10", "uph": 9, "accuracy": 95.8 }
+    ]
+  },
+  {
+    "id": "USR-1019",
+    "name": "Sonia Blade",
+    "role": "PICKER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 88,
+      "accuracyRate": 99.1,
+      "tasksCompletedToday": 12,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 86, "accuracy": 99.0 },
+      { "date": "2026-04-10", "uph": 90, "accuracy": 99.2 }
+    ]
+  },
+  {
+    "id": "USR-1020",
+    "name": "Johnny Cage",
+    "role": "PACKER",
+    "currentTask": "ORD-2035",
+    "stats": {
+      "unitsPerHour": 44,
+      "accuracyRate": 96.5,
+      "tasksCompletedToday": 20,
+      "shiftStartTime": "2026-04-12T08:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 40, "accuracy": 97.0 },
+      { "date": "2026-04-10", "uph": 45, "accuracy": 96.0 }
+    ]
+  },
+  {
+    "id": "USR-1021",
+    "name": "Peter Parker",
+    "role": "PICKER",
+    "currentTask": "ORD-2025",
+    "stats": {
+      "unitsPerHour": 110,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 25,
+      "shiftStartTime": "2026-04-12T07:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 105, "accuracy": 99.9 },
+      { "date": "2026-04-10", "uph": 108, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1022",
+    "name": "Gwen Stacy",
+    "role": "ADMIN",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 0,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 0,
+      "shiftStartTime": "2026-04-12T08:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 0, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 0, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1023",
+    "name": "Miles Morales",
+    "role": "PICKER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 98,
+      "accuracyRate": 99.5,
+      "tasksCompletedToday": 20,
+      "shiftStartTime": "2026-04-12T07:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 95, "accuracy": 99.4 },
+      { "date": "2026-04-10", "uph": 100, "accuracy": 99.6 }
+    ]
+  },
+  {
+    "id": "USR-1024",
+    "name": "Bruce Wayne",
+    "role": "ADMIN",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 0,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 0,
+      "shiftStartTime": "2026-04-12T04:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 0, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 0, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1025",
+    "name": "Clark Kent",
+    "role": "SHIPPER_RECEIVER",
+    "currentTask": "ORD-2045",
+    "stats": {
+      "unitsPerHour": 25,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 8,
+      "shiftStartTime": "2026-04-12T05:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 24, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 26, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1026",
+    "name": "Diana Prince",
+    "role": "INVENTORY_MANAGER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 140,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 1,
+      "shiftStartTime": "2026-04-12T09:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 138, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 142, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1027",
+    "name": "Tony Stark",
+    "role": "ADMIN",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 0,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 0,
+      "shiftStartTime": "2026-04-12T08:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 0, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 0, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1028",
+    "name": "Steve Rogers",
+    "role": "PICKER",
+    "currentTask": "ORD-2008",
+    "stats": {
+      "unitsPerHour": 90,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 16,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 88, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 92, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1029",
+    "name": "Natasha Romanoff",
+    "role": "PICKER",
+    "currentTask": "ORD-2029",
+    "stats": {
+      "unitsPerHour": 96,
+      "accuracyRate": 99.8,
+      "tasksCompletedToday": 17,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 94, "accuracy": 99.9 },
+      { "date": "2026-04-10", "uph": 98, "accuracy": 99.7 }
+    ]
+  },
+  {
+    "id": "USR-1030",
+    "name": "Wanda Maximoff",
+    "role": "PACKER",
+    "currentTask": "ORD-2048",
+    "stats": {
+      "unitsPerHour": 60,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 35,
+      "shiftStartTime": "2026-04-12T08:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 58, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 62, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1031",
+    "name": "Stephen Strange",
+    "role": "INVENTORY_MANAGER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 150,
+      "accuracyRate": 99.9,
+      "tasksCompletedToday": 1,
+      "shiftStartTime": "2026-04-12T09:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 145, "accuracy": 99.8 },
+      { "date": "2026-04-10", "uph": 148, "accuracy": 99.9 }
+    ]
+  },
+  {
+    "id": "USR-1032",
+    "name": "Thor Odinson",
+    "role": "SHIPPER_RECEIVER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 30,
+      "accuracyRate": 98.5,
+      "tasksCompletedToday": 10,
+      "shiftStartTime": "2026-04-12T05:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 28, "accuracy": 98.0 },
+      { "date": "2026-04-10", "uph": 32, "accuracy": 99.0 }
+    ]
+  },
+  {
+    "id": "USR-1033",
+    "name": "Loki Laufeyson",
+    "role": "PICKER",
+    "currentTask": "ORD-2003",
+    "stats": {
+      "unitsPerHour": 85,
+      "accuracyRate": 94.0,
+      "tasksCompletedToday": 11,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 82, "accuracy": 93.5 },
+      { "date": "2026-04-10", "uph": 88, "accuracy": 94.5 }
+    ]
+  },
+  {
+    "id": "USR-1034",
+    "name": "Barry Allen",
+    "role": "PICKER",
+    "currentTask": "ORD-2033",
+    "stats": {
+      "unitsPerHour": 250,
+      "accuracyRate": 99.0,
+      "tasksCompletedToday": 60,
+      "shiftStartTime": "2026-04-12T07:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 240, "accuracy": 98.8 },
+      { "date": "2026-04-10", "uph": 260, "accuracy": 99.2 }
+    ]
+  },
+  {
+    "id": "USR-1035",
+    "name": "Hal Jordan",
+    "role": "SHIPPER_RECEIVER",
+    "currentTask": "ORD-2015",
+    "stats": {
+      "unitsPerHour": 20,
+      "accuracyRate": 99.0,
+      "tasksCompletedToday": 7,
+      "shiftStartTime": "2026-04-12T05:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 18, "accuracy": 99.2 },
+      { "date": "2026-04-10", "uph": 22, "accuracy": 98.8 }
+    ]
+  },
+  {
+    "id": "USR-1036",
+    "name": "Oliver Queen",
+    "role": "PICKER",
+    "currentTask": "ORD-2024",
+    "stats": {
+      "unitsPerHour": 94,
+      "accuracyRate": 99.6,
+      "tasksCompletedToday": 16,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 92, "accuracy": 99.5 },
+      { "date": "2026-04-10", "uph": 96, "accuracy": 99.7 }
+    ]
+  },
+  {
+    "id": "USR-1037",
+    "name": "Arthur Curry",
+    "role": "SHIPPER_RECEIVER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 22,
+      "accuracyRate": 97.5,
+      "tasksCompletedToday": 6,
+      "shiftStartTime": "2026-04-12T05:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 20, "accuracy": 97.0 },
+      { "date": "2026-04-10", "uph": 24, "accuracy": 98.0 }
+    ]
+  },
+  {
+    "id": "USR-1038",
+    "name": "Billy Batson",
+    "role": "PICKER",
+    "currentTask": "ORD-2004",
+    "stats": {
+      "unitsPerHour": 80,
+      "accuracyRate": 98.0,
+      "tasksCompletedToday": 10,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 78, "accuracy": 98.2 },
+      { "date": "2026-04-10", "uph": 82, "accuracy": 97.8 }
+    ]
+  },
+  {
+    "id": "USR-1039",
+    "name": "Victor Fries",
+    "role": "INVENTORY_MANAGER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 100,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 1,
+      "shiftStartTime": "2026-04-12T09:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 98, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 102, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1040",
+    "name": "Harvey Dent",
+    "role": "ADMIN",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 0,
+      "accuracyRate": 50.0,
+      "tasksCompletedToday": 0,
+      "shiftStartTime": "2026-04-12T08:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 0, "accuracy": 45.0 },
+      { "date": "2026-04-10", "uph": 0, "accuracy": 55.0 }
+    ]
+  },
+  {
+    "id": "USR-1041",
+    "name": "Selina Kyle",
+    "role": "PICKER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 105,
+      "accuracyRate": 99.9,
+      "tasksCompletedToday": 22,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 100, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 110, "accuracy": 99.8 }
+    ]
+  },
+  {
+    "id": "USR-1042",
+    "name": "Pamela Isley",
+    "role": "INVENTORY_MANAGER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 110,
+      "accuracyRate": 99.2,
+      "tasksCompletedToday": 1,
+      "shiftStartTime": "2026-04-12T09:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 108, "accuracy": 99.0 },
+      { "date": "2026-04-10", "uph": 112, "accuracy": 99.4 }
+    ]
+  },
+  {
+    "id": "USR-1043",
+    "name": "Harleen Quinzel",
+    "role": "PACKER",
+    "currentTask": "ORD-2042",
+    "stats": {
+      "unitsPerHour": 48,
+      "accuracyRate": 95.0,
+      "tasksCompletedToday": 21,
+      "shiftStartTime": "2026-04-12T08:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 45, "accuracy": 94.0 },
+      { "date": "2026-04-10", "uph": 50, "accuracy": 96.0 }
+    ]
+  },
+  {
+    "id": "USR-1044",
+    "name": "Lex Luthor",
+    "role": "ADMIN",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 0,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 0,
+      "shiftStartTime": "2026-04-12T08:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 0, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 0, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1045",
+    "name": "Kara Zor-El",
+    "role": "PICKER",
+    "currentTask": "ORD-2022",
+    "stats": {
+      "unitsPerHour": 120,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 28,
+      "shiftStartTime": "2026-04-12T07:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 115, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 125, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1046",
+    "name": "Dick Grayson",
+    "role": "PICKER",
+    "currentTask": "ORD-2030",
+    "stats": {
+      "unitsPerHour": 92,
+      "accuracyRate": 99.7,
+      "tasksCompletedToday": 15,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 90, "accuracy": 99.8 },
+      { "date": "2026-04-10", "uph": 94, "accuracy": 99.6 }
+    ]
+  },
+  {
+    "id": "USR-1047",
+    "name": "Jason Todd",
+    "role": "PACKER",
+    "currentTask": "ORD-2018",
+    "stats": {
+      "unitsPerHour": 42,
+      "accuracyRate": 94.5,
+      "tasksCompletedToday": 18,
+      "shiftStartTime": "2026-04-12T08:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 40, "accuracy": 95.0 },
+      { "date": "2026-04-10", "uph": 44, "accuracy": 94.0 }
+    ]
+  },
+  {
+    "id": "USR-1048",
+    "name": "Tim Drake",
+    "role": "INVENTORY_MANAGER",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 115,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 1,
+      "shiftStartTime": "2026-04-12T09:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 110, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 120, "accuracy": 100 }
+    ]
+  },
+  {
+    "id": "USR-1049",
+    "name": "Damian Wayne",
+    "role": "PICKER",
+    "currentTask": "ORD-2049",
+    "stats": {
+      "unitsPerHour": 88,
+      "accuracyRate": 99.0,
+      "tasksCompletedToday": 14,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 85, "accuracy": 99.2 },
+      { "date": "2026-04-10", "uph": 90, "accuracy": 98.8 }
+    ]
+  },
+  {
+    "id": "USR-1050",
+    "name": "Alfred Pennyworth",
+    "role": "ADMIN",
+    "currentTask": null,
+    "stats": {
+      "unitsPerHour": 0,
+      "accuracyRate": 100,
+      "tasksCompletedToday": 0,
+      "shiftStartTime": "2026-04-12T06:00:00Z"
+    },
+    "performanceHistory": [
+      { "date": "2026-04-11", "uph": 0, "accuracy": 100 },
+      { "date": "2026-04-10", "uph": 0, "accuracy": 100 }
+    ]
+  }
+]

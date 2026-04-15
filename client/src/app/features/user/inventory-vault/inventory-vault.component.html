@@ -15,10 +15,30 @@
     </div>
 
     <div class="grid grid-cols-4 gap-6">
-      <button class="bg-wham-primary text-wham-white p-5 border-4 border-black font-black uppercase shadow-[8px_8px_0px_#000] hover:translate-y-1 hover:shadow-none transition-all">All_SKUs</button>
-      <button class="bg-wham-primary text-wham-white p-5 border-4 border-black font-black uppercase shadow-[8px_8px_0px_#000] opacity-80 hover:opacity-100">Low_Stock</button>
-      <button class="bg-wham-primary text-wham-white p-5 border-4 border-black font-black uppercase shadow-[8px_8px_0px_#000] opacity-80 hover:opacity-100">Zone_Map</button>
-      <button class="bg-wham-primary text-wham-white p-5 border-4 border-black font-black uppercase shadow-[8px_8px_0px_#000] opacity-80 hover:opacity-100">Audit_Logs</button>
+      <button (click)="invService.activeTab.set('ALL')"
+              [class.translate-y-1]="invService.activeTab() === 'ALL'"
+              [class.shadow-none]="invService.activeTab() === 'ALL'"
+              class="bg-wham-primary text-wham-white p-5 border-4 border-black font-black uppercase shadow-[8px_8px_0px_#000] hover:translate-y-1 hover:shadow-none transition-all">
+        All_SKUs
+      </button>
+      <button (click)="invService.activeTab.set('LOW')"
+              [class.translate-y-1]="invService.activeTab() === 'LOW'"
+              [class.shadow-none]="invService.activeTab() === 'LOW'"
+              class="bg-wham-primary text-wham-white p-5 border-4 border-black font-black uppercase shadow-[8px_8px_0px_#000] opacity-80 hover:opacity-100 transition-all">
+        Low_Stock
+      </button>
+      <button (click)="invService.activeTab.set('MAP')"
+              [class.translate-y-1]="invService.activeTab() === 'MAP'"
+              [class.shadow-none]="invService.activeTab() === 'MAP'"
+              class="bg-wham-primary text-wham-white p-5 border-4 border-black font-black uppercase shadow-[8px_8px_0px_#000] opacity-80 hover:opacity-100 transition-all">
+        Zone_Map
+      </button>
+      <button (click)="invService.activeTab.set('LOGS')"
+              [class.translate-y-1]="invService.activeTab() === 'LOGS'"
+              [class.shadow-none]="invService.activeTab() === 'LOGS'"
+              class="bg-wham-primary text-wham-white p-5 border-4 border-black font-black uppercase shadow-[8px_8px_0px_#000] opacity-80 hover:opacity-100 transition-all">
+        Audit_Logs
+      </button>
     </div>
 
     <div class="grid grid-cols-12 gap-10">
@@ -37,29 +57,15 @@
           </div>
         </div>
 
-        <div class="bg-[#A3B899] border-4 border-black p-8 shadow-[12px_12px_0px_#000] min-h-[600px]">
-          <div class="space-y-4">
-            @for (item of invService.filteredInventory(); track item.id) {
-              <div class="bg-wham-white border-4 border-black p-6 flex justify-between items-center group hover:bg-wham-cream transition-colors">
-                <div class="flex gap-8 items-center">
-                  <div class="bg-black text-wham-tan p-5 font-black text-2xl min-w-[150px] text-center shadow-[4px_4px_0px_#D11D27]">
-                    {{ item.sku }}
-                  </div>
-                  <div>
-                    <h4 class="text-3xl font-black uppercase text-wham-dark leading-none mb-1">{{ item.name }}</h4>
-                    <p class="text-[12px] font-black uppercase opacity-60 tracking-wider">
-                      ZONE: {{ item.location.zone }} // AISLE: {{ item.location.aisle }} // BIN: {{ item.location.bin }}
-                    </p>
-                  </div>
-                </div>
-                <div class="text-right border-l-4 border-black/10 pl-8">
-                  <p class="text-5xl font-black text-black leading-none">{{ item.quantity.available }}</p>
-                  <p class="text-[11px] font-black uppercase mt-1 tracking-widest">Available_QTY</p>
-                </div>
-              </div>
-            }
-          </div>
+        <div class="min-h-[600px]">
+          @switch (invService.activeTab()) {
+            @case ('ALL') { <app-all-skus /> }
+            @case ('LOW') { <app-low-stock /> }
+            @case ('MAP') { <app-zone-map /> }
+            @case ('LOGS') { <app-audit-logs /> }
+          }
         </div>
+        
       </div>
 
       <div class="col-span-12 lg:col-span-3">

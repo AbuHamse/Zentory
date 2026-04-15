@@ -1,1 +1,120 @@
-<p>receiving-dock works!</p>
+<div class="w-full h-full flex flex-col gap-6 p-2">
+  
+  <div class="w-full bg-wham-dark border-4 border-black p-4 shadow-[8px_8px_0px_#000] flex justify-between items-center">
+    <div class="flex gap-4">
+      <button [routerLink]="['/user/dashboard/home', 'USR-1050']" 
+              class="bg-black text-wham-white px-4 py-2 border-2 border-wham-tan hover:bg-wham-tan hover:text-black transition-all font-black uppercase text-xs">
+        ← SYSTEM_HOME
+      </button>
+      <div class="h-10 w-[2px] bg-wham-tan/20 mx-2"></div>
+      <h1 class="text-2xl font-black text-white uppercase italic tracking-tighter">Inbound_Gate_V2</h1>
+    </div>
+
+    <div class="flex border-2 border-black bg-black p-1 shadow-[4px_4px_0px_#A90011]">
+      <button (click)="viewMode.set('CURRENT')"
+              [class.bg-wham-primary]="viewMode() === 'CURRENT'"
+              class="px-4 py-1 font-black uppercase text-[10px] text-white transition-all hover:bg-wham-dark">
+        CURRENT_LOADS
+      </button>
+      <button (click)="viewMode.set('HISTORY')"
+              [class.bg-wham-primary]="viewMode() === 'HISTORY'"
+              class="px-4 py-1 font-black uppercase text-[10px] text-white transition-all hover:bg-wham-dark">
+        LOAD_HISTORY
+      </button>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-12 gap-8 flex-1 min-h-0">
+    
+    <div class="col-span-12 lg:col-span-5 bg-wham-primary border-4 border-black p-6 shadow-[12px_12px_0px_#000] overflow-y-auto custom-scrollbar">
+      <div class="flex justify-between items-end border-b-4 border-black pb-4 mb-6">
+        <h2 class="text-4xl font-black text-white uppercase tracking-tighter italic">
+          {{ viewMode() === 'CURRENT' ? 'GATE_QUEUE' : 'ARCHIVE_LOGS' }}
+        </h2>
+        <span class="bg-black text-wham-tan px-3 py-1 font-black text-xs uppercase">
+          {{ filteredShipments().length }} {{ viewMode() === 'CURRENT' ? 'ACTIVE' : 'PAST' }}
+        </span>
+      </div>
+
+      <div class="space-y-4">
+        @for (trailer of filteredShipments(); track trailer.id) {
+          <div (click)="selectTrailer(trailer)"
+               [class.bg-black]="selectedTrailer()?.id === trailer.id"
+               [class.text-white]="selectedTrailer()?.id === trailer.id"
+               class="bg-wham-white border-4 border-black p-4 cursor-pointer hover:translate-x-2 transition-all group shadow-[6px_6px_0px_#000]">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-[10px] font-black uppercase opacity-60 tracking-widest">{{ trailer.carrier }}</p>
+                <h3 class="text-3xl font-black uppercase leading-none mt-1">{{ trailer.trailerId }}</h3>
+              </div>
+              <span class="text-[10px] font-black px-2 py-1 border-2 border-black uppercase"
+                    [ngClass]="trailer.priority === 'CRITICAL' ? 'bg-wham-warn text-black' : 'bg-green-500 text-white'">
+                {{ trailer.priority }}
+              </span>
+            </div>
+            <div class="mt-4 flex gap-4 font-black uppercase text-[11px]">
+              <span>DOCK: {{ trailer.dockDoor }}</span>
+              <span class="opacity-30">|</span>
+              <span>STATUS: {{ trailer.status }}</span>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="col-span-12 lg:col-span-7 flex flex-col gap-8">
+      
+      <div class="flex-1 bg-orange-400 border-4 border-black p-6 shadow-[12px_12px_0px_#000] overflow-y-auto custom-scrollbar">
+        <div class="flex justify-between items-start border-b-4 border-black pb-4 mb-4">
+          <h2 class="text-3xl font-black uppercase tracking-tighter italic">SHIPMENT_MANIFEST</h2>
+          @if (selectedTrailer()) {
+            <span class="font-mono text-xs font-black uppercase opacity-60">REF_ID: {{ selectedTrailer()?.id }}</span>
+          }
+        </div>
+
+        @if (selectedTrailer()) {
+          <div class="space-y-3">
+            @for (item of selectedTrailer()?.manifest; track item.sku) {
+              <div class="bg-white/90 border-2 border-black p-3 flex justify-between items-center font-black text-black">
+                <div>
+                  <p class="text-[9px] uppercase opacity-50">{{ item.sku }}</p>
+                  <p class="text-lg uppercase leading-none">{{ item.productName }}</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-2xl leading-none">{{ item.receivedQty }} / {{ item.expectedQty }}</p>
+                  <p class="text-[9px] uppercase">UNITS_VERIFIED</p>
+                </div>
+              </div>
+            }
+          </div>
+        } @else {
+          <div class="h-full flex flex-col items-center justify-center opacity-30 italic">
+            <mat-icon class="scale-[2] mb-4">move_to_inbox</mat-icon>
+            <p class="font-black uppercase text-black">Select_Trailer_To_View_Contents</p>
+          </div>
+        }
+      </div>
+
+      <div class="h-[200px] bg-wham-primary border-4 border-black p-6 shadow-[12px_12px_0px_#000] flex flex-col justify-between">
+        <div class="flex justify-between items-end">
+          <div>
+            <h2 class="text-2xl font-black text-white uppercase italic">UNLOAD_PROGRESS</h2>
+            <p class="text-[10px] font-black text-white/60 uppercase tracking-widest">Dock_Personnel: USR-1050</p>
+          </div>
+          <div class="text-right text-white">
+            <span class="text-5xl font-black leading-none">
+              {{ selectedTrailer() ? calculateProgress(selectedTrailer()!.unloadedPallets, selectedTrailer()!.totalPallets) : 0 }}%
+            </span>
+          </div>
+        </div>
+        
+        <div class="w-full h-8 bg-black/20 border-2 border-black p-1">
+          <div class="h-full bg-wham-warn shadow-[0_0_15px_#E7C84B]" 
+               [style.width.%]="selectedTrailer() ? calculateProgress(selectedTrailer()!.unloadedPallets, selectedTrailer()!.totalPallets) : 0">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,495 @@
+[
+  {
+    "id": "INB-1001",
+    "trailerId": "TRL-X99",
+    "carrier": "FedEx",
+    "dockDoor": "DOOR-01",
+    "status": "COMPLETED",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-990", "productName": "Ergonomic Chair", "expectedQty": 50, "receivedQty": 50 }
+    ],
+    "totalPallets": 10,
+    "unloadedPallets": 10,
+    "eta": "2026-04-15T08:00:00Z",
+    "arrivalTime": "2026-04-15T07:45:00Z",
+    "unloadStart": "2026-04-15T08:15:00Z",
+    "unloadEnd": "2026-04-15T09:30:00Z",
+    "receivedBy": "USR-442"
+  },
+  {
+    "id": "INB-1002",
+    "trailerId": "TRL-B22",
+    "carrier": "DHL",
+    "dockDoor": "DOOR-04",
+    "status": "UNLOADING",
+    "priority": "CRITICAL",
+    "manifest": [
+      { "sku": "SKU-112", "productName": "Lithium Batteries", "expectedQty": 200, "receivedQty": 145 }
+    ],
+    "totalPallets": 8,
+    "unloadedPallets": 5,
+    "eta": "2026-04-15T09:00:00Z",
+    "arrivalTime": "2026-04-15T08:50:00Z",
+    "unloadStart": "2026-04-15T09:10:00Z",
+    "receivedBy": "USR-109"
+  },
+  {
+    "id": "INB-1003",
+    "trailerId": "TRL-G88",
+    "carrier": "Global Logistics",
+    "dockDoor": "DOOR-02",
+    "status": "DOCKING",
+    "priority": "URGENT",
+    "manifest": [
+      { "sku": "SKU-504", "productName": "Solar Panels", "expectedQty": 40, "receivedQty": 0 }
+    ],
+    "totalPallets": 20,
+    "unloadedPallets": 0,
+    "eta": "2026-04-15T10:30:00Z",
+    "arrivalTime": "2026-04-15T10:25:00Z",
+    "receivedBy": "USR-221"
+  },
+  {
+    "id": "INB-1004",
+    "trailerId": "TRL-Z11",
+    "carrier": "FedEx",
+    "dockDoor": "DOOR-08",
+    "status": "PENDING",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-882", "productName": "Office Desks", "expectedQty": 15, "receivedQty": 0 }
+    ],
+    "totalPallets": 15,
+    "unloadedPallets": 0,
+    "eta": "2026-04-15T14:00:00Z",
+    "receivedBy": "USR-442"
+  },
+  {
+    "id": "INB-1005",
+    "trailerId": "TRL-M45",
+    "carrier": "UPS",
+    "dockDoor": "DOOR-03",
+    "status": "REJECTED",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-331", "productName": "Glass Vases", "expectedQty": 100, "receivedQty": 0 }
+    ],
+    "totalPallets": 4,
+    "unloadedPallets": 0,
+    "eta": "2026-04-15T07:00:00Z",
+    "arrivalTime": "2026-04-15T06:55:00Z",
+    "receivedBy": "USR-881"
+  },
+  {
+    "id": "INB-1006",
+    "trailerId": "TRL-V09",
+    "carrier": "DHL",
+    "dockDoor": "DOOR-05",
+    "status": "COMPLETED",
+    "priority": "URGENT",
+    "manifest": [
+      { "sku": "SKU-210", "productName": "Laptops", "expectedQty": 500, "receivedQty": 500 }
+    ],
+    "totalPallets": 5,
+    "unloadedPallets": 5,
+    "eta": "2026-04-14T20:00:00Z",
+    "arrivalTime": "2026-04-14T19:40:00Z",
+    "unloadStart": "2026-04-14T20:10:00Z",
+    "unloadEnd": "2026-04-14T21:45:00Z",
+    "receivedBy": "USR-109"
+  },
+  {
+    "id": "INB-1007",
+    "trailerId": "TRL-K33",
+    "carrier": "Global Logistics",
+    "dockDoor": "DOOR-07",
+    "status": "PENDING",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-772", "productName": "Paper Reams", "expectedQty": 1000, "receivedQty": 0 }
+    ],
+    "totalPallets": 12,
+    "unloadedPallets": 0,
+    "eta": "2026-04-16T09:00:00Z",
+    "receivedBy": "USR-221"
+  },
+  {
+    "id": "INB-1008",
+    "trailerId": "TRL-Q12",
+    "carrier": "Swift",
+    "dockDoor": "DOOR-06",
+    "status": "UNLOADING",
+    "priority": "CRITICAL",
+    "manifest": [
+      { "sku": "SKU-445", "productName": "Medical Masks", "expectedQty": 10000, "receivedQty": 4000 }
+    ],
+    "totalPallets": 25,
+    "unloadedPallets": 10,
+    "eta": "2026-04-15T11:00:00Z",
+    "arrivalTime": "2026-04-15T10:45:00Z",
+    "unloadStart": "2026-04-15T11:15:00Z",
+    "receivedBy": "USR-303"
+  },
+  {
+    "id": "INB-1009",
+    "trailerId": "TRL-Y77",
+    "carrier": "FedEx",
+    "dockDoor": "DOOR-01",
+    "status": "DOCKING",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-001", "productName": "Packaging Tape", "expectedQty": 600, "receivedQty": 0 }
+    ],
+    "totalPallets": 6,
+    "unloadedPallets": 0,
+    "eta": "2026-04-15T12:30:00Z",
+    "arrivalTime": "2026-04-15T12:20:00Z",
+    "receivedBy": "USR-442"
+  },
+  {
+    "id": "INB-1010",
+    "trailerId": "TRL-N55",
+    "carrier": "DHL",
+    "dockDoor": "DOOR-02",
+    "status": "PENDING",
+    "priority": "CRITICAL",
+    "manifest": [
+      { "sku": "SKU-665", "productName": "Insulin Coolers", "expectedQty": 40, "receivedQty": 0 }
+    ],
+    "totalPallets": 4,
+    "unloadedPallets": 0,
+    "eta": "2026-04-15T13:45:00Z",
+    "receivedBy": "USR-109"
+  },
+  {
+    "id": "INB-1011",
+    "trailerId": "TRL-S20",
+    "carrier": "Amazon Freight",
+    "dockDoor": "DOOR-03",
+    "status": "COMPLETED",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-909", "productName": "Keyboard/Mouse Combo", "expectedQty": 150, "receivedQty": 150 }
+    ],
+    "totalPallets": 3,
+    "unloadedPallets": 3,
+    "eta": "2026-04-15T06:00:00Z",
+    "arrivalTime": "2026-04-15T05:50:00Z",
+    "unloadStart": "2026-04-15T06:15:00Z",
+    "unloadEnd": "2026-04-15T07:05:00Z",
+    "receivedBy": "USR-881"
+  },
+  {
+    "id": "INB-1012",
+    "trailerId": "TRL-P61",
+    "carrier": "FedEx",
+    "dockDoor": "DOOR-08",
+    "status": "UNLOADING",
+    "priority": "URGENT",
+    "manifest": [
+      { "sku": "SKU-440", "productName": "Monitors", "expectedQty": 80, "receivedQty": 20 }
+    ],
+    "totalPallets": 16,
+    "unloadedPallets": 4,
+    "eta": "2026-04-15T10:00:00Z",
+    "arrivalTime": "2026-04-15T09:45:00Z",
+    "unloadStart": "2026-04-15T10:15:00Z",
+    "receivedBy": "USR-442"
+  },
+  {
+    "id": "INB-1013",
+    "trailerId": "TRL-H11",
+    "carrier": "Global Logistics",
+    "dockDoor": "DOOR-05",
+    "status": "PENDING",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-229", "productName": "Steel Bolts", "expectedQty": 5000, "receivedQty": 0 }
+    ],
+    "totalPallets": 2,
+    "unloadedPallets": 0,
+    "eta": "2026-04-16T15:00:00Z",
+    "receivedBy": "USR-221"
+  },
+  {
+    "id": "INB-1014",
+    "trailerId": "TRL-F49",
+    "carrier": "DHL",
+    "dockDoor": "DOOR-04",
+    "status": "DOCKING",
+    "priority": "CRITICAL",
+    "manifest": [
+      { "sku": "SKU-101", "productName": "Vaccines", "expectedQty": 20, "receivedQty": 0 }
+    ],
+    "totalPallets": 1,
+    "unloadedPallets": 0,
+    "eta": "2026-04-15T12:00:00Z",
+    "arrivalTime": "2026-04-15T11:55:00Z",
+    "receivedBy": "USR-109"
+  },
+  {
+    "id": "INB-1015",
+    "trailerId": "TRL-J92",
+    "carrier": "UPS",
+    "dockDoor": "DOOR-06",
+    "status": "COMPLETED",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-775", "productName": "Desk Lamps", "expectedQty": 240, "receivedQty": 240 }
+    ],
+    "totalPallets": 4,
+    "unloadedPallets": 4,
+    "eta": "2026-04-15T08:30:00Z",
+    "arrivalTime": "2026-04-15T08:15:00Z",
+    "unloadStart": "2026-04-15T08:45:00Z",
+    "unloadEnd": "2026-04-15T09:30:00Z",
+    "receivedBy": "USR-303"
+  },
+  {
+    "id": "INB-1016",
+    "trailerId": "TRL-W55",
+    "carrier": "Swift",
+    "dockDoor": "DOOR-07",
+    "status": "PENDING",
+    "priority": "URGENT",
+    "manifest": [
+      { "sku": "SKU-312", "productName": "Hard Drives", "expectedQty": 1000, "receivedQty": 0 }
+    ],
+    "totalPallets": 2,
+    "unloadedPallets": 0,
+    "eta": "2026-04-15T16:30:00Z",
+    "receivedBy": "USR-221"
+  },
+  {
+    "id": "INB-1017",
+    "trailerId": "TRL-E21",
+    "carrier": "FedEx",
+    "dockDoor": "DOOR-02",
+    "status": "UNLOADING",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-550", "productName": "A4 Paper", "expectedQty": 2000, "receivedQty": 1000 }
+    ],
+    "totalPallets": 20,
+    "unloadedPallets": 10,
+    "eta": "2026-04-15T10:00:00Z",
+    "arrivalTime": "2026-04-15T10:05:00Z",
+    "unloadStart": "2026-04-15T11:00:00Z",
+    "receivedBy": "USR-442"
+  },
+  {
+    "id": "INB-1018",
+    "trailerId": "TRL-R44",
+    "carrier": "DHL",
+    "dockDoor": "DOOR-01",
+    "status": "DOCKING",
+    "priority": "URGENT",
+    "manifest": [
+      { "sku": "SKU-912", "productName": "Coffee Machines", "expectedQty": 60, "receivedQty": 0 }
+    ],
+    "totalPallets": 6,
+    "unloadedPallets": 0,
+    "eta": "2026-04-15T13:00:00Z",
+    "arrivalTime": "2026-04-15T12:50:00Z",
+    "receivedBy": "USR-109"
+  },
+  {
+    "id": "INB-1019",
+    "trailerId": "TRL-T11",
+    "carrier": "Amazon Freight",
+    "dockDoor": "DOOR-03",
+    "status": "COMPLETED",
+    "priority": "CRITICAL",
+    "manifest": [
+      { "sku": "SKU-887", "productName": "Replacement Screens", "expectedQty": 300, "receivedQty": 300 }
+    ],
+    "totalPallets": 2,
+    "unloadedPallets": 2,
+    "eta": "2026-04-15T07:15:00Z",
+    "arrivalTime": "2026-04-15T07:05:00Z",
+    "unloadStart": "2026-04-15T07:30:00Z",
+    "unloadEnd": "2026-04-15T08:00:00Z",
+    "receivedBy": "USR-881"
+  },
+  {
+    "id": "INB-1020",
+    "trailerId": "TRL-U99",
+    "carrier": "Global Logistics",
+    "dockDoor": "DOOR-05",
+    "status": "REJECTED",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-123", "productName": "Paint Thinner", "expectedQty": 100, "receivedQty": 0 }
+    ],
+    "totalPallets": 10,
+    "unloadedPallets": 0,
+    "eta": "2026-04-15T09:45:00Z",
+    "arrivalTime": "2026-04-15T09:40:00Z",
+    "receivedBy": "USR-221"
+  },
+  {
+    "id": "INB-1021",
+    "trailerId": "TRL-I66",
+    "carrier": "FedEx",
+    "dockDoor": "DOOR-08",
+    "status": "PENDING",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-344", "productName": "USB Cables", "expectedQty": 5000, "receivedQty": 0 }
+    ],
+    "totalPallets": 2,
+    "unloadedPallets": 0,
+    "eta": "2026-04-16T08:00:00Z",
+    "receivedBy": "USR-442"
+  },
+  {
+    "id": "INB-1022",
+    "trailerId": "TRL-O77",
+    "carrier": "DHL",
+    "dockDoor": "DOOR-04",
+    "status": "UNLOADING",
+    "priority": "URGENT",
+    "manifest": [
+      { "sku": "SKU-660", "productName": "Hand Sanitizer", "expectedQty": 1000, "receivedQty": 900 }
+    ],
+    "totalPallets": 10,
+    "unloadedPallets": 9,
+    "eta": "2026-04-15T11:15:00Z",
+    "arrivalTime": "2026-04-15T11:00:00Z",
+    "unloadStart": "2026-04-15T11:30:00Z",
+    "receivedBy": "USR-109"
+  },
+  {
+    "id": "INB-1023",
+    "trailerId": "TRL-A12",
+    "carrier": "Swift",
+    "dockDoor": "DOOR-07",
+    "status": "DOCKING",
+    "priority": "CRITICAL",
+    "manifest": [
+      { "sku": "SKU-455", "productName": "Servers", "expectedQty": 12, "receivedQty": 0 }
+    ],
+    "totalPallets": 6,
+    "unloadedPallets": 0,
+    "eta": "2026-04-15T14:30:00Z",
+    "arrivalTime": "2026-04-15T14:20:00Z",
+    "receivedBy": "USR-221"
+  },
+  {
+    "id": "INB-1024",
+    "trailerId": "TRL-L33",
+    "carrier": "UPS",
+    "dockDoor": "DOOR-06",
+    "status": "COMPLETED",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-778", "productName": "Staplers", "expectedQty": 400, "receivedQty": 400 }
+    ],
+    "totalPallets": 2,
+    "unloadedPallets": 2,
+    "eta": "2026-04-15T10:00:00Z",
+    "arrivalTime": "2026-04-15T09:50:00Z",
+    "unloadStart": "2026-04-15T10:30:00Z",
+    "unloadEnd": "2026-04-15T11:00:00Z",
+    "receivedBy": "USR-303"
+  },
+  {
+    "id": "INB-1025",
+    "trailerId": "TRL-C44",
+    "carrier": "Global Logistics",
+    "dockDoor": "DOOR-02",
+    "status": "PENDING",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-991", "productName": "Whiteboards", "expectedQty": 30, "receivedQty": 0 }
+    ],
+    "totalPallets": 5,
+    "unloadedPallets": 0,
+    "eta": "2026-04-17T09:00:00Z",
+    "receivedBy": "USR-221"
+  },
+  {
+    "id": "INB-1026",
+    "trailerId": "TRL-D55",
+    "carrier": "FedEx",
+    "dockDoor": "DOOR-01",
+    "status": "UNLOADING",
+    "priority": "URGENT",
+    "manifest": [
+      { "sku": "SKU-102", "productName": "Tablets", "expectedQty": 150, "receivedQty": 50 }
+    ],
+    "totalPallets": 3,
+    "unloadedPallets": 1,
+    "eta": "2026-04-15T12:00:00Z",
+    "arrivalTime": "2026-04-15T11:45:00Z",
+    "unloadStart": "2026-04-15T12:15:00Z",
+    "receivedBy": "USR-442"
+  },
+  {
+    "id": "INB-1027",
+    "trailerId": "TRL-P19",
+    "carrier": "DHL",
+    "dockDoor": "DOOR-04",
+    "status": "COMPLETED",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-544", "productName": "Calculators", "expectedQty": 2000, "receivedQty": 2000 }
+    ],
+    "totalPallets": 4,
+    "unloadedPallets": 4,
+    "eta": "2026-04-15T05:00:00Z",
+    "arrivalTime": "2026-04-15T04:45:00Z",
+    "unloadStart": "2026-04-15T05:15:00Z",
+    "unloadEnd": "2026-04-15T06:30:00Z",
+    "receivedBy": "USR-109"
+  },
+  {
+    "id": "INB-1028",
+    "trailerId": "TRL-Y22",
+    "carrier": "Amazon Freight",
+    "dockDoor": "DOOR-03",
+    "status": "DOCKING",
+    "priority": "CRITICAL",
+    "manifest": [
+      { "sku": "SKU-801", "productName": "Graphics Cards", "expectedQty": 500, "receivedQty": 0 }
+    ],
+    "totalPallets": 2,
+    "unloadedPallets": 0,
+    "eta": "2026-04-15T15:00:00Z",
+    "arrivalTime": "2026-04-15T14:55:00Z",
+    "receivedBy": "USR-881"
+  },
+  {
+    "id": "INB-1029",
+    "trailerId": "TRL-X01",
+    "carrier": "Swift",
+    "dockDoor": "DOOR-07",
+    "status": "PENDING",
+    "priority": "ROUTINE",
+    "manifest": [
+      { "sku": "SKU-222", "productName": "Bubble Wrap", "expectedQty": 50, "receivedQty": 0 }
+    ],
+    "totalPallets": 15,
+    "unloadedPallets": 0,
+    "eta": "2026-04-16T11:00:00Z",
+    "receivedBy": "USR-221"
+  },
+  {
+    "id": "INB-1030",
+    "trailerId": "TRL-M00",
+    "carrier": "UPS",
+    "dockDoor": "DOOR-06",
+    "status": "UNLOADING",
+    "priority": "URGENT",
+    "manifest": [
+      { "sku": "SKU-115", "productName": "Printer Ink", "expectedQty": 800, "receivedQty": 400 }
+    ],
+    "totalPallets": 8,
+    "unloadedPallets": 4,
+    "eta": "2026-04-15T12:00:00Z",
+    "arrivalTime": "2026-04-15T11:40:00Z",
+    "unloadStart": "2026-04-15T12:10:00Z",
+    "receivedBy": "USR-303"
+  }
+]

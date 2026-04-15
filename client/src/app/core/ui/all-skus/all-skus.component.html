@@ -1,0 +1,68 @@
+<div class="w-full h-[700px] overflow-y-auto custom-scrollbar bg-[#A3B899] border-4 border-black p-1 shadow-[inner_10px_10px_20px_rgba(0,0,0,0.2)]">
+  
+  <div class="sticky top-0 z-20 grid grid-cols-12 bg-black text-wham-tan p-4 font-black uppercase text-[11px] tracking-[0.3em] border-b-4 border-black">
+    <div class="col-span-2">SKU_ID</div>
+    <div class="col-span-4">PRODUCT_DESCRIPTION</div>
+    <div class="col-span-2 text-center">AISLE_LOC</div>
+    <div class="col-span-2 text-center">STATUS</div>
+    <div class="col-span-2 text-right">STOCK_LEVEL</div>
+  </div>
+
+  @for (zone of invService.groupedInventory() | keyvalue; track zone.key) {
+    
+    <div class="sticky top-[52px] z-10 bg-wham-dark text-wham-white p-3 border-y-4 border-black flex justify-between items-center px-6">
+      <span class="font-black uppercase tracking-[0.5em] text-sm">SECTION_ZONE // {{ zone.key }}</span>
+      <span class="text-[10px] font-black opacity-60">{{ zone.value.length }} ITEMS IN WING</span>
+    </div>
+
+    <div class="divide-y-4 divide-black">
+      @for (item of zone.value; track item.id) {
+        <div class="grid grid-cols-12 bg-wham-white p-4 items-center hover:bg-wham-cream transition-colors group">
+          
+          <div class="col-span-2">
+            <span class="bg-black text-wham-tan px-3 py-1 font-black text-sm border-2 border-black inline-block shadow-[3px_3px_0px_#A90011]">
+              {{ item.sku }}
+            </span>
+          </div>
+
+          <div class="col-span-4">
+            <h4 class="font-black uppercase text-lg leading-tight text-black">{{ item.name }}</h4>
+            <p class="text-[10px] font-bold opacity-50 uppercase tracking-tighter">Supplier: {{ item.supplier }}</p>
+          </div>
+
+          <div class="col-span-2 text-center font-black text-wham-dark italic">
+            {{ item.location.aisle }}—{{ item.location.bin }}
+          </div>
+
+          <div class="col-span-2 flex justify-center">
+            <span class="text-[10px] font-black px-2 py-1 uppercase border-2 border-black"
+                  [ngClass]="{
+                    'bg-green-500 text-white': item.status === 'IN_STOCK',
+                    'bg-wham-warn text-black': item.status === 'LOW_STOCK',
+                    'bg-black text-white': item.status === 'OUT_OF_STOCK'
+                  }">
+              {{ item.status }}
+            </span>
+          </div>
+
+          <div class="col-span-2 text-right">
+            <div class="flex flex-col items-end">
+              <span class="text-4xl font-black leading-none" [class.text-wham-primary]="item.status === 'LOW_STOCK'">
+                {{ item.quantity.available }}
+              </span>
+              <span class="text-[9px] font-black uppercase opacity-40">Available_Units</span>
+            </div>
+          </div>
+
+        </div>
+      }
+    </div>
+  }
+
+  @if (invService.totalSkus() === 0) {
+    <div class="flex flex-col items-center justify-center h-full p-20 opacity-20 italic">
+      <mat-icon class="scale-[3] mb-4">inventory_2</mat-icon>
+      <p class="text-4xl font-black uppercase">Vault_Empty_No_Data</p>
+    </div>
+  }
+</div>
