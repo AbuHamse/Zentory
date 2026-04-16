@@ -1,0 +1,1485 @@
+{"PerformanceMetric": [
+  {
+    "userId": "USR-001",
+    "userName": "Alex Rivera",
+    "role": "PICKER",
+    "totalUnits": 450,
+    "averageUph": 37.5,
+    "accuracyRate": 99.2,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 40,
+        "status": "LABOR_SHARE",
+        "refuteContext": "Assisted Receiving department for 1 hour"
+      },
+      {
+        "slot": 4,
+        "units": 75,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 90,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 80,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-002",
+    "userName": "Sarah Chen",
+    "role": "PACKER",
+    "totalUnits": 320,
+    "averageUph": 26.6,
+    "accuracyRate": 99.8,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 55,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 20,
+        "status": "DOWNTIME",
+        "refuteContext": "Conveyor belt jam in Sector 4"
+      },
+      {
+        "slot": 4,
+        "units": 65,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 60,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-003",
+    "userName": "Marcus Jordan",
+    "role": "SHIPPER",
+    "totalUnits": 600,
+    "averageUph": 50.0,
+    "accuracyRate": 100,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 110,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 105,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 95,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 100,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 100,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 90,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-004",
+    "userName": "Elena Rodriguez",
+    "role": "PICKER",
+    "totalUnits": 310,
+    "averageUph": 25.8,
+    "accuracyRate": 98.5,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 70,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 65,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 30,
+        "status": "BELOW_EXPECTATION",
+        "refuteContext": "Scanner battery issues and sync delays"
+      },
+      {
+        "slot": 4,
+        "units": 45,
+        "status": "BELOW_EXPECTATION"
+      },
+      {
+        "slot": 5,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 50,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-005",
+    "userName": "James Wilson",
+    "role": "PACKER",
+    "totalUnits": 280,
+    "averageUph": 23.3,
+    "accuracyRate": 97.2,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 45,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 45,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 40,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 50,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-006",
+    "userName": "Priya Patel",
+    "role": "SHIPPER",
+    "totalUnits": 420,
+    "averageUph": 35.0,
+    "accuracyRate": 99.9,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 15,
+        "status": "DOWNTIME",
+        "refuteContext": "Waiting for trailers to swap at dock"
+      },
+      {
+        "slot": 3,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 80,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-007",
+    "userName": "David Schmidt",
+    "role": "PICKER",
+    "totalUnits": 390,
+    "averageUph": 32.5,
+    "accuracyRate": 99.0,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 65,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 65,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 65,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 65,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 65,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 65,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-008",
+    "userName": "Lisa Wong",
+    "role": "PACKER",
+    "totalUnits": 210,
+    "averageUph": 17.5,
+    "accuracyRate": 96.5,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 30,
+        "status": "BELOW_EXPECTATION",
+        "refuteContext": "Slow volume at start of shift"
+      },
+      {
+        "slot": 2,
+        "units": 35,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 35,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 35,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 40,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 35,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-009",
+    "userName": "Kevin Thorne",
+    "role": "SHIPPER",
+    "totalUnits": 550,
+    "averageUph": 45.8,
+    "accuracyRate": 99.7,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 95,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 95,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 90,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 90,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 90,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 90,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-010",
+    "userName": "Maria Garcia",
+    "role": "PICKER",
+    "totalUnits": 300,
+    "averageUph": 25.0,
+    "accuracyRate": 99.4,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 0,
+        "status": "LABOR_SHARE",
+        "refuteContext": "Training new hire in Aisle 12"
+      },
+      {
+        "slot": 4,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 60,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-011",
+    "userName": "Robert Taylor",
+    "role": "PACKER",
+    "totalUnits": 340,
+    "averageUph": 28.3,
+    "accuracyRate": 99.1,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 55,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 55,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 55,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 55,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-012",
+    "userName": "Chloe Adams",
+    "role": "SHIPPER",
+    "totalUnits": 480,
+    "averageUph": 40.0,
+    "accuracyRate": 99.5,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 80,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-013",
+    "userName": "Nathan Drake",
+    "role": "PICKER",
+    "totalUnits": 410,
+    "averageUph": 34.1,
+    "accuracyRate": 98.9,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 20,
+        "status": "DOWNTIME",
+        "refuteContext": "Broken pallet cleanup in main aisle"
+      },
+      {
+        "slot": 3,
+        "units": 75,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 75,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 75,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-014",
+    "userName": "Sofia Rossi",
+    "role": "PACKER",
+    "totalUnits": 290,
+    "averageUph": 24.1,
+    "accuracyRate": 99.6,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 40,
+        "status": "BELOW_EXPECTATION",
+        "refuteContext": "Ran out of medium-sized boxes at station"
+      },
+      {
+        "slot": 5,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 50,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-015",
+    "userName": "Omar Hassan",
+    "role": "SHIPPER",
+    "totalUnits": 510,
+    "averageUph": 42.5,
+    "accuracyRate": 100,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 85,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-016",
+    "userName": "Emma Watson",
+    "role": "PICKER",
+    "totalUnits": 380,
+    "averageUph": 31.6,
+    "accuracyRate": 99.3,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 70,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 70,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 30,
+        "status": "LABOR_SHARE",
+        "refuteContext": "Helped with inventory cycle counts"
+      },
+      {
+        "slot": 4,
+        "units": 70,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 70,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 70,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-017",
+    "userName": "Liam O'Connor",
+    "role": "PACKER",
+    "totalUnits": 315,
+    "averageUph": 26.2,
+    "accuracyRate": 98.8,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 55,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 55,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 55,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 50,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-018",
+    "userName": "Yuki Tanaka",
+    "role": "SHIPPER",
+    "totalUnits": 530,
+    "averageUph": 44.1,
+    "accuracyRate": 99.9,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 90,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 90,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 90,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 90,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 90,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 80,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-019",
+    "userName": "Zoe Miller",
+    "role": "PICKER",
+    "totalUnits": 360,
+    "averageUph": 30.0,
+    "accuracyRate": 99.1,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 60,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-020",
+    "userName": "Lucas Brown",
+    "role": "PACKER",
+    "totalUnits": 275,
+    "averageUph": 22.9,
+    "accuracyRate": 99.4,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 45,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 45,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 45,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 45,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 45,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-021",
+    "userName": "Aisha Khan",
+    "role": "SHIPPER",
+    "totalUnits": 460,
+    "averageUph": 38.3,
+    "accuracyRate": 99.8,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 70,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 70,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-022",
+    "userName": "Felix Meyer",
+    "role": "PICKER",
+    "totalUnits": 420,
+    "averageUph": 35.0,
+    "accuracyRate": 99.7,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 70,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 70,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 70,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 70,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 70,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 70,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-023",
+    "userName": "Gabriella Silva",
+    "role": "PACKER",
+    "totalUnits": 330,
+    "averageUph": 27.5,
+    "accuracyRate": 99.5,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 55,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 55,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 55,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 55,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 50,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-024",
+    "userName": "Noah Smith",
+    "role": "SHIPPER",
+    "totalUnits": 580,
+    "averageUph": 48.3,
+    "accuracyRate": 99.9,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 100,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 100,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 100,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 95,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 95,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 90,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-025",
+    "userName": "Isabella Quinn",
+    "role": "PICKER",
+    "totalUnits": 250,
+    "averageUph": 20.8,
+    "accuracyRate": 98.2,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 10,
+        "status": "DOWNTIME",
+        "refuteContext": "Forklift blocking the end of Aisle 4"
+      },
+      {
+        "slot": 4,
+        "units": 45,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 45,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-026",
+    "userName": "Ethan Hunt",
+    "role": "PACKER",
+    "totalUnits": 300,
+    "averageUph": 25.0,
+    "accuracyRate": 99.0,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 50,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-027",
+    "userName": "Mia Thompson",
+    "role": "SHIPPER",
+    "totalUnits": 490,
+    "averageUph": 40.8,
+    "accuracyRate": 100,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 75,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-028",
+    "userName": "Ryan Cooper",
+    "role": "PICKER",
+    "totalUnits": 405,
+    "averageUph": 33.7,
+    "accuracyRate": 99.5,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 75,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 75,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 75,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 60,
+        "status": "BELOW_EXPECTATION",
+        "refuteContext": "Network issues with handheld device"
+      },
+      {
+        "slot": 5,
+        "units": 60,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 60,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-029",
+    "userName": "Ava Martinez",
+    "role": "PACKER",
+    "totalUnits": 310,
+    "averageUph": 25.8,
+    "accuracyRate": 99.3,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 50,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 55,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 55,
+        "status": "OPTIMAL"
+      }
+    ]
+  },
+  {
+    "userId": "USR-030",
+    "userName": "Tyler Nguyen",
+    "role": "SHIPPER",
+    "totalUnits": 500,
+    "averageUph": 41.6,
+    "accuracyRate": 99.8,
+    "intervals": [
+      {
+        "slot": 1,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 2,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 3,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 4,
+        "units": 85,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 5,
+        "units": 80,
+        "status": "OPTIMAL"
+      },
+      {
+        "slot": 6,
+        "units": 80,
+        "status": "OPTIMAL"
+      }
+    ]
+  }
+],
+"RefuteClaim" : [
+  {
+    "id": "REF-1001",
+    "userId": "USR-004",
+    "timestamp": "2023-10-25T14:00:00Z",
+    "intervalSlot": 5,
+    "category": "LABOR_SHARE",
+    "explanation": "Sent to help in Shipping due to high volume.",
+    "status": "DENIED"
+  },
+  {
+    "id": "REF-1002",
+    "userId": "USR-013",
+    "timestamp": "2023-10-25T14:00:00Z",
+    "intervalSlot": 5,
+    "category": "LABOR_SHARE",
+    "explanation": "Cross-training in the Receiving department.",
+    "status": "DENIED"
+  },
+  {
+    "id": "REF-1003",
+    "userId": "USR-030",
+    "timestamp": "2023-10-25T19:00:00Z",
+    "intervalSlot": 1,
+    "category": "LABOR_SHARE",
+    "explanation": "Cross-training in the Receiving department.",
+    "status": "APPROVED"
+  },
+  {
+    "id": "REF-1004",
+    "userId": "USR-022",
+    "timestamp": "2023-10-26T19:00:00Z",
+    "intervalSlot": 2,
+    "category": "MEETING",
+    "explanation": "Daily start-of-shift 'stand-up' meeting ran late.",
+    "status": "PENDING"
+  },
+  {
+    "id": "REF-1005",
+    "userId": "USR-023",
+    "timestamp": "2023-10-26T02:00:00Z",
+    "intervalSlot": 6,
+    "category": "LABOR_SHARE",
+    "explanation": "Moved to packing station to clear backlog.",
+    "status": "APPROVED"
+  },
+  {
+    "id": "REF-1006",
+    "userId": "USR-009",
+    "timestamp": "2023-10-26T20:00:00Z",
+    "intervalSlot": 4,
+    "category": "LABOR_SHARE",
+    "explanation": "Reassigned to assist with inventory cycle counting.",
+    "status": "PENDING"
+  },
+  {
+    "id": "REF-1007",
+    "userId": "USR-021",
+    "timestamp": "2023-10-26T14:00:00Z",
+    "intervalSlot": 1,
+    "category": "LABOR_SHARE",
+    "explanation": "Cross-training in the Receiving department.",
+    "status": "DENIED"
+  },
+  {
+    "id": "REF-1008",
+    "userId": "USR-016",
+    "timestamp": "2023-10-27T04:00:00Z",
+    "intervalSlot": 6,
+    "category": "SAFETY_STOP",
+    "explanation": "Blocked emergency exit cleared per supervisor instruction.",
+    "status": "PENDING"
+  },
+  {
+    "id": "REF-1009",
+    "userId": "USR-018",
+    "timestamp": "2023-10-26T07:00:00Z",
+    "intervalSlot": 3,
+    "category": "SAFETY_STOP",
+    "explanation": "Blocked emergency exit cleared per supervisor instruction.",
+    "status": "APPROVED"
+  },
+  {
+    "id": "REF-1010",
+    "userId": "USR-008",
+    "timestamp": "2023-10-25T08:00:00Z",
+    "intervalSlot": 3,
+    "category": "LABOR_SHARE",
+    "explanation": "Sent to help in Shipping due to high volume.",
+    "status": "PENDING"
+  },
+  {
+    "id": "REF-1011",
+    "userId": "USR-018",
+    "timestamp": "2023-10-26T07:00:00Z",
+    "intervalSlot": 2,
+    "category": "EQUIPMENT_ISSUE",
+    "explanation": "Printer ran out of thermal labels, waited for supply.",
+    "status": "APPROVED"
+  },
+  {
+    "id": "REF-1012",
+    "userId": "USR-014",
+    "timestamp": "2023-10-26T15:00:00Z",
+    "intervalSlot": 4,
+    "category": "LABOR_SHARE",
+    "explanation": "Moved to packing station to clear backlog.",
+    "status": "PENDING"
+  },
+  {
+    "id": "REF-1013",
+    "userId": "USR-014",
+    "timestamp": "2023-10-26T11:00:00Z",
+    "intervalSlot": 3,
+    "category": "EQUIPMENT_ISSUE",
+    "explanation": "Forklift battery died and needed emergency swap.",
+    "status": "APPROVED"
+  },
+  {
+    "id": "REF-1014",
+    "userId": "USR-003",
+    "timestamp": "2023-10-25T14:00:00Z",
+    "intervalSlot": 5,
+    "category": "EQUIPMENT_ISSUE",
+    "explanation": "Handheld scanner wouldn't connect to Wi-Fi.",
+    "status": "PENDING"
+  },
+  {
+    "id": "REF-1015",
+    "userId": "USR-023",
+    "timestamp": "2023-10-25T16:00:00Z",
+    "intervalSlot": 6,
+    "category": "MEETING",
+    "explanation": "Team feedback session on new warehouse management software.",
+    "status": "APPROVED"
+  },
+  {
+    "id": "REF-1016",
+    "userId": "USR-020",
+    "timestamp": "2023-10-27T02:00:00Z",
+    "intervalSlot": 6,
+    "category": "SAFETY_STOP",
+    "explanation": "Spilled liquid in Aisle 4 required cleanup protocol.",
+    "status": "APPROVED"
+  },
+  {
+    "id": "REF-1017",
+    "userId": "USR-025",
+    "timestamp": "2023-10-27T06:00:00Z",
+    "intervalSlot": 5,
+    "category": "LABOR_SHARE",
+    "explanation": "Cross-training in the Receiving department.",
+    "status": "PENDING"
+  },
+  {
+    "id": "REF-1018",
+    "userId": "USR-005",
+    "timestamp": "2023-10-26T08:00:00Z",
+    "intervalSlot": 5,
+    "category": "MEETING",
+    "explanation": "Unexpected safety briefing regarding new heavy machinery.",
+    "status": "DENIED"
+  },
+  {
+    "id": "REF-1019",
+    "userId": "USR-005",
+    "timestamp": "2023-10-26T10:00:00Z",
+    "intervalSlot": 1,
+    "category": "SAFETY_STOP",
+    "explanation": "Investigated falling hazard report in high-stack area.",
+    "status": "APPROVED"
+  },
+  {
+    "id": "REF-1020",
+    "userId": "USR-028",
+    "timestamp": "2023-10-27T07:00:00Z",
+    "intervalSlot": 6,
+    "category": "SAFETY_STOP",
+    "explanation": "Spilled liquid in Aisle 4 required cleanup protocol.",
+    "status": "PENDING"
+  },
+  {
+    "id": "REF-1021",
+    "userId": "USR-005",
+    "timestamp": "2023-10-25T11:00:00Z",
+    "intervalSlot": 3,
+    "category": "EQUIPMENT_ISSUE",
+    "explanation": "Forklift battery died and needed emergency swap.",
+    "status": "APPROVED"
+  },
+  {
+    "id": "REF-1022",
+    "userId": "USR-013",
+    "timestamp": "2023-10-26T15:00:00Z",
+    "intervalSlot": 2,
+    "category": "MEETING",
+    "explanation": "One-on-one performance review with manager.",
+    "status": "APPROVED"
+  },
+  {
+    "id": "REF-1023",
+    "userId": "USR-018",
+    "timestamp": "2023-10-25T21:00:00Z",
+    "intervalSlot": 3,
+    "category": "SAFETY_STOP",
+    "explanation": "Blocked emergency exit cleared per supervisor instruction.",
+    "status": "DENIED"
+  },
+  {
+    "id": "REF-1024",
+    "userId": "USR-026",
+    "timestamp": "2023-10-26T10:00:00Z",
+    "intervalSlot": 4,
+    "category": "EQUIPMENT_ISSUE",
+    "explanation": "Printer ran out of thermal labels, waited for supply.",
+    "status": "DENIED"
+  },
+  {
+    "id": "REF-1025",
+    "userId": "USR-018",
+    "timestamp": "2023-10-25T18:00:00Z",
+    "intervalSlot": 6,
+    "category": "SAFETY_STOP",
+    "explanation": "Blocked emergency exit cleared per supervisor instruction.",
+    "status": "APPROVED"
+  },
+  {
+    "id": "REF-1026",
+    "userId": "USR-019",
+    "timestamp": "2023-10-25T17:00:00Z",
+    "intervalSlot": 2,
+    "category": "MEETING",
+    "explanation": "Unexpected safety briefing regarding new heavy machinery.",
+    "status": "APPROVED"
+  },
+  {
+    "id": "REF-1027",
+    "userId": "USR-023",
+    "timestamp": "2023-10-27T01:00:00Z",
+    "intervalSlot": 1,
+    "category": "LABOR_SHARE",
+    "explanation": "Sent to help in Shipping due to high volume.",
+    "status": "APPROVED"
+  },
+  {
+    "id": "REF-1028",
+    "userId": "USR-014",
+    "timestamp": "2023-10-25T11:00:00Z",
+    "intervalSlot": 1,
+    "category": "EQUIPMENT_ISSUE",
+    "explanation": "Printer ran out of thermal labels, waited for supply.",
+    "status": "PENDING"
+  },
+  {
+    "id": "REF-1029",
+    "userId": "USR-006",
+    "timestamp": "2023-10-25T19:00:00Z",
+    "intervalSlot": 5,
+    "category": "SAFETY_STOP",
+    "explanation": "Spilled liquid in Aisle 4 required cleanup protocol.",
+    "status": "DENIED"
+  },
+  {
+    "id": "REF-1030",
+    "userId": "USR-019",
+    "timestamp": "2023-10-26T21:00:00Z",
+    "intervalSlot": 3,
+    "category": "LABOR_SHARE",
+    "explanation": "Sent to help in Shipping due to high volume.",
+    "status": "PENDING"
+  }
+]}

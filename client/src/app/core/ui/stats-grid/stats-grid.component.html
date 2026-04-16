@@ -1,0 +1,20 @@
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 w-full bg-black p-4 border-4 border-black shadow-[10px_10px_0px_#000]">
+  @for (col of intervals; track col.slot) {
+    <div class="bg-wham-white border-2 border-black p-4 flex flex-col items-center justify-between min-h-[180px] group hover:bg-wham-cream transition-colors">
+      <div class="w-full flex justify-between items-start">
+        <span class="text-[10px] font-black uppercase opacity-40 italic">SLOT_0{{col.slot}}</span>
+        <div class="w-2 h-2 rounded-full bg-black opacity-10"></div>
+      </div>
+      
+      <div class="text-center">
+         <h3 class="text-5xl font-black leading-none tracking-tighter">{{col.units}}</h3>
+         <p class="text-[9px] font-black uppercase tracking-[0.3em] mt-2 opacity-60">UNITS_PROCESSED</p>
+      </div>
+
+      <div [class]="getStatusClass(col.status)" 
+           class="w-full text-center py-2 text-[10px] font-black border-2 border-black shadow-[3px_3px_0px_#000] uppercase italic">
+        {{col.status}}
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,60 @@
+<div class="bg-black border-4 border-black shadow-[12px_12px_0px_#000] flex flex-col h-full overflow-hidden">
+  
+  <div class="flex bg-wham-dark p-2 gap-2 border-b-4 border-black">
+    @for (role of ['PICKER', 'PACKER', 'SHIPPER']; track role) {
+      <button (click)="setRole(role)"
+              [class.bg-wham-warn]="activeRole() === role"
+              [class.text-black]="activeRole() === role"
+              [class.text-white]="activeRole() !== role"
+              class="flex-1 py-3 font-black uppercase text-xs border-2 border-black transition-all active:translate-y-1">
+        {{role}}S
+      </button>
+    }
+  </div>
+
+  <div class="p-6 space-y-4 overflow-y-auto custom-scrollbar bg-[#1a1a1a]" style="max-height: 520px;">
+    @for (staff of filteredLeaderboard(); track staff.userId; let i = $index) {
+      <div [class.border-wham-warn]="staff.userId === 'USR-1050'"
+           [class.bg-wham-cream]="staff.userId === 'USR-1050'"
+           class="bg-wham-white border-4 border-black p-5 flex justify-between items-center group shadow-[6px_6px_0px_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
+        
+        <div class="flex items-center gap-8">
+          <div class="flex flex-col items-center justify-center">
+            <span class="text-4xl font-black italic opacity-20 group-hover:opacity-100 transition-opacity">#{{i + 1}}</span>
+          </div>
+
+          <div>
+            <h4 class="text-3xl font-black uppercase leading-none tracking-tighter">
+              {{staff.userName}}
+              @if(staff.userId === 'USR-1050') {
+                <span class="ml-2 text-[10px] bg-black text-wham-warn px-2 py-1 italic">SYSTEM_ME</span>
+              }
+            </h4>
+            <div class="flex gap-4 mt-2">
+               <p class="text-[10px] font-black uppercase opacity-50">ACCURACY: {{staff.accuracyRate}}%</p>
+               <p class="text-[10px] font-black uppercase text-blue-600">ID: {{staff.userId}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-10">
+          <div class="text-right">
+            <p class="text-4xl font-black leading-none tracking-tighter">{{staff.averageUph}}</p>
+            <p class="text-[9px] font-black uppercase opacity-40">AVG_UPH</p>
+          </div>
+          <div class="w-[2px] bg-black/10"></div>
+          <div class="text-right">
+            <p class="text-4xl font-black leading-none tracking-tighter text-wham-primary">{{staff.totalUnits}}</p>
+            <p class="text-[9px] font-black uppercase opacity-40">TOTAL_VOL</p>
+          </div>
+        </div>
+
+      </div>
+    }
+  </div>
+
+  <div class="bg-wham-warn p-3 flex justify-between items-center border-t-4 border-black">
+    <span class="text-[10px] font-black uppercase italic">Leaderboard_Status: Live_Stream_Active</span>
+    <span class="text-[10px] font-mono font-bold">{{ filteredLeaderboard().length }} ENTRIES_INDEXED</span>
+  </div>
+</div>
