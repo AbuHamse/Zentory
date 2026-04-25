@@ -1,0 +1,55 @@
+<div (click)="onBayClick()"
+     [class.cursor-pointer]="data"
+     [class.bg-wham-primary]="data?.priority === 'CRITICAL_CUTOFF'"
+     [class.bg-white]="!data"
+     class="border-4 border-black h-48 p-4 flex flex-col justify-between transition-all hover:-translate-y-1 shadow-[6px_6px_0px_#000] relative overflow-hidden group">
+  
+  <div class="flex justify-between items-start z-10">
+    <span class="text-sm font-black uppercase italic tracking-tighter"
+          [class.text-white]="data?.priority === 'CRITICAL_CUTOFF'">
+      DOOR_{{ doorId }}
+    </span>
+    @if (data) {
+      <span class="text-[9px] font-black bg-black text-white px-2 py-0.5 border border-white/20">
+        {{ data.carrier }}
+      </span>
+    }
+  </div>
+
+  <div class="z-10">
+    @if (data) {
+      <div class="text-center">
+        <h4 [class.text-white]="data.priority === 'CRITICAL_CUTOFF'" 
+            class="text-3xl font-black leading-none italic font-mono tracking-tighter">
+          {{ timeLeft() }}
+        </h4>
+        <p class="text-[8px] font-black uppercase opacity-60 mt-1" 
+           [class.text-white/80]="data.priority === 'CRITICAL_CUTOFF'">
+          DEPARTURE_EST
+        </p>
+      </div>
+    } @else {
+      <div class="h-full flex flex-col items-center justify-center opacity-10">
+        <span class="text-[10px] font-black uppercase italic italic tracking-widest">BAY_VACANT</span>
+      </div>
+    }
+  </div>
+
+  <div class="z-10">
+    @if (data) {
+      <div class="flex justify-between items-end mb-1 text-[8px] font-black uppercase"
+           [class.text-white]="data.priority === 'CRITICAL_CUTOFF'">
+        <span>PALLETS: {{ data.loadedPallets }}/{{ data.totalPallets }}</span>
+        <span>{{ calculateProgress() | number:'1.0-0' }}%</span>
+      </div>
+      <div class="w-full h-3 bg-black/20 border-2 border-black overflow-hidden relative">
+        <div class="h-full bg-wham-warn shadow-[0_0_10px_rgba(231,200,75,0.5)] transition-all duration-500" 
+             [style.width.%]="calculateProgress()"></div>
+      </div>
+    }
+  </div>
+
+  <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
+       style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 10px 10px;">
+  </div>
+</div>

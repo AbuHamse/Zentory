@@ -1,0 +1,56 @@
+<div class="flex-1 bg-wham-tan border-4 border-black p-4 shadow-[8px_8px_0px_#000] flex flex-col min-h-0">
+  
+  <div class="border-b-4 border-black pb-4 mb-4">
+    <div class="flex justify-between items-end">
+      <h3 class="text-2xl font-black uppercase italic tracking-tighter text-black">STAGING_AREA</h3>
+      <span class="bg-black text-wham-tan px-2 py-0.5 text-[10px] font-black">
+        {{ stagingList().length }} LOADS
+      </span>
+    </div>
+    <div class="flex justify-between mt-2 text-[9px] font-bold uppercase opacity-50 text-black">
+      <span>CARRIER_SORT_ACTIVE</span>
+      <span>PALLETS_TOTAL: {{ totalPalletsWaiting() }}</span>
+    </div>
+  </div>
+
+  <div class="flex-1 overflow-y-auto custom-scrollbar space-y-4 pr-2">
+    @for (load of stagingList(); track load.id) {
+      <div class="bg-white border-2 border-black p-3 shadow-[4px_4px_0px_#000] transition-transform hover:-translate-y-1">
+        
+        <div class="flex justify-between items-start mb-2">
+          <span class="text-[9px] font-black bg-black text-white px-2 py-0.5 uppercase tracking-tighter">
+            {{ load.carrier }}
+          </span>
+          <span [class]="getPriorityClass(load.priority)" 
+                class="text-[9px] font-black uppercase italic border-b-2 px-1">
+            {{ load.priority.replace('_', ' ') }}
+          </span>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <div>
+            <h4 class="text-xl font-black text-black leading-none">{{ load.trailerId }}</h4>
+            <p class="text-[10px] font-bold opacity-40 uppercase mt-1">LOAD_ID: {{ load.id }}</p>
+          </div>
+          <div class="text-right">
+            <p class="text-xl font-black text-black leading-none">{{ load.totalPallets }}</p>
+            <p class="text-[9px] font-black opacity-40 uppercase">PALLETS</p>
+          </div>
+        </div>
+
+        <div class="mt-3 pt-2 border-t border-black/10 flex justify-between items-center">
+           <span class="text-[9px] font-black opacity-60 uppercase italic text-black">Scheduled_Exit:</span>
+           <span class="text-[11px] font-black text-black">{{ load.scheduledDeparture | date:'HH:mm' }}</span>
+        </div>
+      </div>
+    } @empty {
+      <div class="h-full flex flex-col items-center justify-center opacity-20 grayscale py-10">
+        <p class="text-2xl font-black uppercase italic text-black">No_Loads_Staged</p>
+      </div>
+    }
+  </div>
+
+  <div class="mt-4 pt-2 border-t-2 border-black text-[8px] font-mono opacity-40 uppercase text-black">
+    Queue_Refresh: Dynamic_Push_Active
+  </div>
+</div>

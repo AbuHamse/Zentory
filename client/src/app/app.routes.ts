@@ -15,6 +15,7 @@ import { PickerDashboardComponent } from './features/user/picker-dashboard/picke
 import { InventoryVaultComponent } from './features/user/inventory-vault/inventory-vault.component';
 import { ReceivingDockComponent } from './features/user/receiving-dock/receiving-dock.component';
 import { MyPerformanceComponent } from './features/user/my-performance/my-performance.component';
+import { DockOutboundComponent } from './features/user/dock-outbound/dock-outbound.component';
 // import { ShippingDispatchComponent } from './features/user/shipping-dispatch/shipping-dispatch.component';
 // import { RecoveryCenterComponent } from './features/user/recovery-center/recovery-center.component';
 // import { SystemLogsComponent } from './features/user/system-logs/system-logs.component';
@@ -47,7 +48,7 @@ export const routes: Routes = [
       { path: 'inventory-control', component: InventoryVaultComponent },
       { path: 'receiving-dock', component: ReceivingDockComponent },
       { path: 'performance', component: MyPerformanceComponent },
-      // { path: 'shipping-dispatch', component: ShippingDispatchComponent },
+      { path: 'dock-outbound', component: DockOutboundComponent },
       // { path: 'recovery-center', component: RecoveryCenterComponent },
       // { path: 'system-logs', component: SystemLogsComponent },
     ]

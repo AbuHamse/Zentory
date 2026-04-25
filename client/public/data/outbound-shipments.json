@@ -1,0 +1,849 @@
+[
+  {
+    "id": "OUT-4401",
+    "trailerId": "TR-9921",
+    "carrier": "FEDEX",
+    "dockDoor": "S-01",
+    "status": "DEPARTED",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-101",
+        "customerName": "TechCorp Solutions",
+        "totalUnits": 120,
+        "loadedUnits": 120,
+        "isHighValue": false
+      },
+      {
+        "orderId": "ORD-102",
+        "customerName": "Global Logistics Inc",
+        "totalUnits": 50,
+        "loadedUnits": 50,
+        "isHighValue": true
+      }
+    ],
+    "totalPallets": 12,
+    "loadedPallets": 12,
+    "scheduledDeparture": "2024-05-20T14:00:00Z",
+    "loadingStarted": "2024-05-20T10:30:00Z",
+    "actualDeparture": "2024-05-20T14:15:00Z",
+    "UserId": "USR-882",
+    "Outbound_SID": "SID-A990"
+  },
+  {
+    "id": "OUT-4402",
+    "trailerId": "TR-1044",
+    "carrier": "UPS",
+    "dockDoor": "S-04",
+    "status": "LOADING",
+    "priority": "CRITICAL_CUTOFF",
+    "manifest": [
+      {
+        "orderId": "ORD-205",
+        "customerName": "Northern Retail",
+        "totalUnits": 300,
+        "loadedUnits": 145,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 24,
+    "loadedPallets": 10,
+    "scheduledDeparture": "2024-05-21T18:00:00Z",
+    "loadingStarted": "2024-05-21T15:00:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-712",
+    "Outbound_SID": "SID-B112"
+  },
+  {
+    "id": "OUT-4403",
+    "trailerId": "TR-5582",
+    "carrier": "DHL",
+    "dockDoor": "S-12",
+    "status": "STAGING",
+    "priority": "HOT_LOAD",
+    "manifest": [
+      {
+        "orderId": "ORD-309",
+        "customerName": "MedSupply Direct",
+        "totalUnits": 15,
+        "loadedUnits": 0,
+        "isHighValue": true
+      }
+    ],
+    "totalPallets": 2,
+    "loadedPallets": 0,
+    "scheduledDeparture": "2024-05-21T09:00:00Z",
+    "loadingStarted": "",
+    "actualDeparture": "",
+    "UserId": "USR-401",
+    "Outbound_SID": "SID-C205"
+  },
+  {
+    "id": "OUT-4404",
+    "trailerId": "TR-4009",
+    "carrier": "AMAZON",
+    "dockDoor": "S-09",
+    "status": "MANIFEST_CLOSED",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-444",
+        "customerName": "Prime Hub NY",
+        "totalUnits": 500,
+        "loadedUnits": 500,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 40,
+    "loadedPallets": 40,
+    "scheduledDeparture": "2024-05-21T12:00:00Z",
+    "loadingStarted": "2024-05-21T07:00:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-990",
+    "Outbound_SID": "SID-D441"
+  },
+  {
+    "id": "OUT-4405",
+    "trailerId": "TR-7712",
+    "carrier": "PRIVATE_FLEET",
+    "dockDoor": "S-02",
+    "status": "LOADING",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-510",
+        "customerName": "Internal R&D",
+        "totalUnits": 45,
+        "loadedUnits": 20,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 4,
+    "loadedPallets": 2,
+    "scheduledDeparture": "2024-05-22T10:00:00Z",
+    "loadingStarted": "2024-05-22T08:30:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-332",
+    "Outbound_SID": "SID-E552"
+  },
+  {
+    "id": "OUT-4406",
+    "trailerId": "TR-2231",
+    "carrier": "PURALATOR",
+    "dockDoor": "S-14",
+    "status": "STAGING",
+    "priority": "CRITICAL_CUTOFF",
+    "manifest": [
+      {
+        "orderId": "ORD-601",
+        "customerName": "Canada Connect",
+        "totalUnits": 200,
+        "loadedUnits": 0,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 18,
+    "loadedPallets": 0,
+    "scheduledDeparture": "2024-05-21T16:30:00Z",
+    "loadingStarted": "",
+    "actualDeparture": "",
+    "UserId": "USR-105",
+    "Outbound_SID": "SID-F661"
+  },
+  {
+    "id": "OUT-4407",
+    "trailerId": "TR-9090",
+    "carrier": "DAY & ROSS",
+    "dockDoor": "S-07",
+    "status": "LOADING",
+    "priority": "HOT_LOAD",
+    "manifest": [
+      {
+        "orderId": "ORD-707",
+        "customerName": "Heavy Iron Parts",
+        "totalUnits": 80,
+        "loadedUnits": 40,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 26,
+    "loadedPallets": 13,
+    "scheduledDeparture": "2024-05-21T21:00:00Z",
+    "loadingStarted": "2024-05-21T18:00:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-221",
+    "Outbound_SID": "SID-G771"
+  },
+  {
+    "id": "OUT-4408",
+    "trailerId": "TR-1122",
+    "carrier": "ROBERT",
+    "dockDoor": "S-03",
+    "status": "DEPARTED",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-801",
+        "customerName": "Quebec Retail Co",
+        "totalUnits": 65,
+        "loadedUnits": 65,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 8,
+    "loadedPallets": 8,
+    "scheduledDeparture": "2024-05-20T11:00:00Z",
+    "loadingStarted": "2024-05-20T08:00:00Z",
+    "actualDeparture": "2024-05-20T11:10:00Z",
+    "UserId": "USR-554",
+    "Outbound_SID": "SID-H882"
+  },
+  {
+    "id": "OUT-4409",
+    "trailerId": "TR-3344",
+    "carrier": "FEDEX",
+    "dockDoor": "S-05",
+    "status": "LOADING",
+    "priority": "CRITICAL_CUTOFF",
+    "manifest": [
+      {
+        "orderId": "ORD-901",
+        "customerName": "Urgent Care Ltd",
+        "totalUnits": 10,
+        "loadedUnits": 5,
+        "isHighValue": true
+      }
+    ],
+    "totalPallets": 1,
+    "loadedPallets": 0.5,
+    "scheduledDeparture": "2024-05-21T23:59:00Z",
+    "loadingStarted": "2024-05-21T22:30:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-119",
+    "Outbound_SID": "SID-I991"
+  },
+  {
+    "id": "OUT-4410",
+    "trailerId": "TR-5566",
+    "carrier": "UPS",
+    "dockDoor": "S-10",
+    "status": "STAGING",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-1010",
+        "customerName": "Midwest Supply",
+        "totalUnits": 150,
+        "loadedUnits": 0,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 15,
+    "loadedPallets": 0,
+    "scheduledDeparture": "2024-05-22T13:00:00Z",
+    "loadingStarted": "",
+    "actualDeparture": "",
+    "UserId": "USR-662",
+    "Outbound_SID": "SID-J101"
+  },
+  {
+    "id": "OUT-4411",
+    "trailerId": "TR-8877",
+    "carrier": "AMAZON",
+    "dockDoor": "S-11",
+    "status": "LOADING",
+    "priority": "HOT_LOAD",
+    "manifest": [
+      {
+        "orderId": "ORD-1111",
+        "customerName": "Amazon FC West",
+        "totalUnits": 600,
+        "loadedUnits": 300,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 44,
+    "loadedPallets": 22,
+    "scheduledDeparture": "2024-05-21T17:00:00Z",
+    "loadingStarted": "2024-05-21T14:00:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-771",
+    "Outbound_SID": "SID-K211"
+  },
+  {
+    "id": "OUT-4412",
+    "trailerId": "TR-3432",
+    "carrier": "DHL",
+    "dockDoor": "S-08",
+    "status": "MANIFEST_CLOSED",
+    "priority": "CRITICAL_CUTOFF",
+    "manifest": [
+      {
+        "orderId": "ORD-1212",
+        "customerName": "Precision Labs",
+        "totalUnits": 5,
+        "loadedUnits": 5,
+        "isHighValue": true
+      }
+    ],
+    "totalPallets": 1,
+    "loadedPallets": 1,
+    "scheduledDeparture": "2024-05-21T06:00:00Z",
+    "loadingStarted": "2024-05-21T05:30:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-202",
+    "Outbound_SID": "SID-L321"
+  },
+  {
+    "id": "OUT-4413",
+    "trailerId": "TR-9900",
+    "carrier": "DAY & ROSS",
+    "dockDoor": "S-13",
+    "status": "LOADING",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-1313",
+        "customerName": "Nova Warehouse",
+        "totalUnits": 400,
+        "loadedUnits": 100,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 30,
+    "loadedPallets": 8,
+    "scheduledDeparture": "2024-05-22T04:00:00Z",
+    "loadingStarted": "2024-05-21T23:00:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-114",
+    "Outbound_SID": "SID-M431"
+  },
+  {
+    "id": "OUT-4414",
+    "trailerId": "TR-2222",
+    "carrier": "ROBERT",
+    "dockDoor": "S-06",
+    "status": "STAGING",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-1414",
+        "customerName": "Montreal Logistics",
+        "totalUnits": 88,
+        "loadedUnits": 0,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 10,
+    "loadedPallets": 0,
+    "scheduledDeparture": "2024-05-22T15:00:00Z",
+    "loadingStarted": "",
+    "actualDeparture": "",
+    "UserId": "USR-555",
+    "Outbound_SID": "SID-N542"
+  },
+  {
+    "id": "OUT-4415",
+    "trailerId": "TR-1212",
+    "carrier": "FEDEX",
+    "dockDoor": "S-01",
+    "status": "DEPARTED",
+    "priority": "HOT_LOAD",
+    "manifest": [
+      {
+        "orderId": "ORD-1515",
+        "customerName": "Silicon Valley Systems",
+        "totalUnits": 22,
+        "loadedUnits": 22,
+        "isHighValue": true
+      }
+    ],
+    "totalPallets": 2,
+    "loadedPallets": 2,
+    "scheduledDeparture": "2024-05-20T19:00:00Z",
+    "loadingStarted": "2024-05-20T18:15:00Z",
+    "actualDeparture": "2024-05-20T19:05:00Z",
+    "UserId": "USR-881",
+    "Outbound_SID": "SID-O651"
+  },
+  {
+    "id": "OUT-4416",
+    "trailerId": "TR-4545",
+    "carrier": "UPS",
+    "dockDoor": "S-04",
+    "status": "MANIFEST_CLOSED",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-1616",
+        "customerName": "Retail Giant",
+        "totalUnits": 1200,
+        "loadedUnits": 1200,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 52,
+    "loadedPallets": 52,
+    "scheduledDeparture": "2024-05-21T08:00:00Z",
+    "loadingStarted": "2024-05-21T02:00:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-112",
+    "Outbound_SID": "SID-P761"
+  },
+  {
+    "id": "OUT-4417",
+    "trailerId": "TR-8989",
+    "carrier": "PURALATOR",
+    "dockDoor": "S-14",
+    "status": "LOADING",
+    "priority": "CRITICAL_CUTOFF",
+    "manifest": [
+      {
+        "orderId": "ORD-1717",
+        "customerName": "Air Cargo Hub",
+        "totalUnits": 300,
+        "loadedUnits": 280,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 20,
+    "loadedPallets": 19,
+    "scheduledDeparture": "2024-05-21T14:45:00Z",
+    "loadingStarted": "2024-05-21T12:00:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-304",
+    "Outbound_SID": "SID-Q871"
+  },
+  {
+    "id": "OUT-4418",
+    "trailerId": "TR-7070",
+    "carrier": "PRIVATE_FLEET",
+    "dockDoor": "S-02",
+    "status": "STAGING",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-1818",
+        "customerName": "Local Store 5",
+        "totalUnits": 40,
+        "loadedUnits": 0,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 3,
+    "loadedPallets": 0,
+    "scheduledDeparture": "2024-05-22T06:00:00Z",
+    "loadingStarted": "",
+    "actualDeparture": "",
+    "UserId": "USR-209",
+    "Outbound_SID": "SID-R982"
+  },
+  {
+    "id": "OUT-4419",
+    "trailerId": "TR-6161",
+    "carrier": "AMAZON",
+    "dockDoor": "S-11",
+    "status": "DEPARTED",
+    "priority": "CRITICAL_CUTOFF",
+    "manifest": [
+      {
+        "orderId": "ORD-1919",
+        "customerName": "Amazon Prime East",
+        "totalUnits": 1500,
+        "loadedUnits": 1500,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 60,
+    "loadedPallets": 60,
+    "scheduledDeparture": "2024-05-20T22:00:00Z",
+    "loadingStarted": "2024-05-20T16:00:00Z",
+    "actualDeparture": "2024-05-20T21:55:00Z",
+    "UserId": "USR-441",
+    "Outbound_SID": "SID-S191"
+  },
+  {
+    "id": "OUT-4420",
+    "trailerId": "TR-3030",
+    "carrier": "DHL",
+    "dockDoor": "S-08",
+    "status": "LOADING",
+    "priority": "HOT_LOAD",
+    "manifest": [
+      {
+        "orderId": "ORD-2020",
+        "customerName": "EuroTrans Global",
+        "totalUnits": 55,
+        "loadedUnits": 10,
+        "isHighValue": true
+      }
+    ],
+    "totalPallets": 5,
+    "loadedPallets": 1,
+    "scheduledDeparture": "2024-05-21T19:30:00Z",
+    "loadingStarted": "2024-05-21T18:45:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-227",
+    "Outbound_SID": "SID-T202"
+  },
+  {
+    "id": "OUT-4421",
+    "trailerId": "TR-4040",
+    "carrier": "ROBERT",
+    "dockDoor": "S-03",
+    "status": "MANIFEST_CLOSED",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-2121",
+        "customerName": "Quebec Power",
+        "totalUnits": 90,
+        "loadedUnits": 90,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 11,
+    "loadedPallets": 11,
+    "scheduledDeparture": "2024-05-21T11:00:00Z",
+    "loadingStarted": "2024-05-21T08:30:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-500",
+    "Outbound_SID": "SID-U311"
+  },
+  {
+    "id": "OUT-4422",
+    "trailerId": "TR-5050",
+    "carrier": "DAY & ROSS",
+    "dockDoor": "S-13",
+    "status": "STAGING",
+    "priority": "HOT_LOAD",
+    "manifest": [
+      {
+        "orderId": "ORD-2222",
+        "customerName": "Maritime Goods",
+        "totalUnits": 175,
+        "loadedUnits": 0,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 14,
+    "loadedPallets": 0,
+    "scheduledDeparture": "2024-05-22T01:00:00Z",
+    "loadingStarted": "",
+    "actualDeparture": "",
+    "UserId": "USR-612",
+    "Outbound_SID": "SID-V422"
+  },
+  {
+    "id": "OUT-4423",
+    "trailerId": "TR-6060",
+    "carrier": "FEDEX",
+    "dockDoor": "S-05",
+    "status": "LOADING",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-2323",
+        "customerName": "Express Tech",
+        "totalUnits": 220,
+        "loadedUnits": 110,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 20,
+    "loadedPallets": 10,
+    "scheduledDeparture": "2024-05-22T03:00:00Z",
+    "loadingStarted": "2024-05-22T01:00:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-889",
+    "Outbound_SID": "SID-W533"
+  },
+  {
+    "id": "OUT-4424",
+    "trailerId": "TR-7080",
+    "carrier": "UPS",
+    "dockDoor": "S-10",
+    "status": "DEPARTED",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-2424",
+        "customerName": "National Store",
+        "totalUnits": 410,
+        "loadedUnits": 410,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 35,
+    "loadedPallets": 35,
+    "scheduledDeparture": "2024-05-20T15:00:00Z",
+    "loadingStarted": "2024-05-20T11:00:00Z",
+    "actualDeparture": "2024-05-20T15:05:00Z",
+    "UserId": "USR-101",
+    "Outbound_SID": "SID-X644"
+  },
+  {
+    "id": "OUT-4425",
+    "trailerId": "TR-8090",
+    "carrier": "AMAZON",
+    "dockDoor": "S-09",
+    "status": "LOADING",
+    "priority": "CRITICAL_CUTOFF",
+    "manifest": [
+      {
+        "orderId": "ORD-2525",
+        "customerName": "Amazon FC South",
+        "totalUnits": 800,
+        "loadedUnits": 750,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 48,
+    "loadedPallets": 45,
+    "scheduledDeparture": "2024-05-21T13:00:00Z",
+    "loadingStarted": "2024-05-21T09:00:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-442",
+    "Outbound_SID": "SID-Y755"
+  },
+  {
+    "id": "OUT-4426",
+    "trailerId": "TR-9011",
+    "carrier": "DHL",
+    "dockDoor": "S-12",
+    "status": "STAGING",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-2626",
+        "customerName": "Global Cargo",
+        "totalUnits": 12,
+        "loadedUnits": 0,
+        "isHighValue": true
+      }
+    ],
+    "totalPallets": 1,
+    "loadedPallets": 0,
+    "scheduledDeparture": "2024-05-22T08:00:00Z",
+    "loadingStarted": "",
+    "actualDeparture": "",
+    "UserId": "USR-203",
+    "Outbound_SID": "SID-Z866"
+  },
+  {
+    "id": "OUT-4427",
+    "trailerId": "TR-1012",
+    "carrier": "PURALATOR",
+    "dockDoor": "S-14",
+    "status": "LOADING",
+    "priority": "HOT_LOAD",
+    "manifest": [
+      {
+        "orderId": "ORD-2727",
+        "customerName": "Vancouver Hub",
+        "totalUnits": 140,
+        "loadedUnits": 70,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 12,
+    "loadedPallets": 6,
+    "scheduledDeparture": "2024-05-21T15:30:00Z",
+    "loadingStarted": "2024-05-21T14:00:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-305",
+    "Outbound_SID": "SID-AA77"
+  },
+  {
+    "id": "OUT-4428",
+    "trailerId": "TR-2023",
+    "carrier": "PRIVATE_FLEET",
+    "dockDoor": "S-02",
+    "status": "MANIFEST_CLOSED",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-2828",
+        "customerName": "Outlet #12",
+        "totalUnits": 85,
+        "loadedUnits": 85,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 6,
+    "loadedPallets": 6,
+    "scheduledDeparture": "2024-05-21T10:00:00Z",
+    "loadingStarted": "2024-05-21T08:45:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-210",
+    "Outbound_SID": "SID-BB88"
+  },
+  {
+    "id": "OUT-4429",
+    "trailerId": "TR-3034",
+    "carrier": "FEDEX",
+    "dockDoor": "S-01",
+    "status": "LOADING",
+    "priority": "CRITICAL_CUTOFF",
+    "manifest": [
+      {
+        "orderId": "ORD-2929",
+        "customerName": "Life Sciences",
+        "totalUnits": 30,
+        "loadedUnits": 25,
+        "isHighValue": true
+      }
+    ],
+    "totalPallets": 3,
+    "loadedPallets": 2,
+    "scheduledDeparture": "2024-05-21T11:45:00Z",
+    "loadingStarted": "2024-05-21T10:30:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-882",
+    "Outbound_SID": "SID-CC99"
+  },
+  {
+    "id": "OUT-4430",
+    "trailerId": "TR-4045",
+    "carrier": "UPS",
+    "dockDoor": "S-04",
+    "status": "STAGING",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-3030",
+        "customerName": "Regional Distrib",
+        "totalUnits": 250,
+        "loadedUnits": 0,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 22,
+    "loadedPallets": 0,
+    "scheduledDeparture": "2024-05-22T05:00:00Z",
+    "loadingStarted": "",
+    "actualDeparture": "",
+    "UserId": "USR-115",
+    "Outbound_SID": "SID-DD10"
+  },
+  {
+    "id": "OUT-4431",
+    "trailerId": "TR-5056",
+    "carrier": "AMAZON",
+    "dockDoor": "S-11",
+    "status": "LOADING",
+    "priority": "HOT_LOAD",
+    "manifest": [
+      {
+        "orderId": "ORD-3131",
+        "customerName": "Amazon FC Central",
+        "totalUnits": 1100,
+        "loadedUnits": 400,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 55,
+    "loadedPallets": 20,
+    "scheduledDeparture": "2024-05-21T20:00:00Z",
+    "loadingStarted": "2024-05-21T16:00:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-443",
+    "Outbound_SID": "SID-EE11"
+  },
+  {
+    "id": "OUT-4432",
+    "trailerId": "TR-6067",
+    "carrier": "ROBERT",
+    "dockDoor": "S-06",
+    "status": "DEPARTED",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-3232",
+        "customerName": "Montreal North",
+        "totalUnits": 50,
+        "loadedUnits": 50,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 5,
+    "loadedPallets": 5,
+    "scheduledDeparture": "2024-05-20T10:00:00Z",
+    "loadingStarted": "2024-05-20T08:30:00Z",
+    "actualDeparture": "2024-05-20T10:15:00Z",
+    "UserId": "USR-556",
+    "Outbound_SID": "SID-FF12"
+  },
+  {
+    "id": "OUT-4433",
+    "trailerId": "TR-7078",
+    "carrier": "DAY & ROSS",
+    "dockDoor": "S-07",
+    "status": "MANIFEST_CLOSED",
+    "priority": "HOT_LOAD",
+    "manifest": [
+      {
+        "orderId": "ORD-3333",
+        "customerName": "Coast Logistics",
+        "totalUnits": 190,
+        "loadedUnits": 190,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 16,
+    "loadedPallets": 16,
+    "scheduledDeparture": "2024-05-21T17:30:00Z",
+    "loadingStarted": "2024-05-21T15:00:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-222",
+    "Outbound_SID": "SID-GG13"
+  },
+  {
+    "id": "OUT-4434",
+    "trailerId": "TR-8089",
+    "carrier": "DHL",
+    "dockDoor": "S-08",
+    "status": "LOADING",
+    "priority": "CRITICAL_CUTOFF",
+    "manifest": [
+      {
+        "orderId": "ORD-3434",
+        "customerName": "Euro Connect",
+        "totalUnits": 20,
+        "loadedUnits": 18,
+        "isHighValue": true
+      }
+    ],
+    "totalPallets": 2,
+    "loadedPallets": 2,
+    "scheduledDeparture": "2024-05-21T12:00:00Z",
+    "loadingStarted": "2024-05-21T11:15:00Z",
+    "actualDeparture": "",
+    "UserId": "USR-204",
+    "Outbound_SID": "SID-HH14"
+  },
+  {
+    "id": "OUT-4435",
+    "trailerId": "TR-9099",
+    "carrier": "PURALATOR",
+    "dockDoor": "S-14",
+    "status": "STAGING",
+    "priority": "ROUTINE",
+    "manifest": [
+      {
+        "orderId": "ORD-3535",
+        "customerName": "Ottawa Sales",
+        "totalUnits": 110,
+        "loadedUnits": 0,
+        "isHighValue": false
+      }
+    ],
+    "totalPallets": 10,
+    "loadedPallets": 0,
+    "scheduledDeparture": "2024-05-22T09:00:00Z",
+    "loadingStarted": "",
+    "actualDeparture": "",
+    "UserId": "USR-306",
+    "Outbound_SID": "SID-II15"
+  }
+]
