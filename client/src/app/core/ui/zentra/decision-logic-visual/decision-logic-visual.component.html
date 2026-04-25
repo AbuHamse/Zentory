@@ -1,0 +1,58 @@
+<section class="w-full py-24 bg-wham-white relative border-b-8 border-black overflow-hidden selection:bg-black selection:text-white">
+  
+  <div class="absolute top-0 right-0 w-1/2 h-full bg-wham-tan-muted/30 skew-x-12 transform origin-top-right"></div>
+
+  <div class="max-w-[1400px] mx-auto px-8 relative z-10">
+    <div class="grid grid-cols-12 gap-12 items-center">
+      
+      <div class="col-span-12 lg:col-span-5">
+        <h3 class="text-wham-red-dark font-mono text-[10px] font-black uppercase tracking-[0.4em] mb-4">LOGIC_FLOW // REASONING</h3>
+        <h2 class="text-5xl font-black uppercase italic tracking-tighter text-black mb-8 leading-none">
+          HOW_ZENTRA<br>THINKS.
+        </h2>
+        <p class="text-sm font-bold uppercase opacity-60 leading-relaxed mb-8">
+          Zentra doesn't just calculate; it correlates. By layering real-time performance against the 12-hour interval ledger, it identifies the "why" behind the numbers.
+        </p>
+        
+        <div class="space-y-4">
+          @for (node of logicNodes; track node.id) {
+            <div class="flex items-center gap-4 group">
+              <div class="w-2 h-2 bg-black transition-all group-hover:scale-150 group-hover:bg-wham-red-main"></div>
+              <span class="font-mono text-[9px] font-black uppercase tracking-widest text-black/40 group-hover:text-black transition-colors">
+                {{ node.id }} // {{ node.label }}
+              </span>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="col-span-12 lg:col-span-7 relative h-[400px] flex items-center justify-center">
+        
+        <div class="absolute w-80 h-48 bg-black/5 border-2 border-black/10 rounded-2xl -translate-y-16 -translate-x-12 rotate-[-12deg] flex items-end p-4">
+          <span class="font-mono text-[8px] uppercase opacity-30 tracking-[0.3em]">RAW_FLOOR_DATA</span>
+        </div>
+
+        <div class="absolute w-80 h-48 bg-white/40 backdrop-blur-md border-2 border-black/20 rounded-2xl translate-y-0 translate-x-0 rotate-[-4deg] shadow-xl flex items-center justify-center">
+           <div class="w-3/4 h-1/2 bg-black/5 rounded-lg flex flex-col justify-center px-4 gap-2">
+              <div class="h-1 w-full bg-wham-red-dark/20"></div>
+              <div class="h-1 w-2/3 bg-wham-red-dark/20"></div>
+              <div class="h-1 w-1/2 bg-wham-red-dark/20"></div>
+           </div>
+        </div>
+
+        <div class="absolute w-80 h-48 bg-wham-red-dark/10 backdrop-blur-xl border-4 border-wham-red-dark rounded-2xl translate-y-16 translate-x-12 rotate-[4deg] shadow-[20px_20px_40px_rgba(0,0,0,0.1)] p-6 flex flex-col justify-between">
+           <div class="flex justify-between items-start">
+             <span class="bg-wham-red-dark text-white text-[8px] font-black px-2 py-1">INSIGHT_FOUND</span>
+             <div class="w-4 h-4 bg-wham-red-dark animate-ping rounded-full"></div>
+           </div>
+           <div>
+             <p class="text-wham-red-dark font-black italic uppercase text-lg leading-tight">BOTTLENECK_IDENTIFIED</p>
+             <p class="text-[8px] font-mono font-bold uppercase text-black mt-1 tracking-widest">GATE_12_MISMATCH</p>
+           </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+<section class="w-full py-24 bg-black relative overflow-hidden flex items-center justify-center selection:bg-wham-red-dark selection:text-white">
+  
+  <div class="absolute w-[600px] h-[600px] bg-wham-red-dark/20 rounded-full blur-[140px] animate-pulse"></div>
+
+  <div class="max-w-4xl w-full mx-auto px-8 relative z-10">
+    
+    <div class="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] overflow-hidden">
+      
+      <div class="bg-white/5 border-b border-white/10 p-5 flex justify-between items-center">
+        <div class="flex gap-2">
+          <div class="w-3 h-3 rounded-full bg-wham-red-main"></div>
+          <div class="w-3 h-3 rounded-full bg-white/10"></div>
+          <div class="w-3 h-3 rounded-full bg-white/10"></div>
+        </div>
+        <span class="font-mono text-[9px] font-black text-white/40 uppercase tracking-[0.4em]">ZENTRA_NEURAL_LINK_v1.0</span>
+      </div>
+
+      <div class="p-10 space-y-10 min-h-[450px] flex flex-col justify-end">
+        @for (log of chatLogs; track log.content) {
+          <div class="flex flex-col space-y-2" [class.items-end]="log.isUser">
+            <span class="font-mono text-[8px] text-white/30 uppercase tracking-widest px-2">
+              {{ log.origin }}
+            </span>
+            <div class="max-w-[85%] p-5 rounded-2xl border transition-all duration-500"
+                 [ngClass]="log.isUser 
+                    ? 'bg-white/5 border-white/10 text-white font-bold italic rounded-tr-none' 
+                    : 'bg-wham-red-dark/10 border-wham-red-main/30 text-wham-tan-light font-mono text-sm rounded-tl-none shadow-[0_0_20px_rgba(169,0,17,0.1)]'">
+              {{ log.content }}
+            </div>
+          </div>
+        }
+
+        <div class="flex items-center gap-3 py-4 opacity-50">
+          <div class="flex gap-1">
+            <div class="w-1.5 h-1.5 bg-white rounded-full animate-bounce [animation-duration:0.8s]"></div>
+            <div class="w-1.5 h-1.5 bg-white rounded-full animate-bounce [animation-duration:0.8s] [animation-delay:0.2s]"></div>
+            <div class="w-1.5 h-1.5 bg-white rounded-full animate-bounce [animation-duration:0.8s] [animation-delay:0.4s]"></div>
+          </div>
+          <span class="font-mono text-[9px] text-white uppercase italic tracking-widest">ZENTRA_IS_PROCESSING...</span>
+        </div>
+      </div>
+
+      <div class="p-8 bg-black/40 border-t border-white/10">
+        <div class="w-full bg-white/5 border border-white/10 rounded-xl p-4 flex justify-between items-center group cursor-not-allowed">
+          <span class="text-white/20 font-mono text-xs uppercase italic tracking-widest">Enter_Query_to_Zentra...</span>
+          <div class="w-1.5 h-6 bg-wham-red-main animate-pulse shadow-[0_0_10px_#A90011]"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-8 flex justify-center gap-12 opacity-20">
+      <div class="text-[8px] font-mono text-white uppercase tracking-widest">Link_Quality: 99.9%</div>
+      <div class="text-[8px] font-mono text-white uppercase tracking-widest">Encryption: Neural_256</div>
+      <div class="text-[8px] font-mono text-white uppercase tracking-widest">Synapse_Load: 12%</div>
+    </div>
+  </div>
+</section>

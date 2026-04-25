@@ -1,0 +1,24 @@
+<section class="w-full py-24 bg-white border-b-8 border-black">
+  <div class="max-w-[1400px] mx-auto px-8">
+    <div class="mb-12">
+      <h3 class="text-4xl font-black uppercase italic tracking-tighter">INTEGRATION_PORTS</h3>
+      <p class="font-mono text-[10px] font-black uppercase opacity-40 tracking-widest mt-2">Verified_System_Handshakes</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-4 border-black bg-black gap-[2px] shadow-[15px_15px_0px_rgba(0,0,0,0.1)]">
+      @for (port of partners; track port.name) {
+        <div class="bg-white p-6 group hover:bg-wham-tan-muted transition-all">
+          <div class="flex justify-between items-center mb-6">
+            <span class="text-[8px] font-mono font-black uppercase bg-black text-white px-2 py-1">{{ port.type }}</span>
+            <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_#22c55e]"></div>
+          </div>
+          <h4 class="text-xl font-black uppercase italic mb-2 tracking-tight">{{ port.name }}</h4>
+          <div class="pt-4 border-t border-black/5 flex justify-between items-center">
+            <span class="font-mono text-[9px] font-bold opacity-30 uppercase">{{ port.status }}</span>
+            <span class="font-mono text-[12px] opacity-0 group-hover:opacity-100 transition-opacity">➔</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

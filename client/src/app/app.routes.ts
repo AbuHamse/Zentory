@@ -20,7 +20,27 @@ import { DockOutboundComponent } from './features/user/dock-outbound/dock-outbou
 // import { RecoveryCenterComponent } from './features/user/recovery-center/recovery-center.component';
 // import { SystemLogsComponent } from './features/user/system-logs/system-logs.component';
 
+
+import { LandingShellComponent } from './pages/landing-shell/landing-shell.component';
+import {Home} from './pages/home/home.component'
+import { ProductsComponent } from './pages/products/products.component';
+import { ZentraComponent } from './pages/zentra/zentra.component';
+import { ResourcesComponent } from './pages/resources/resources.component';
+
 export const routes: Routes = [
+
+  // WEBSITE ROUTES (Using the Landing Shell)
+  {
+    path: '',
+    component: LandingShellComponent,
+    children: [
+      { path: '', component: Home },
+      { path: 'products', component: ProductsComponent },
+      { path: 'zentra', component: ZentraComponent },
+      { path: 'resources', component: ResourcesComponent },
+    ]
+  },
+
   { path: '', redirectTo: 'admin/dashboard/home', pathMatch: 'full' },
   
   // --- ADMIN ROUTES ---

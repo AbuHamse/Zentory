@@ -1,0 +1,45 @@
+<p>standard-spec-sheet works!</p>
+<div class="w-full max-w-xl mx-auto transition-all duration-500" 
+     [ngClass]="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'">
+  
+  <div class="bg-white border-4 border-black p-10 rounded-[40px] 
+              shadow-[20px_20px_40px_rgba(0,0,0,0.1),inset_-10px_-10px_20px_rgba(0,0,0,0.05)] 
+              relative overflow-hidden group hover:scale-[1.01]">
+    
+    <div class="flex justify-between items-start mb-10">
+      <div class="bg-black text-white px-3 py-1 font-mono text-[9px] uppercase italic tracking-widest">
+        UNIT_TYPE: CORE_01
+      </div>
+      <div class="w-12 h-12 bg-wham-tan-muted rounded-full border-2 border-black flex items-center justify-center shadow-inner">
+        <div class="w-2 h-2 bg-black rounded-full"></div>
+      </div>
+    </div>
+
+    <h3 class="text-5xl font-black uppercase italic tracking-tighter text-black mb-2">STANDARD</h3>
+    <p class="font-mono text-[10px] font-black uppercase text-wham-red-dark mb-10 tracking-[0.2em]">
+      Optimized_Logistics_Foundation
+    </p>
+
+    <div class="space-y-6 mb-12">
+      @for (feature of coreFeatures; track feature.label) {
+        <div class="flex items-start gap-4 border-b-2 border-black/5 pb-4 group/item">
+          <div class="w-2 h-6 bg-black group-hover/item:bg-wham-red-dark transition-colors mt-1"></div>
+          <div>
+            <h4 class="text-sm font-black uppercase tracking-tight text-black">{{ feature.label }}</h4>
+            <p class="text-[10px] font-bold uppercase opacity-50">{{ feature.detail }}</p>
+          </div>
+        </div>
+      }
+    </div>
+
+    <button class="w-full bg-black text-white py-5 font-black uppercase italic text-xl 
+                   shadow-[inset_0px_4px_4px_rgba(255,255,255,0.3)] 
+                   hover:bg-wham-red-dark transition-all active:translate-y-1">
+      INITIALIZE_STANDARD_NODE
+    </button>
+
+    <div class="absolute bottom-4 right-8 font-mono text-[8px] opacity-20 uppercase tracking-widest">
+      ZN-M1_BASE_CONFIGURATION
+    </div>
+  </div>
+</div>

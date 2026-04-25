@@ -1,0 +1,48 @@
+<section class="w-full bg-black py-4 border-b-[12px] border-wham-red-dark overflow-hidden selection:bg-wham-red-main selection:text-white">
+  
+  <div class="flex items-center gap-12 whitespace-nowrap animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused] cursor-help">
+    
+    @for (i of [1,2,3]; track i) {
+      <div class="flex items-center gap-12 text-white">
+        
+        <div class="flex items-center gap-3">
+          <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+          <span class="font-mono text-[10px] font-black uppercase tracking-widest text-wham-tan-light/40">NODE_STATUS: OPTIMAL</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="font-mono text-[10px] font-black uppercase tracking-widest text-wham-red-main">LIVE_THROUGHPUT:</span>
+          <span class="font-mono text-xs font-black italic tracking-tighter">1,240_UPH</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="font-mono text-[10px] font-black uppercase tracking-widest text-wham-tan-light/40">NETWORK_LATENCY:</span>
+          <span class="font-mono text-xs font-black italic tracking-tighter">14ms</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="font-mono text-[10px] font-black uppercase tracking-widest text-wham-red-main">ACTIVE_SESSIONS:</span>
+          <span class="font-mono text-xs font-black italic tracking-tighter">42_TERMINALS</span>
+        </div>
+
+        <div class="h-4 w-[2px] bg-white/10"></div>
+
+        <div class="flex items-center gap-3">
+          <span class="font-mono text-[10px] font-black uppercase tracking-widest text-wham-tan-light/40">LAST_SYNC:</span>
+          <span class="font-mono text-xs font-black italic tracking-tighter">0.002s_AGO</span>
+        </div>
+
+        <div class="h-8 w-8 flex items-center justify-center border border-white/20">
+            <span class="text-wham-red-main font-black">/</span>
+        </div>
+      </div>
+    }
+  </div>
+</section>
+
+<style>
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>

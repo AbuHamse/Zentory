@@ -1,0 +1,33 @@
+<nav class="sticky top-0 z-[100] w-full bg-black text-white border-b-4 border-wham-red-dark p-0 selection:bg-wham-red-main">
+  <div class="max-w-[1400px] mx-auto px-6 h-20 flex justify-between items-center">
+    
+    <div class="flex items-center gap-4 cursor-pointer group" routerLink="/">
+      <div class="w-10 h-10 bg-wham-red-dark flex items-center justify-center rotate-45 group-hover:rotate-90 transition-all duration-500 border-2 border-white">
+        <span class="text-white font-black text-xl -rotate-45 group-hover:-rotate-90 transition-all">Z</span>
+      </div>
+      <h1 class="text-2xl font-black uppercase italic tracking-tighter leading-none">
+        ZENTORY<span class="text-wham-red-dark">_OS</span>
+      </h1>
+    </div>
+
+    <div class="hidden lg:flex items-center gap-10">
+      <a routerLink="/" routerLinkActive="text-wham-red-main" [routerLinkActiveOptions]="{exact: true}" 
+         class="font-mono text-[10px] font-black uppercase tracking-[0.3em] hover:text-wham-red-main transition-colors">HOME</a>
+      
+      <a routerLink="/products" routerLinkActive="text-wham-red-main" 
+         class="font-mono text-[10px] font-black uppercase tracking-[0.3em] hover:text-wham-red-main transition-colors">PRODUCTS</a>
+      
+      <a routerLink="/zentra" routerLinkActive="text-wham-red-main" 
+         class="font-mono text-[10px] font-black uppercase tracking-[0.3em] hover:text-wham-red-main transition-colors">ZENTRA</a>
+      
+      <a routerLink="/resources" routerLinkActive="text-wham-red-main" 
+         class="font-mono text-[10px] font-black uppercase tracking-[0.3em] hover:text-wham-red-main transition-colors">RESOURCES</a>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <button class="bg-wham-red-dark text-white px-6 py-2 font-black uppercase italic text-xs shadow-[4px_4px_0px_#fff] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all active:bg-wham-red-main">
+        LOGIN
+      </button>
+    </div>
+  </div>
+</nav>

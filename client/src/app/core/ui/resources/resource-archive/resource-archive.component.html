@@ -1,0 +1,26 @@
+<section class="w-full py-24 bg-wham-tan-muted">
+  <div class="max-w-[1400px] mx-auto px-8">
+    <div class="flex items-center gap-4 mb-12">
+      <div class="w-8 h-8 bg-black flex items-center justify-center">
+        <span class="text-white text-xs font-black">#</span>
+      </div>
+      <h3 class="text-3xl font-black uppercase italic tracking-tighter">TECHNICAL_ARCHIVE</h3>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      @for (file of manuals; track file.name) {
+        <div class="bg-white border-2 border-black p-6 hover:shadow-[10px_10px_0px_#A90011] transition-all cursor-pointer group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="font-mono text-[8px] font-black uppercase opacity-40">{{ file.type }}</span>
+            <span class="font-mono text-[8px] font-black uppercase text-wham-red-dark">{{ file.size }}</span>
+          </div>
+          <h4 class="text-sm font-black uppercase italic leading-tight group-hover:text-wham-red-main">{{ file.name }}</h4>
+          <div class="mt-6 flex items-center gap-2">
+            <div class="w-full h-[2px] bg-black/5 group-hover:bg-black/20"></div>
+            <span class="text-[10px] font-black">↓</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

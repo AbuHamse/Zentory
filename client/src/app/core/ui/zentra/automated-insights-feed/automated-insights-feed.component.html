@@ -1,0 +1,51 @@
+<section class="w-full py-24 bg-black relative overflow-hidden selection:bg-wham-red-dark">
+  
+  <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-wham-red-dark/10 to-transparent"></div>
+
+  <div class="max-w-5xl mx-auto px-8 relative z-10">
+    
+    <div class="flex items-center gap-6 mb-12">
+      <div class="h-[2px] flex-1 bg-white/10"></div>
+      <h3 class="font-mono text-[10px] font-black text-white uppercase tracking-[0.6em]">PROACTIVE_INSIGHT_STREAM</h3>
+      <div class="h-[2px] flex-1 bg-white/10"></div>
+    </div>
+
+    <div class="space-y-4">
+      @for (alert of alerts; track alert.time) {
+        <div class="group relative bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all duration-300">
+          
+          <div class="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl"
+               [ngClass]="{
+                 'bg-wham-red-main shadow-[0_0_15px_#D11D27]': alert.severity === 'CRITICAL',
+                 'bg-wham-tan-light shadow-[0_0_15px_#FBEBD6]': alert.severity === 'LOW',
+                 'bg-green-500 shadow-[0_0_15px_#22c55e]': alert.severity === 'SUCCESS'
+               }">
+          </div>
+
+          <div class="flex justify-between items-center">
+            <div class="space-y-1">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-[9px] font-black text-wham-red-main uppercase tracking-widest">{{ alert.type }}</span>
+                <span class="font-mono text-[8px] text-white/20 uppercase italic">{{ alert.time }}</span>
+              </div>
+              <p class="text-white font-bold uppercase tracking-tight text-lg group-hover:text-wham-tan-light transition-colors">
+                {{ alert.msg }}
+              </p>
+            </div>
+
+            <button class="bg-white/5 border border-white/10 px-4 py-2 font-mono text-[9px] text-white uppercase hover:bg-white hover:text-black transition-all">
+              EXECUTE_REMEDY
+            </button>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="font-mono text-[8px] text-white/30 uppercase tracking-[0.5em] animate-pulse">
+        >> STREAMING_NEURAL_LOGS_IN_REAL_TIME...
+      </p>
+    </div>
+
+  </div>
+</section>

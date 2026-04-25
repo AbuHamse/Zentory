@@ -1,0 +1,84 @@
+<section class="w-full py-24 bg-wham-tan-muted border-b-[12px] border-black selection:bg-wham-red-dark selection:text-white overflow-hidden">
+  <div class="max-w-[1400px] mx-auto px-8">
+    
+    <div class="mb-20 text-center">
+      <h2 class="text-5xl font-black uppercase italic tracking-tighter text-black mb-4">
+        DATA_TRANSMISSION_LOGIC
+      </h2>
+      <p class="font-mono text-[10px] font-black uppercase tracking-[0.5em] text-wham-red-dark">
+        SYSTEM_FLOW // WAREHOUSE_TO_INTELLIGENCE
+      </p>
+    </div>
+
+    <div class="relative flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-4">
+      
+      <div class="flex-1 w-full group">
+        <div class="bg-white border-4 border-black p-8 shadow-[12px_12px_0px_#000] group-hover:-translate-y-2 group-hover:shadow-[20px_20px_0px_#A90011] transition-all duration-300">
+          <div class="flex justify-between items-center mb-6">
+            <span class="font-mono text-[10px] font-black bg-black text-white px-2 py-1">STAGE_01</span>
+            <div class="w-3 h-3 bg-wham-red-main animate-pulse"></div>
+          </div>
+          <h4 class="text-2xl font-black uppercase italic mb-4">RAW_INGRESS</h4>
+          <p class="text-[10px] font-bold uppercase opacity-60 leading-tight">
+            Capturing real-time worker output, dock gate status, and inventory movement via terminal inputs.
+          </p>
+        </div>
+      </div>
+
+      <div class="hidden lg:flex items-center">
+        <div class="w-12 h-1 bg-black relative">
+          <div class="absolute -right-1 -top-1 w-3 h-3 bg-black rotate-45"></div>
+        </div>
+      </div>
+
+      <div class="flex-1 w-full group">
+        <div class="bg-black border-4 border-black p-8 shadow-[12px_12px_0px_#A90011] text-white group-hover:-translate-y-2 group-hover:shadow-[20px_20px_0px_#000] transition-all duration-300">
+          <div class="flex justify-between items-center mb-6">
+            <span class="font-mono text-[10px] font-black bg-wham-red-dark text-white px-2 py-1">STAGE_02</span>
+            <span class="text-[8px] font-mono opacity-40">PROCESSING...</span>
+          </div>
+          <h4 class="text-2xl font-black uppercase italic mb-4 text-wham-tan-light">SHIFT_RECON</h4>
+          <p class="text-[10px] font-bold uppercase opacity-80 leading-tight">
+            Data is parsed through 2-hour interval filters to calculate accountability scores and throughput velocity.
+          </p>
+        </div>
+      </div>
+
+      <div class="hidden lg:flex items-center">
+        <div class="w-12 h-1 bg-black relative">
+          <div class="absolute -right-1 -top-1 w-3 h-3 bg-black rotate-45"></div>
+        </div>
+      </div>
+
+      <div class="flex-1 w-full group">
+        <div class="bg-white border-4 border-black p-8 shadow-[12px_12px_0px_#000] group-hover:-translate-y-2 group-hover:shadow-[20px_20px_0px_#A90011] transition-all duration-300">
+          <div class="flex justify-between items-center mb-6">
+            <span class="font-mono text-[10px] font-black bg-black text-white px-2 py-1">STAGE_03</span>
+            <div class="flex gap-1">
+              <div class="w-1 h-3 bg-black"></div>
+              <div class="w-1 h-3 bg-black"></div>
+              <div class="w-1 h-3 bg-black"></div>
+            </div>
+          </div>
+          <h4 class="text-2xl font-black uppercase italic mb-4">BI_REPORTING</h4>
+          <p class="text-[10px] font-bold uppercase opacity-60 leading-tight">
+            Visualizing performance heatmaps and predictive analytics for operational management.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-20 border-t-2 border-dashed border-black/20 pt-10 flex flex-wrap gap-8 justify-center grayscale opacity-40">
+      <div class="flex items-center gap-2 font-mono text-[9px] font-black uppercase">
+        <div class="w-2 h-2 rounded-full border border-black"></div> SQL_DATABASE_HOOK
+      </div>
+      <div class="flex items-center gap-2 font-mono text-[9px] font-black uppercase">
+        <div class="w-2 h-2 rounded-full border border-black"></div> INTERVAL_CALC_ENGINE
+      </div>
+      <div class="flex items-center gap-2 font-mono text-[9px] font-black uppercase">
+        <div class="w-2 h-2 rounded-full border border-black"></div> BI_RENDER_PIPELINE
+      </div>
+    </div>
+  </div>
+</section>

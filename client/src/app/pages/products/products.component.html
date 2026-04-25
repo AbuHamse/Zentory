@@ -1,0 +1,17 @@
+<div class="bg-wham-white min-h-screen">
+  
+  <app-tier-selector (tierChanged)="handleTierChange($event)"></app-tier-selector>
+
+  <section class="max-w-[1400px] mx-auto px-8 py-24 min-h-[70vh] flex items-center justify-center">
+    <div class="w-full">
+      @if (selectedTier === 'STANDARD') {
+        <app-standard-spec-sheet class="animate-in fade-in zoom-in duration-500"></app-standard-spec-sheet>
+      } @else {
+        <app-premium-turbo-module class="animate-in fade-in zoom-in duration-500"></app-premium-turbo-module>
+      }
+    </div>
+  </section>
+
+  <app-concept-lab-preview></app-concept-lab-preview>
+
+</div>

@@ -1,0 +1,47 @@
+<section class="w-full py-24 bg-wham-white border-b-8 border-black selection:bg-black selection:text-white">
+  <div class="max-w-[1400px] mx-auto px-8">
+    
+    <div class="flex items-end justify-between mb-16 border-b-4 border-black pb-6">
+      <div>
+        <h2 class="text-6xl font-black uppercase italic tracking-tighter text-black">THE_TRANSMISSION</h2>
+        <p class="font-mono text-[10px] font-black uppercase text-wham-red-dark mt-2 tracking-[0.4em]">
+          DATA_LOGS // KNOWLEDGE_BASE_v1
+        </p>
+      </div>
+      <div class="hidden md:block text-right">
+        <span class="text-[8px] font-mono uppercase opacity-30">Active_Feed: Primary_Server</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-px bg-black border-4 border-black shadow-[15px_15px_0px_#000]">
+      @for (post of articles; track post.id) {
+        <div class="group bg-white p-8 flex flex-col md:flex-row gap-8 items-start md:items-center hover:bg-wham-tan-muted transition-colors cursor-pointer">
+          
+          <div class="w-32 shrink-0">
+            <p class="font-mono text-[10px] font-black text-wham-red-dark mb-1">{{ post.id }}</p>
+            <p class="font-mono text-[10px] font-black opacity-30">{{ post.date }}</p>
+          </div>
+
+          <div class="flex-grow">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="bg-black text-white text-[8px] font-black px-2 py-0.5 uppercase tracking-widest">
+                {{ post.category }}
+              </span>
+            </div>
+            <h3 class="text-2xl font-black uppercase italic group-hover:text-wham-red-main transition-colors">
+              {{ post.title }}
+            </h3>
+            <p class="text-xs font-bold uppercase opacity-60 mt-2 max-w-2xl leading-tight">
+              {{ post.excerpt }}
+            </p>
+          </div>
+
+          <div class="w-12 h-12 flex items-center justify-center border-2 border-black group-hover:bg-black group-hover:text-white transition-all">
+            <span class="font-black">➔</span>
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>
