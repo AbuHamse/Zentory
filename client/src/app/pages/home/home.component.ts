@@ -21,6 +21,6 @@ import { SystemTelemetryComponent } from '../../core/ui/home/system-telemetry/sy
   ],
   templateUrl: './home.component.html'
 })
-export class Home {
+export class HomeComponent {
   // The parent component acts as the scroll-container and layout manager
 }

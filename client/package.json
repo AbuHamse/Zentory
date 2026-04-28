@@ -24,6 +24,7 @@
   "private": true,
   "packageManager": "npm@10.5.2",
   "dependencies": {
+    "@angular/animations": "^21.2.7",
     "@angular/cdk": "^21.2.5",
     "@angular/common": "^21.0.0",
     "@angular/compiler": "^21.0.0",
@@ -44,7 +45,6 @@
     "@angular/cli": "^21.0.6",
     "@angular/compiler-cli": "^21.0.0",
     "@tailwindcss/postcss": "^4.1.12",
-    "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
     "jsdom": "^27.1.0",
     "postcss": "^8.5.3",

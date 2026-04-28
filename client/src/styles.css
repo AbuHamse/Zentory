@@ -17,7 +17,7 @@ html, body {
   margin: 0; 
   background-color: var(--color-wham-cream);
   font-family: 'Roboto', sans-serif;
-  overflow: hidden; 
+  overflow: auto; 
 }
 
 /* ============================================================

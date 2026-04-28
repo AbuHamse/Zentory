@@ -1,32 +1,38 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "dist/main.js",
+"scripts": {
+  "build": "nest build",
+  "start": "nest start",
+  "start:dev": "nest start --watch",
+  "start:debug": "nest start --debug --watch",
+  "start:prod": "node dist/main"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "@nestjs/common": "^11.1.18",
+    "@nestjs/config": "^4.0.4",
     "@nestjs/core": "^11.1.18",
     "@nestjs/graphql": "^13.2.4",
+    "@nestjs/jwt": "^11.0.2",
     "@nestjs/platform-express": "^11.1.18",
     "@supabase/supabase-js": "^2.102.1",
-    "apollo-server-express": "^3.13.0",
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
-    "dotenv": "^17.4.1",
     "drizzle-orm": "^0.45.2",
     "graphql": "^16.13.2",
-    "graphql-tools": "^9.0.26",
     "helmet": "^8.1.0",
-    "morgan": "^1.10.1",
+    "passport-jwt": "^4.0.1",
     "pg": "^8.20.0",
+    "reflect-metadata": "^0.2.2",
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@nestjs/cli": "^11.0.21",
     "@types/bcrypt": "^6.0.0",
     "@types/node": "^25.5.2",
     "nodemon": "^3.1.14",

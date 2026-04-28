@@ -1,6 +1,8 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, signal, computed, inject } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs';
 
 // Custom Imports
 import { MaterialModule } from './shared/material.module';
@@ -23,32 +25,40 @@ import { SidebarComponent } from './core/layout/sidebar/sidebar.component';
   styleUrl: './app.component.css' 
 })
 export class AppComponent {
-  // Zentory Branding
+  private readonly router = inject(Router);
+
+  // 1. Track the current URL as a signal
+  private readonly currentUrl = toSignal(
+    this.router.events.pipe(map(() => this.router.url))
+  );
+
+  // 2. Determine if we are on a landing page
+  // This checks if the path is / or /products or /zentra or /resources
+  protected readonly isLandingPage = computed(() => {
+    const url = this.currentUrl() || '/';
+    const landingPaths = ['/', '/products', '/zentra', '/resources','/auth/login'];
+    return landingPaths.includes(url) || url === '';
+  });
+
   protected readonly title = signal('ZTN-Zentory');
-  
-  // 1. Unified Sidebar State (Starts closed for the 'Drawer' effect)
   protected readonly isSidenavOpen = signal(false); 
 
-  // 2. Toggle Logic for the Navbar Click
   toggleSidebar() {
     this.isSidenavOpen.update(state => !state);
   }
 
-  // 3. Close Logic (For the backdrop click or close button)
   closeSidebar() {
     this.isSidenavOpen.set(false);
   }
 
-  /** * Zentory Navigation Items 
-   * (You can keep these here or in the SidebarComponent directly)
-   */
-  protected readonly navItems = [
-    { icon: 'dashboard', label: 'Dashboard', route: '/dashboard' },
-    { icon: 'inventory_2', label: 'Inventory', route: '/inventory' },
-    { icon: 'local_shipping', label: 'Orders', route: '/orders' },
-    { icon: 'qr_code_scanner', label: 'Scanning', route: '/scanning' },
-    { icon: 'map', label: 'Floor Plan', route: '/floor-plan' },
-    { icon: 'analytics', label: 'Analytics', route: '/analytics' },
-    { icon: 'settings', label: 'Settings', route: '/settings' },
-  ];
+protected readonly navItems = [
+  // Add 'admin/' to the start of these routes
+  { icon: 'dashboard', label: 'Dashboard', route: '/admin/dashboard/home' }, 
+  { icon: 'inventory_2', label: 'Inventory', route: '/admin/dashboard/inventory' },
+  { icon: 'local_shipping', label: 'Orders', route: '/admin/dashboard/orders' },
+  { icon: 'qr_code_scanner', label: 'Scanning', route: '/admin/dashboard/shipment-receiving' }, // Matches shipment-receiving
+  { icon: 'assignment_return', label: 'Returns', route: '/admin/dashboard/returns' },
+  { icon: 'people', label: 'Customers', route: '/admin/dashboard/customers' },
+  { icon: 'analytics', label: 'Reports', route: '/admin/dashboard/reports' },
+];
 }
