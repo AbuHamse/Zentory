@@ -1,5 +1,5 @@
 import { pgTable, uuid, varchar, timestamp, integer, jsonb, text } from 'drizzle-orm/pg-core';
-import { users } from './users.schema';
+import { users } from '../identity/users.schema';
 
 export const inboundShipments = pgTable('inbound_shipments', {
   id: varchar('id', { length: 50 }).primaryKey(), // e.g., INB-8802

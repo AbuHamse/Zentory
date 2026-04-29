@@ -1,5 +1,5 @@
 import { pgTable, uuid, varchar, decimal, timestamp } from 'drizzle-orm/pg-core';
-import { users } from './users.schema';
+import { users } from '../identity/users.schema';
 
 export const logisticsMetadata = pgTable('logistics_metadata', {
   id: uuid('id').defaultRandom().primaryKey(),

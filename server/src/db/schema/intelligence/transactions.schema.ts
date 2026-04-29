@@ -1,6 +1,6 @@
 import { pgTable, uuid, varchar, timestamp, integer, decimal, text } from 'drizzle-orm/pg-core';
-import { operators } from './operators.schema';
-import { payees } from './payees.schema';
+import { operators } from '../identity/operators.schema';
+import { payees } from '../logistics/payees.schema';
 
 export const transactions = pgTable('transactions', {
   id: uuid('id').defaultRandom().primaryKey(),

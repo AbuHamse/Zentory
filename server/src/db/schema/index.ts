@@ -1,26 +1,25 @@
-// 1. Core Infrastructure & Identity
-export * from './users.schema';
-export * from './warehouse_users.schema';
-export * from './operators.schema';
+// --- 👤 Identity & CRM ---
+export * from './identity/users.schema';
+export * from './identity/warehouse_users.schema';
+export * from './identity/operators.schema';
+export * from './identity/customers.schema';
+export * from './identity/customer_overviews.schema';
 
-// 2. CRM & External Entities
-export * from './customers.schema';
-export * from './customer_overviews.schema';
-export * from './payees.schema';
+// --- 🚚 Logistics & Supply Chain ---
+export * from './logistics/inventory.schema';
+export * from './logistics/inbound_shipments.schema';
+export * from './logistics/outbound_shipments.schema';
+export * from './logistics/orders.schema';
+export * from './logistics/logistics_meta.schema';
+export * from './logistics/payees.schema';
+export * from './logistics/returns.schema';
 
-// 3. Logistics & Inventory
-export * from './inventory.schema';
-export * from './inbound_shipments.schema';
-export * from './outbound_shipments.schema';
-export * from './orders.schema';
-export * from './logistics_meta.schema';
-
-// 4. Financials & Audit
-export * from './transactions.schema';
-
-// 5. Business Intelligence & Alerts
-export * from './alerts.schema';
-export * from './complaints.schema';
-export * from './feedback_reports.schema';
-export * from './report_summaries.schema';
-export * from './business_state.schema';
+// --- 📈 Business Intelligence & Audit ---
+export * from './intelligence/transactions.schema';
+export * from './intelligence/alerts.schema';
+export * from './intelligence/complaints.schema';
+export * from './intelligence/feedback_reports.schema';
+export * from './intelligence/report_summaries.schema';
+export * from './intelligence/business_state.schema';
+export * from './intelligence/product_reports.schema';
+export * from './intelligence/report_configs.schema';

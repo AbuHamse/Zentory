@@ -15,6 +15,13 @@
       "when": 1777481341588,
       "tag": "0001_sleepy_stature",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1777494585486,
+      "tag": "0002_marvelous_kid_colt",
+      "breakpoints": true
     }
   ]
 }
