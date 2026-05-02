@@ -23,3 +23,5 @@ export * from './intelligence/report_summaries.schema';
 export * from './intelligence/business_state.schema';
 export * from './intelligence/product_reports.schema';
 export * from './intelligence/report_configs.schema';
+export * from './intelligence/time_period_reports.schema';
+export * from './intelligence/trend_data.schema';

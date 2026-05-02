@@ -1,40 +1,46 @@
-import { pgTable, uuid, varchar, integer, timestamp, decimal, text, jsonb } from 'drizzle-orm/pg-core';
+import { pgTable, varchar, timestamp, jsonb, text, doublePrecision } from 'drizzle-orm/pg-core';
 
 export const inventory = pgTable('inventory', {
-  id: varchar('id', { length: 50 }).primaryKey(), // e.g., SKU-99042
-  sku: varchar('sku', { length: 100 }).unique().notNull(),
+  id: varchar('id', { length: 50 }).primaryKey(), // SKU-10001
+  sku: varchar('sku', { length: 100 }).notNull().unique(),
   name: varchar('name', { length: 255 }).notNull(),
   description: text('description'),
-  category: varchar('category', { length: 50 }).notNull(),
+  category: varchar('category', { length: 100 }),
+  
+  // Nested Objects as JSONB
+  quantity: jsonb('quantity').$type<{
+    onHand: number;
+    allocated: number;
+    available: number;
+    minThreshold: number;
+  }>().notNull(),
 
-  // QUANTITY DATA (Flattened for performance)
-  onHand: integer('on_hand').default(0).notNull(),
-  allocated: integer('allocated').default(0).notNull(),
-  available: integer('available').default(0).notNull(),
-  minThreshold: integer('min_threshold').default(5).notNull(),
+  location: jsonb('location').$type<{
+    zone: string;
+    aisle: string;
+    rack: string;
+    bin: string;
+  }>().notNull(),
 
-  // WAREHOUSE GEOGRAPHY (Flattened)
-  zone: varchar('zone', { length: 50 }).notNull(),
-  aisle: varchar('aisle', { length: 20 }),
-  rack: varchar('rack', { length: 20 }),
-  bin: varchar('bin', { length: 20 }),
-
-  // PHYSICAL SPECS (Stored as JSONB since these are rarely queried alone)
   dimensions: jsonb('dimensions').$type<{
-    length: number; width: number; height: number; unit: 'cm' | 'in';
-  }>(),
-  weight: jsonb('weight').$type<{
-    value: number; unit: 'kg' | 'lb';
+    length: number;
+    width: number;
+    height: number;
+    unit: string;
   }>(),
 
-  // STATUS & TRACKING
-  status: varchar('status', { length: 50 }).default('IN_STOCK'),
+  weight: jsonb('weight').$type<{
+    value: number;
+    unit: string;
+  }>(),
+
+  status: varchar('status', { length: 50 }).notNull(), // IN_STOCK, LOW_STOCK, etc.
   lastCounted: timestamp('last_counted'),
   supplier: varchar('supplier', { length: 255 }),
   
-  // Personnel Arrays (JSONB for string arrays)
+  // Tracking Arrays
   pickedBy: jsonb('picked_by').$type<string[]>().default([]),
-  receivedBy: jsonb('received_by_users').$type<string[]>().default([]),
-
-  updatedAt: timestamp('updated_at').defaultNow(),
+  recievedBy: jsonb('recieved_by').$type<string[]>().default([]),
+  
+  createdAt: timestamp('created_at').defaultNow(),
 });
