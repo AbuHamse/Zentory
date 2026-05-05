@@ -1,0 +1,78 @@
+<div class="min-h-screen w-full flex bg-wham-white dark:bg-black transition-colors duration-300">
+  
+  <!-- Left Side: Branding -->
+  <div class="hidden lg:block lg:w-1/2 relative bg-wham-dark overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070" 
+         class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-multiply grayscale">
+    
+    <div class="relative z-10 p-16 h-full flex flex-col justify-between">
+      <div class="space-y-2">
+        <h1 class="text-white text-5xl font-black italic tracking-tighter uppercase leading-none">ZENTORY</h1>
+        <p class="text-wham-tan text-[10px] font-mono font-bold tracking-[0.5em] uppercase">Enterprise Registration</p>
+      </div>
+      <div class="border-l-4 border-white pl-6">
+        <p class="text-white/80 font-bold uppercase text-xs tracking-widest leading-relaxed">
+          Initialize Corporation Infrastructure.<br>Billing Setup Required.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Side: Registration Form -->
+  <div class="w-full lg:w-1/2 flex flex-col p-8 lg:p-24 justify-center relative bg-wham-cream dark:bg-[#0a0a0a]">
+    
+    <div class="absolute top-12 right-12 flex items-center gap-6">
+      <button (click)="toggleTheme()" class="font-mono text-[9px] font-black uppercase tracking-widest border-b-2 border-black dark:border-white text-black dark:text-white pb-1">
+        {{ isDarkMode() ? 'Light Mode' : 'Dark Mode' }}
+      </button>
+    </div>
+
+    <div class="max-w-md w-full mx-auto">
+      <div class="mb-12">
+        <h2 class="text-7xl font-black italic uppercase tracking-tighter text-black dark:text-white mb-2">SIGN UP</h2>
+        <p class="text-[10px] font-mono font-black uppercase text-wham-primary tracking-[0.3em]">Create Business Account</p>
+      </div>
+
+      <div class="space-y-8">
+        @if (errorMessage()) {
+          <div class="bg-red-600 text-white p-4 font-mono text-[10px] font-bold uppercase tracking-widest">
+            Error: {{ errorMessage() }}
+          </div>
+        }
+
+        <div class="space-y-6">
+          <div class="group border-b-2 border-black dark:border-white focus-within:border-wham-primary transition-all">
+            <label class="block text-[9px] font-black uppercase opacity-40 mb-1">Full Name</label>
+            <input type="text" [(ngModel)]="regData.fullName" class="w-full bg-transparent py-2 text-sm font-bold outline-none dark:text-white">
+          </div>
+
+          <div class="group border-b-2 border-black dark:border-white focus-within:border-wham-primary transition-all">
+            <label class="block text-[9px] font-black uppercase opacity-40 mb-1">Company Name</label>
+            <input type="text" [(ngModel)]="regData.companyName" class="w-full bg-transparent py-2 text-sm font-bold outline-none dark:text-white">
+          </div>
+
+          <div class="group border-b-2 border-black dark:border-white focus-within:border-wham-primary transition-all">
+            <label class="block text-[9px] font-black uppercase opacity-40 mb-1">Work Email</label>
+            <input type="email" [(ngModel)]="regData.email" class="w-full bg-transparent py-2 text-sm font-bold outline-none dark:text-white">
+          </div>
+
+          <div class="group border-b-2 border-black dark:border-white focus-within:border-wham-primary transition-all">
+            <label class="block text-[9px] font-black uppercase opacity-40 mb-1">Create Password</label>
+            <input type="password" [(ngModel)]="regData.password" class="w-full bg-transparent py-2 text-sm font-bold outline-none dark:text-white">
+          </div>
+        </div>
+
+        <div class="space-y-4 pt-4">
+          <button (click)="onRegister()" [disabled]="isLoading()" 
+                  class="w-full bg-black dark:bg-wham-primary text-white py-6 font-black uppercase italic text-xl shadow-[8px_8px_0px_#A90011] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all disabled:opacity-50">
+            {{ isLoading() ? 'Initializing...' : 'Proceed to Billing' }}
+          </button>
+          
+          <button routerLink="/auth/login" class="w-full text-[10px] font-mono font-black uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-wham-primary transition-colors">
+            Already have an account? Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

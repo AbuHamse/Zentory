@@ -1,5 +1,7 @@
 /* src/styles.css */
 @import "tailwindcss";
+/* THIS LINE IS REQUIRED FOR MANUAL CLASS TOGGLING IN V4 */
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   /* Red & White Color Scheme */

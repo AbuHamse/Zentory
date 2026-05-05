@@ -26,6 +26,9 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ZentraComponent } from './pages/zentra/zentra.component';
 import { ResourcesComponent } from './pages/resources/resources.component';
 import {AuthComponent} from './pages/auth/auth.component'
+import { RegisterComponent } from './pages/auth/register/register.component';
+import { SuccessComponent } from './pages/stripe/success/success.component';
+import { CancelComponent } from './pages/stripe/cancel/cancel.component';
 
 export const routes: Routes = [
   // 🌐 WEBSITE ROUTES
@@ -38,6 +41,10 @@ export const routes: Routes = [
       { path: 'zentra', component: ZentraComponent },
       { path: 'resources', component: ResourcesComponent },
       { path: 'auth/login', component: AuthComponent },
+      { path: 'auth/register', component: RegisterComponent },
+    // Land here after Stripe payment
+    { path: 'payment/success', component: SuccessComponent },
+    { path: 'payment/cancel', component: CancelComponent },
     ]
   },
   

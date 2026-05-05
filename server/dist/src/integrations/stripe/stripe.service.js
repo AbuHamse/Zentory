@@ -16,18 +16,17 @@ const Stripe = require("stripe");
 let StripeService = class StripeService {
     constructor(configService) {
         this.configService = configService;
-        this.stripe = new Stripe(this.configService.get('STRIPE_SECRET_KEY'), {
-            apiVersion: '2025-01-27',
-        });
+        this.stripe = new Stripe(this.configService.get('STRIPE_SECRET_KEY'));
     }
     async createCheckoutSession(userId, email, priceId) {
+        const frontendUrl = process.env['FRONTEND_URL'] || 'http://localhost:4200';
         return await this.stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             customer_email: email,
             line_items: [{ price: priceId, quantity: 1 }],
             mode: 'subscription',
-            success_url: `${process.env.FRONTEND_URL}/dashboard?success=true`,
-            cancel_url: `${process.env.FRONTEND_URL}/dashboard?canceled=true`,
+            success_url: `${frontendUrl}/payment/success`,
+            cancel_url: `${frontendUrl}/payment/cancel`,
             metadata: { userId },
         });
     }

@@ -51,9 +51,11 @@ const database_provider_1 = require("../../core/database/database.provider");
 const node_postgres_1 = require("drizzle-orm/node-postgres");
 const schema = __importStar(require("../../db/schema"));
 const drizzle_orm_1 = require("drizzle-orm");
+const stripe_service_1 = require("../../integrations/stripe/stripe.service");
 let AuthService = class AuthService {
-    constructor(db) {
+    constructor(db, stripeService) {
         this.db = db;
+        this.stripeService = stripeService;
     }
     async syncUserWithDatabase(user) {
         if (user.role === 'ADMIN') {
@@ -62,7 +64,7 @@ let AuthService = class AuthService {
             });
             if (existingAdmin)
                 return existingAdmin;
-            return await this.db
+            const newAdmin = await this.db
                 .insert(schema.users)
                 .values({
                 id: user.id,
@@ -73,6 +75,12 @@ let AuthService = class AuthService {
                 isActive: true,
             })
                 .returning();
+            const priceId = process.env['STRIPE_PRICE_ID'] || 'price_standard_monthly';
+            const session = await this.stripeService.createCheckoutSession(user.id, user.email, priceId);
+            return {
+                ...newAdmin[0],
+                checkoutUrl: session.url
+            };
         }
         const existingWorker = await this.db.query.warehouseUsers.findFirst({
             where: (0, drizzle_orm_1.eq)(schema.warehouseUsers.id, user.id),
@@ -100,6 +108,7 @@ exports.AuthService = AuthService;
 exports.AuthService = AuthService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)(database_provider_1.DRIZZLE)),
-    __metadata("design:paramtypes", [node_postgres_1.NodePgDatabase])
+    __metadata("design:paramtypes", [node_postgres_1.NodePgDatabase,
+        stripe_service_1.StripeService])
 ], AuthService);
 //# sourceMappingURL=auth.service.js.map

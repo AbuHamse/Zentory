@@ -4,22 +4,23 @@ import Stripe = require('stripe');
 
 @Injectable()
 export class StripeService {
- private stripe: any;
+  private stripe: any;
 
   constructor(private configService: ConfigService) {
-    this.stripe = new Stripe(this.configService.get<string>('STRIPE_SECRET_KEY')!, {
-      apiVersion: '2025-01-27' as any,
-    });
+    this.stripe = new Stripe(this.configService.get<string>('STRIPE_SECRET_KEY')!);
   }
 
   async createCheckoutSession(userId: string, email: string, priceId: string) {
+    const frontendUrl = process.env['FRONTEND_URL'] || 'http://localhost:4200';
+
     return await this.stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       customer_email: email,
       line_items: [{ price: priceId, quantity: 1 }],
       mode: 'subscription',
-      success_url: `${process.env.FRONTEND_URL}/dashboard?success=true`,
-      cancel_url: `${process.env.FRONTEND_URL}/dashboard?canceled=true`,
+      // Updated to match your Angular routes
+      success_url: `${frontendUrl}/payment/success`,
+      cancel_url: `${frontendUrl}/payment/cancel`,
       metadata: { userId }, 
     });
   }

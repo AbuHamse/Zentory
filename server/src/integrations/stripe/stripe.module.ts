@@ -3,8 +3,8 @@ import { StripeService } from './stripe.service';
 import { StripeController } from './stripe.controller';
 
 @Module({
-  providers: [StripeService],
   controllers: [StripeController],
-  exports: [StripeService],
+  providers: [StripeService],
+  exports: [StripeService], // THIS IS THE MISSING LINK
 })
 export class StripeModule {}

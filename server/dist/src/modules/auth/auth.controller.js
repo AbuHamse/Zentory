@@ -15,20 +15,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthController = void 0;
 const common_1 = require("@nestjs/common");
 const auth_service_1 = require("./auth.service");
-const supabase_auth_guard_1 = require("../../core/guards/supabase-auth.guard");
 let AuthController = class AuthController {
     constructor(authService) {
         this.authService = authService;
     }
-    async syncProfile(req) {
-        return await this.authService.syncUserWithDatabase(req.user);
+    async syncProfile(payload) {
+        return await this.authService.syncUserWithDatabase(payload);
     }
 };
 exports.AuthController = AuthController;
 __decorate([
     (0, common_1.Post)('sync'),
-    (0, common_1.UseGuards)(supabase_auth_guard_1.SupabaseAuthGuard),
-    __param(0, (0, common_1.Req)()),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)

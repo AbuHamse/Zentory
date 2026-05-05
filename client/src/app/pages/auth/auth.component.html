@@ -1,76 +1,69 @@
 <div class="min-h-screen w-full flex bg-wham-white dark:bg-black transition-colors duration-300">
   
+  <!-- Left Side: Branding/Visual -->
   <div class="hidden lg:block lg:w-1/2 relative bg-wham-dark overflow-hidden">
     <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070" 
          class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-multiply grayscale">
     
     <div class="relative z-10 p-16 h-full flex flex-col justify-between">
       <div class="space-y-2">
-        <h1 class="text-white text-5xl font-black italic tracking-tighter uppercase leading-none">ZENTORY_OS</h1>
-        <p class="text-wham-tan text-[10px] font-mono font-bold tracking-[0.5em] uppercase">Enterprise_Terminal_v4.0</p>
+        <h1 class="text-white text-5xl font-black italic tracking-tighter uppercase leading-none">ZENTORY</h1>
+        <p class="text-wham-tan text-[10px] font-mono font-bold tracking-[0.5em] uppercase">Logistics Management System</p>
       </div>
       <div class="border-l-4 border-white pl-6">
         <p class="text-white/80 font-bold uppercase text-xs tracking-widest leading-relaxed">
-          Proprietary Logistics Framework.<br>Authorized Personnel Only.
+          Proprietary Business Intelligence.<br>Authorized Access Required.
         </p>
       </div>
     </div>
   </div>
 
+  <!-- Right Side: Login Form -->
   <div class="w-full lg:w-1/2 flex flex-col p-8 lg:p-24 justify-center relative bg-wham-cream dark:bg-[#0a0a0a]">
     
+    <!-- Theme Toggle -->
     <div class="absolute top-12 right-12 flex items-center gap-6">
-      <button (click)="toggleTheme()" class="font-mono text-[9px] font-black uppercase tracking-widest border-b-2 border-black dark:border-white text-black dark:text-white pb-1">
-        {{ isDarkMode() ? 'SYSTEM_LIGHT' : 'SYSTEM_DARK' }}
+      <button (click)="toggleTheme()" 
+              class="font-mono text-[9px] font-black uppercase tracking-widest border-b-2 border-black dark:border-white text-black dark:text-white pb-1 transition-all">
+        {{ isDarkMode() ? 'Light Mode' : 'Dark Mode' }}
       </button>
     </div>
 
     <div class="max-w-md w-full mx-auto">
       <div class="mb-12">
-        <h2 class="text-7xl font-black italic uppercase tracking-tighter text-black dark:text-white mb-2">
-          {{ isLoginMode() ? 'LOGIN_' : 'SIGN_UP_' }}
-        </h2>
-        <p class="text-[10px] font-mono font-black uppercase text-wham-primary tracking-[0.3em]">
-          {{ isLoginMode() ? 'Establish_Secure_Handshake' : 'Initialize_Operator_Credential' }}
-        </p>
+        <h2 class="text-7xl font-black italic uppercase tracking-tighter text-black dark:text-white mb-2">LOGIN</h2>
+        <p class="text-[10px] font-mono font-black uppercase text-wham-primary tracking-[0.3em]">Secure Portal Access</p>
       </div>
 
       <div class="space-y-10">
-        @if (isLoginMode()) {
-          <div @crossFade class="space-y-6">
-            <div class="group border-b-2 border-black dark:border-white focus-within:border-wham-primary transition-all">
-              <label class="block text-[9px] font-black uppercase opacity-40 mb-1">Operator_Email</label>
-              <input type="email" [(ngModel)]="authData.email" class="w-full bg-transparent py-2 text-sm font-bold outline-none dark:text-white uppercase">
-            </div>
-            <div class="group border-b-2 border-black dark:border-white focus-within:border-wham-primary transition-all">
-              <label class="block text-[9px] font-black uppercase opacity-40 mb-1">Security_Key</label>
-              <input type="password" [(ngModel)]="authData.password" class="w-full bg-transparent py-2 text-sm font-bold outline-none dark:text-white uppercase">
-            </div>
-          </div>
-        } @else {
-          <div @crossFade class="space-y-6">
-            <div class="group border-b-2 border-black dark:border-white focus-within:border-wham-primary transition-all">
-              <label class="block text-[9px] font-black uppercase opacity-40 mb-1">Full_Legal_Name</label>
-              <input type="text" [(ngModel)]="authData.fullName" class="w-full bg-transparent py-2 text-sm font-bold outline-none dark:text-white uppercase">
-            </div>
-            <div class="group border-b-2 border-black dark:border-white focus-within:border-wham-primary transition-all">
-              <label class="block text-[9px] font-black uppercase opacity-40 mb-1">Registered_Email</label>
-              <input type="email" [(ngModel)]="authData.email" class="w-full bg-transparent py-2 text-sm font-bold outline-none dark:text-white uppercase">
-            </div>
-            <div class="group border-b-2 border-black dark:border-white focus-within:border-wham-primary transition-all">
-              <label class="block text-[9px] font-black uppercase opacity-40 mb-1">Create_Security_Key</label>
-              <input type="password" [(ngModel)]="authData.password" class="w-full bg-transparent py-2 text-sm font-bold outline-none dark:text-white uppercase">
-            </div>
+        @if (errorMessage()) {
+          <div class="bg-red-600 text-white p-4 font-mono text-[10px] font-bold uppercase tracking-widest">
+            Error: {{ errorMessage() }}
           </div>
         }
 
+        <div class="space-y-6">
+          <div class="group border-b-2 border-black dark:border-white focus-within:border-wham-primary transition-all">
+            <label class="block text-[9px] font-black uppercase opacity-40 mb-1 dark:text-white/40">Email Address</label>
+            <input type="email" [(ngModel)]="authData.email" 
+                   class="w-full bg-transparent py-2 text-sm font-bold outline-none text-black dark:text-white">
+          </div>
+          <div class="group border-b-2 border-black dark:border-white focus-within:border-wham-primary transition-all">
+            <label class="block text-[9px] font-black uppercase opacity-40 mb-1 dark:text-white/40">Password</label>
+            <input type="password" [(ngModel)]="authData.password" 
+                   class="w-full bg-transparent py-2 text-sm font-bold outline-none text-black dark:text-white">
+          </div>
+        </div>
+
         <div class="space-y-4">
-          <button (click)="onAuthorize()" class="w-full bg-black dark:bg-wham-primary text-white py-6 font-black uppercase italic text-xl shadow-[8px_8px_0px_#A90011] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
-            {{ isLoginMode() ? 'EXECUTE_AUTHENTICATION' : 'FINALIZE_REGISTRATION' }}
+          <button (click)="onAuthorize()" [disabled]="isLoading()" 
+                  class="w-full bg-black dark:bg-wham-primary text-white py-6 font-black uppercase italic text-xl shadow-[8px_8px_0px_#A90011] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all disabled:opacity-50">
+            {{ isLoading() ? 'Processing...' : 'Sign In' }}
           </button>
           
-          <button (click)="toggleMode()" class="w-full text-[10px] font-mono font-black uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-wham-primary transition-colors">
-            {{ isLoginMode() ? 'Request_New_Credentials' : 'Return_to_Login_Interface' }}
+          <button routerLink="/auth/register" 
+                  class="w-full text-[10px] font-mono font-black uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-wham-primary dark:hover:text-wham-primary transition-colors">
+            Don't have an account? Sign up
           </button>
         </div>
       </div>
