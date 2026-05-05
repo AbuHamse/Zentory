@@ -6,18 +6,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LoggerService = void 0;
+exports.AppLogger = void 0;
 const common_1 = require("@nestjs/common");
-let LoggerService = class LoggerService extends common_1.Logger {
-    logAction(action, metadata) {
-        this.log(`[ACTION]: ${action} - ${JSON.stringify(metadata)}`);
-    }
-    logError(message, stack) {
-        this.error(message, stack);
+let AppLogger = class AppLogger extends common_1.Logger {
+    logWarehouseAction(operatorId, action, details) {
+        this.log(`[OPERATOR: ${operatorId}] ${action} - ${JSON.stringify(details)}`);
     }
 };
-exports.LoggerService = LoggerService;
-exports.LoggerService = LoggerService = __decorate([
+exports.AppLogger = AppLogger;
+exports.AppLogger = AppLogger = __decorate([
     (0, common_1.Injectable)({ scope: common_1.Scope.TRANSIENT })
-], LoggerService);
+], AppLogger);
 //# sourceMappingURL=logger.service.js.map

@@ -1,25 +1,31 @@
 import { Injectable, OnModuleInit, OnModuleDestroy } from '@nestjs/common';
 import { createClient, RedisClientType } from 'redis';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class RedisService implements OnModuleInit, OnModuleDestroy {
   private client: RedisClientType;
 
+  constructor(private configService: ConfigService) {
+    this.client = createClient({
+      url: this.configService.get<string>('REDIS_URL') || 'redis://localhost:6379'
+    });
+  }
+
   async onModuleInit() {
-    this.client = createClient({ url: process.env.REDIS_URL || 'redis://localhost:6379' });
-    this.client.on('error', (err) => console.error('Redis Client Error', err));
     await this.client.connect();
   }
 
   async onModuleDestroy() {
-    await this.client.quit();
+    await this.client.disconnect();
   }
 
-  async set(key: string, value: string) {
-    await this.client.set(key, value);
-  }
-
+  // Getters/Setters for Zentory performance metrics
   async get(key: string) {
     return await this.client.get(key);
+  }
+
+  async set(key: string, value: string, ttl = 3600) {
+    await this.client.set(key, value, { EX: ttl });
   }
 }

@@ -1,10 +1,8 @@
-import { Component, signal, computed } from '@angular/core';
+import { Component, signal, computed, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { MaterialModule } from '../../../shared/material.module';
-
-// Import local JSON mock data
-import shipmentsData from '../../../assets/data/shipments.json';
 
 export interface Shipment {
   id: string;
@@ -31,25 +29,34 @@ export interface Shipment {
   imports: [CommonModule, MaterialModule, RouterModule],
   templateUrl: './shipping-receiving.component.html'
 })
-export class ShippingReceivingComponent {
-  // Signals for state management
-  protected allShipments = signal<Shipment[]>(shipmentsData as Shipment[]);
+export class ShippingReceivingComponent implements OnInit {
+  private http = inject(HttpClient);
+
+  // Initialize signals with empty state
+  protected allShipments = signal<Shipment[]>([]);
   protected selectedShipment = signal<Shipment | null>(null);
   protected activeFilter = signal<'ALL' | 'INBOUND' | 'OUTBOUND'>('ALL');
 
-  // Computed signal for filtered view - Sliced to first 15 as requested
+  ngOnInit(): void {
+    // Fetching from the new public/data path
+    // Note: Verify if your file is named 'shipments.json' or 'shippments.json'
+    this.http.get<Shipment[]>('/data/shippments.json').subscribe({
+      next: (data) => {
+        this.allShipments.set(data);
+      },
+      error: (err) => console.error('Failed to load shipments:', err)
+    });
+  }
+
   protected filteredShipments = computed(() => {
     const filter = this.activeFilter();
     const data = this.allShipments();
     
     const filtered = filter === 'ALL' ? data : data.filter(s => s.type === filter);
-    
-    // Limits the initial fetch to the first 15 items
     return filtered.slice(0, 15);
   });
 
   selectShipment(shipment: Shipment) {
-    console.log('Shipment Selected:', shipment.id); // Debugging line
     this.selectedShipment.set(shipment);
   }
 

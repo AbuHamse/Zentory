@@ -1,15 +1,15 @@
 import { pgTable, varchar, timestamp, jsonb } from 'drizzle-orm/pg-core';
 
 export const warehouseUsers = pgTable('warehouse_users', {
-  // Changed from uuid to varchar to support "USR-XXXX" format
-  id: varchar('id', { length: 50 }).primaryKey().notNull(), 
+  id: varchar('id', { length: 50 }).primaryKey().notNull(), // "USR-XXXX"
   name: varchar('name', { length: 255 }).notNull(),
   role: varchar('role', { length: 50 }).notNull(), // PICKER, PACKER, etc.
   
-  // Changed to varchar to support "ORD-XXXX" format from your JSON
-  currentTask: varchar('current_task_id', { length: 50 }), 
+  // Fixing the error: Added status for your 'active' filter
+  status: varchar('status', { length: 50 }).default('active'), 
+
+  currentTask: varchar('current_task_id', { length: 50 }), // "ORD-XXXX"
   
-  // Real-time Stats (Stored as JSONB for rapid dashboard updates)
   stats: jsonb('stats').$type<{
     unitsPerHour: number;
     accuracyRate: number;
@@ -17,13 +17,14 @@ export const warehouseUsers = pgTable('warehouse_users', {
     shiftStartTime: string;
   }>().notNull(),
 
-  // Performance History (Historical array for charting)
   performanceHistory: jsonb('performance_history').$type<{
     date: string;
     uph: number;
     accuracy: number;
   }[]>().default([]),
 
+  // Fixing the error: Added lastActiveAt
+  lastActiveAt: timestamp('last_active_at').defaultNow(),
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow(),
 });

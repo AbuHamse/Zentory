@@ -4,6 +4,7 @@ import { databaseProvider, DRIZZLE } from './database.provider';
 @Global()
 @Module({
   providers: [databaseProvider],
-  exports: [DRIZZLE], // This allows other modules to @Inject(DRIZZLE)
+  // Export the provider object so the Factory is shared across the app
+  exports: [databaseProvider], 
 })
 export class DatabaseModule {}

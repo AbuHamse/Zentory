@@ -1,12 +1,9 @@
 import { Injectable, Logger, Scope } from '@nestjs/common';
 
 @Injectable({ scope: Scope.TRANSIENT })
-export class LoggerService extends Logger {
-  logAction(action: string, metadata?: any) {
-    this.log(`[ACTION]: ${action} - ${JSON.stringify(metadata)}`);
-  }
-
-  logError(message: string, stack?: string) {
-    this.error(message, stack);
+export class AppLogger extends Logger {
+  // Custom method to log warehouse operations for Zentory
+  logWarehouseAction(operatorId: string, action: string, details: any) {
+    this.log(`[OPERATOR: ${operatorId}] ${action} - ${JSON.stringify(details)}`);
   }
 }

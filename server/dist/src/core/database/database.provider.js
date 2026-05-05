@@ -36,7 +36,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.databaseProvider = exports.DRIZZLE = void 0;
 const node_postgres_1 = require("drizzle-orm/node-postgres");
 const pg_1 = require("pg");
-const schema = __importStar(require("../../db/schema/operators.schema"));
+const schema = __importStar(require("../../db/schema"));
 exports.DRIZZLE = 'DRIZZLE';
 exports.databaseProvider = {
     provide: exports.DRIZZLE,

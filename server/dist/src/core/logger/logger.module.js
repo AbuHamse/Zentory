@@ -15,8 +15,8 @@ exports.LoggerModule = LoggerModule;
 exports.LoggerModule = LoggerModule = __decorate([
     (0, common_1.Global)(),
     (0, common_1.Module)({
-        providers: [logger_service_1.LoggerService],
-        exports: [logger_service_1.LoggerService],
+        providers: [logger_service_1.AppLogger],
+        exports: [logger_service_1.AppLogger],
     })
 ], LoggerModule);
 //# sourceMappingURL=logger.module.js.map

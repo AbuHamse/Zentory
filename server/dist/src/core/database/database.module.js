@@ -16,7 +16,7 @@ exports.DatabaseModule = DatabaseModule = __decorate([
     (0, common_1.Global)(),
     (0, common_1.Module)({
         providers: [database_provider_1.databaseProvider],
-        exports: [database_provider_1.DRIZZLE],
+        exports: [database_provider_1.databaseProvider],
     })
 ], DatabaseModule);
 //# sourceMappingURL=database.module.js.map

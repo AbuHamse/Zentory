@@ -23,6 +23,7 @@
     "@nestjs/core": "^11.1.18",
     "@nestjs/graphql": "^13.2.4",
     "@nestjs/jwt": "^11.0.2",
+    "@nestjs/passport": "^11.0.5",
     "@nestjs/platform-express": "^11.1.18",
     "@supabase/supabase-js": "^2.102.1",
     "bcrypt": "^6.0.0",
@@ -31,10 +32,12 @@
     "drizzle-orm": "^0.45.2",
     "graphql": "^16.13.2",
     "helmet": "^8.1.0",
+    "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
     "pg": "^8.20.0",
     "redis": "^5.12.1",
     "reflect-metadata": "^0.2.2",
+    "stripe": "^22.1.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {

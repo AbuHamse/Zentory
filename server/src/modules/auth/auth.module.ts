@@ -1,10 +1,8 @@
 import { Module } from '@nestjs/common';
-import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
-import { OperatorsModule } from '../operators/operators.module';
+import { AuthService } from './auth.service';
 
 @Module({
-  imports: [OperatorsModule], // Needed to link auth users to operator profiles
   controllers: [AuthController],
   providers: [AuthService],
 })

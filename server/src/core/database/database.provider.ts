@@ -1,7 +1,7 @@
 import { drizzle } from 'drizzle-orm/node-postgres';
 import { Pool } from 'pg';
 import { Injectable, OnModuleInit, OnModuleDestroy } from '@nestjs/common';
-import * as schema from '../../db/schema/operators.schema';
+import * as schema from '../../db/schema';
 
 export const DRIZZLE = 'DRIZZLE';
 

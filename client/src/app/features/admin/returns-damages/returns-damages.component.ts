@@ -1,10 +1,8 @@
-import { Component, signal, computed } from '@angular/core';
+import { Component, signal, computed, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { MaterialModule } from '../../../shared/material.module';
-
-// Import mock data
-import returnsData from '../../../assets/data/returns.json';
 
 export interface ReturnReport {
   id: string;
@@ -26,10 +24,23 @@ export interface ReturnReport {
   templateUrl: './returns-damages.component.html',
   styleUrls: ['./returns-damages.css']
 })
-export class ReturnsDamagesComponent {
-  protected allReturns = signal<ReturnReport[]>(returnsData as ReturnReport[]);
+export class ReturnsDamagesComponent implements OnInit {
+  private http = inject(HttpClient);
+
+  // Initialize signals with empty state
+  protected allReturns = signal<ReturnReport[]>([]);
   protected selectedReturn = signal<ReturnReport | null>(null);
   protected activeFilter = signal<string>('ALL');
+
+  ngOnInit(): void {
+    // Fetching from the new public/data path
+    this.http.get<ReturnReport[]>('/data/returns.json').subscribe({
+      next: (data) => {
+        this.allReturns.set(data);
+      },
+      error: (err) => console.error('Failed to load returns:', err)
+    });
+  }
 
   protected filteredReturns = computed(() => {
     const filter = this.activeFilter();

@@ -49,20 +49,35 @@ exports.OperatorsService = void 0;
 const common_1 = require("@nestjs/common");
 const database_provider_1 = require("../../core/database/database.provider");
 const node_postgres_1 = require("drizzle-orm/node-postgres");
-const schema = __importStar(require("../../db/schema/operators.schema"));
+const schema = __importStar(require("../../db/schema"));
 const drizzle_orm_1 = require("drizzle-orm");
 let OperatorsService = class OperatorsService {
     constructor(db) {
         this.db = db;
     }
-    async findAll() {
-        return await this.db.select().from(schema.operators);
+    async getActiveOperators() {
+        return await this.db.query.warehouseUsers.findMany({
+            where: (0, drizzle_orm_1.eq)(schema.warehouseUsers.role, 'operator'),
+        });
     }
-    async findOne(id) {
-        return await this.db
-            .select()
-            .from(schema.operators)
-            .where((0, drizzle_orm_1.eq)(schema.operators.id, id));
+    async updateOperatorTask(operatorId, taskId) {
+        const result = await this.db
+            .update(schema.warehouseUsers)
+            .set({
+            currentTask: taskId,
+            lastActiveAt: new Date()
+        })
+            .where((0, drizzle_orm_1.eq)(schema.warehouseUsers.id, operatorId))
+            .returning();
+        if (result.length === 0) {
+            throw new common_1.NotFoundException('Operator not found');
+        }
+        return result[0];
+    }
+    async getOperatorPerformance(operatorId) {
+        return await this.db.query.warehouseUsers.findFirst({
+            where: (0, drizzle_orm_1.eq)(schema.warehouseUsers.id, operatorId),
+        });
     }
 };
 exports.OperatorsService = OperatorsService;

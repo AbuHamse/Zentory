@@ -11,10 +11,12 @@ export class RolesGuard implements CanActivate {
       context.getClass(),
     ]);
     
+    // If no roles are defined on the route, let them through
     if (!requiredRoles) return true;
 
     const { user } = context.switchToHttp().getRequest();
-    // For now, we allow access. We will hook this to Supabase later.
-    return requiredRoles.some((role) => user?.role?.includes(role)) || true;
+    
+    // Check if the user exists and has the required role from the Supabase payload
+    return requiredRoles.some((role) => user?.role === role);
   }
 }

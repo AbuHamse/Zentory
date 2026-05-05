@@ -1,15 +1,12 @@
-import { Component, signal, computed } from '@angular/core';
+import { Component, signal, computed, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import { MaterialModule } from '../../../shared/material.module';
 
 // 1. IMPORT THE INTERFACES
 import { Customer, CustomerOverview } from '../../../shared/models/customer.model';
-
-// 2. IMPORT MOCK DATA
-import customersData from '../../../assets/data/customers.json';
-import overviewData from '../../../assets/data/customeroverviews.json';
 
 @Component({
   selector: 'app-customer-overview',
@@ -18,10 +15,12 @@ import overviewData from '../../../assets/data/customeroverviews.json';
   templateUrl: './customer-overview.component.html',
   styleUrls: ['./customer-overview.css']
 })
-export class CustomerOverviewComponent {
-  // Signals casted to our new interfaces
-  private customers = signal<Customer[]>(customersData as Customer[]);
-  private overviews = signal<CustomerOverview[]>(overviewData as CustomerOverview[]);
+export class CustomerOverviewComponent implements OnInit {
+  private http = inject(HttpClient);
+
+  // Initialize signals with empty arrays
+  private customers = signal<Customer[]>([]);
+  private overviews = signal<CustomerOverview[]>([]);
 
   // State for the Notes UI
   protected isAddingNote = signal(false);
@@ -30,6 +29,19 @@ export class CustomerOverviewComponent {
 
   protected searchQuery = signal('');
   protected selectedCustomerId = signal<string | null>(null);
+
+  ngOnInit(): void {
+    // Fetch both datasets from the new public/data path
+    this.http.get<Customer[]>('/data/customers.json').subscribe({
+      next: (data) => this.customers.set(data),
+      error: (err) => console.error('Failed to load customers:', err)
+    });
+
+    this.http.get<CustomerOverview[]>('/data/customeroverviews.json').subscribe({
+      next: (data) => this.overviews.set(data),
+      error: (err) => console.error('Failed to load customer overviews:', err)
+    });
+  }
 
   // NOTE ACTIONS
   startAddNote() {
@@ -50,14 +62,12 @@ export class CustomerOverviewComponent {
     this.noteInput.set('');
   }
 
-saveNote() {
+  saveNote() {
     const profile = this.activeProfile();
     const text = this.noteInput().trim();
     
-    // Safety check: ensure profile exists and has an internalNotes array
     if (!profile || !text) return;
     
-    // Initialize array if it somehow doesn't exist
     if (!profile.internalNotes) {
       profile.internalNotes = [];
     }
@@ -77,7 +87,6 @@ saveNote() {
 
   deleteNote(index: number) {
     const profile = this.activeProfile();
-    // Safety check: ensure array exists before splicing
     if (profile && profile.internalNotes) {
       profile.internalNotes.splice(index, 1);
     }
@@ -103,12 +112,11 @@ saveNote() {
 
     if (!identity) return null;
 
-    // Returns a combined object for the UI
     return { ...identity, ...overview };
   });
 
   selectCustomer(id: string) {
     this.selectedCustomerId.set(id);
-      this.cancelNote();
+    this.cancelNote();
   }
 }
