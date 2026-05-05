@@ -36,7 +36,7 @@ export class AppComponent {
   // This checks if the path is / or /products or /zentra or /resources
   protected readonly isLandingPage = computed(() => {
     const url = this.currentUrl() || '/';
-    const landingPaths = ['/', '/products', '/zentra', '/resources','/auth/login'];
+    const landingPaths = ['/', '/products', '/zentra', '/resources','/auth/login', '/auth/register', '/payment/success', '/payment/cancel'];
     return landingPaths.includes(url) || url === '';
   });
 

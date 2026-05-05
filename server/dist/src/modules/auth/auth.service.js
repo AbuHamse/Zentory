@@ -75,7 +75,10 @@ let AuthService = class AuthService {
                 isActive: true,
             })
                 .returning();
-            const priceId = process.env['STRIPE_PRICE_ID'] || 'price_standard_monthly';
+            const priceId = process.env['STRIPE_PRICE_ID'];
+            if (!priceId) {
+                throw new Error('STRIPE_PRICE_ID is missing in server environment');
+            }
             const session = await this.stripeService.createCheckoutSession(user.id, user.email, priceId);
             return {
                 ...newAdmin[0],

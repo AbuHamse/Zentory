@@ -9,7 +9,7 @@ import { StripeService } from '../../integrations/stripe/stripe.service';
 export class AuthService {
   constructor(
     @Inject(DRIZZLE) private db: NodePgDatabase<typeof schema>,
-    private stripeService: StripeService // Injected your service
+    private stripeService: StripeService 
   ) {}
 
   async syncUserWithDatabase(user: { 
@@ -26,7 +26,6 @@ export class AuthService {
         where: eq(schema.users.id, user.id),
       });
 
-      // If they already exist, we just return the user data
       if (existingAdmin) return existingAdmin;
 
       // Insert Admin into your PG 'users' table
@@ -42,9 +41,13 @@ export class AuthService {
         })
         .returning();
 
-      // Trigger Stripe Checkout using your logic
-      // NOTE: Ensure your .env has a STRIPE_PRICE_ID
-      const priceId = process.env['STRIPE_PRICE_ID'] || 'price_standard_monthly';
+      // Using your actual Stripe Price ID from .env
+      const priceId = process.env['STRIPE_PRICE_ID'];
+      
+      if (!priceId) {
+        throw new Error('STRIPE_PRICE_ID is missing in server environment');
+      }
+
       const session = await this.stripeService.createCheckoutSession(
         user.id, 
         user.email, 
@@ -53,11 +56,11 @@ export class AuthService {
 
       return {
         ...newAdmin[0],
-        checkoutUrl: session.url // This is what your Angular component needs
+        checkoutUrl: session.url 
       };
     }
 
-    // 2. Logic for WAREHOUSE EMPLOYEES (Remains unchanged)
+    // 2. Logic for WAREHOUSE EMPLOYEES
     const existingWorker = await this.db.query.warehouseUsers.findFirst({
       where: eq(schema.warehouseUsers.id, user.id),
     });
