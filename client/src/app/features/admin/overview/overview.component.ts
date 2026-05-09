@@ -13,6 +13,7 @@ import { QualityWorkstationComponent } from '../../../core/ui/quality-workstatio
 import { ReportArchitectComponent } from '../../../core/ui/report-architect/report-architect.component';
 import { LowStockComponent } from '../../../core/ui/low-stock/low-stock.component';
 import { ZoneMapComponent } from '../../../core/ui/zone-map/zone-map.component';
+import { ZoneDetailComponent } from '../../../core/ui/zone-detail/zone-detail.component';
 
 interface KpiCard {
   label: string;
@@ -35,7 +36,8 @@ interface KpiCard {
     QualityWorkstationComponent,
     ReportArchitectComponent,
     LowStockComponent,
-    ZoneMapComponent
+    ZoneMapComponent,
+    ZoneDetailComponent
   ],
   templateUrl: './overview.component.html',
   styles: [`

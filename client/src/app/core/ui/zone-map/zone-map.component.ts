@@ -1,16 +1,14 @@
-import { Component, inject, computed, signal } from '@angular/core';
+import { Component, inject, computed, signal, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InventoryDataService } from '../../../services/inventory-data.service';
 import { MatIconModule } from '@angular/material/icon';
 
 const ZONE_CAPACITIES = {
-  'DYNAMIC-LEFT': 600,   // Left Green Wing
-  'DYNAMIC-RIGHT': 600,  // Right Green Wing
-  'STATIC-CENTER': 400,  // Blue Center Block
-  'STAGING-IN': 200,     // Pink Left Staging
-  'STAGING-OUT': 200,    // Purple Right Staging
-  'RECEIVING': 300,      // Gray Bottom Left (Trucks)
-  'SHIPPING': 300        // Brown Bottom Right (Trucks)
+  'DYNAMIC-LEFT': 600,
+  'DYNAMIC-RIGHT': 600,
+  'STATIC-CENTER': 400,
+  'RECEIVING': 300,
+  'SHIPPING': 300
 };
 
 @Component({
@@ -22,6 +20,10 @@ const ZONE_CAPACITIES = {
 })
 export class ZoneMapComponent {
   protected invService = inject(InventoryDataService);
+  
+  // Output to tell the Overview component to switch cases/tabs
+  @Output() zoneSelected = new EventEmitter<string>();
+
   protected isFullscreen = signal(false);
   protected selectedZoneDetail = signal<any>(null);
 
@@ -47,21 +49,29 @@ export class ZoneMapComponent {
     return heatmap;
   });
 
-  toggleMapMode(event: Event) {
-    event.stopPropagation();
+  toggleMapMode(event?: Event) {
+    if (event) event.stopPropagation();
     this.isFullscreen.update(val => !val);
+  }
+
+  // Navigation Logic for Red Widgets
+  navigateToZoneDetail(zone: string, event: Event) {
+    event.stopPropagation();
+    this.invService.searchTerm.set(zone);
+    this.zoneSelected.emit('ZONE_DETAIL'); // Tell Overview to show the detail case
+    console.log(`ZENTORY_OS // Navigation Triggered // ${zone}`);
   }
 
   focusZone(zone: string, event: Event) {
     event.stopPropagation();
     this.invService.searchTerm.set(zone);
-    this.selectedZoneDetail.set({ name: zone, ...this.zoneHeatmap()[zone] });
+    const stats = this.zoneHeatmap()[zone];
+    this.selectedZoneDetail.set({ name: zone, ...stats });
   }
 
   getZoneColor(percentage: number): string {
-    if (percentage > 90) return '#A90011'; // High Intensity Red
-    if (percentage > 60) return '#D11D27'; // Medium Intensity
-    if (percentage > 30) return '#FBE9D9'; // Low Intensity Cream
-    return '#FFFBF7'; // Available
+    if (percentage > 85) return '#A90011';
+    if (percentage > 50) return '#D11D27';
+    return '#FBE9D9';
   }
 }
