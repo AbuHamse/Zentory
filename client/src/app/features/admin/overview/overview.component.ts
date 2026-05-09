@@ -1,22 +1,24 @@
 import { Component, inject, signal, computed, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../../../shared/material.module';
 import { RouterLink } from '@angular/router';
 import { ReportDataService } from '../../../services/report-data.service';
 
-// Import the specific workstation components for the 8 pages
+// Workstation Components
 import { InventoryMatrixComponent } from '../../../core/ui/inventory-matrix/inventory-matrix.component';
 import { FinancialWorkstationComponent } from '../../../core/ui/financial-workstation/financial-workstation.component';
 import { ServiceInsightsComponent } from '../../../core/ui/service-insights/service-insights.component';
 import { QualityWorkstationComponent } from '../../../core/ui/quality-workstation/quality-workstation.component';
 import { ReportArchitectComponent } from '../../../core/ui/report-architect/report-architect.component';
+import { LowStockComponent } from '../../../core/ui/low-stock/low-stock.component';
+import { ZoneMapComponent } from '../../../core/ui/zone-map/zone-map.component';
 
 interface KpiCard {
   label: string;
   value: string | number;
   isWarning?: boolean;
-  sectionKey: string; // Used to tell the switch which page to open
+  sectionKey: string;
 }
 
 @Component({
@@ -27,11 +29,13 @@ interface KpiCard {
     MaterialModule,
     FormsModule, 
     RouterLink,
-    InventoryMatrixComponent,
+    InventoryMatrixComponent, // Restored to fix NG8001
     FinancialWorkstationComponent,
     ServiceInsightsComponent,
     QualityWorkstationComponent,
-    ReportArchitectComponent
+    ReportArchitectComponent,
+    LowStockComponent,
+    ZoneMapComponent
   ],
   templateUrl: './overview.component.html',
   styles: [`
@@ -50,10 +54,10 @@ export class OverviewComponent implements OnInit {
   // 2. Data Streams from Service
   protected summary = this.reportService.reportSummary;
   protected state = this.reportService.businessState;
-  protected products = this.reportService.productReports;
+  protected productReports = this.reportService.productReports; 
   protected trends = this.reportService.timePeriodReports;
 
-  // 3. Dynamic KPI Mapping for the Top Row
+  // 3. Dynamic KPI Mapping
   protected readonly kpiStats = computed<KpiCard[]>(() => [
     { 
       label: 'Financial Flux', 

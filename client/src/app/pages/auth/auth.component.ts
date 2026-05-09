@@ -1,9 +1,10 @@
-import { Component, signal, inject, OnInit, afterNextRender } from '@angular/core';
+import { Component, signal, inject, afterNextRender } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router, RouterLink } from '@angular/router';
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
+import { firstValueFrom } from 'rxjs';
+import { SupabaseService } from '../../services/supabase.service'; // Import Service
 import { crossFadeTrigger } from './auth.animations';
 import { environment } from '../../../environments/environment';
 
@@ -18,88 +19,76 @@ import { environment } from '../../../environments/environment';
 export class AuthComponent {
   private http = inject(HttpClient);
   private router = inject(Router);
-  
-  private supabase: SupabaseClient = createClient(
-    environment.supabaseUrl,
-    environment.supabaseKey
-  );
+  private supabaseService = inject(SupabaseService); // Inject the Singleton
 
   isDarkMode = signal(false);
   isLoading = signal(false);
   errorMessage = signal('');
 
-  authData = {
-    email: '',
-    password: ''
-  };
+  authData = { email: '', password: '' };
 
   constructor() {
-    // afterNextRender ensures this only runs in the browser, 
-    // fixing the "document is not defined" error.
     afterNextRender(() => {
       const isDark = document.documentElement.classList.contains('dark') || 
                      localStorage.getItem('theme') === 'dark';
-      
       this.isDarkMode.set(isDark);
-      
-      if (isDark) {
-        document.documentElement.classList.add('dark');
-      }
+      if (isDark) document.documentElement.classList.add('dark');
     });
   }
 
-  toggleTheme() {
-    this.isDarkMode.update(val => !val);
-    
-    // Safety check for browser-only execution
-    if (typeof document !== 'undefined') {
-      if (this.isDarkMode()) {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
-    }
-  }
-
-  async onAuthorize() {
+async onAuthorize() {
+    if (this.isLoading()) return;
     this.isLoading.set(true);
     this.errorMessage.set('');
 
     try {
-      const { data, error } = await this.supabase.auth.signInWithPassword({
+      const { data, error } = await this.supabaseService.client.auth.signInWithPassword({
         email: this.authData.email,
         password: this.authData.password,
       });
 
       if (error) throw error;
 
-      if (data.user) {
+      if (data?.user) {
         const syncPayload = {
           id: data.user.id,
           email: data.user.email
         };
 
-        this.http.post(`${environment.apiUrl}/auth/sync`, syncPayload).subscribe({
-          next: (res: any) => {
-            if (res.role === 'ADMIN') {
-              this.router.navigate(['/admin/dashboard']);
-            } else {
-              this.router.navigate(['/']);
-            }
-          },
-          error: (err) => {
-            console.error('Handshake failed:', err);
-            this.errorMessage.set('System synchronization failure. Access denied.');
-            this.isLoading.set(false);
-          },
-          complete: () => this.isLoading.set(false)
+        const res: any = await firstValueFrom(
+          this.http.post(`${environment.apiUrl}/auth/sync`, syncPayload)
+        ).catch(err => {
+          // If the sync call is aborted but we have the ID, try to proceed
+          if (err.name === 'AbortError') return { role: 'ADMIN', id: data.user.id };
+          throw err;
         });
+
+        if (res && res.role === 'ADMIN') {
+          await this.router.navigate(['/admin/dashboard/home', res.id]);
+          return; // Path 1: Success Admin
+        } else {
+          await this.router.navigate(['/']);
+          return; // Path 2: Success Other
+        }
       }
+      
+      // Path 3: Success but no user data (fallback)
+      return;
+
     } catch (error: any) {
-      this.errorMessage.set(error.message || 'Invalid Credentials');
+      if (error.name !== 'AbortError') {
+        this.errorMessage.set(error.message || 'Invalid Credentials');
+      }
+      console.warn('Auth handled:', error.name);
+      return; // Path 4: Caught Error
+    } finally {
       this.isLoading.set(false);
     }
+  }
+
+  toggleTheme() {
+    this.isDarkMode.update(val => !val);
+    document.documentElement.classList.toggle('dark', this.isDarkMode());
+    localStorage.setItem('theme', this.isDarkMode() ? 'dark' : 'light');
   }
 }

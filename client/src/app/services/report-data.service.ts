@@ -11,45 +11,68 @@ import { ComplaintReport, UserFeedbackReport } from '../shared/models/user-feedb
 export class ReportDataService {
   private http = inject(HttpClient);
 
-  // Initializing with null/empty until data is fetched
-  private _businessSource = signal<any>(null);
-  private _feedbackSource = signal<any>(null);
-  private _trendsSource = signal<any>(null);
-  private _productSource = signal<any>(null);
+  // Private signals with strict types for better IDE support and performance
+  private _businessSource = signal<{ ReportSummary: ReportSummary[], ZentoryBusinessState: ZentoryBusinessState[] } | null>(null);
+  private _feedbackSource = signal<{ ComplaintsReports: ComplaintReport[], UserFeedbackSummary: UserFeedbackReport[] } | null>(null);
+  private _trendsSource = signal<{ TrendData: TrendData[], TimePeriodReport: TimePeriodReport[] } | null>(null);
+  private _productSource = signal<{ ProductReport: ProductReport[] } | null>(null);
 
   // Public Signals for the UI
-  public reportSummary = computed<ReportSummary>(() => this._businessSource()?.ReportSummary?.[0]);
-  public businessState = computed<ZentoryBusinessState>(() => this._businessSource()?.ZentoryBusinessState?.[0]);
-  public complaintsReports = computed<ComplaintReport[]>(() => this._feedbackSource()?.ComplaintsReports || []);
-  public userFeedbackSummary = computed<UserFeedbackReport[]>(() => this._feedbackSource()?.UserFeedbackSummary || []);
-  public trendData = computed<TrendData[]>(() => this._trendsSource()?.TrendData || []);
-  public timePeriodReports = computed<TimePeriodReport[]>(() => this._trendsSource()?.TimePeriodReport || []);
-  public productReports = computed<ProductReport[]>(() => this._productSource()?.ProductReport || []);
+  public reportSummary = computed(() => this._businessSource()?.ReportSummary?.[0]);
+  public businessState = computed(() => this._businessSource()?.ZentoryBusinessState?.[0]);
+  public complaintsReports = computed(() => this._feedbackSource()?.ComplaintsReports || []);
+  public userFeedbackSummary = computed(() => this._feedbackSource()?.UserFeedbackSummary || []);
+  public trendData = computed(() => this._trendsSource()?.TrendData || []);
+  public timePeriodReports = computed(() => this._trendsSource()?.TimePeriodReport || []);
+  public productReports = computed(() => this._productSource()?.ProductReport || []);
 
   constructor() {
     this.initializeData();
   }
 
-  private async initializeData() {
-    // Fetching from /public/data path
-    const [business, feedback, trends, products] = await Promise.all([
-      firstValueFrom(this.http.get('/data/business-summary.json')),
-      firstValueFrom(this.http.get('/data/feedback-logs.json')),
-      firstValueFrom(this.http.get('/data/monthly-trends.json')),
-      firstValueFrom(this.http.get('/data/product-analytics.json'))
-    ]);
+  /**
+   * Initial data load from local JSON mock files.
+   * Standardizes the fetch sequence for Zentory_OS v0.0.1.
+   */
+  public async initializeData() {
+    try {
+      const [business, feedback, trends, products] = await Promise.all([
+        firstValueFrom(this.http.get<any>('/data/business-summary.json')),
+        firstValueFrom(this.http.get<any>('/data/feedback-logs.json')),
+        firstValueFrom(this.http.get<any>('/data/monthly-trends.json')),
+        firstValueFrom(this.http.get<any>('/data/product-analytics.json'))
+      ]);
 
-    this._businessSource.set(business);
-    this._feedbackSource.set(feedback);
-    this._trendsSource.set(trends);
-    this._productSource.set(products);
+      this._businessSource.set(business);
+      this._feedbackSource.set(feedback);
+      this._trendsSource.set(trends);
+      this._productSource.set(products);
+      
+      console.log('Zentory Intelligence Hub: Data Synchronization Complete.');
+    } catch (error) {
+      console.error('Zentory System Error: Failed to initialize data streams.', error);
+    }
   }
 
+  /**
+   * Manual refresh trigger for the UI.
+   */
+  async refreshData() {
+    await this.initializeData();
+  }
+
+  /**
+   * Removes a product from the local signal state.
+   * Note: This only affects the current session until real DB integration.
+   */
   archiveProduct(sku: string) {
-    const currentData = { ...this._productSource() };
+    const currentData = this._productSource();
     if (currentData?.ProductReport) {
-      currentData.ProductReport = currentData.ProductReport.filter((p: any) => p.sku !== sku);
-      this._productSource.set(currentData);
+      // Create a fresh reference to ensure signal notification
+      this._productSource.set({
+        ...currentData,
+        ProductReport: currentData.ProductReport.filter(p => p.sku !== sku)
+      });
     }
   }
 }
