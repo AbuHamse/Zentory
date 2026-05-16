@@ -57,31 +57,54 @@ export class InventoryVaultComponent {
     if (this.inventoryForm.valid) {
       const f = this.inventoryForm.value;
       
-      const newItem: InventoryItem = {
-        id: `SKU-${Math.floor(Math.random() * 10000)}`,
-        sku: f.sku!,
-        name: f.name!,
-        category: f.category as any,
-        quantity: {
-          onHand: f.onHand!,
-          allocated: 0,
-          available: f.onHand!,
-          minThreshold: f.minThreshold!
-        },
-        location: {
-          zone: f.zone as any,
-          aisle: 'A01', 
-          rack: '01',
-          bin: 'A-1'
-        },
-        dimensions: { length: 0, width: 0, height: 0, unit: 'in' },
-        weight: { value: 0, unit: 'lb' },
-        status: 'IN_STOCK',
-        lastCounted: new Date().toISOString(),
-        supplier: f.supplier!,
-        pickedBy: [],
-        recievedBy: []
-      };
+     // Inside your method where you create new items
+const newItem: InventoryItem = {
+  id: `SKU-${Math.floor(Math.random() * 100000)}`, // Or your ID logic
+  sku: 'NEW-SKU-001', 
+  name: 'New Enterprise Asset',
+  category: 'OTHER',
+  
+  // QUANTITY DATA
+  quantity: {
+    onHand: 0,
+    allocated: 0,
+    available: 0,
+    minThreshold: 10
+  },
+
+  // WAREHOUSE GEOGRAPHY
+  location: {
+    zone: 'RECEIVING',
+    aisle: '00',
+    rack: '00',
+    bin: '00'
+  },
+
+  // 1. ADDED MISSING FINANCIAL DATA
+  unitPrice: 0, 
+  currency: 'USD',
+
+  // PHYSICAL SPECS
+  dimensions: {
+    length: 0,
+    width: 0,
+    height: 0,
+    unit: 'cm'
+  },
+  weight: {
+    value: 0,
+    unit: 'kg'
+  },
+
+  // STATUS & TRACKING
+  status: 'IN_STOCK',
+  lastCounted: new Date().toISOString(),
+  supplier: 'INTERNAL',
+  
+  // STAFF TRACKING
+  pickedBy: [],
+  recievedBy: [] // 2. ENSURE THIS IS AN ARRAY [] NOT NEVER[]
+};
 
       this.invService.addItem(newItem);
       this.inventoryForm.reset({ category: 'OTHER', zone: 'NORTH-WING' });

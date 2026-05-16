@@ -1,0 +1,79 @@
+<div class="p-8 bg-[#FFFBF7] border-4 border-[#334155] shadow-[12px_12px_0px_0px_rgba(51,65,85,1)]">
+  
+  <div class="flex justify-between items-start mb-8">
+    <h2 class="text-3xl font-black uppercase italic tracking-tighter text-[#334155]">
+      Asset_Registration // <span class="text-[#A90011]">New_Entry</span>
+    </h2>
+    <button (click)="close()" class="text-[#334155] hover:text-[#A90011]">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <form #assetForm="ngForm" class="grid grid-cols-2 gap-6">
+    
+    <div class="col-span-2 flex flex-col gap-1">
+      <label class="text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Product_Name</label>
+      <input [(ngModel)]="newItem.name" name="name" required
+             class="bg-white border-2 border-[#334155] p-3 text-xs font-bold focus:outline-none focus:bg-[#FBE9D9]">
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label class="text-[10px] font-black uppercase tracking-widest text-[#334155]/60">SKU_Reference</label>
+      <input [(ngModel)]="newItem.sku" name="sku" required
+             class="bg-white border-2 border-[#334155] p-3 text-xs font-bold uppercase">
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label class="text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Category</label>
+      <select [(ngModel)]="newItem.category" name="category"
+              class="bg-white border-2 border-[#334155] p-3 text-xs font-bold uppercase appearance-none">
+        <option value="ELECTRONICS">Electronics</option>
+        <option value="HARDWARE">Hardware</option>
+        <option value="COMPONENTS">Components</option>
+        <option value="KITTED">Kitted</option>
+        <option value="OTHER">Other</option>
+      </select>
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label class="text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Target_Zone</label>
+      <select [(ngModel)]="newItem.location!.zone" name="zone"
+              class="bg-white border-2 border-[#334155] p-3 text-xs font-bold uppercase appearance-none">
+        <option value="RECEIVING">Receiving</option>
+        <option value="DYNAMIC-LEFT">Dynamic Left</option>
+        <option value="DYNAMIC-RIGHT">Dynamic Right</option>
+        <option value="STATIC-CENTER">Static Center</option>
+      </select>
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label class="text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Initial_Qty</label>
+      <input type="number" [(ngModel)]="newItem.quantity!.onHand" name="qty"
+             class="bg-white border-2 border-[#334155] p-3 text-xs font-bold">
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label class="text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Unit_Price</label>
+      <input type="number" [(ngModel)]="newItem.unitPrice" name="price"
+             class="bg-white border-2 border-[#334155] p-3 text-xs font-bold">
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label class="text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Supplier</label>
+      <input [(ngModel)]="newItem.supplier" name="supplier"
+             class="bg-white border-2 border-[#334155] p-3 text-xs font-bold uppercase">
+    </div>
+
+    <div class="col-span-2 flex gap-4 mt-6">
+      <button (click)="close()" 
+              class="flex-1 py-3 border-2 border-[#334155] text-[10px] font-black uppercase tracking-widest hover:bg-[#334155]/5">
+        Abort_Entry
+      </button>
+      <button (click)="save()" [disabled]="!assetForm.valid"
+              class="flex-1 py-3 bg-[#A90011] text-white text-[10px] font-black uppercase tracking-widest hover:scale-105 transition-transform disabled:opacity-50">
+        Register_Asset
+      </button>
+    </div>
+
+  </form>
+</div>

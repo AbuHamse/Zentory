@@ -1,15 +1,25 @@
-<div class="flex flex-col gap-4 h-full">
+<div class="flex flex-col gap-4 h-full animate-in fade-in duration-700">
   
   <div class="flex flex-col gap-6">
-    <h1 class="text-2xl font-black uppercase tracking-widest text-wham-dark">Inventory Management</h1>
+    <div class="flex justify-between items-end">
+      <div>
+        <h1 class="text-3xl font-black uppercase tracking-tighter text-[#334155] italic">Inventory_Manifest</h1>
+        <p class="text-[10px] font-bold text-[#D11D27]/40 uppercase tracking-[0.3em]">System Status: {{ isLoading() ? 'Syncing...' : 'Vault Secured' }}</p>
+      </div>
+      
+      <div *ngIf="lastUpdated()" class="text-right">
+        <p class="text-[9px] font-black uppercase text-[#334155]/40 tracking-widest">Last_Vault_Sync</p>
+        <p class="text-[10px] font-bold text-[#A90011]">{{ lastUpdated() | date:'HH:mm:ss' }}</p>
+      </div>
+    </div>
     
-    <div class="flex gap-8 border-b border-wham-dark/10">
+    <div class="flex gap-8 border-b border-[#334155]/10">
       @for (tab of tabs; track tab) {
         <button 
           (click)="setTab(tab)"
-          [class.border-wham-primary]="activeTab() === tab"
-          [class.text-wham-primary]="activeTab() === tab"
-          class="pb-3 text-[11px] font-black uppercase tracking-widest transition-all border-b-2 border-transparent hover:text-wham-primary">
+          [class.border-[#A90011]]="activeTab() === tab"
+          [class.text-[#A90011]]="activeTab() === tab"
+          class="pb-3 text-[11px] font-black uppercase tracking-widest transition-all border-b-2 border-transparent hover:text-[#A90011]">
           {{ tab }}
         </button>
       }
@@ -18,76 +28,97 @@
 
   <div class="flex flex-wrap justify-between items-center gap-4 mt-2">
     <div class="relative w-full md:w-96">
-      <span class="absolute inset-y-0 left-3 flex items-center text-wham-dark/40">
+      <span class="absolute inset-y-0 left-3 flex items-center text-[#334155]/40">
         <mat-icon class="scale-75">search</mat-icon>
       </span>
       <input 
         type="text" 
         [(ngModel)]="searchQuery"
-        placeholder="SEARCH BY PRODUCT NAME OR SKU..."
-        class="w-full bg-wham-white border-2 border-wham-dark/10 py-2 pl-10 pr-4 text-[11px] font-bold uppercase tracking-wider focus:outline-none focus:border-wham-primary transition-colors">
+        placeholder="SEARCH BY PRODUCT, SKU, OR ZONE..."
+        class="w-full bg-[#FFFBF7] border-2 border-[#334155]/10 py-2 pl-10 pr-4 text-[11px] font-bold uppercase tracking-wider focus:outline-none focus:border-[#A90011] transition-colors">
     </div>
 
     <div class="flex gap-2">
-         <button [routerLink]="['/dashboard/home']" class="bg-wham-dark text-wham-white px-4 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-wham-primary transition-colors">
-         Exit to Home
+      <button (click)="refreshData()" 
+              [disabled]="isLoading()"
+              class="bg-[#FBE9D9] text-[#A90011] px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-[#A90011] hover:text-white transition-all disabled:opacity-50">
+        <mat-icon [class.animate-spin]="isLoading()" class="scale-75">sync</mat-icon>
       </button>
-      <button class="bg-wham-dark text-wham-white px-4 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-wham-primary transition-colors">
-        + Add Inventory
+
+      <button [routerLink]="['/admin/dashboard/home']" class="bg-[#334155] text-white px-4 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-[#A90011] transition-colors">
+          Exit_Hub
+      </button>
+      
+      <button (click)="openAddAssetModal()" class="bg-[#A90011] text-white px-6 py-2 text-[10px] font-black uppercase tracking-widest hover:scale-105 transition-all shadow-lg shadow-[#A90011]/20">
+        + Add_Asset
       </button>
     </div>
   </div>
 
-  <div class="zentory-widget p-0 flex-1 flex flex-col overflow-hidden">
-    <div class="overflow-x-auto overflow-y-auto max-h-[calc(100vh-350px)]">
+  <div class="bg-white border border-[#334155]/10 rounded-3xl p-0 flex-1 flex flex-col overflow-hidden shadow-sm">
+    <div class="overflow-x-auto overflow-y-auto max-h-[calc(100vh-400px)]">
       <table class="w-full text-left border-collapse">
-        <thead class="sticky top-0 bg-wham-tan/30 backdrop-blur-md z-10">
-          <tr class="border-b-2 border-wham-dark/5">
-            <th class="p-4 text-[10px] font-black uppercase tracking-widest text-wham-dark/60">Product Name</th>
-            <th class="p-4 text-[10px] font-black uppercase tracking-widest text-wham-dark/60">SKU</th>
-            <th class="p-4 text-[10px] font-black uppercase tracking-widest text-wham-dark/60">Status</th>
-            <th class="p-4 text-[10px] font-black uppercase tracking-widest text-wham-dark/60 text-right">Current Qty</th>
-            <th class="p-4 text-[10px] font-black uppercase tracking-widest text-wham-dark/60">Location</th>
-            <th class="p-4 text-[10px] font-black uppercase tracking-widest text-wham-dark/60 text-right">Actions</th>
+        <thead class="sticky top-0 bg-[#FFFBF7] backdrop-blur-md z-10">
+          <tr class="border-b-2 border-[#334155]/5">
+            <th class="p-5 text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Product_Identification</th>
+            <th class="p-5 text-[10px] font-black uppercase tracking-widest text-[#334155]/60">SKU_Ref</th>
+            <th class="p-5 text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Logic_Status</th>
+            <th class="p-5 text-[10px] font-black uppercase tracking-widest text-[#334155]/60 text-right">Qty_On_Hand</th>
+            <th class="p-5 text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Zone_Location</th>
+            <th class="p-5 text-[10px] font-black uppercase tracking-widest text-[#334155]/60 text-right">Protocol</th>
           </tr>
         </thead>
         
-        <tbody class="divide-y divide-wham-dark/5">
-          @for (item of filteredInventory(); track item.id) {
-            <tr class="hover:bg-wham-primary/5 transition-colors group">
-              <td class="p-4">
-                <p class="text-xs font-black text-wham-dark uppercase leading-none">{{ item.name }}</p>
+        <tbody class="divide-y divide-[#334155]/5">
+          @for (item of filteredInventory(); track item.sku) {
+            <tr class="hover:bg-[#FBE9D9]/30 transition-colors group">
+              <td class="p-5">
+                <p class="text-xs font-black text-[#334155] uppercase leading-none">{{ item.name }}</p>
+                <p class="text-[9px] font-bold text-[#A90011]/40 mt-1 uppercase">{{ item.category }}</p>
               </td>
-              <td class="p-4">
-                <span class="text-[10px] font-bold text-wham-dark/40 font-mono">{{ item.sku }}</span>
+              <td class="p-5">
+                <span class="text-[10px] font-bold text-[#334155]/40 font-mono tracking-tighter">{{ item.sku }}</span>
               </td>
-              <td class="p-4">
+              <td class="p-5">
                 <span 
                   [ngClass]="{
-                    'text-green-600 bg-green-50': item.status === 'Ready',
-                    'text-wham-warn bg-wham-warn/10': item.status === 'Low',
-                    'text-blue-600 bg-blue-50': item.status === 'Arriving'
+                    'text-green-600 bg-green-50': item.status === 'IN_STOCK',
+                    'text-[#A90011] bg-[#A90011]/10': item.status === 'LOW_STOCK',
+                    'text-slate-400 bg-slate-50': item.status === 'OUT_OF_STOCK' || item.status === 'DISCONTINUED'
                   }"
-                  class="px-2 py-1 text-[9px] font-black uppercase tracking-tighter">
-                  {{ item.status }}
+                  class="px-3 py-1 rounded-md text-[9px] font-black uppercase tracking-tighter">
+                  {{ item.status?.replace('_', ' ') }}
                 </span>
               </td>
-              <td class="p-4 text-right">
-                <p class="text-xs font-black">{{ item.qty | number }}</p>
+              <td class="p-5 text-right">
+                <p class="text-sm font-black italic" [class.text-[#A90011]]="item.quantity.onHand <= item.quantity.minThreshold">
+                  {{ item.quantity.onHand | number }}
+                </p>
               </td>
-              <td class="p-4">
-                <p class="text-[10px] font-bold uppercase">{{ item.location }}</p>
+              <td class="p-5">
+                <div class="flex items-center gap-2">
+                  <mat-icon class="scale-50 text-[#A90011]/30">location_on</mat-icon>
+                  <p class="text-[10px] font-black uppercase text-[#334155] italic">
+                    {{ item.location.zone }}_{{ item.location.aisle }}
+                  </p>
+                </div>
               </td>
-              <td class="p-4 text-right">
-                <button class="text-wham-dark/20 hover:text-wham-primary transition-colors">
-                  <mat-icon class="scale-75">edit</mat-icon>
-                </button>
+              <td class="p-5 text-right">
+                <div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <button (click)="deleteItem(item.sku)" class="p-2 text-[#334155]/20 hover:text-[#A90011] transition-colors">
+                    <mat-icon class="scale-75">delete_outline</mat-icon>
+                  </button>
+                  <button class="p-2 bg-[#334155] text-white rounded-lg hover:bg-[#A90011] transition-colors">
+                    <mat-icon class="scale-75">edit</mat-icon>
+                  </button>
+                </div>
               </td>
             </tr>
           } @empty {
             <tr>
-              <td colspan="6" class="p-20 text-center">
-                <p class="text-[11px] font-black uppercase tracking-widest text-wham-dark/30">No inventory found matching criteria</p>
+              <td colspan="6" class="p-32 text-center">
+                <mat-icon class="scale-[2] text-[#334155]/10 mb-4">inventory_2</mat-icon>
+                <p class="text-[11px] font-black uppercase tracking-[0.4em] text-[#334155]/30 italic">No_Assets_Detected_In_Query</p>
               </td>
             </tr>
           }
