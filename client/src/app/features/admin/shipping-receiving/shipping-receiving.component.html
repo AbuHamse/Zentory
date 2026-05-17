@@ -1,152 +1,142 @@
-<div class="flex flex-col gap-6 p-4 h-full overflow-hidden">
+<div class="flex flex-col gap-6 p-4 h-full overflow-hidden animate-in fade-in duration-500">
   
-  <div class="flex justify-between items-center border-b-2 border-wham-dark/10 pb-4">
-    <div class="flex items-center gap-4">
-      <button [routerLink]="['/dashboard/home']" class="p-2 border-2 border-wham-dark hover:bg-wham-dark hover:text-white transition-colors">
+  <div class="flex justify-between items-center border-b-4 border-[#334155] pb-6">
+    <div class="flex items-center gap-6">
+      <button [routerLink]="['/admin/dashboard/home']" class="p-3 border-4 border-[#334155] hover:bg-[#334155] hover:text-white transition-all shadow-[4px_4px_0px_0px_rgba(51,65,85,1)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px]">
         <mat-icon>arrow_back</mat-icon>
       </button>
-      <h1 class="text-2xl font-black uppercase tracking-widest text-wham-dark leading-none">Shipping & Receiving</h1>
+      <div>
+        <h1 class="text-4xl font-black uppercase tracking-tighter text-[#334155] italic leading-none">Shipping_Receiving</h1>
+        <p class="text-[10px] font-bold text-[#A90011] uppercase tracking-[0.3em] mt-1">Dock_Control_Module // Active</p>
+      </div>
     </div>
     
-    <div class="flex gap-2">
-      <button (click)="setFilter('INBOUND')" 
-              [class.bg-wham-dark]="activeFilter() === 'INBOUND'" 
-              [class.text-white]="activeFilter() === 'INBOUND'"
-              class="px-4 py-2 border-2 border-wham-dark text-[10px] font-black uppercase tracking-widest transition-all">Inbound</button>
-      <button (click)="setFilter('OUTBOUND')" 
-              [class.bg-wham-dark]="activeFilter() === 'OUTBOUND'" 
-              [class.text-white]="activeFilter() === 'OUTBOUND'"
-              class="px-4 py-2 border-2 border-wham-dark text-[10px] font-black uppercase tracking-widest transition-all">Outbound</button>
-      <button class="bg-wham-primary text-white px-4 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-wham-warn transition-colors">+ New Shipment</button>
+    <div class="flex gap-4">
+      <div class="flex border-4 border-[#334155] bg-white shadow-[4px_4px_0px_0px_rgba(51,65,85,1)]">
+        <button (click)="setFilter('INBOUND')" 
+                [class.bg-[#334155]]="activeFilter() === 'INBOUND'" 
+                [class.text-white]="activeFilter() === 'INBOUND'"
+                class="px-6 py-2 text-[11px] font-black uppercase tracking-widest transition-all hover:bg-[#334155]/10 hover:text-[#334155]">Inbound</button>
+        <button (click)="setFilter('OUTBOUND')" 
+                [class.bg-[#334155]]="activeFilter() === 'OUTBOUND'" 
+                [class.text-white]="activeFilter() === 'OUTBOUND'"
+                class="px-6 py-2 text-[11px] font-black uppercase tracking-widest transition-all border-l-4 border-[#334155] hover:bg-[#334155]/10 hover:text-[#334155]">Outbound</button>
+      </div>
+
+      <button (click)="openNewShipmentModal()" class="bg-[#A90011] text-white px-8 py-2 text-[11px] font-black uppercase tracking-widest hover:scale-105 transition-all shadow-[6px_6px_0px_0px_rgba(51,65,85,0.2)]">
+        + Create_Manifest
+      </button>
     </div>
   </div>
 
-  <div class="grid grid-cols-12 gap-6 flex-1 overflow-hidden">
+  <div class="grid grid-cols-12 gap-8 flex-1 overflow-hidden">
     
     <div class="col-span-12 lg:col-span-4 flex flex-col gap-6 overflow-hidden">
-      <div class="zentory-widget flex-1 bg-wham-tan/5 border-t-4 border-wham-dark flex flex-col overflow-hidden">
-        <div class="flex justify-between items-start mb-6">
-          <span class="text-[10px] font-black uppercase tracking-[0.2em] text-wham-primary">
-            Logistics Manifest // {{ selectedShipment()?.id || 'Pending Selection' }}
+      <div class="bg-white border-4 border-[#334155] shadow-[8px_8px_0px_0px_rgba(251,233,217,1)] flex-1 flex flex-col overflow-hidden p-6">
+        <div class="flex justify-between items-start mb-8 border-b-2 border-[#334155]/10 pb-4">
+          <span class="text-[11px] font-black uppercase tracking-widest text-[#334155]">
+            Logistics_Record // <span class="text-[#A90011]">{{ selectedShipment()?.id || 'NO_SELECTION' }}</span>
           </span>
           @if(selectedShipment()?.received) {
-            <span class="text-[8px] font-black bg-wham-primary text-white px-2 py-0.5 uppercase tracking-tighter">Verified Intake</span>
+            <span class="text-[9px] font-black bg-green-600 text-white px-3 py-1 uppercase italic">Verified_Intake</span>
           }
         </div>
         
         @if (selectedShipment(); as shipment) {
-          <div class="flex-1 overflow-y-auto space-y-6 pr-2 custom-scrollbar">
+          <div class="flex-1 overflow-y-auto space-y-8 pr-2 custom-scrollbar">
             
-            <div class="border-b border-wham-dark/10 pb-4">
-              <p class="text-[8px] font-bold text-wham-dark/40 uppercase">Consignee / Company</p>
-              <h2 class="text-xl font-black uppercase text-wham-dark leading-tight">{{ shipment.company }}</h2>
-              <div class="flex gap-2 mt-2">
-                <span class="text-[9px] font-black uppercase px-2 py-0.5 bg-wham-dark text-white">{{ shipment.type }}</span>
-                <span class="text-[9px] font-black uppercase px-2 py-0.5 border border-wham-dark text-wham-dark">{{ shipment.status }}</span>
+            <div>
+              <p class="text-[9px] font-bold text-[#334155]/40 uppercase tracking-widest mb-1">Entity_Consignee</p>
+              <h2 class="text-3xl font-black uppercase text-[#334155] leading-tight italic">{{ shipment.company }}</h2>
+              <div class="flex gap-3 mt-4">
+                <span class="text-[10px] font-black uppercase px-3 py-1 bg-[#334155] text-white tracking-widest">{{ shipment.type }}</span>
+                <span class="text-[10px] font-black uppercase px-3 py-1 border-2 border-[#334155] text-[#334155] tracking-widest">{{ shipment.status }}</span>
               </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-y-4 gap-x-2 bg-wham-dark/5 p-4 border border-wham-dark/10">
+            <div class="grid grid-cols-2 gap-6 bg-[#FBE9D9]/30 p-5 border-2 border-[#334155]">
               <div>
-                <p class="text-[8px] font-bold text-wham-dark/40 uppercase">Carrier / Tracking</p>
-                <p class="text-[10px] font-black uppercase">{{ shipment.carrier }}</p>
-                <p class="text-[9px] font-mono font-bold text-wham-primary">{{ shipment.tracking }}</p>
+                <p class="text-[9px] font-bold text-[#334155]/40 uppercase mb-1">Carrier_Tracking</p>
+                <p class="text-[11px] font-black uppercase">{{ shipment.carrier }}</p>
+                <p class="text-[10px] font-mono font-bold text-[#A90011] mt-1">{{ shipment.tracking }}</p>
               </div>
               <div>
-                <p class="text-[8px] font-bold text-wham-dark/40 uppercase">Scheduled Arrival</p>
-                <p class="text-[10px] font-bold">{{ shipment.eta | date:'longDate' }}</p>
-              </div>
-              <div>
-                <p class="text-[8px] font-bold text-wham-dark/40 uppercase">Warehouse Zone</p>
-                <p class="text-[10px] font-black uppercase">Alpha-04 / Dock-B</p>
-              </div>
-              <div>
-                <p class="text-[8px] font-bold text-wham-dark/40 uppercase">Bill of Lading</p>
-                <p class="text-[10px] font-bold uppercase">#BL-{{ shipment.id.split('-')[1] }}882</p>
+                <p class="text-[9px] font-bold text-[#334155]/40 uppercase mb-1">Expected_Arrival</p>
+                <p class="text-[11px] font-black italic">{{ shipment.eta | date:'mediumDate' }}</p>
               </div>
             </div>
 
-            <div class="space-y-3">
-              <p class="text-[9px] font-black uppercase tracking-widest border-b border-wham-dark/20 pb-1">Itemized Manifest</p>
-              <div class="space-y-2">
-                <div class="flex justify-between items-center text-[10px] border-b border-wham-dark/5 pb-1">
-                  <span class="font-medium text-wham-dark/70 uppercase">ZTN-BRK Master Steel Plate</span>
-                  <span class="font-black">x{{ (shipment.itemsExpected * 0.65) | number:'1.0-0' }}</span>
-                </div>
-                <div class="flex justify-between items-center text-[10px] border-b border-wham-dark/5 pb-1">
-                  <span class="font-medium text-wham-dark/70 uppercase">ZTN-FIX Pivot Assembly Kit</span>
-                  <span class="font-black">x{{ (shipment.itemsExpected * 0.35) | number:'1.0-0' }}</span>
-                </div>
-              </div>
-              <div class="flex justify-between pt-1">
-                <span class="text-[9px] font-black uppercase tracking-tighter">Gross Quantity Expected</span>
-                <span class="text-[11px] font-black">{{ shipment.itemsExpected }} PCS</span>
+            <div class="space-y-4">
+              <p class="text-[10px] font-black uppercase tracking-[0.3em] border-b-2 border-[#334155] pb-2">Itemized_Manifest</p>
+              <div class="flex justify-between pt-2">
+                <span class="text-[10px] font-black uppercase text-[#334155]/60">Total_Items_Expected</span>
+                <span class="text-xl font-black italic text-[#334155]">{{ shipment.itemsExpected }} PCS</span>
               </div>
             </div>
 
-            <div class="p-4 border-2" 
-                 [class.border-wham-warn]="shipment.damages?.hasDamage"
-                 [class.border-wham-dark/10]="!shipment.damages?.hasDamage">
-              <div class="flex items-center gap-2 mb-2">
-                <mat-icon class="scale-75" [class.text-wham-warn]="shipment.damages?.hasDamage">
-                  {{ shipment.damages?.hasDamage ? 'report_problem' : 'verified' }}
+            <div class="p-5 border-4" 
+                 [class.border-[#A90011]]="shipment.damages?.hasDamage"
+                 [class.border-[#334155]/10]="!shipment.damages?.hasDamage"
+                 [class.bg-[#A90011]/5]="shipment.damages?.hasDamage">
+              <div class="flex items-center gap-3 mb-3">
+                <mat-icon [class.text-[#A90011]]="shipment.damages?.hasDamage">
+                  {{ shipment.damages?.hasDamage ? 'report' : 'verified_user' }}
                 </mat-icon>
-                <p class="text-[10px] font-black uppercase">Quality Control (QC) Status</p>
+                <p class="text-[11px] font-black uppercase italic tracking-widest">QC_Security_Scan</p>
               </div>
               @if (shipment.damages?.hasDamage) {
-                <div class="bg-wham-warn/5 p-2 border-l-2 border-wham-warn">
-                  <p class="text-[10px] font-black text-wham-warn uppercase">Discrepancy: {{ shipment.damages?.damagedItems }} Units Flagged</p>
-                  <p class="text-[10px] italic mt-1 font-medium">"{{ shipment.damages?.notes }}"</p>
-                </div>
+                <p class="text-[10px] font-bold text-[#A90011] uppercase underline mb-1">Damage_Detected: {{ shipment.damages?.damagedItems }} Units</p>
+                <p class="text-[10px] font-medium leading-relaxed italic text-[#334155]">"{{ shipment.damages?.notes }}"</p>
               } @else {
-                <p class="text-[10px] font-bold opacity-30 uppercase italic tracking-tight">Cargo verified at point of intake. No damage found.</p>
+                <p class="text-[10px] font-bold opacity-30 uppercase italic">No discrepancies found during dock inspection.</p>
               }
             </div>
 
             @if (!shipment.received && shipment.type === 'INBOUND') {
-              <button class="w-full bg-wham-dark text-white py-3 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-wham-primary transition-all">
-                Finalize & Receive Manifest
+              <button (click)="finalizeIntake(shipment)" class="w-full bg-[#A90011] text-white py-5 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-[#334155] transition-all shadow-[6px_6px_0px_0px_rgba(51,65,85,0.2)]">
+                Authorize_Intake_Manifest
               </button>
             }
           </div>
         } @else {
-          <div class="h-full flex flex-col items-center justify-center opacity-30 border-2 border-dashed border-wham-dark/10">
-            <mat-icon class="scale-[2] mb-4">dock</mat-icon>
-            <p class="text-[10px] font-black uppercase tracking-widest">Select record for manifest inspection</p>
+          <div class="h-full flex flex-col items-center justify-center opacity-20 border-4 border-dashed border-[#334155]/20">
+            <mat-icon class="scale-[3] mb-6">conveyor_belt</mat-icon>
+            <p class="text-[11px] font-black uppercase tracking-[0.5em] italic">Pending_Selection</p>
           </div>
         }
       </div>
     </div>
 
     <div class="col-span-12 lg:col-span-8 flex flex-col gap-6 overflow-hidden">
-      <div class="zentory-widget p-0 overflow-hidden flex-1 flex flex-col">
+      <div class="bg-white border-4 border-[#334155] shadow-[8px_8px_0px_0px_rgba(169,0,17,0.1)] overflow-hidden flex-1 flex flex-col">
         <div class="overflow-y-auto flex-1 custom-scrollbar">
-          <table class="w-full text-left">
-            <thead class="bg-wham-dark text-white uppercase text-[9px] tracking-[0.2em] sticky top-0 z-20">
+          <table class="w-full text-left border-collapse">
+            <thead class="bg-[#334155] text-white uppercase text-[10px] tracking-[0.3em] sticky top-0 z-20">
               <tr>
-                <th class="p-4">ID</th>
-                <th class="p-4">Company</th>
-                <th class="p-4">Carrier</th>
-                <th class="p-4 text-center">Status</th>
-                <th class="p-4 text-right">Items</th>
+                <th class="p-5 border-r border-white/10">Manifest_ID</th>
+                <th class="p-5 border-r border-white/10">Entity</th>
+                <th class="p-5 border-r border-white/10">Logistics_Carrier</th>
+                <th class="p-5 border-r border-white/10 text-center">Status</th>
+                <th class="p-5 text-right">Qty</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-wham-dark/5">
+            <tbody class="divide-y-4 divide-[#334155]/5">
               @for (s of filteredShipments(); track s.id) {
                 <tr (click)="selectShipment(s)" 
-                    class="cursor-pointer hover:bg-wham-primary/5 transition-colors"
-                    [class.bg-wham-primary/10]="selectedShipment()?.id === s.id">
-                  <td class="p-4 font-black text-xs">{{ s.id }}</td>
-                  <td class="p-4 font-bold text-xs uppercase">{{ s.company }}</td>
-                  <td class="p-4">
-                    <p class="text-[10px] font-black">{{ s.carrier }}</p>
-                    <p class="text-[9px] font-mono text-wham-primary">{{ s.tracking }}</p>
+                    class="cursor-pointer hover:bg-[#FBE9D9]/40 transition-all group"
+                    [class.bg-[#FBE9D9]]="selectedShipment()?.id === s.id">
+                  <td class="p-5 font-black text-xs italic">{{ s.id }}</td>
+                  <td class="p-5 font-black text-xs uppercase">{{ s.company }}</td>
+                  <td class="p-5">
+                    <p class="text-[10px] font-black uppercase">{{ s.carrier }}</p>
+                    <p class="text-[10px] font-mono font-bold text-[#A90011] tracking-tighter">{{ s.tracking }}</p>
                   </td>
-                  <td class="p-4 text-center">
-                    <span [class.text-wham-warn]="s.status === 'Delayed'" class="text-[9px] font-black uppercase border-b-2 border-current pb-1">{{ s.status }}</span>
+                  <td class="p-5 text-center">
+                    <span [class.text-[#A90011]]="s.status === 'Delayed'" 
+                          class="text-[10px] font-black uppercase border-b-2 border-current pb-1">{{ s.status }}</span>
                   </td>
-                  <td class="p-4 text-right">
-                    <p class="text-xs font-black">{{ s.itemsReceived || 0 }} / {{ s.itemsExpected }}</p>
+                  <td class="p-5 text-right">
+                    <p class="text-xs font-black italic">{{ s.itemsReceived || 0 }}_{{ s.itemsExpected }}</p>
                   </td>
                 </tr>
               }
@@ -155,20 +145,22 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-6 h-64">
-        <div class="zentory-widget">
-          <span class="text-[10px] font-black uppercase tracking-widest text-wham-dark/40 block mb-4">Tracking History</span>
-          <div class="border-l-2 border-wham-dark ml-2 pl-4 space-y-4">
-             <div class="text-[10px]">
-               <p class="font-black">In-Transit</p>
-               <p class="opacity-40 uppercase">Departed Hub // Chicago, IL</p>
+      <div class="grid grid-cols-2 gap-8 h-48">
+        <div class="bg-[#334155] p-6 shadow-[8px_8px_0px_0px_rgba(169,0,17,1)]">
+          <span class="text-[10px] font-black uppercase tracking-widest text-white/40 block mb-4 italic">Live_Tracking_Log</span>
+          <div class="border-l-4 border-[#A90011] ml-2 pl-6 space-y-4">
+             <div class="text-[11px] text-white">
+               <p class="font-black italic">IN_TRANSIT</p>
+               <p class="opacity-60 uppercase tracking-tighter mt-1">Departed Regional Hub // ZTN-HUB-04</p>
              </div>
           </div>
         </div>
         
-        <div class="zentory-widget bg-wham-warn/5 border-wham-warn border-l-4">
-          <span class="text-[10px] font-black uppercase tracking-widest text-wham-warn block mb-2">Smart Prediction</span>
-          <p class="text-[11px] font-bold leading-relaxed">Inclement weather detected on route. Potential delay of <span class="text-wham-warn">4.5 hours</span> predicted for inbound deliveries.</p>
+        <div class="bg-[#FBE9D9] p-6 border-4 border-[#334155] shadow-[8px_8px_0px_0px_rgba(51,65,85,1)]">
+          <span class="text-[10px] font-black uppercase tracking-widest text-[#A90011] block mb-3 italic">System_Prediction</span>
+          <p class="text-xs font-black leading-relaxed text-[#334155] uppercase tracking-tighter">
+            Operational variance detected. <span class="bg-[#A90011] text-white px-1">Weather_Interference</span> on primary route. Estimated delay of 04:30 HRS.
+          </p>
         </div>
       </div>
 

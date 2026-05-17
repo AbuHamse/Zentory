@@ -1,0 +1,110 @@
+<div class="flex flex-col gap-6 p-6 h-full bg-[#FFFBF7] animate-in fade-in duration-500">
+  
+  <div class="flex justify-between items-end border-b-4 border-[#334155] pb-6">
+    <div>
+      <h1 class="text-4xl font-black uppercase tracking-tighter text-[#334155] italic leading-none">Spatial_Intelligence</h1>
+      <p class="text-[10px] font-bold text-[#A90011] uppercase tracking-[0.3em] mt-2">
+        Live Floor Plan // Global Accuracy: {{ inventoryService.inventoryAccuracy() }}%
+      </p>
+    </div>
+    <div class="flex gap-6">
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 bg-[#A90011] border border-[#334155]"></span>
+        <span class="text-[9px] font-black uppercase text-[#334155]/60">Traffic_Lanes</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 bg-[#3B82F6] border border-[#334155]"></span>
+        <span class="text-[9px] font-black uppercase text-[#334155]/60">Pick_Zones</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-12 gap-8 flex-1 overflow-hidden">
+    
+    <div class="col-span-12 lg:col-span-9 bg-white border-4 border-[#334155] shadow-[12px_12px_0px_0px_rgba(51,65,85,1)] p-4 flex items-center justify-center relative">
+      <svg viewBox="0 0 800 500" class="w-full h-full" preserveAspectRatio="xMidYMid meet">
+        <rect x="0" y="0" width="800" height="500" fill="none" stroke="#334155" stroke-width="4"/>
+
+        <rect x="0" y="200" width="10" height="60" class="emergency-exit" /> 
+        <rect x="790" y="200" width="10" height="60" class="emergency-exit" />
+        <rect x="370" y="490" width="60" height="10" class="emergency-exit" />
+
+        <path d="M 40 40 L 40 460 L 760 460 L 760 420 L 80 420 L 80 40 Z" 
+              class="zone" fill="#A90011" 
+              [class.active-zone]="selectedZone() === 'TRAFFIC'"
+              (click)="selectZone('TRAFFIC')"/>
+        
+        <rect x="100" y="40" width="50" height="350" 
+              class="zone" fill="#3B82F6" 
+              [class.active-zone]="selectedZone() === 'ZONE_A'"
+              (click)="selectZone('ZONE_A')"/>
+        
+        <rect x="320" y="150" width="100" height="200" 
+              class="zone" fill="#64748b" 
+              [class.active-zone]="selectedZone() === 'PACKING'"
+              (click)="selectZone('PACKING')"/>
+        <text x="330" y="250" class="text-[10px] font-black fill-[#334155] pointer-events-none uppercase">Pack_Station</text>
+
+        <g class="zone" fill="#3B82F6" (click)="selectZone('ZONE_B')">
+            <rect x="520" y="40" width="200" height="15" [class.active-zone]="selectedZone() === 'ZONE_B'"/>
+            <rect x="520" y="80" width="200" height="15" [class.active-zone]="selectedZone() === 'ZONE_B'"/>
+            <rect x="520" y="120" width="200" height="15" [class.active-zone]="selectedZone() === 'ZONE_B'"/>
+            <rect x="520" y="160" width="200" height="15" [class.active-zone]="selectedZone() === 'ZONE_B'"/>
+        </g>
+
+        <path d="M 160 320 Q 220 380 310 320" fill="none" stroke="#3B82F6" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+        
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#3B82F6" />
+          </marker>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="col-span-12 lg:col-span-3 flex flex-col gap-6">
+      
+      <div class="bg-[#334155] p-6 text-white shadow-[8px_8px_0px_0px_rgba(169,0,17,1)]">
+        <span class="text-[10px] font-black uppercase tracking-widest text-white/40 block mb-4 italic">Telemetry_Focus</span>
+        @if (zoneStats(); as stats) {
+          <h3 class="text-2xl font-black italic uppercase leading-none mb-6">{{ selectedZone() }}</h3>
+          <div class="space-y-4">
+            <div class="border-l-2 border-[#A90011] pl-4">
+              <p class="text-[9px] uppercase font-bold text-white/40">Registered_SKUs</p>
+              <p class="text-xl font-black">{{ stats.skuCount }} Items</p>
+            </div>
+            <div class="border-l-2 border-[#A90011] pl-4">
+              <p class="text-[9px] uppercase font-bold text-white/40">Total_Capacity</p>
+              <p class="text-xl font-black">{{ stats.totalUnits }} Units</p>
+            </div>
+            @if(stats.lowStock > 0) {
+              <div class="bg-[#A90011]/20 p-2 border border-[#A90011]">
+                <p class="text-[9px] font-black uppercase text-[#A90011]">{{ stats.lowStock }} Low Stock Flags</p>
+              </div>
+            }
+          </div>
+        } @else {
+          <p class="text-[11px] font-bold opacity-40 uppercase italic tracking-widest leading-relaxed">Select a terminal zone on the map to initialize telemetry data.</p>
+        }
+      </div>
+
+      <div class="bg-white border-4 border-[#334155] p-6 flex-1 shadow-[8px_8px_0px_0px_rgba(51,65,85,1)] overflow-hidden flex flex-col">
+        <span class="text-[10px] font-black uppercase tracking-widest text-[#A90011] block mb-4 italic">Traffic_Alerts</span>
+        <div class="space-y-4 overflow-y-auto pr-2 custom-scrollbar">
+            @for (alert of alerts(); track alert.msg) {
+                <div class="flex gap-4 pb-4 border-b border-[#334155]/10">
+                    <mat-icon [class.text-[#A90011]]="alert.type === 'CRITICAL'" class="scale-75">
+                        {{ alert.type === 'CRITICAL' ? 'report' : 'info' }}
+                    </mat-icon>
+                    <div>
+                        <p class="text-[10px] font-black uppercase leading-tight tracking-tighter">{{ alert.msg }}</p>
+                        <p class="text-[8px] font-bold text-[#334155]/40 mt-1">LOGGED: {{ alert.time }}</p>
+                    </div>
+                </div>
+            }
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

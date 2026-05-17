@@ -1,0 +1,73 @@
+<div class="p-8 bg-[#FFFBF7] border-4 border-[#334155] shadow-[12px_12px_0px_0px_rgba(51,65,85,1)]">
+  
+  <div class="flex justify-between items-start mb-8">
+    <h2 class="text-3xl font-black uppercase italic tracking-tighter text-[#334155]">
+      Logistics_Entry // <span class="text-[#A90011]">{{ shipment.type }}</span>
+    </h2>
+    <button (click)="close()" class="text-[#334155] hover:text-[#A90011]">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <form #shipmentForm="ngForm" class="grid grid-cols-2 gap-6">
+    
+    <div class="col-span-2 flex gap-4 bg-[#334155]/5 p-2 border-2 border-[#334155]">
+      <button type="button" (click)="shipment.type = 'INBOUND'"
+              [class.bg-[#334155]]="shipment.type === 'INBOUND'"
+              [class.text-white]="shipment.type === 'INBOUND'"
+              class="flex-1 py-2 text-[10px] font-black uppercase tracking-widest transition-all">Inbound</button>
+      <button type="button" (click)="shipment.type = 'OUTBOUND'"
+              [class.bg-[#334155]]="shipment.type === 'OUTBOUND'"
+              [class.text-white]="shipment.type === 'OUTBOUND'"
+              class="flex-1 py-2 text-[10px] font-black uppercase tracking-widest transition-all">Outbound</button>
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label class="text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Consignee / Company</label>
+      <input [(ngModel)]="shipment.company" name="company" required
+             class="bg-white border-2 border-[#334155] p-3 text-xs font-bold uppercase focus:bg-[#FBE9D9] outline-none">
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label class="text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Carrier_Title</label>
+      <input [(ngModel)]="shipment.carrier" name="carrier" required
+             class="bg-white border-2 border-[#334155] p-3 text-xs font-bold uppercase outline-none">
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label class="text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Tracking_Number</label>
+      <input [(ngModel)]="shipment.tracking" name="tracking" required
+             class="bg-white border-2 border-[#334155] p-3 text-xs font-bold font-mono outline-none">
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label class="text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Expected_Arrival</label>
+      <input type="date" [(ngModel)]="shipment.eta" name="eta"
+             class="bg-white border-2 border-[#334155] p-3 text-xs font-bold outline-none">
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label class="text-[10px] font-black uppercase tracking-widest text-[#334155]/60">{{ shipment.type === 'INBOUND' ? 'Origin' : 'Destination' }}</label>
+      <input [(ngModel)]="shipment.origin_destination" name="origin"
+             class="bg-white border-2 border-[#334155] p-3 text-xs font-bold uppercase outline-none">
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label class="text-[10px] font-black uppercase tracking-widest text-[#334155]/60">Gross_Item_Count</label>
+      <input type="number" [(ngModel)]="shipment.itemsExpected" name="qty"
+             class="bg-white border-2 border-[#334155] p-3 text-xs font-bold outline-none">
+    </div>
+
+    <div class="col-span-2 flex gap-4 mt-6">
+      <button type="button" (click)="close()" 
+              class="flex-1 py-4 border-2 border-[#334155] text-[10px] font-black uppercase tracking-widest hover:bg-[#334155]/5 transition-colors">
+        Cancel_Manifest
+      </button>
+      <button type="button" (click)="save()" [disabled]="!shipmentForm.valid"
+              class="flex-1 py-4 bg-[#A90011] text-white text-[10px] font-black uppercase tracking-widest hover:scale-105 transition-transform disabled:opacity-50 shadow-lg shadow-[#A90011]/20">
+        Authorize_Shipment
+      </button>
+    </div>
+
+  </form>
+</div>

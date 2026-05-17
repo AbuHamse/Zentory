@@ -1,5 +1,4 @@
-// src/app/core/layout/navbar/navbar.component.ts
-import { Component, output, input } from '@angular/core';
+import { Component, output, input, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../../../shared/material.module';
 
@@ -10,9 +9,23 @@ import { MaterialModule } from '../../../shared/material.module';
   templateUrl: './navbar.component.html',
 })
 export class NavbarComponent {
-  // Use v21 outputs for the toggle
+  // Navigation Protocol Outputs
   onToggleSidenav = output<void>();
   
-  // Use inputs if you want to pass the username or title from the parent
-  title = input('Zentory');
+  // System Metadata Inputs
+  title = input('ZTN-ZENTORY');
+  version = input('v21.4');
+  
+  // Logic Status Signals
+  protected systemStatus = signal<'SECURED' | 'SYNCING' | 'OFFLINE'>('SECURED');
+  protected currentUser = signal({
+    name: 'System Admin',
+    role: 'Global Permissions',
+    initials: 'SA'
+  });
+
+  // Action: Trigger Sidebar Toggle
+  toggle() {
+    this.onToggleSidenav.emit();
+  }
 }

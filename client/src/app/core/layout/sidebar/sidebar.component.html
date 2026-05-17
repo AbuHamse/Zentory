@@ -1,24 +1,32 @@
-<div class="h-14 flex items-center justify-between px-6 bg-wham-dark text-wham-white">
-  <span class="text-[10px] font-black uppercase tracking-[0.3em]">Navigation</span>
-  <button mat-icon-button (click)="onClose.emit()" class="scale-75">
-    <mat-icon>close</mat-icon>
+<div class="h-14 flex items-center justify-between px-6 bg-[#A90011] text-white shadow-md">
+  <span class="text-[11px] font-black uppercase tracking-[0.3em]">Navigation</span>
+  <button (click)="close()" class="flex items-center justify-center hover:rotate-90 transition-transform duration-200">
+    <mat-icon class="scale-75">close</mat-icon>
   </button>
 </div>
 
-<mat-nav-list class="p-0 pt-4">
+<mat-nav-list class="p-0">
   @for (item of navItems; track item.label) {
     <a mat-list-item 
        [routerLink]="item.route" 
        routerLinkActive="active-link"
        [routerLinkActiveOptions]="{exact: true}"
-       (click)="onClose.emit()"
-       class="h-14 px-6 flex items-center transition-all hover:bg-wham-primary/5">
+       (click)="close()"
+       class="h-16 px-6 flex items-center border-b border-[#334155]/5 transition-all hover:bg-[#334155]/5">
        
-      <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
-      
-      <span matListItemTitle class="ml-4 text-[11px] uppercase tracking-widest font-bold">
-        {{ item.label }}
-      </span>
+      <div class="flex items-center h-full">
+        <mat-icon class="text-[#334155] opacity-70 group-[.active-link]:opacity-100 group-[.active-link]:text-[#A90011]">
+          {{ item.icon }}
+        </mat-icon>
+        
+        <span class="ml-6 text-[12px] uppercase tracking-[0.15em] font-black text-[#334155]">
+          {{ item.label }}
+        </span>
+      </div>
     </a>
   }
 </mat-nav-list>
+
+<div class="absolute bottom-8 left-6 opacity-10">
+  <p class="text-[10px] font-black uppercase tracking-widest">Zentory_Systems</p>
+</div>

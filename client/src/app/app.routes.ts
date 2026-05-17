@@ -29,6 +29,8 @@ import {AuthComponent} from './pages/auth/auth.component'
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { SuccessComponent } from './pages/stripe/success/success.component';
 import { CancelComponent } from './pages/stripe/cancel/cancel.component';
+import { FloorPlanComponent } from './features/admin/floor-plan/floor-plan.component';
+import { AnalyticsComponent } from './features/admin/analytics/analytics.component';
 
 export const routes: Routes = [
   // 🌐 WEBSITE ROUTES
@@ -63,6 +65,8 @@ export const routes: Routes = [
       { path: 'returns', component: ReturnsDamagesComponent },
       { path: 'customers', component: CustomerOverviewComponent },
       { path: 'reports', component: ReportsComponent },
+      { path: 'floor-plan', component: FloorPlanComponent },
+      { path: 'analytics', component: AnalyticsComponent},
     ] 
   },
 

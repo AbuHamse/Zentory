@@ -12,20 +12,29 @@ import { MaterialModule } from '../../../shared/material.module';
     :host { 
       display: block; 
       height: 100%; 
+      background-color: #FFFBF7;
+    }
+    .active-link {
+      background-color: rgba(169, 0, 17, 0.05);
+      border-right: 4px solid #A90011;
+      color: #A90011 !important;
     }
   `]
 })
 export class SidebarComponent {
-  // We only need the output so the Close Button can tell the parent to shut it
   onClose = output<void>();
 
   protected readonly navItems = [
-    { icon: 'dashboard', label: 'Dashboard', route: '/dashboard' },
-    { icon: 'inventory_2', label: 'Inventory', route: '/inventory' },
-    { icon: 'local_shipping', label: 'Orders', route: '/orders' },
-    { icon: 'qr_code_scanner', label: 'Scanning', route: '/scanning' },
-    { icon: 'map', label: 'Floor Plan', route: '/floor-plan' },
-    { icon: 'analytics', label: 'Analytics', route: '/analytics' },
-    { icon: 'settings', label: 'Settings', route: '/settings' },
+    { icon: 'dashboard', label: 'Dashboard', route: '/admin/dashboard/home' },
+    { icon: 'inventory_2', label: 'Inventory', route: '/admin/dashboard/inventory' },
+    { icon: 'shopping_cart', label: 'Orders', route: '/admin/dashboard/orders' },
+    { icon: 'qr_code_scanner', label: 'Scanning', route: '/admin/dashboard/shipment-receiving' },
+    { icon: 'map', label: 'Floor Plan', route: '/admin/dashboard/floor-plan' },
+    { icon: 'analytics', label: 'Analytics', route: '/admin/dashboard/analytics' },
+    { icon: 'settings', label: 'Settings', route: '/admin/dashboard/settings' },
   ];
+
+  close() {
+    this.onClose.emit();
+  }
 }

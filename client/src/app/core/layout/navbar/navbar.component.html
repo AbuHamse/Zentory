@@ -1,38 +1,67 @@
-<mat-toolbar class="h-14 bg-wham-dark text-wham-white flex justify-between items-center px-0 border-b border-wham-primary/30 shadow-lg">
+<mat-toolbar class="h-14 bg-[#334155] text-white flex justify-between items-center p-0 shadow-lg relative z-50">
   
   <div class="flex items-center h-full">
-    <div (click)="onToggleSidenav.emit()" 
-         class="bg-wham-primary h-full px-6 flex items-center border-r border-wham-white/10 group cursor-pointer hover:bg-wham-warn transition-all duration-200 active:scale-95">
-      <mat-icon class="mr-3 scale-75 opacity-70 group-hover:opacity-100">menu</mat-icon>
-      <span class="text-lg font-black tracking-[0.3em] uppercase italic select-none">{{ title() }}</span>
-    </div>
+    <button (click)="toggle()" 
+            class="h-full px-5 flex items-center bg-[#A90011] hover:bg-[#D11D27] text-white transition-all border-r border-white/10">
+      <mat-icon class="scale-75">menu</mat-icon>
+    </button>
     
-    <div class="hidden md:flex px-6 items-center">
-      <span class="text-[9px] uppercase tracking-[0.25em] font-bold text-wham-cream/60">
-        Warehouse & Asset Management <span class="text-wham-primary ml-2">// v21.4</span>
-      </span>
+    <div class="flex items-center gap-6 px-6 h-full">
+      <div class="flex items-center gap-4">
+        <img src="logo.png" 
+             alt="ZTN Logo" 
+             class="h-8 w-auto object-contain brightness-0 invert shadow-sm" />
+        
+        <div class="hidden sm:block">
+          <h1 class="text-xl font-black uppercase tracking-tighter leading-none select-none italic text-white/90">
+            ZENTORY_OS
+          </h1>
+          <p class="text-[8px] font-bold uppercase tracking-[0.4em] mt-1 text-[#D11D27] leading-none">
+            {{ version() }}
+          </p>
+        </div>
+      </div>
+      
+      <div class="h-8 w-[1px] bg-white/10 hidden md:block"></div>
+      <div class="hidden lg:flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+        <span class="text-[9px] font-black uppercase tracking-[0.2em] text-white/40 italic">
+          Node_Status // SECURED
+        </span>
+      </div>
     </div>
   </div>
 
-  <div class="flex items-center h-full">
-    <div class="h-8 w-[1px] bg-wham-white/10 mx-2"></div>
+  <div class="flex items-center h-full px-6">
+    
+    <div class="h-8 w-[1px] bg-white/10 mx-4 hidden sm:block"></div>
     
     <button mat-button [matMenuTriggerFor]="profileMenu" 
-            class="h-full px-6 flex items-center gap-3 hover:bg-wham-white/5 transition-all">
+            class="h-full flex items-center gap-4 hover:bg-white/5 transition-all text-white p-0">
       <div class="text-right hidden sm:block">
-        <p class="text-[10px] font-bold uppercase leading-none tracking-tighter">System Admin</p>
-        <p class="text-[8px] uppercase text-wham-cream/40 tracking-widest mt-1">Global Permissions</p>
+        <p class="text-[10px] font-black uppercase leading-none tracking-tighter italic">
+          {{ currentUser().name }}
+        </p>
+        <p class="text-[8px] uppercase text-white/30 tracking-widest mt-1 italic">
+          {{ currentUser().role }}
+        </p>
       </div>
-      <div class="w-8 h-8 bg-wham-primary border border-wham-white/20 flex items-center justify-center font-bold text-xs">
-        SA
+      
+      <div class="w-10 h-10 bg-[#A90011] border-2 border-white/20 flex items-center justify-center font-black text-xs shadow-inner">
+        {{ currentUser().initials }}
       </div>
     </button>
 
     <mat-menu #profileMenu="matMenu" class="zentory-menu">
-      <button mat-menu-item>PROFILE</button>
-      <button mat-menu-item>SETTINGS</button>
-      <mat-divider></mat-divider>
-      <button mat-menu-item class="text-wham-primary font-bold">LOGOUT</button>
+      <button mat-menu-item class="hover:bg-[#FBE9D9]/10">
+        <mat-icon class="scale-90 text-white/70">admin_panel_settings</mat-icon>
+        <span class="font-black uppercase tracking-widest text-[10px]">Security_Vault</span>
+      </button>
+      <mat-divider class="!border-white/10"></mat-divider>
+      <button mat-menu-item class="text-[#A90011] hover:bg-[#A90011]/5">
+        <mat-icon class="scale-90 text-[#A90011]">power_settings_new</mat-icon>
+        <span class="font-black uppercase tracking-widest text-[10px]">Terminal_Exit</span>
+      </button>
     </mat-menu>
   </div>
 </mat-toolbar>
