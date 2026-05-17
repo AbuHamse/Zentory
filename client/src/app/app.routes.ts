@@ -31,6 +31,7 @@ import { SuccessComponent } from './pages/stripe/success/success.component';
 import { CancelComponent } from './pages/stripe/cancel/cancel.component';
 import { FloorPlanComponent } from './features/admin/floor-plan/floor-plan.component';
 import { AnalyticsComponent } from './features/admin/analytics/analytics.component';
+import { SettingsComponent } from './features/admin/settings/settings.component';
 
 export const routes: Routes = [
   // 🌐 WEBSITE ROUTES
@@ -67,6 +68,7 @@ export const routes: Routes = [
       { path: 'reports', component: ReportsComponent },
       { path: 'floor-plan', component: FloorPlanComponent },
       { path: 'analytics', component: AnalyticsComponent},
+      { path: 'settings', component: SettingsComponent},
     ] 
   },
 

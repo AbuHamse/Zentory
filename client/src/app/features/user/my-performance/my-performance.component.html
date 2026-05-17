@@ -1,18 +1,23 @@
 <div class="w-full space-y-8 animate-in fade-in duration-500 p-2">
   
-  <div class="bg-[#213C64] border-4 border-black p-8 shadow-[12px_12px_0px_#000] flex justify-between items-center text-white">
+  <div class="bg-[#213C64] border-4 border-black p-8 shadow-[12px_12px_0px_#000] flex flex-col md:flex-row justify-between items-center text-white gap-6">
     <div>
-      <h1 class="text-6xl font-black uppercase tracking-tighter italic">MY_PERFORMANCE_OS</h1>
-      <p class="font-mono text-xs opacity-70 tracking-[0.4em] uppercase text-white/60">ZTN_TELEMETRY // DIRIE_USR-1050</p>
+      <h1 class="text-4xl lg:text-6xl font-black uppercase tracking-tighter italic leading-none">MY_PERFORMANCE_OS</h1>
+      <p class="font-mono text-[10px] opacity-70 tracking-[0.4em] uppercase mt-2 text-white/60">
+        ZTN_TELEMETRY // DIRIE_USR-1050 // STATUS: ACTIVE
+      </p>
     </div>
     <button (click)="isModalOpen.set(true)" 
-            class="bg-wham-warn text-black px-10 py-4 border-4 border-black font-black uppercase italic hover:bg-black hover:text-white transition-all shadow-[8px_8px_0px_#000] active:translate-y-1">
+            class="bg-[#A90011] text-white px-10 py-4 border-4 border-black font-black uppercase italic hover:bg-white hover:text-black transition-all shadow-[8px_8px_0px_#000] active:translate-y-1 shrink-0">
       LOG_REFUTE_CLAIM
     </button>
   </div>
 
   <div class="space-y-4">
-    <h3 class="font-black uppercase text-2xl italic text-wham-dark px-2">PRODUCTION_SPRINTS (12H)</h3>
+    <div class="flex items-center gap-4 px-2">
+        <div class="h-8 w-2 bg-[#A90011]"></div>
+        <h3 class="font-black uppercase text-2xl italic text-[#334155]">PRODUCTION_SPRINTS (12H)</h3>
+    </div>
     <app-stats-grid [intervals]="perfService.myStats()?.intervals || []"></app-stats-grid>
   </div>
 
@@ -21,20 +26,36 @@
       <app-leaderboard></app-leaderboard>
     </div>
 
-    <div class="col-span-12 lg:col-span-5 bg-wham-tan border-4 border-black p-8 shadow-[10px_10px_0px_#000] flex flex-col overflow-hidden">
-      <h3 class="text-3xl font-black uppercase mb-6 border-b-8 border-black pb-4 italic text-black">REFUTE_HISTORY</h3>
+    <div class="col-span-12 lg:col-span-5 bg-[#FBE9D9] border-4 border-black p-8 shadow-[10px_10px_0px_#000] flex flex-col overflow-hidden">
+      <div class="flex justify-between items-start mb-6 border-b-8 border-black pb-4">
+          <h3 class="text-3xl font-black uppercase italic text-black leading-none">REFUTE_HISTORY</h3>
+          <mat-icon class="text-black scale-125">history_edu</mat-icon>
+      </div>
       
-      <div class="flex-1 overflow-y-auto custom-scrollbar space-y-4">
+      <div class="flex-1 overflow-y-auto custom-scrollbar space-y-4 pr-2">
         @for (claim of perfService.myClaims(); track claim.id) {
-          <div class="bg-white border-4 border-black p-5 group hover:bg-wham-cream transition-colors">
+          <div class="bg-white border-4 border-black p-5 group hover:border-[#A90011] transition-all relative">
             <div class="flex justify-between items-center mb-2">
-              <span class="text-[10px] font-black bg-black text-white px-2 py-0.5">SLOT_0{{claim.intervalSlot}}</span>
-              <span [class]="claim.status === 'PENDING' ? 'text-wham-primary' : 'text-green-600'" 
-                    class="font-black uppercase text-[10px] italic">● {{claim.status}}</span>
+              <span class="text-[10px] font-black bg-black text-white px-3 py-1 uppercase tracking-tighter">
+                SLOT_0{{claim.intervalSlot}}
+              </span>
+              <div class="flex items-center gap-2">
+                  <span [class]="claim.status === 'PENDING' ? 'text-[#A90011]' : 'text-green-600'" 
+                        class="font-black uppercase text-[10px] italic">
+                    ● {{claim.status}}
+                  </span>
+              </div>
             </div>
-            <p class="text-sm font-black uppercase text-black">{{claim.category}}</p>
-            <p class="text-xs italic opacity-60 text-black">"{{claim.explanation}}"</p>
+            <p class="text-sm font-black uppercase text-[#334155]">{{claim.category}}</p>
+            <p class="text-[11px] italic font-bold opacity-60 text-black mt-1 leading-tight">
+              "{{claim.explanation}}"
+            </p>
           </div>
+        } @empty {
+            <div class="flex flex-col items-center justify-center h-full py-12 border-4 border-dashed border-black/20">
+                <mat-icon class="text-black/20 scale-[2] mb-4">folder_off</mat-icon>
+                <p class="text-[10px] font-black uppercase text-black/40 tracking-widest italic">No_Historical_Claims_Indexed</p>
+            </div>
         }
       </div>
     </div>
@@ -42,14 +63,20 @@
 </div>
 
 @if (isModalOpen()) {
-  <app-refute-form 
-    (close)="isModalOpen.set(false)" 
-    (submitted)="onClaimSubmitted()">
-  </app-refute-form>
+  <div class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] flex items-center justify-center p-4">
+      <app-refute-form 
+        class="w-full max-w-2xl"
+        (close)="isModalOpen.set(false)" 
+        (submitted)="onClaimSubmitted()">
+      </app-refute-form>
+  </div>
 }
 
 @if (showToast()) {
-  <div class="fixed bottom-10 right-10 bg-black text-wham-warn border-[6px] border-wham-warn p-8 font-black uppercase italic shadow-[15px_15px_0px_rgba(0,0,0,0.8)] animate-in slide-in-from-right duration-500 z-[300]">
-    SYSTEM_COMM_SUCCESS // REFUTE_CLAIM_INDEXED
+  <div class="zentory-toast fixed bottom-10 right-10 bg-black text-[#FBE9D9] border-[6px] border-[#A90011] p-8 font-black uppercase italic shadow-[15px_15px_0px_rgba(0,0,0,0.8)] z-[300]">
+    <div class="flex items-center gap-4">
+        <mat-icon class="text-[#A90011]">check_circle</mat-icon>
+        <span>SYSTEM_COMM_SUCCESS // REFUTE_CLAIM_INDEXED</span>
+    </div>
   </div>
 }
