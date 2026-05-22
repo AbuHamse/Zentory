@@ -16,54 +16,54 @@ Integrating the **Money Mind Machine** philosophy, the system merges technical r
 ### 1. Unified Operations Terminal
 The primary landing interface focuses on **Throughput Optimization**. It features a live telemetry pulse and global node monitoring to ensure 24/7 transparency across all regional logistics tiers.
 
-![Zentory_OS Hero Interface](screenshot1.png)
+![Zentory_OS Hero Interface](/client/public/screenshot1.png)
 
 ### 2. Strategic Infrastructure & Feature Suite
 The system is built on modular deployment standards, allowing for seamless integration of WMS, BI, and Workforce Tracking modules.
 
-![Enterprise Infrastructure](screenshot2.png)
+![Enterprise Infrastructure](/client/public/screenshot2.png)
 
 ### 3. Knowledge Base // The Transmission
 A centralized repository for operational data logs and engineering protocols, ensuring all personnel are aligned with the latest system telemetry.
 
-![The Transmission Knowledge Base](screenshot3.png)
+![The Transmission Knowledge Base](/client/public/screenshot3.png)
 
 ### 4. Secure Authentication Gateway
 High-security portal access featuring a sleek, industrial-grade login interface that reinforces the proprietary nature of the business intelligence.
 
-![Secure Portal Access](screenshot4.png)
+![Secure Portal Access](/client/public/screenshot4.png)
 
 ### 5. Zentra Concept Lab
 An advanced neural interface preview that allows stakeholders to experience how the system parses logistics bottlenecks using natural language query logic.
 
-![Zentra Concept Lab](screenshot5.png)
+![Zentra Concept Lab](/client/public/screenshot5.png)
 
 ### 6. Administrative Command Center
 The high-level oversight dashboard for system admins, providing a 360-degree view of inventory, active orders, and shipment health.
 
-![Admin Command Center](screenshot6.png)
+![Admin Command Center](/client/public/screenshot6.png)
 
 ### 7. Quality Control & Recovery Center
 A dedicated module for handling reverse logistics and technical inspections.
 * **Master-Detail Queue**: Seamless navigation through incoming returns.
 * **Disposition Engine**: Standardized protocols for restock, scrap, or vendor return actions.
 
-![Returns and Quality Control](screenshot7.png)
+![Returns and Quality Control](/client/public/screenshot7.png)
 
 ### 8. Executive Overview & Utilization Matrix
 A sophisticated data engine that parses complex warehouse metrics into executive-level insights, featuring spatial distribution heatmaps for primary sectors.
 
-![Executive Overview Dashboard](screenshot8.png)
+![Executive Overview Dashboard](/client/public/screenshot8.png)
 
 ### 9. Inventory Reports Hub
 High-density SKU analysis featuring margin percentages, return rates, and stock velocity indicators for data-driven procurement.
 
-![Reports Hub Inventory](screenshot9.png)
+![Reports Hub Inventory](/client/public/screenshot9.png)
 
 ### 10. Operator Session // User Dashboard
 The ground-level interface for personnel, featuring real-time logistics health status, active alerts, and performance telemetry.
 
-![User Performance Dashboard](screenshot10.png)
+![User Performance Dashboard](/client/public/screenshot10.png)
 
 ---
 
