@@ -1,47 +1,47 @@
 <div class="w-full max-w-xl mx-auto transition-all duration-700 delay-100" 
      [ngClass]="visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'">
   
-  <div class="bg-wham-red-dark border-4 border-black p-10 rounded-[40px] 
-              shadow-[25px_25px_50px_rgba(169,0,17,0.2),inset_10px_10px_20px_rgba(255,255,255,0.15),inset_-10px_-10px_20px_rgba(0,0,0,0.3)] 
-              relative overflow-hidden group hover:scale-[1.02]">
+  <div class="bg-[#A90011] border-[3px] border-[#334155] p-12 rounded-[32px] 
+              shadow-[40px_40px_80px_rgba(169,0,17,0.15),inset_4px_4px_12px_rgba(255,255,255,0.1)] 
+              relative overflow-hidden group hover:scale-[1.005] transition-transform duration-500">
     
-    <div class="absolute -top-24 -left-24 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -top-32 -left-32 w-80 h-80 bg-white opacity-[0.08] rounded-full blur-[100px] pointer-events-none"></div>
 
-    <div class="flex justify-between items-start mb-10 relative z-10">
-      <div class="bg-white text-black px-3 py-1 font-mono text-[9px] font-black uppercase italic tracking-widest">
-        UNIT_TYPE: TURBO_02
+    <div class="flex justify-between items-start mb-12 relative z-10">
+      <div class="bg-white text-[#A90011] px-4 py-1.5 font-black text-[10px] uppercase tracking-[0.3em] italic shadow-sm">
+        Configuration: Enterprise_Elite
       </div>
-      <div class="flex gap-2">
-        <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-        <div class="w-2 h-2 bg-white/20 rounded-full"></div>
+      <div class="flex gap-2.5">
+        <div class="w-2.5 h-2.5 bg-white rounded-full animate-pulse shadow-[0_0_10px_rgba(255,255,255,0.8)]"></div>
+        <div class="w-2.5 h-2.5 bg-white/30 rounded-full"></div>
       </div>
     </div>
 
-    <h3 class="text-5xl font-black uppercase italic tracking-tighter text-white mb-2 relative z-10">PREMIUM_TURBO</h3>
-    <p class="font-mono text-[10px] font-black uppercase text-wham-tan-light mb-10 tracking-[0.2em] relative z-10">
-      High_Throughput_Neural_Engine
+    <h3 class="text-5xl font-black uppercase italic tracking-tighter text-white mb-2 relative z-10 leading-none">Enterprise</h3>
+    <p class="font-bold text-[11px] uppercase text-[#FBE9D9] mb-12 tracking-[0.3em] italic relative z-10">
+      Strategic_Supply_Chain_Intelligence
     </p>
 
-    <div class="space-y-6 mb-12 relative z-10">
+    <div class="space-y-8 mb-14 relative z-10">
       @for (feature of turboFeatures; track feature.label) {
-        <div class="flex items-start gap-4 border-b-2 border-white/10 pb-4 group/item">
-          <div class="w-2 h-6 bg-white group-hover/item:bg-wham-tan-light transition-colors mt-1 shadow-[0_0_8px_#fff]"></div>
+        <div class="flex items-start gap-5 border-b border-white/10 pb-6 group/item">
+          <div class="w-1.5 h-6 bg-[#FBE9D9] opacity-40 group-hover/item:opacity-100 group-hover/item:scale-y-110 transition-all duration-300 mt-1 shadow-[0_0_12px_rgba(251,233,217,0.4)]"></div>
           <div>
-            <h4 class="text-sm font-black uppercase tracking-tight text-white">{{ feature.label }}</h4>
-            <p class="text-[10px] font-bold uppercase text-white/50">{{ feature.detail }}</p>
+            <h4 class="text-sm font-black uppercase tracking-tight text-white group-hover/item:translate-x-1 transition-transform">{{ feature.label }}</h4>
+            <p class="text-[10px] font-bold uppercase text-white/50 mt-1 tracking-wide">{{ feature.detail }}</p>
           </div>
         </div>
       }
     </div>
 
-    <button class="w-full bg-white text-black py-5 font-black uppercase italic text-xl 
-                   shadow-[8px_8px_0px_#000] 
-                   hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all active:bg-wham-tan-light">
-      ACTIVATE_TURBO_ACCESS
+    <button class="w-full bg-white text-[#334155] py-6 font-black uppercase italic text-lg 
+                   shadow-[8px_8px_0px_#334155] 
+                   hover:bg-[#FBE9D9] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-300">
+      Request_Enterprise_Deployment
     </button>
 
-    <div class="absolute bottom-4 right-8 font-mono text-[8px] text-white/20 uppercase tracking-widest">
-      ZN-X2_ADVANCED_CONFIGURATION
+    <div class="absolute bottom-6 right-10 font-bold text-[9px] text-white/30 uppercase tracking-[0.3em] italic">
+      ZN-X2_Elite_Global_Specification
     </div>
   </div>
 </div>

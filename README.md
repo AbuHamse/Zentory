@@ -1,69 +1,64 @@
-##📦 Zentory | Logistics Management Suite
-Zentory is a high-performance, geometric-styled WMS (Warehouse Management System) designed with a sharp, industrial aesthetic. Built for efficiency, transparency, and rapid order fulfillment.
+Zentory_OS // Enterprise Intelligence Suite
+Strategic Logistics Management & Real-Time Operational Analytics
 
-🚀 Quick Start (Development)
-To get the client-side environment running, use the following commands:
+🛰️ Project Overview
+Zentory_OS is a high-tier enterprise software ecosystem designed for global supply chains. Developed with a focus on Operational Excellence and Strategic Intelligence, the platform provides a unified interface for complex warehouse environments.
 
-🛠️ Installation
-Bash
-# Install all dependencies
-npm install
-💻 Run Client
+Integrating the Money Mind Machine philosophy, the system merges technical rigor with high-utility industrial logic to optimize every 12-hour production window.
 
-Bash
-# Serve the Angular application locally
-ng serve
+⚡ Core System Architecture
+1. Unified Operations Terminal
+The primary landing interface focuses on Throughput Optimization. It features a live telemetry pulse and global node monitoring to ensure 24/7 transparency across all regional logistics tiers.
 
-##🏗️ Build
-#Bash
-# Production build
-ng build --configuration production
-🏗️ Project Architecture
-🗂️ Folder Structure
-src/app/features/ — Contains core modules: Dashboard, Inventory, and Orders.
+!(public/screenshot1.png)
 
-src/app/shared/ — Reusable ZTN-Widgets and layout components.
+2. Business Intelligence & Analytics Hub
+A sophisticated data engine that parses complex warehouse metrics into executive-level insights.
 
-src/assets/data/ — Local JSON mock data for offline development.
+Executive Overview: Real-time financial flux and order velocity tracking.
 
-##🛡️ Core Features
-RBAC (Role-Based Access Control): Custom views for GMs, Managers, and Warehouse staff.
+Utilization Matrix: Spatial distribution heatmaps for primary warehouse sectors.
 
-Command Center: A real-time overview of warehouse usage and revenue.
+Inventory Reports Hub: High-density SKU analysis featuring margin percentages, return rates, and stock velocity indicators.
 
-Master-Detail Fulfillment: Expandable order rows with line-item picking status.
+!(public/screenshot2.png)
 
-Live Filtration: Signal-based filtering for order status (Processing, Picked, Shipped).
+3. Quality Control & Recovery Center
+A dedicated module for handling reverse logistics and technical inspections.
 
-##🎨Design System (Zentory Aesthetics)
-The application follows the ZTN Geometric Standard:
+Master-Detail Queue: Seamless navigation through incoming returns.
 
-Primary: Madder Red (#A52A2A)
+Disposition Engine: Standardized protocols for restock, scrap, or vendor return actions based on inspection evidence.
 
-Background: Wham-Cream / Tan
+!(public/screenshot3.png)
 
-Typography: Black, Uppercase, Tracking-wide headers.
+4. Personnel & Performance Management
+Optimized for 12-hour interval accountability, the user dashboard provides workers with real-time feedback and system-wide alerts.
 
-Borders: Sharp 90-degree edges (No rounding).
+Shift Interval Logic: Segmenting production into strategic sprints for maximum efficiency.
 
-##🛠️ Tech Stack
-Framework: Angular (v17/18+)
+Telemetry Logs: "The Transmission" knowledge base for system updates and engineering protocols.
 
-Styling: Tailwind CSS
+!(public/screenshot4.png)
 
-Icons: Material Icons & React Icons
+🎨 Design Philosophy: "Enterprise WHAM"
+The visual identity utilizes a high-contrast, professional aesthetic defined by:
 
-Backend: Node.js / Express (Incoming...)
+Primary Palette: Deep Navy (#334155), Zentory Red (#A90011), and Foundation Tan (#FBE9D9).
 
-Database: MongoDB / Mongoose (Incoming...)
+Typography: Bold, italicized headers paired with monospaced technical telemetry for an authoritative, "Mission Control" feel.
 
-##📅 Upcoming Milestones
-[ ] Connect Express Server and MongoDB.
+Tactile UI: Heavy offset shadows and thick borders that emphasize durability and industrial reliability.
 
-[ ] Implement live Picking/Packing logic.
+!(public/screenshot5.png)
 
-[ ] Add PDF Label generation for couriers.
+🛠️ Technical Stack
+Framework: Angular 18 (Standalone Components & Signals).
 
-[ ] Build Warehouse Worker-specific Mobile View.
+Styling: Tailwind CSS v4.
 
-#Zentory: Precision in every movement.
+Logic: Reactive State Management with RxJS & Computed Signals.
+
+Data: High-density JSON telemetry simulation for real-time testing.
+
+Zentory_OS // 2026 // SYSTEM_INTEGRITY_VERIFIED

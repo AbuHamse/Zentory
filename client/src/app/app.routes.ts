@@ -32,6 +32,7 @@ import { CancelComponent } from './pages/stripe/cancel/cancel.component';
 import { FloorPlanComponent } from './features/admin/floor-plan/floor-plan.component';
 import { AnalyticsComponent } from './features/admin/analytics/analytics.component';
 import { SettingsComponent } from './features/admin/settings/settings.component';
+import { RecoveryCenterComponent } from './features/user/recovery-center/recovery-center.component';
 
 export const routes: Routes = [
   // 🌐 WEBSITE ROUTES
@@ -84,6 +85,7 @@ export const routes: Routes = [
       { path: 'receiving-dock', component: ReceivingDockComponent },
       { path: 'performance', component: MyPerformanceComponent },
       { path: 'dock-outbound', component: DockOutboundComponent },
+      { path: 'recovery-center', component: RecoveryCenterComponent },
     ]
   }
 ];

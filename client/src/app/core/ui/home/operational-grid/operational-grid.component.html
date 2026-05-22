@@ -1,56 +1,58 @@
-<section class="w-full py-20 bg-wham-tan-light border-b-[10px] border-black selection:bg-black selection:text-wham-tan-light">
+<section class="w-full py-24 bg-[#FBE9D9] border-b-[8px] border-[#334155] selection:bg-[#334155] selection:text-white">
   <div class="max-w-[1400px] mx-auto px-8">
     
-    <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-      <div class="max-w-2xl">
-        <h2 class="text-5xl font-black uppercase italic tracking-tighter text-black mb-4">
-          01_INTERVAL_ACCOUNTABILITY
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+      <div class="max-w-3xl">
+        <h2 class="text-5xl font-black uppercase italic tracking-tighter text-[#334155] mb-4">
+          Strategic_Operational_Flow
         </h2>
-        <div class="h-2 w-32 bg-wham-red-dark mb-6"></div>
-        <p class="text-xs font-mono font-bold uppercase tracking-widest text-black/60">
-          ARCHITECTURE: 12-HOUR OPERATIONAL WINDOW // 6-PHASE PRODUCTION SPRINT
+        <div class="h-1.5 w-24 bg-[#A90011] mb-6"></div>
+        <p class="text-xs font-bold uppercase tracking-[0.25em] text-[#334155]/60 leading-relaxed">
+          Dynamic Resource Management: 12-Hour Strategic Window // High-Velocity Performance Intervals
         </p>
       </div>
-      <div class="bg-black text-white p-4 font-mono text-[10px] uppercase tracking-tighter border-l-8 border-wham-red-dark">
-        REF_DOC: ZN_OP_LOGIC_v1
+      <div class="bg-[#334155] text-white px-6 py-3 font-bold text-[10px] uppercase tracking-widest border-l-8 border-[#A90011] shadow-[4px_4px_0px_rgba(0,0,0,0.1)]">
+        Data_Standard: ZTN_LOGISTICS_MODEL_v4
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 border-4 border-black bg-black gap-[4px] shadow-[20px_20px_0px_#000] overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 border-[3px] border-[#334155] bg-[#334155] gap-[2px] shadow-[30px_30px_0px_rgba(51,65,85,0.05)] overflow-hidden">
       
       @for (interval of intervals; track interval.id) {
-        <div class="relative bg-white p-8 group cursor-pointer transition-all duration-300 hover:bg-wham-red-dark hover:text-white">
+        <div class="relative bg-white p-10 group cursor-pointer transition-all duration-500 hover:bg-[#334155] hover:text-white">
           
-          <div class="flex justify-between items-start mb-12">
-            <span class="text-4xl font-black italic leading-none">0{{interval.id}}</span>
-            <div class="w-2 h-8 bg-black group-hover:bg-wham-tan-light transition-colors"></div>
+          <div class="flex justify-between items-start mb-16">
+            <span class="text-5xl font-black italic leading-none tracking-tighter text-[#334155] group-hover:text-white">0{{interval.id}}</span>
+            <div class="w-1.5 h-10 bg-[#A90011] transition-all duration-500 group-hover:scale-y-125"></div>
           </div>
 
-          <div class="space-y-1 mb-10">
-            <p class="text-[9px] font-black uppercase tracking-widest opacity-40 group-hover:opacity-100 transition-opacity">TIME_WINDOW</p>
-            <p class="text-xl font-mono font-black italic">{{interval.start}} - {{interval.end}}</p>
+          <div class="space-y-2 mb-12">
+            <p class="text-[9px] font-black uppercase tracking-[0.2em] text-[#334155]/40 group-hover:text-white/40 transition-colors">Phase_Duration</p>
+            <p class="text-xl font-bold italic tracking-tight">{{interval.start}} — {{interval.end}}</p>
           </div>
 
-          <div class="pt-6 border-t-2 border-black/10 group-hover:border-white/20">
-            <p class="text-[10px] font-black uppercase tracking-tighter italic">
-              {{interval.label}} // AUDIT_READY
+          <div class="pt-6 border-t border-[#334155]/10 group-hover:border-white/20">
+            <p class="text-[10px] font-black uppercase tracking-widest italic group-hover:text-[#A90011]">
+              {{interval.label}} // Verified_Data_Stream
             </p>
           </div>
 
-          <div class="absolute bottom-0 right-0 p-2 opacity-0 group-hover:opacity-20 transition-opacity">
-            <span class="text-[40px] font-black italic uppercase select-none tracking-tighter">SPRINT</span>
+          <div class="absolute bottom-4 right-4 opacity-0 group-hover:opacity-10 transition-all duration-700">
+            <span class="text-[32px] font-black italic uppercase select-none tracking-tighter">FLOW</span>
           </div>
         </div>
       }
     </div>
 
-    <div class="mt-12 flex justify-end">
-      <div class="flex items-center gap-4 group">
-        <span class="font-mono text-[9px] font-bold uppercase text-black/40 group-hover:text-wham-red-dark transition-colors">Initialize_Full_Shift_Report</span>
-        <div class="w-12 h-12 rounded-full border-4 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all cursor-pointer">
-          <span class="text-xl font-bold">➔</span>
+    <div class="mt-16 flex justify-end">
+      <button class="flex items-center gap-6 group hover:translate-x-[-8px] transition-transform duration-500">
+        <span class="font-bold text-[11px] uppercase tracking-widest text-[#334155]/50 group-hover:text-[#A90011] transition-colors italic">
+          Generate_Executive_Summary_Report
+        </span>
+        <div class="w-14 h-14 rounded-full border-2 border-[#334155] flex items-center justify-center group-hover:bg-[#334155] group-hover:text-white transition-all shadow-md">
+          <span class="text-2xl font-light transform group-hover:translate-x-1 transition-transform">→</span>
         </div>
-      </div>
+      </button>
     </div>
   </div>
 </section>

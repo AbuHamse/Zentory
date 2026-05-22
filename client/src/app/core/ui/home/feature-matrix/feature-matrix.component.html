@@ -1,58 +1,58 @@
-<section class="w-full py-24 bg-white border-b-[12px] border-black selection:bg-wham-red-main selection:text-white">
+<section class="w-full py-28 bg-white border-b-[8px] border-[#334155] selection:bg-[#A90011] selection:text-white">
   <div class="max-w-[1400px] mx-auto px-8">
     
-    <div class="mb-16 border-l-[10px] border-black pl-8">
-      <h2 class="text-6xl font-black uppercase italic tracking-tighter text-black leading-none">
-        CORE_SYSTEM_CAPABILITIES
+    <div class="mb-20 border-l-[8px] border-[#A90011] pl-10">
+      <h2 class="text-5xl lg:text-6xl font-black uppercase italic tracking-tighter text-[#334155] leading-none">
+        Enterprise_Infrastructure
       </h2>
-      <p class="mt-4 font-mono text-[11px] font-black uppercase tracking-[0.4em] text-wham-red-dark">
-        ENGINEERING_SPEC_SHEET // REV_04
+      <p class="mt-4 font-bold text-[11px] uppercase tracking-[0.4em] text-[#334155]/50">
+        Strategic Capabilities // Global Deployment Standards
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-t-4 border-l-4 border-black">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-t-2 border-l-2 border-[#334155]">
       @for (feature of features; track feature.title) {
-        <div class="group p-10 border-r-4 border-b-4 border-black hover:bg-wham-tan-muted transition-all duration-300 relative overflow-hidden">
+        <div class="group p-12 border-r-2 border-b-2 border-[#334155] hover:bg-[#FBE9D9] transition-all duration-500 relative overflow-hidden">
           
-          <div class="mb-8 flex justify-between items-start">
-            <div class="w-10 h-10 bg-black flex items-center justify-center group-hover:bg-wham-red-dark transition-colors">
-              <span class="text-white font-mono text-xs font-bold">{{ feature.code }}</span>
+          <div class="mb-10 flex justify-between items-start">
+            <div class="w-12 h-12 bg-[#334155] flex items-center justify-center group-hover:bg-[#A90011] transition-all duration-500 shadow-sm">
+              <span class="text-white font-bold text-xs">{{ feature.code }}</span>
             </div>
-            <span class="text-[8px] font-mono opacity-20 uppercase tracking-widest">{{ feature.id_hex }}</span>
+            <span class="text-[9px] font-black opacity-20 uppercase tracking-[0.2em] italic">{{ feature.id_hex }}</span>
           </div>
 
-          <h3 class="text-2xl font-black uppercase italic mb-4 group-hover:translate-x-2 transition-transform duration-300">
+          <h3 class="text-2xl font-black uppercase italic mb-6 group-hover:translate-x-2 transition-transform duration-500 text-[#334155]">
             {{ feature.title }}
           </h3>
-          <p class="text-sm font-bold leading-snug uppercase opacity-60 mb-6 group-hover:opacity-100">
+          <p class="text-[13px] font-semibold leading-relaxed uppercase text-[#334155]/70 mb-8 group-hover:text-[#334155]">
             {{ feature.description }}
           </p>
 
-          <ul class="space-y-2 border-t-2 border-black/5 pt-6">
+          <ul class="space-y-3 border-t border-[#334155]/10 pt-8">
             @for (spec of feature.specs; track spec) {
               <li class="flex items-center gap-3">
-                <div class="w-1 h-1 bg-wham-red-main"></div>
-                <span class="text-[9px] font-mono font-black uppercase tracking-tight text-black/40 group-hover:text-black">
+                <div class="w-1.5 h-1.5 bg-[#A90011] rounded-full group-hover:scale-125 transition-transform"></div>
+                <span class="text-[10px] font-bold uppercase tracking-tight text-[#334155]/50 group-hover:text-[#334155]">
                   {{ spec }}
                 </span>
               </li>
             }
           </ul>
 
-          <div class="absolute -bottom-4 -right-4 text-6xl font-black italic opacity-[0.02] group-hover:opacity-[0.05] transition-opacity select-none uppercase">
+          <div class="absolute -bottom-6 -right-6 text-7xl font-black italic opacity-[0.03] group-hover:opacity-[0.07] transition-opacity select-none uppercase text-[#334155]">
             {{ feature.code }}
           </div>
         </div>
       }
     </div>
 
-    <div class="mt-12 flex justify-between items-center opacity-30">
-      <div class="text-[9px] font-mono font-black uppercase tracking-[0.2em]">
-        Integrity_Check: Verified_2026
+    <div class="mt-16 flex justify-between items-center opacity-40 italic">
+      <div class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#334155]">
+        System_Integrity_Verified // 2026
       </div>
-      <div class="h-[2px] flex-1 mx-8 bg-black"></div>
-      <div class="text-[9px] font-mono font-black uppercase tracking-[0.2em]">
-        Zentory_WMS_Logic
+      <div class="h-[1px] flex-1 mx-12 bg-[#334155]/30"></div>
+      <div class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#334155]">
+        Zentory_Intelligence_Hub
       </div>
     </div>
   </div>
